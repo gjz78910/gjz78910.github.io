@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-UK"
-title                    : "Main Page"
+title                    : "Jingzhi / Homepage"
 title_separator          : "-"
 name                     : &name "Jingzhi Gong"
 description              : &description "personal description"
