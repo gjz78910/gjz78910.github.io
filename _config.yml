@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-UK"
-title                    : "Jingzhi Gong / Site Title"
+title                    : "Main Page"
 title_separator          : "-"
 name                     : &name "Jingzhi Gong"
 description              : &description "personal description"
@@ -96,7 +96,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : "gjz78910"
   google_plus      :
   keybase          :
   instagram        :
