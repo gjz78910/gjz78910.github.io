@@ -38,7 +38,6 @@ This involves modeling the complex relationship between the configurable options
 and accurately predicting the performance for any configuration. 
 
 This way, software engineers and users can optimize the software to meet their design / execution requirements without spending much time on testing the software. 
-
 Moreover, machine learning (deep learning) models can reduce the large amount of costs on performance measurements due to their high efficiency of learning.
 
 ## Backgrounds
