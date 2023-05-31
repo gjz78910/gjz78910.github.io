@@ -19,10 +19,10 @@ On this website, you can find more information about my research interests and p
 Feel free to reach out to me if you have any questions or would like to collaborate.
 
 ## News
-* **May/2023:** Our paper '[Predicting Software Performance with Divide-and-Learn](https://arxiv.org/abs/2203.15988)' has been accepted by the The ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering [(ESEC/FSE 2023)](https://2023.esec-fse.org/) as a research paper with two strong accepts and no revision requested; acceptance rate 12.7% (60 out of 473). 
-
-
-* **May/2022:** Our paper '[Does Configuration Encoding Matter in Learning Software Performance? An Empirical Study on Encoding Schemes](https://arxiv.org/abs/2203.15988)' 
+>* **May/2023:** Our paper '[Predicting Software Performance with Divide-and-Learn](https://arxiv.org/abs/2203.15988)' has been accepted by the The ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering [(ESEC/FSE 2023)](https://2023.esec-fse.org/) as a research paper with two strong accepts and no revision requested; acceptance rate 12.7% (60 out of 473). 
+>
+>
+>* **May/2022:** Our paper '[Does Configuration Encoding Matter in Learning Software Performance? An Empirical Study on Encoding Schemes](https://arxiv.org/abs/2203.15988)' 
 has been accepted by the 19th International Conference on Mining Software Repositories ([MSR 2022](https://conf.researchr.org/details/msr-2022/msr-2022-technical-papers/1/Does-Configuration-Encoding-Matter-in-Learning-Software-Performance-An-Empirical-Stu)) 
 as a technical paper, with an acceptance rate of 34% (45 out of 138). 
 
