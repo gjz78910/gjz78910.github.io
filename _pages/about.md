@@ -16,7 +16,7 @@ My research topic is deep learning for software performance prediction.
 I’m passionate about this field because it has the potential to revolutionize the way we develop software. 
 
 On this website, you can find more information about my research interests and projects. 
-Feel free to reach out to me if you have any questions or would like to collaborate.
+Feel free to contact me if you have any questions or would like to collaborate.
 
 ## News
 >* **May/2023:** Our paper '[Predicting Software Performance with Divide-and-Learn](https://arxiv.org/pdf/2306.06651)' has been accepted by the ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering [(ESEC/FSE 2023)](https://2023.esec-fse.org/) as a research paper with two strong accepts and no revision requested; acceptance rate 12.7% (60 out of 473). 
@@ -37,7 +37,7 @@ My research interests are in applying **machine learning (deep learning)** to le
 This involves modeling the complex relationship between the configurable options of the software and its performance metrics (such as latency, execution time, etc.) 
 and accurately predicting the performance for any configuration. 
 
-This way, software engineers and users can optimize the software to meet their design / execution requirements without spending much time on testing the software. 
+This way, software engineers and users can optimize the software to meet their design/execution requirements without spending much time testing the software. 
 Moreover, machine learning (deep learning) models can reduce the large amount of costs on performance measurements due to their high efficiency of learning.
 
 ## Backgrounds
