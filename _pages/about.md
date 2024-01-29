@@ -19,7 +19,7 @@ On this website, you can find more information about my research interests and p
 Feel free to contact me if you have any questions or would like to collaborate.
 
 ## News
->* **January/2023:** Our paper '[Predicting Configuration Performance in Multiple Environments with Sequential Meta-Leaning](https://arxiv.org/pdf/2306.06651)' has been accepted by the *ACM International Conference on the Foundations of Software Engineering (FSE)* [(FSE 2024)](https://conf.researchr.org/home/fse-2024) as a research paper with acceptance rate 11.6% (56 out of 483). 
+>* **January/2024:** Our paper '[Predicting Configuration Performance in Multiple Environments with Sequential Meta-Leaning](https://arxiv.org/pdf/2306.06651)' has been accepted by the *ACM International Conference on the Foundations of Software Engineering* [(FSE 2024)](https://conf.researchr.org/home/fse-2024) as a research paper with acceptance rate 11.6% (56 out of 483). 
 >
 >
 >* **May/2023:** Our paper '[Predicting Software Performance with Divide-and-Learn](https://arxiv.org/pdf/2306.06651)' has been accepted by the *ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering* [(ESEC/FSE 2023)](https://2023.esec-fse.org/) as a research paper with two strong accepts and no revision requested; acceptance rate 12.7% (60 out of 473). 
