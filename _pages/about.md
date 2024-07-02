@@ -8,9 +8,11 @@ redirect_from:
   - /about.html
 ---
 
-I'm currently a PhD student in [the Department of Computer Science](https://www.lboro.ac.uk/departments/compsci/) 
+I'm currently a KTP Assiciate for both [University of Leeds](https://www.leeds.ac.uk/) and [TurinTech AI](https://www.turintech.ai/), and I'm working on cutting-eadge AI and LLM techniques for code optimization.
+
+I completed my PhD degree in March 2024 in [the Department of Computer Science](https://www.lboro.ac.uk/departments/compsci/) 
 at [Loughborough University](https://www.lboro.ac.uk/). I'm honored to be a member of the [<kbd>IDEAS Labotory</kbd>](https://ideas-labo.github.io/)
-and be supervised by [Dr Tao Chen](https://scholar.google.co.uk/citations?user=K4teyvoAAAAJ&hl=en). My graduation time is probably in the early 2024.
+and be supervised by [Dr Tao Chen](https://scholar.google.co.uk/citations?user=K4teyvoAAAAJ&hl=en). 
 
 My research topic is deep learning for software performance prediction. 
 I’m passionate about this field because it has the potential to revolutionize the way we develop software. 
