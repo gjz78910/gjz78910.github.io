@@ -5,4 +5,5 @@ A Github Pages template for academic websites. This was forked (then detached) b
 2. Add new publication: 
    1. Create a new file in the **_publication** folder
    2. Add pdf file in the **files** folder
-3. Update the page contents: update the corresponding files in the **_pages** folder
+   3. The publication information will automatically appear if the path settings are correct
+3. Update the main page contents: update the **about.md** files in the **_pages** folder
