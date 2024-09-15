@@ -10,7 +10,7 @@ redirect_from:
 
 I'm currently a KTP Assiciate (a special kind of postdoc) for both [University of Leeds](https://www.leeds.ac.uk/) and [TurinTech AI](https://www.turintech.ai/), and I'm working on cutting-eadge compiler and LLM-based techniques for code optimization. 
 At University of Leeds, I am a member of the [DSS research group](https://distributed-systems.leeds.ac.uk/) and supervised by [Prof Jie Xu](https://eps.leeds.ac.uk/computing/staff/331/professor-jie-xu), and [Prof Zheng Wang](https://zwang4.github.io/). 
-Moreover, at TurinTech AI, I'm a member of the Data Science team, which is led by [Dr Fan Wu](https://scholar.google.com/citations?user=p8z2_usAAAAJ&hl=en) and [Dr Paul Brooks](https://www.linkedin.com/in/paul-brookes-125288b2/).
+Moreover, at TurinTech AI, I'm a member of the Data Science team, which is led by [Dr Fan Wu](https://scholar.google.com/citations?user=p8z2_usAAAAJ&hl=en) and [Dr Paul Brookes](https://www.linkedin.com/in/paul-brookes-125288b2/).
 
 
 I completed my PhD degree in March 2024 in [the Department of Computer Science](https://www.lboro.ac.uk/departments/compsci/) 
