@@ -8,13 +8,16 @@ redirect_from:
   - /about.html
 ---
 
-I'm currently a KTP Assiciate (a special kind of postdoc) for both [University of Leeds](https://www.leeds.ac.uk/) and [TurinTech AI](https://www.turintech.ai/), and I'm working on cutting-eadge AI and LLM techniques for code optimization.
+I'm currently a KTP Assiciate (a special kind of postdoc) for both [University of Leeds](https://www.leeds.ac.uk/) and [TurinTech AI](https://www.turintech.ai/), and I'm working on cutting-eadge compiler and LLM-based techniques for code optimization. 
+At University of Leeds, I am a member of the [DSS research group](https://distributed-systems.leeds.ac.uk/) and supervised by [Prof Jie Xu](https://eps.leeds.ac.uk/computing/staff/331/professor-jie-xu), and [Prof Zheng Wang](https://zwang4.github.io/). 
+Moreover, at TurinTech AI, I'm a member of the Data Science team, which is led by [Dr Fan Wu](https://scholar.google.com/citations?user=p8z2_usAAAAJ&hl=en) and [Dr Paul Brooks](https://www.linkedin.com/in/paul-brookes-125288b2/).
+
 
 I completed my PhD degree in March 2024 in [the Department of Computer Science](https://www.lboro.ac.uk/departments/compsci/) 
 at [Loughborough University](https://www.lboro.ac.uk/). I'm honored to be a member of the [<kbd>IDEAS Labotory</kbd>](https://ideas-labo.github.io/)
 and be supervised by [Dr Tao Chen](https://scholar.google.co.uk/citations?user=K4teyvoAAAAJ&hl=en). 
 
-My research topic is deep learning for software performance prediction. 
+My key research interests are in deep learning for software performance prediction. 
 I’m passionate about this field because it has the potential to revolutionize the way we develop software. 
 
 On this website, you can find more information about my research interests and projects. 
