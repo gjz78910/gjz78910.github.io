@@ -9,17 +9,19 @@ redirect_from:
 ---
 
 I'm currently a [KTP Associate](https://www.ktp-uk.org/) (a special kind of postdoc) for both [University of Leeds](https://www.leeds.ac.uk/) and [TurinTech AI](https://www.turintech.ai/), and I'm working on cutting-edge compiler and LLM-based techniques for code optimization. 
-At the University of Leeds, I am a member of the [<kbd>DSS Research Group</kbd>](https://distributed-systems.leeds.ac.uk/) and supervised by [Prof Jie Xu](https://eps.leeds.ac.uk/computing/staff/331/professor-jie-xu), and [Prof Zheng Wang](https://zwang4.github.io/). 
+At the University of Leeds, I am a member of the [Intelligent Systems Software Lab (ISSL)](https://issl-uk.com/) and [Distributed Systems and Services (DSS)](https://distributed-systems.leeds.ac.uk/) research group, supervised by [Prof Jie Xu](https://eps.leeds.ac.uk/computing/staff/331/professor-jie-xu) and [Prof Zheng Wang](https://zwang4.github.io/). 
 Moreover, at TurinTech AI, I'm a member of the Data Science team, which is led by [Dr Fan Wu](https://scholar.google.com/citations?user=p8z2_usAAAAJ&hl=en) and [Dr Paul Brookes](https://www.linkedin.com/in/paul-brookes-125288b2/).
 
 
 I completed my PhD degree in Dec 2024 in [the Department of Computer Science](https://www.lboro.ac.uk/departments/compsci/) 
-at [Loughborough University](https://www.lboro.ac.uk/). I'm very honored to be a member of the [<kbd>IDEAS Labotory</kbd>](https://ideas-labo.github.io/)
-and be supervised by [Dr Tao Chen](https://scholar.google.co.uk/citations?user=K4teyvoAAAAJ&hl=en) during my doctoral study. 
+at [Loughborough University](https://www.lboro.ac.uk/). I'm very honored to be supervised by [Dr Tao Chen](https://scholar.google.co.uk/citations?user=K4teyvoAAAAJ&hl=en) during my doctoral study, and I'm a member of the [<kbd>IDEAS Labotory</kbd>](https://ideas-labo.github.io/) (Intelligent Dependability Engineering for Adaptive Software Laboratory). I'm a recipient of the [SPEC Kaivalya Dixit Distinguished Dissertation Award 2024](https://research.spec.org/awards/), which is a prominent award in the domain of in computer benchmarking, performance evaluation, and experimental system analysis. 
 
-My key research interests are in deep learning for software performance prediction. 
+My current key research interests are in AI for software engineering, including: 
+
+- Software **configuration performance prediction/modeling** using machine learning and deep learning;
+- Software **code performance optimization** using cutting-edge LLM and compiler-based techniques. 
+
 I’m passionate about this field because it has the potential to revolutionize the way we develop software. 
-
 On this website, you can find more information about my research interests and projects. 
 Feel free to contact me if you have any questions or would like to collaborate.
 
