@@ -26,6 +26,11 @@ On this website, you can find more information about my research interests and p
 Feel free to contact me if you have any questions or would like to collaborate.
 
 ## News
+>* **January/2025:** I am hohored to be awarded the [SPEC Kaivalya Dixit Distinguished Dissertation Award 2024](https://research.spec.org/news/2025-01-31-00-00-winner-of-spec-kaivalya-dixit-distinguished-dissertation-award-2024/), 
+which is a prominent award in the domain of in computer benchmarking, performance evaluation, and experimental system analysis. 
+Grateful to @[spec_perf](https://x.com/spec_perf) for recognizing our contributions to performance engineering! Thank you @[tao_chen_ideas](https://x.com/tao_chen_ideas) and @[PooyanJamshidi](https://x.com/PooyanJamshidi) for your unwavering support!
+>
+> 
 >* **November/2024:** Our paper '[Accuracy Can Lie: On the Impact of Surrogate Model in Configuration Tuning](https://arxiv.org/abs/2409.07629)' has been accepted by the *IEEE Transactions on Software Engineering* [(TSE)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32) as a journal paper.
 >
 > 
