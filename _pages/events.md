@@ -5,16 +5,33 @@ permalink: /events/
 author_profile: true
 ---
 
+## Recent Events
+
 ### ICPE 2025
-![Conference Photo](/images/event_images/icpe25.png)
-*SPEC Kaivalya Dixit Distinguished Dissertation Awarding Ceremony at ICPE'25*
+![ICPE 2025](/images/event_images/icpe25.png)
+*SPEC Kaivalya Dixit Distinguished Dissertation Awarding Ceremony at [ICPE'25](https://research.spec.org/awards/past-winners/2024/)*
 
-## Event Highlights
+### KTP Conference 2024
+![KTP Conference 2024](/images/event_images/KTPConf24.jpg)
+*[KTP Conference 2024](https://www.ktp-uk.org/)*
 
-You can add more events and photos here. Each image should be placed in the `/images/` directory and referenced with the path `/images/filename.jpg`.
+### FSE 2024
+![FSE 2024](/images/event_images/fse24.jpg)
+*Presenting at [FSE 2024](https://conf.researchr.org/home/fse-2024)*
 
-### Tips for adding images:
-1. Place your images in the `images/` folder
-2. Use the format: `![Alt text](/images/filename.jpg)`
-3. Add captions below images using *italic text*
-4. You can organize events by year, type, or any other structure you prefer 
+### FSE 2024 (Additional Photo)
+![FSE 2024](/images/event_images/fse24-2.jpg)
+*Attending [FSE 2024](https://conf.researchr.org/home/fse-2024)*
+
+### SSBSE 2024
+![SSBSE 2024](/images/event_images/ssbse24.jpg)
+*Presenting at [SSBSE 2024](https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge)*
+
+### COW 2024
+![COW 2024](/images/event_images/cow24.jpg)
+*Attending [66th COW 2024](https://www.ucl.ac.uk/crest/events/2024/mar/66th-crest-open-workshop-ssbse-challenge-track-collaborative-jam-session)*
+
+### FSE 2023
+![FSE 2023](/images/event_images/fse23.jpg)
+*Presenting at [FSE 2023](https://2023.esec-fse.org/)*
+
