@@ -5,11 +5,9 @@ permalink: /events/
 author_profile: true
 ---
 
-## Recent Events
-
 ### ICPE 2025
 ![Conference Photo](/images/event_images/icpe25.png)
-*Caption: SPEC Kaivalya Dixit Distinguished Dissertation Awarding Ceremony at ICPE'25*
+*SPEC Kaivalya Dixit Distinguished Dissertation Awarding Ceremony at ICPE'25*
 
 ## Event Highlights
 
