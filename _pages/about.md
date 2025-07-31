@@ -30,7 +30,7 @@ Feel free to contact me if you have any questions or would like to collaborate.
 >
 >
 >* **June/2025:** Our paper '[Learning Software Bug Reports: A Systematic Literature Review](https://dl.acm.org/doi/abs/10.1145/3750040)' has been accepted by the *ACM Transactions on Software Engineering and Methodology
-* [(TOSEM)](https://dl.acm.org/toc/tosem/justaccepted) as a journal paper in the first round with acceptance rate 9.29% (60/646).
+[(TOSEM)](https://dl.acm.org/toc/tosem/justaccepted) as a journal paper in the first round with acceptance rate 9.29% (60/646).
 >
 >
 >* **January/2025:** I am hohored to be awarded the [SPEC Kaivalya Dixit Distinguished Dissertation Award 2024](https://research.spec.org/news/2025-01-31-00-00-winner-of-spec-kaivalya-dixit-distinguished-dissertation-award-2024/), 
