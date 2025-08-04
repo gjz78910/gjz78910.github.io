@@ -26,6 +26,9 @@ On this website, you can find more information about my research interests and p
 Feel free to contact me if you have any questions or would like to collaborate.
 
 ## News
+>* **July/2025:** I am honored to be selected as a **Shadow Program Committee Member** for the *IEEE/ACM International Conference on Software Engineering* [(ICSE 2026)](https://conf.researchr.org/home/icse-2026).
+>
+>
 >* **June/2025:** Our paper '[Dually Hierarchical Drift Adaptation for Online Configuration Performance Learning](https://arxiv.org/abs/2507.08730)' has been accepted by the *IEEE/ACM International Conference on Software Engineering* [(ICSE)](https://conf.researchr.org/home/icse-2026) as a research paper in the first round with acceptance rate 9.29% (60/646).
 >
 >
