@@ -15,10 +15,10 @@ At TurinTech AI, I'm a member of the Data Science team led by [Dr Fan Wu](https:
 I completed my PhD in Dec 2024 in the [Department of Computer Science](https://www.lboro.ac.uk/departments/compsci/) at [Loughborough University](https://www.lboro.ac.uk/), supervised by [Dr Tao Chen](https://scholar.google.co.uk/citations?user=K4teyvoAAAAJ&hl=en) in the [<kbd>IDEAS Laboratory</kbd>](https://ideas-labo.github.io/) (Intelligent Dependability Engineering for Adaptive Software Laboratory). My PhD thesis received the [SPEC Kaivalya Dixit Distinguished Dissertation Award 2024](https://research.spec.org/awards/), a prominent award in computer benchmarking, performance evaluation, and experimental system analysis.
 
 ## Research Focus
-I work across machine learning for software performance and GenAI for code optimisation, from foundational methods to industrial deployment.
+I work across different AI techniques for software performance engineering, from foundational machine learning models to cutting‑edge GenAI systems.
 
 ### Doctoral research — Software configuration performance engineering
-- Developed ML/DL approaches that learn how high‑dimensional options, environments, and workloads shape performance to enable optimisation without exhaustive benchmarking; addressed feature sparsity, rugged performance spaces, and cross‑environment drift (versions/hardware/workloads).
+- Developed ML/DL approaches that learn how high‑dimensional options, environments, and workloads shape performance to enable optimisation without exhaustive benchmarking; addressed feature sparsity, rugged performance spaces, and cross‑environment drift (versions/hardware/workloads) — see e.g., our [TOSEM survey](https://arxiv.org/abs/2403.03322), [TSE 2024](https://arxiv.org/abs/2409.07629), [FSE 2024](https://arxiv.org/abs/2402.03183), and [ICSE 2026](https://arxiv.org/abs/2507.08730).
 - **Why it matters**: This 
   enables earlier performance issue detection, 
   software adaptibility and autoscaling, and 
@@ -26,8 +26,8 @@ I work across machine learning for software performance and GenAI for code optim
   measurements.
 
 ### Current research — GenAI for industrial code optimisation
-- Lead work on search-based multi‑LLM optimisation and meta‑prompting for robust code scoring/rewrites, combined with ensembling and compiler techniques.
-- **Why it matters**: Our methods yield verifiable speedups and cost reductions on production codebases while making GenAI systems more reliable and auditable.
+- Lead work on search-based multi‑LLM optimisation and meta‑prompting for robust code scoring/optimization, combined with ensembling and compiler techniques; implemented in commercial pipelines via the [KTP](https://www.ktp-uk.org/) with [TurinTech AI](https://www.turintech.ai/) and evaluated on real production workloads (see also SSBSE’24 Challenge work [GreenStableYolo](https://arxiv.org/abs/2407.14982)).
+- **Why it matters**: Our methods deliver verifiable speedups and cost reductions on production codebases while making GenAI systems more reliable and auditable in practice.
 
 ### Ongoing interests — AI4SE, SE4AI
 - LLM performance modeling (hybrid models + online adaptive tuning), performance‑aware GenAI systems (dynamic prompt engineering + configuration tuning), trustworthy GenAI (RLHF + uncertainty verification), and industry standards/tooling (benchmarks, profiling + static analysis validation, CI/CD integration).
@@ -81,14 +81,10 @@ congratulations to all the authors!
 
 <details>
   <summary><b>View older news</b> (click to expand)</summary>
->
->
->* **May/2023:** Our paper '[Predicting Software Performance with Divide-and-Learn](https://arxiv.org/pdf/2306.06651)' has been accepted by the *ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering* [(ESEC/FSE 2023)](https://2023.esec-fse.org/) as a research paper with two strong accepts and no revision requested; acceptance rate 12.7% (60 out of 473). 
->
->
->* **May/2022:** Our paper '[Does Configuration Encoding Matter in Learning Software Performance? An Empirical Study on Encoding Schemes](https://arxiv.org/abs/2203.15988)' 
-has been accepted by the *19th International Conference on Mining Software Repositories* ([MSR 2022](https://conf.researchr.org/details/msr-2022/msr-2022-technical-papers/1/Does-Configuration-Encoding-Matter-in-Learning-Software-Performance-An-Empirical-Stu)) 
-as a technical paper, with an acceptance rate of 34% (45 out of 138).
+
+- **May/2023:** Our paper '[Predicting Software Performance with Divide-and-Learn](https://arxiv.org/pdf/2306.06651)' has been accepted by the *ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering* [(ESEC/FSE 2023)](https://2023.esec-fse.org/) as a research paper with two strong accepts and no revision requested; acceptance rate 12.7% (60/473).
+
+- **May/2022:** Our paper '[Does Configuration Encoding Matter in Learning Software Performance? An Empirical Study on Encoding Schemes](https://arxiv.org/abs/2203.15988)' has been accepted by the *19th International Conference on Mining Software Repositories* [(MSR 2022)](https://conf.researchr.org/details/msr-2022/msr-2022-technical-papers/1/Does-Configuration-Encoding-Matter-in-Learning-Software-Performance-An-Empirical-Stu) as a technical paper, with an acceptance rate of 34% (45/138).
 
 </details>
 
