@@ -21,11 +21,11 @@ I work across different AI-powered techniques for software performance engineeri
    - Developed [ML/DL approaches](https://dl.acm.org/doi/full/10.1145/3702986) that learn how high‑dimensional options, environments, and workloads shape performance to enable optimisation without exhaustive benchmarking; addressed [feature sparsity](https://ieeexplore.ieee.org/abstract/document/10744216), [rugged performance spaces](https://ieeexplore.ieee.org/abstract/document/10832565), and [cross‑environment drift](https://dl.acm.org/doi/abs/10.1145/3643743).
    - **Why it matters**: earlier performance‑issue detection, dependable capacity planning/autoscaling, and safer, faster releases with far fewer measurements.
 
- - **Current research — GenAI for industrial code optimisation**
+ - **Current research — GenAI for industrial code performance optimisation**
    - Lead work on [search-based multi‑LLM optimisation](https://arxiv.org/abs/2501.01277) and [meta‑prompting](https://arxiv.org/abs/2508.01443) for robust code scoring/optimisation, combined with [ensembling](https://arxiv.org/abs/2503.13505) and compiler techniques; implemented in commercial platforms with [TurinTech AI](https://www.turintech.ai/) and evaluated on real production workloads.
    - **Why it matters**: delivers verifiable speedups and cost reductions on production codebases while making GenAI systems more reliable and auditable in practice.
 
- - **Ongoing interests — AI4SE, SE4AI**
+ - **Ongoing interests — AI-driven software performance engineering, AI4SE, SE4AI**
    - LLM performance modelling (hybrid models + online adaptive tuning), performance‑aware GenAI systems (dynamic prompt engineering + configuration tuning), trustworthy GenAI (RLHF + uncertainty verification), and industry standards/tooling (benchmarks, profiling + static analysis validation, CI/CD integration).
    - **Why it matters**: makes GenAI systems predictable and safe in real‑world workloads, improves reproducibility and comparability, accelerates industry adoption, and lowers compute and carbon footprints.
 
