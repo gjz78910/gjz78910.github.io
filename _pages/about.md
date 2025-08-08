@@ -17,74 +17,62 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
 ## Research Focus
 I work across different AI-powered techniques for software performance engineering, from foundational machine learning models to cutting‑edge GenAI systems.
 
-### Doctoral research — Software configuration performance engineering
-- Developed [ML/DL approaches](https://dl.acm.org/doi/full/10.1145/3702986) that learn the 
-  high‑dimensional configuration options to 
-  predict and optimise performance without 
-  exhaustive benchmarking, addressing critial 
-  challenges such as [feature sparsity](https://ieeexplore.ieee.org/abstract/document/10744216), [rugged performance spaces](https://ieeexplore.ieee.org/abstract/document/10832565), and [cross‑environment drift](https://dl.acm.org/doi/abs/10.1145/3643743) (versions/hardware/workloads).
-- **Why it matters**: This 
-  enables earlier performance issue detection, 
-  software adaptibility and autoscaling, and 
-  faster product evolution with far fewer 
-  measurements.
+ - **Doctoral research — Software configuration performance engineering**
+   - Developed [ML/DL approaches](https://dl.acm.org/doi/full/10.1145/3702986) that learn how high‑dimensional options, environments, and workloads shape performance to enable optimisation without exhaustive benchmarking; addressed [feature sparsity](https://ieeexplore.ieee.org/abstract/document/10744216), [rugged performance spaces](https://ieeexplore.ieee.org/abstract/document/10832565), and [cross‑environment drift](https://dl.acm.org/doi/abs/10.1145/3643743).
+   - **Why it matters**: earlier performance‑issue detection, dependable capacity planning/autoscaling, and safer, faster releases with far fewer measurements.
 
-### Current research — GenAI for industrial code optimisation
-- Lead work on [search-based multi‑LLM optimisation](https://arxiv.org/abs/2501.01277) and [meta‑prompting](https://arxiv.org/abs/2508.01443) for robust code scoring/optimization, combined with [ensembling](https://arxiv.org/abs/2503.13505) and compiler techniques; implemented in commercial platforms via the collaboration with [TurinTech AI](https://www.turintech.ai/) and evaluated on real production workloads.
-- **Why it matters**: Our methods deliver verifiable speedups and cost reductions on production codebases while making GenAI systems more reliable and auditable in practice.
+ - **Current research — GenAI for industrial code optimisation**
+   - Lead work on [search-based multi‑LLM optimisation](https://arxiv.org/abs/2501.01277) and [meta‑prompting](https://arxiv.org/abs/2508.01443) for robust code scoring/optimisation, combined with [ensembling](https://arxiv.org/abs/2503.13505) and compiler techniques; implemented in commercial platforms with [TurinTech AI](https://www.turintech.ai/) and evaluated on real production workloads.
+   - **Why it matters**: delivers verifiable speedups and cost reductions on production codebases while making GenAI systems more reliable and auditable in practice.
 
-### Ongoing interests — AI4SE, SE4AI
-- LLM performance modeling (hybrid models + online adaptive tuning), performance‑aware GenAI systems (dynamic prompt engineering + configuration tuning), trustworthy GenAI (RLHF + uncertainty verification), and industry standards/tooling (benchmarks, profiling + static analysis validation, CI/CD integration).
-- **Why it matters**: These directions make GenAI 
- systems predictable and safe in real-world 
- workloads, enabling reproducible evaluation, 
- faster industrial adoption, and lower compute 
- and carbon footprints.
+ - **Ongoing interests — AI4SE, SE4AI**
+   - LLM performance modelling (hybrid models + online adaptive tuning), performance‑aware GenAI systems (dynamic prompt engineering + configuration tuning), trustworthy GenAI (RLHF + uncertainty verification), and industry standards/tooling (benchmarks, profiling + static analysis validation, CI/CD integration).
+   - **Why it matters**: makes GenAI systems predictable and safe in real‑world workloads, improves reproducibility and comparability, accelerates industry adoption, and lowers compute and carbon footprints.
 
 If you’re interested in collaboration, please feel free to reach out!
 
 ## News
 >
-> **July/2025:** I am honored to be selected as a **Shadow Program Committee Member** for the *IEEE/ACM International Conference on Software Engineering* [(ICSE 2026)](https://conf.researchr.org/home/icse-2026).
+>* **July/2025:** I am honored to be selected as a **Shadow Program Committee Member** for the *IEEE/ACM International Conference on Software Engineering* [(ICSE 2026)](https://conf.researchr.org/home/icse-2026).
 >
 >
-> **June/2025:** Our paper '[Dually Hierarchical Drift Adaptation for Online Configuration Performance Learning](https://arxiv.org/abs/2507.08730)' has been accepted by the *IEEE/ACM International Conference on Software Engineering* [(ICSE)](https://conf.researchr.org/home/icse-2026) as a research paper in the first round with acceptance rate 9.29% (60/646).
+>* **June/2025:** Our paper '[Dually Hierarchical Drift Adaptation for Online Configuration Performance Learning](https://arxiv.org/abs/2507.08730)' has been accepted by the *IEEE/ACM International Conference on Software Engineering* [(ICSE)](https://conf.researchr.org/home/icse-2026) as a research paper in the first round with acceptance rate 9.29% (60/646).
 >
 >
-> **June/2025:** Our paper '[Learning Software Bug Reports: A Systematic Literature Review](https://dl.acm.org/doi/abs/10.1145/3750040)' has been accepted by the *ACM Transactions on Software Engineering and Methodology
+>* **June/2025:** Our paper '[Learning Software Bug Reports: A Systematic Literature Review](https://dl.acm.org/doi/abs/10.1145/3750040)' has been accepted by the *ACM Transactions on Software Engineering and Methodology
 [(TOSEM)](https://dl.acm.org/toc/tosem/justaccepted) as a journal paper in the first round with acceptance rate 9.29% (60/646).
 >
 >
-> **January/2025:** I am honored to be awarded the [SPEC Kaivalya Dixit Distinguished Dissertation Award 2024](https://research.spec.org/news/2025-01-31-00-00-winner-of-spec-kaivalya-dixit-distinguished-dissertation-award-2024/), 
+>* **January/2025:** I am honored to be awarded the [SPEC Kaivalya Dixit Distinguished Dissertation Award 2024](https://research.spec.org/news/2025-01-31-00-00-winner-of-spec-kaivalya-dixit-distinguished-dissertation-award-2024/), 
 which is a prominent award in the domain of in computer benchmarking, performance evaluation, and experimental system analysis. 
 Grateful to @[spec_perf](https://x.com/spec_perf) for recognizing our contributions to performance engineering! Thank you @[tao_chen_ideas](https://x.com/tao_chen_ideas) and @[PooyanJamshidi](https://x.com/PooyanJamshidi) for your unwavering support!
 >
 > 
-> **November/2024:** Our paper '[Accuracy Can Lie: On the Impact of Surrogate Model in Configuration Tuning](https://ieeexplore.ieee.org/abstract/document/10832565)' has been accepted by the *IEEE Transactions on Software Engineering* [(TSE)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32) as a journal paper.
+>* **November/2024:** Our paper '[Accuracy Can Lie: On the Impact of Surrogate Model in Configuration Tuning](https://ieeexplore.ieee.org/abstract/document/10832565)' has been accepted by the *IEEE Transactions on Software Engineering* [(TSE)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32) as a journal paper.
 >
 > 
-> **October/2024:** Our paper '[Dividable Configuration Performance Learning](https://arxiv.org/abs/2409.07629)' has been accepted by the *IEEE Transactions on Software Engineering* [(TSE)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32) as a journal paper.
+>* **October/2024:** Our paper '[Dividable Configuration Performance Learning](https://arxiv.org/abs/2409.07629)' has been accepted by the *IEEE Transactions on Software Engineering* [(TSE)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32) as a journal paper.
 >
 > 
-> **September/2024:** I am selected as a **Junior Program Committee member** for the *ACM/IEEE International Conference on Mining Software Repositories* [(MSR 2025)](https://conf.researchr.org/home/msr-2025).
+>* **September/2024:** I am selected as a **Junior Program Committee member** for the *ACM/IEEE International Conference on Mining Software Repositories* [(MSR 2025)](https://conf.researchr.org/home/msr-2025).
 >
 > 
-> **August/2024:** Our paper '[Deep Configuration Performance Learning: A Systematic Survey and Taxonomy](https://arxiv.org/abs/2403.03322)' has been accepted by the *ACM Transactions on Software Engineering and Methodology* [(TOSEM)](https://dl.acm.org/journal/tosem) as a survey paper.
+>* **August/2024:** Our paper '[Deep Configuration Performance Learning: A Systematic Survey and Taxonomy](https://arxiv.org/abs/2403.03322)' has been accepted by the *ACM Transactions on Software Engineering and Methodology* [(TOSEM)](https://dl.acm.org/journal/tosem) as a survey paper.
 >
 > 
-> **July/2024:** The team I led received the **SSBSE'24 Challenge Track award** for the paper '[GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation](https://arxiv.org/abs/2407.14982)', thanks and 
+>* **July/2024:** The team I led received the **SSBSE'24 Challenge Track award** for the paper '[GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation](https://arxiv.org/abs/2407.14982)', thanks and 
 congratulations to all the authors!  
 >
 > 
-> **May/2024:** Our paper '[GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation](https://arxiv.org/abs/2407.14982)' has been accepted by the *Symposium on Search-Based Software Engineering* [(SSBSE 2024)](https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge) as a challenge track paper. 
+>* **May/2024:** Our paper '[GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation](https://arxiv.org/abs/2407.14982)' has been accepted by the *Symposium on Search-Based Software Engineering* [(SSBSE 2024)](https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge) as a challenge track paper. 
 >
 > 
-> **January/2024:** Our paper '[Predicting Configuration Performance in Multiple Environments with Sequential Meta-Leaning](https://arxiv.org/abs/2402.03183)' has been accepted by the *ACM International Conference on the Foundations of Software Engineering* [(FSE 2024)](https://conf.researchr.org/home/fse-2024) as a research paper with acceptance rate 11.6% (56 out of 483). 
+>* **January/2024:** Our paper '[Predicting Configuration Performance in Multiple Environments with Sequential Meta-Leaning](https://arxiv.org/abs/2402.03183)' has been accepted by the *ACM International Conference on the Foundations of Software Engineering* [(FSE 2024)](https://conf.researchr.org/home/fse-2024) as a research paper with acceptance rate 11.6% (56 out of 483). 
 >
 >
-> **May/2023:** Our paper '[Predicting Software Performance with Divide-and-Learn](https://arxiv.org/pdf/2306.06651)' has been accepted by the *ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering* [(ESEC/FSE 2023)](https://2023.esec-fse.org/) as a research paper with two strong accepts and no revision requested; acceptance rate 12.7% (60/473).
+>* **May/2023:** Our paper '[Predicting Software Performance with Divide-and-Learn](https://arxiv.org/pdf/2306.06651)' has been accepted by the *ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering* [(ESEC/FSE 2023)](https://2023.esec-fse.org/) as a research paper with two strong accepts and no revision requested; acceptance rate 12.7% (60/473).
 >
-> **May/2022:** Our paper '[Does Configuration Encoding Matter in Learning Software Performance? An Empirical Study on Encoding Schemes](https://arxiv.org/abs/2203.15988)' has been accepted by the *19th International Conference on Mining Software Repositories* [(MSR 2022)](https://conf.researchr.org/details/msr-2022/msr-2022-technical-papers/1/Does-Configuration-Encoding-Matter-in-Learning-Software-Performance-An-Empirical-Stu) as a technical paper, with an acceptance rate of 34% (45/138).
+>* **May/2022:** Our paper '[Does Configuration Encoding Matter in Learning Software Performance? An Empirical Study on Encoding Schemes](https://arxiv.org/abs/2203.15988)' has been accepted by the *19th International Conference on Mining Software Repositories* [(MSR 2022)](https://conf.researchr.org/details/msr-2022/msr-2022-technical-papers/1/Does-Configuration-Encoding-Matter-in-Learning-Software-Performance-An-Empirical-Stu) as a technical paper, with an acceptance rate of 34% (45/138).
 >
 >
 
