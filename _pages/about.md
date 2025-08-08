@@ -17,17 +17,29 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
 ## Research Focus
 I work across different AI-powered techniques for software performance engineering, from foundational machine learning models to cutting‑edge GenAI systems.
 
- - **Doctoral research — Software configuration performance engineering**
-   - Developed [ML/DL approaches](https://dl.acm.org/doi/full/10.1145/3702986) that learn how high‑dimensional options, environments, and workloads shape performance to enable optimisation without exhaustive benchmarking; addressed [feature sparsity](https://ieeexplore.ieee.org/abstract/document/10744216), [rugged performance spaces](https://ieeexplore.ieee.org/abstract/document/10832565), and [cross‑environment drift](https://dl.acm.org/doi/abs/10.1145/3643743).
-   - **Why it matters**: earlier performance‑issue detection, dependable capacity planning/autoscaling, and safer, faster releases with far fewer measurements.
+- **Doctoral research — Software configuration performance engineering**
+  - Developed [ML/DL approaches](https://dl.acm.org/doi/full/10.1145/3702986) that learn the 
+    high‑dimensional configuration options to 
+    predict and optimise performance without 
+    exhaustive benchmarking, addressing critial 
+    challenges such as [feature sparsity](https://ieeexplore.ieee.org/abstract/document/10744216), [rugged performance spaces](https://ieeexplore.ieee.org/abstract/document/10832565), and [cross‑environment drift](https://dl.acm.org/doi/abs/10.1145/3643743) (versions/hardware/workloads).
+  - **Why it matters**: This 
+    enables earlier performance issue detection, 
+    software adaptibility and autoscaling, and 
+    faster product evolution with far fewer 
+    measurements.
 
- - **Current research — GenAI for industrial code performance optimisation**
-   - Lead work on [search-based multi‑LLM optimisation](https://arxiv.org/abs/2501.01277) and [meta‑prompting](https://arxiv.org/abs/2508.01443) for robust code scoring/optimisation, combined with [ensembling](https://arxiv.org/abs/2503.13505) and compiler techniques; implemented in commercial platforms with [TurinTech AI](https://www.turintech.ai/) and evaluated on real production workloads.
-   - **Why it matters**: delivers verifiable speedups and cost reductions on production codebases while making GenAI systems more reliable and auditable in practice.
+- **Current research — GenAI for industrial code performance optimisation**
+  - Lead work on [search-based multi‑LLM optimisation](https://arxiv.org/abs/2501.01277) and [meta‑prompting](https://arxiv.org/abs/2508.01443) for robust code scoring/optimization, combined with [ensembling](https://arxiv.org/abs/2503.13505) and compiler techniques; implemented in commercial platforms via the collaboration with [TurinTech AI](https://www.turintech.ai/) and evaluated on real production workloads.
+  - **Why it matters**: Our methods deliver verifiable speedups and cost reductions on production codebases while making GenAI systems more reliable and auditable in practice.
 
- - **Ongoing interests — AI-driven software performance engineering, AI4SE, SE4AI**
-   - LLM performance modelling (hybrid models + online adaptive tuning), performance‑aware GenAI systems (dynamic prompt engineering + configuration tuning), trustworthy GenAI (RLHF + uncertainty verification), and industry standards/tooling (benchmarks, profiling + static analysis validation, CI/CD integration).
-   - **Why it matters**: makes GenAI systems predictable and safe in real‑world workloads, improves reproducibility and comparability, accelerates industry adoption, and lowers compute and carbon footprints.
+- **Ongoing interests — AI-driven performance engineering, AI4SE, SE4AI**
+  - LLM performance modeling (hybrid models + online adaptive tuning), performance‑aware GenAI systems (dynamic prompt engineering + configuration tuning), trustworthy GenAI (RLHF + uncertainty verification), and industry standards/tooling (benchmarks, profiling + static analysis validation, CI/CD integration).
+  - **Why it matters**: These directions make GenAI 
+  systems predictable and safe in real-world 
+  workloads, enabling reproducible evaluation, 
+  faster industrial adoption, and lower compute 
+  and carbon footprints.
 
 If you’re interested in collaboration, please feel free to reach out!
 
@@ -40,7 +52,7 @@ If you’re interested in collaboration, please feel free to reach out!
 >
 >
 >* **June/2025:** Our paper '[Learning Software Bug Reports: A Systematic Literature Review](https://dl.acm.org/doi/abs/10.1145/3750040)' has been accepted by the *ACM Transactions on Software Engineering and Methodology
-[(TOSEM)](https://dl.acm.org/toc/tosem/justaccepted) as a journal paper in the first round with acceptance rate 9.29% (60/646).
+[(TOSEM)](https://dl.acm.org/toc/tosem/justaccepted) as a journal paper.
 >
 >
 >* **January/2025:** I am honored to be awarded the [SPEC Kaivalya Dixit Distinguished Dissertation Award 2024](https://research.spec.org/news/2025-01-31-00-00-winner-of-spec-kaivalya-dixit-distinguished-dissertation-award-2024/), 
