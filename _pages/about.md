@@ -25,7 +25,7 @@ I work across different AI-powered techniques for software performance engineeri
     challenges such as [feature sparsity](https://ieeexplore.ieee.org/abstract/document/10744216), [rugged performance spaces](https://ieeexplore.ieee.org/abstract/document/10832565), and [cross‑environment drift](https://dl.acm.org/doi/abs/10.1145/3643743) (versions/hardware/workloads).
   - **Why it matters**: This 
     enables earlier performance issue detection, 
-    software adaptibility and autoscaling, and 
+    software adaptability and autoscaling, and 
     faster product evolution with far fewer 
     measurements.
 
