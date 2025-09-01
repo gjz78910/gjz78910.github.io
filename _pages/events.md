@@ -6,6 +6,9 @@ author_profile: true
 ---
 
 ## ICPE 2025
+![ICPE 2025](/images/event_images/spec-award.jpg)
+*Trophy of the [SPEC Kaivalya Dixit Distinguished Dissertation Award](https://research.spec.org/awards/past-winners/2024/)*
+
 ![ICPE 2025](/images/event_images/icpe25.png)
 *Attending (online) SPEC Kaivalya Dixit Distinguished Dissertation Award Ceremony at [ICPE'25](https://research.spec.org/awards/past-winners/2024/)*
 
