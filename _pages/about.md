@@ -44,16 +44,18 @@ I work across different AI-powered techniques for software performance engineeri
 If you’re interested in collaboration, please feel free to reach out!
 
 ## News
+>* **October/2025:** I am selected as a **Junior Program Committee member** for the *ACM/IEEE International Conference on Mining Software Repositories* [(MSR 2026)](https://2026.msrconf.org/).
+>
 >* **October/2025:** Our paper '[GA4GC: Greener Agent for Greener Code via Multi-Objective Configuration Optimization](placeholder-link)' has been accepted by the *Symposium on Search-Based Software Engineering* [(SSBSE 2025)](https://conf.researchr.org/home/ssbse-2025) as a challenge track paper.
 >
 >* **September/2025:** I am honored to be invited as a **Program Committee Member** for the *ACM Web Conference* [(WWW 2026)](https://www2026.thewebconf.org/).
 >
->* **September/2025:** Our paper '[Tuning LLM-based Code Optimization via Meta-Prompting: An Industrial Perspective](https://arxiv.org/abs/2508.01443)' has been accepted by the *IEEE/ACM International Conference on Automated Software Engineering* [(ASE)](https://conf.researchr.org/home/ase-2025) as a industry showcase paper with acceptance rate 44% (61/139).
+>* **September/2025:** Our paper '[Tuning LLM-based Code Optimization via Meta-Prompting: An Industrial Perspective](https://arxiv.org/abs/2508.01443)' has been accepted by the *IEEE/ACM International Conference on Automated Software Engineering* [(ASE 2025)](https://conf.researchr.org/home/ase-2025) as a industry showcase paper with acceptance rate 44% (61/139).
 >
 >* **July/2025:** I am honored to be selected as a **Shadow Program Committee Member** for the *IEEE/ACM International Conference on Software Engineering* [(ICSE 2026)](https://conf.researchr.org/home/icse-2026).
 >
 >
->* **June/2025:** Our paper '[Dually Hierarchical Drift Adaptation for Online Configuration Performance Learning](https://arxiv.org/abs/2507.08730)' has been accepted by the *IEEE/ACM International Conference on Software Engineering* [(ICSE)](https://conf.researchr.org/home/icse-2026) as a research paper in the first round with acceptance rate 9.29% (60/646).
+>* **June/2025:** Our paper '[Dually Hierarchical Drift Adaptation for Online Configuration Performance Learning](https://arxiv.org/abs/2507.08730)' has been accepted by the *IEEE/ACM International Conference on Software Engineering* [(ICSE 2026)](https://conf.researchr.org/home/icse-2026) as a research paper in the first round with acceptance rate 9.29% (60/646).
 >
 >
 >* **June/2025:** Our paper '[Learning Software Bug Reports: A Systematic Literature Review](https://dl.acm.org/doi/abs/10.1145/3750040)' has been accepted by the *ACM Transactions on Software Engineering and Methodology
