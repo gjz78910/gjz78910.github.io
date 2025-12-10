@@ -5,6 +5,18 @@ permalink: /events/
 author_profile: true
 ---
 
+## ASE 2025
+![ASE 2025](/images/event_images/ase25.jpg)
+*Presenting at [ASE 2025](https://conf.researchr.org/home/ase-2025)*
+
+## SSBSE 2025
+![SSBSE 2025](/images/event_images/ssbse25.jpg)
+*Presenting at [SSBSE 2025](https://conf.researchr.org/home/ssbse-2025)*
+
+## AIware 2025
+![AIware 2025](/images/event_images/aiware25.jpg)
+*Session Chair at [AIware 2025](https://conf.researchr.org/home/aiware-2025)*
+
 ## ICPE 2025
 ![ICPE 2025](/images/event_images/spec-award.jpg)
 *Trophy of the [SPEC Kaivalya Dixit Distinguished Dissertation Award](https://research.spec.org/awards/past-winners/2024/)*
@@ -20,8 +32,8 @@ author_profile: true
 ![FSE 2024](/images/event_images/fse24.jpg)
 *Presenting at [FSE 2024](https://conf.researchr.org/home/fse-2024)*
 
-![FSE 2024](/images/event_images/fse24-2.jpg)
-*Attending [FSE 2024](https://conf.researchr.org/home/fse-2024)*
+<!-- ![FSE 2024](/images/event_images/fse24-2.jpg)
+*Attending [FSE 2024](https://conf.researchr.org/home/fse-2024)* -->
 
 ## SSBSE 2024
 ![SSBSE 2024](/images/event_images/ssbse24.jpg)
