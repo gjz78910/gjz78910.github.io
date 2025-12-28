@@ -44,6 +44,8 @@ I work across different AI-powered techniques for software performance engineeri
 If you’re interested in collaboration, please feel free to reach out!
 
 ## News
+>* **November/2025:** I am honored to receive the **Distinguished Reviewer** award in the *IEEE/ACM International Conference on Software Engineering* [(ICSE 2025)](https://conf.researchr.org/home/icse-2025) Shadow PC.
+>
 >* **October/2025:** I am selected as a **Junior Program Committee member** for the *ACM/IEEE International Conference on Mining Software Repositories* [(MSR 2026)](https://2026.msrconf.org/).
 >
 >* **October/2025:** Our paper '[GA4GC: Greener Agent for Greener Code via Multi-Objective Configuration Optimization](placeholder-link)' has been accepted by the *Symposium on Search-Based Software Engineering* [(SSBSE 2025)](https://conf.researchr.org/home/ssbse-2025) as a challenge track paper.
