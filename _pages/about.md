@@ -44,9 +44,11 @@ I work across different AI-powered techniques for software performance engineeri
 If you’re interested in collaboration, please feel free to reach out!
 
 ## News
+>* **January/2026:** I am honored to be selected as a **Program Committee Member** for the *IEEE International Conference on Software Testing, Verification and Validation* [(ICST 2026)](https://conf.researchr.org/home/icst-2026).
+>
 >* **November/2025:** I am honored to receive the **Distinguished Reviewer** award in the *IEEE/ACM International Conference on Software Engineering* [(ICSE 2025)](https://conf.researchr.org/home/icse-2025) Shadow PC.
 >
->* **October/2025:** I am selected as a **Junior Program Committee member** for the *ACM/IEEE International Conference on Mining Software Repositories* [(MSR 2026)](https://2026.msrconf.org/).
+>* **October/2025:** I am honored to be selected as a **Junior Program Committee member** for the *ACM/IEEE International Conference on Mining Software Repositories* [(MSR 2026)](https://2026.msrconf.org/).
 >
 >* **October/2025:** Our paper '[GA4GC: Greener Agent for Greener Code via Multi-Objective Configuration Optimization](placeholder-link)' has been accepted by the *Symposium on Search-Based Software Engineering* [(SSBSE 2025)](https://conf.researchr.org/home/ssbse-2025) as a challenge track paper.
 >
@@ -75,7 +77,7 @@ Grateful to @[spec_perf](https://x.com/spec_perf) for recognizing our contributi
 >* **October/2024:** Our paper '[Dividable Configuration Performance Learning](https://arxiv.org/abs/2409.07629)' has been accepted by the *IEEE Transactions on Software Engineering* [(TSE)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32) as a journal paper.
 >
 > 
->* **September/2024:** I am selected as a **Junior Program Committee member** for the *ACM/IEEE International Conference on Mining Software Repositories* [(MSR 2025)](https://conf.researchr.org/home/msr-2025).
+>* **September/2024:** I am honored to be selected as a **Junior Program Committee member** for the *ACM/IEEE International Conference on Mining Software Repositories* [(MSR 2025)](https://conf.researchr.org/home/msr-2025).
 >
 > 
 >* **August/2024:** Our paper '[Deep Configuration Performance Learning: A Systematic Survey and Taxonomy](https://arxiv.org/abs/2403.03322)' has been accepted by the *ACM Transactions on Software Engineering and Methodology* [(TOSEM)](https://dl.acm.org/journal/tosem) as a survey paper.
