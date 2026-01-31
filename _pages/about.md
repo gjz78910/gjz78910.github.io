@@ -74,10 +74,9 @@ If you’re interested in collaboration, please feel free to reach out!
 which is a prominent award in the domain of in computer benchmarking, performance evaluation, and experimental system analysis. 
 Grateful to @[spec_perf](https://x.com/spec_perf) for recognizing our contributions to performance engineering! Thank you @[tao_chen_ideas](https://x.com/tao_chen_ideas) and @[PooyanJamshidi](https://x.com/PooyanJamshidi) for your unwavering support!
 >
+>* <a id="toggle-older-news" onclick="toggleOlderNews(); return false;" href="#" style="text-decoration: none; color: #5cb85c; border-bottom: 1px dotted #5cb85c; cursor: pointer; font-size: 0.95em;">Show older news</a>
 
-<button id="toggle-older-news" onclick="toggleOlderNews()" style="margin-top: 1em; padding: 0.5em 1em; background-color: #5cb85c; color: white; border: none; border-radius: 0.25em; cursor: pointer; font-size: 0.9em;">Show older news</button>
-
-<div id="older-news" style="display: none; margin-top: 1em;">
+<div id="older-news" style="display: none; margin-top: 1em;" markdown="1">
 >* **November/2024:** Our paper '[Accuracy Can Lie: On the Impact of Surrogate Model in Configuration Tuning](https://ieeexplore.ieee.org/abstract/document/10832565)' has been accepted by the *IEEE Transactions on Software Engineering* [(TSE)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32) as a journal paper.
 >
 > 
@@ -113,10 +112,10 @@ function toggleOlderNews() {
   
   if (olderNews.style.display === 'none') {
     olderNews.style.display = 'block';
-    button.textContent = 'Hide older news (2023 and earlier)';
+    button.textContent = 'Hide older news';
   } else {
     olderNews.style.display = 'none';
-    button.textContent = 'Show older news (2023 and earlier)';
+    button.textContent = 'Show older news';
   }
 }
 </script>
