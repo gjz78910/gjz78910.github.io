@@ -18,8 +18,6 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
 
 ## Research Interests
 
-I work across different AI-powered techniques for software performance engineering, from foundational machine learning models to cutting‑edge GenAI systems.
-
 <style>
 .research-grid {
   display: grid;
@@ -101,72 +99,100 @@ I work across different AI-powered techniques for software performance engineeri
 If you’re interested in collaboration, please feel free to reach out!
 
 ## News
->* **February/2026:** I am honored to be invited as a **Program Committee Member** for the *ACM SIGSOFT International Symposium on Software Testing and Analysis* [(ISSTA 2026)](https://conf.researchr.org/home/issta-2026).
->
->* **January/2026:** Our paper '[Analyzing Message-Code Inconsistency in AI Coding Agent-Authored Pull Requests](https://arxiv.org/abs/2601.04886)' and '[Comparing AI Coding Agents: A Task-Stratified Analysis of Pull Request Acceptance]()' have been accepted by the *ACM/IEEE International Conference on Mining Software Repositories* [(MSR 2026)](https://2026.msrconf.org/track/msr-2026-mining-challenge#Call-for-Mining-Challenge-Papers) as Mining Challenge track papers.
->
->* **January/2026:** I am honored to be selected as a **Program Committee Member** for the *IEEE International Conference on Software Testing, Verification and Validation* [(ICST 2026)](https://conf.researchr.org/home/icst-2026).
->
->* **November/2025:** I am honored to receive the **Distinguished Reviewer** award in the *IEEE/ACM International Conference on Software Engineering* [(ICSE 2025)](https://conf.researchr.org/home/icse-2025) Shadow PC.
->
->* **October/2025:** I am honored to be selected as a **Junior Program Committee member** for the *ACM/IEEE International Conference on Mining Software Repositories* [(MSR 2026)](https://2026.msrconf.org/).
->
->* **October/2025:** Our paper '[GA4GC: Greener Agent for Greener Code via Multi-Objective Configuration Optimization](placeholder-link)' has been accepted by the *Symposium on Search-Based Software Engineering* [(SSBSE 2025)](https://conf.researchr.org/home/ssbse-2025) as a challenge track paper.
->
->* **September/2025:** I am honored to be invited as a **Program Committee Member** for the *ACM Web Conference* [(WWW 2026)](https://www2026.thewebconf.org/).
->
->* **September/2025:** Our paper '[Tuning LLM-based Code Optimization via Meta-Prompting: An Industrial Perspective](https://arxiv.org/abs/2508.01443)' has been accepted by the *IEEE/ACM International Conference on Automated Software Engineering* [(ASE 2025)](https://conf.researchr.org/home/ase-2025) as a industry showcase paper with acceptance rate 44% (61/139).
->
->* **July/2025:** I am honored to be selected as a **Shadow Program Committee Member** for the *IEEE/ACM International Conference on Software Engineering* [(ICSE 2026)](https://conf.researchr.org/home/icse-2026).
->
->
->* **June/2025:** Our paper '[Dually Hierarchical Drift Adaptation for Online Configuration Performance Learning](https://arxiv.org/abs/2507.08730)' has been accepted by the *IEEE/ACM International Conference on Software Engineering* [(ICSE 2026)](https://conf.researchr.org/home/icse-2026) as a research paper in the first round with acceptance rate 9.29% (60/646).
->
->
->* **June/2025:** Our paper '[Learning Software Bug Reports: A Systematic Literature Review](https://dl.acm.org/doi/abs/10.1145/3750040)' has been accepted by the *ACM Transactions on Software Engineering and Methodology
-[(TOSEM)](https://dl.acm.org/toc/tosem/justaccepted) as a journal paper.
->
->
->* **January/2025:** I am honored to be awarded the [SPEC Kaivalya Dixit Distinguished Dissertation Award 2024](https://research.spec.org/news/2025-01-31-00-00-winner-of-spec-kaivalya-dixit-distinguished-dissertation-award-2024/), 
-which is a prominent award in the domain of in computer benchmarking, performance evaluation, and experimental system analysis. 
-Grateful to @[spec_perf](https://x.com/spec_perf) for recognizing our contributions to performance engineering! Thank you @[tao_chen_ideas](https://x.com/tao_chen_ideas) and @[PooyanJamshidi](https://x.com/PooyanJamshidi) for your unwavering support!
->
->* <a id="toggle-older-news" onclick="toggleOlderNews(); return false;" href="#" style="text-decoration: none; color: #5cb85c; border-bottom: 1px dotted #5cb85c; cursor: pointer; font-size: 0.95em;">Show older news</a>
 
-<div id="older-news" style="display: none; margin-top: 1em;" markdown="1">
->* **November/2024:** Our paper '[Accuracy Can Lie: On the Impact of Surrogate Model in Configuration Tuning](https://ieeexplore.ieee.org/abstract/document/10832565)' has been accepted by the *IEEE Transactions on Software Engineering* [(TSE)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32) as a journal paper.
->
-> 
->* **October/2024:** Our paper '[Dividable Configuration Performance Learning](https://arxiv.org/abs/2409.07629)' has been accepted by the *IEEE Transactions on Software Engineering* [(TSE)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32) as a journal paper.
->
-> 
->* **September/2024:** I am honored to be selected as a **Junior Program Committee member** for the *ACM/IEEE International Conference on Mining Software Repositories* [(MSR 2025)](https://conf.researchr.org/home/msr-2025).
->
-> 
->* **August/2024:** Our paper '[Deep Configuration Performance Learning: A Systematic Survey and Taxonomy](https://arxiv.org/abs/2403.03322)' has been accepted by the *ACM Transactions on Software Engineering and Methodology* [(TOSEM)](https://dl.acm.org/journal/tosem) as a survey paper.
->
-> 
->* **July/2024:** The team I led received the **SSBSE'24 Challenge Track award** for the paper '[GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation](https://arxiv.org/abs/2407.14982)', thanks and 
-congratulations to all the authors!  
->
-> 
->* **May/2024:** Our paper '[GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation](https://arxiv.org/abs/2407.14982)' has been accepted by the *Symposium on Search-Based Software Engineering* [(SSBSE 2024)](https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge) as a challenge track paper. 
->
-> 
->* **January/2024:** Our paper '[Predicting Configuration Performance in Multiple Environments with Sequential Meta-Leaning](https://arxiv.org/abs/2402.03183)' has been accepted by the *ACM International Conference on the Foundations of Software Engineering* [(FSE 2024)](https://conf.researchr.org/home/fse-2024) as a research paper with acceptance rate 11.6% (56 out of 483). 
->
->* **May/2023:** Our paper '[Predicting Software Performance with Divide-and-Learn](https://arxiv.org/pdf/2306.06651)' has been accepted by the *ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering* [(ESEC/FSE 2023)](https://2023.esec-fse.org/) as a research paper with two strong accepts and no revision requested; acceptance rate 12.7% (60/473).
->
->* **May/2022:** Our paper '[Does Configuration Encoding Matter in Learning Software Performance? An Empirical Study on Encoding Schemes](https://arxiv.org/abs/2203.15988)' has been accepted by the *19th International Conference on Mining Software Repositories* [(MSR 2022)](https://conf.researchr.org/details/msr-2022/msr-2022-technical-papers/1/Does-Configuration-Encoding-Matter-in-Learning-Software-Performance-An-Empirical-Stu) as a technical paper, with an acceptance rate of 34% (45/138).
->
->
+<style>
+.news-timeline {
+  list-style: none;
+  padding: 0 0 0 1.3rem;
+  margin: 0.75rem 0 0.5rem;
+  border-left: 2px solid #e0e0e0;
+}
+.news-timeline li {
+  position: relative;
+  padding: 0 0 0.85rem 0.5rem;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+.news-timeline li::before {
+  content: '';
+  position: absolute;
+  left: -1.55rem;
+  top: 0.38em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+}
+.news-timeline li.paper::before  { background: #5cb85c; }
+.news-timeline li.award::before   { background: #e06666; }
+.news-timeline li.service::before { background: #0087BD; }
+.news-badge {
+  display: inline;
+  padding: .15em .5em .2em;
+  font-size: 72%;
+  font-weight: bold;
+  color: #fff;
+  border-radius: .25em;
+  white-space: nowrap;
+  vertical-align: middle;
+  margin-right: 0.25em;
+}
+.news-badge.paper   { background: #5cb85c; }
+.news-badge.award   { background: #e06666; }
+.news-badge.service { background: #0087BD; }
+.news-date {
+  font-size: 0.83em;
+  color: #999;
+  margin-right: 0.3em;
+}
+.news-toggle-btn {
+  background: none;
+  border: none;
+  border-bottom: 1px dotted #5cb85c;
+  color: #5cb85c;
+  cursor: pointer;
+  font-size: 0.88em;
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+  display: inline-block;
+}
+</style>
+
+<ul class="news-timeline">
+  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Feb 2026</span>Invited as <strong>Program Committee Member</strong> for the <em>ACM SIGSOFT International Symposium on Software Testing and Analysis</em> <a href="https://conf.researchr.org/home/issta-2026">(ISSTA 2026)</a>.</li>
+  <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Jan 2026</span>'<a href="https://arxiv.org/abs/2601.04886">Analyzing Message-Code Inconsistency in AI Coding Agent-Authored Pull Requests</a>' and '<a href="">Comparing AI Coding Agents: A Task-Stratified Analysis of Pull Request Acceptance</a>' accepted at <a href="https://2026.msrconf.org/track/msr-2026-mining-challenge#Call-for-Mining-Challenge-Papers">MSR 2026</a> Mining Challenge track.</li>
+  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Jan 2026</span>Selected as <strong>Program Committee Member</strong> for the <em>IEEE International Conference on Software Testing, Verification and Validation</em> <a href="https://conf.researchr.org/home/icst-2026">(ICST 2026)</a>.</li>
+  <li class="award"><span class="news-badge award">Award</span><span class="news-date">Nov 2025</span>Received the <strong>Distinguished Reviewer</strong> award at the <em>IEEE/ACM International Conference on Software Engineering</em> <a href="https://conf.researchr.org/home/icse-2025">(ICSE 2025)</a> Shadow PC.</li>
+  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Oct 2025</span>Selected as <strong>Junior Program Committee member</strong> for the <em>ACM/IEEE International Conference on Mining Software Repositories</em> <a href="https://2026.msrconf.org/">(MSR 2026)</a>.</li>
+  <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Oct 2025</span>'<a href="placeholder-link">GA4GC: Greener Agent for Greener Code via Multi-Objective Configuration Optimization</a>' accepted at <a href="https://conf.researchr.org/home/ssbse-2025">SSBSE 2025</a> as a challenge track paper.</li>
+  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Sep 2025</span>Invited as <strong>Program Committee Member</strong> for the <em>ACM Web Conference</em> <a href="https://www2026.thewebconf.org/">(WWW 2026)</a>.</li>
+  <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Sep 2025</span>'<a href="https://arxiv.org/abs/2508.01443">Tuning LLM-based Code Optimization via Meta-Prompting: An Industrial Perspective</a>' accepted at <a href="https://conf.researchr.org/home/ase-2025">ASE 2025</a> as an industry showcase paper (acceptance rate 44%, 61/139).</li>
+  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Jul 2025</span>Selected as <strong>Shadow Program Committee Member</strong> for the <em>IEEE/ACM International Conference on Software Engineering</em> <a href="https://conf.researchr.org/home/icse-2026">(ICSE 2026)</a>.</li>
+  <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Jun 2025</span>'<a href="https://arxiv.org/abs/2507.08730">Dually Hierarchical Drift Adaptation for Online Configuration Performance Learning</a>' accepted at <a href="https://conf.researchr.org/home/icse-2026">ICSE 2026</a> in the first round (acceptance rate 9.29%, 60/646).</li>
+  <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Jun 2025</span>'<a href="https://dl.acm.org/doi/abs/10.1145/3750040">Learning Software Bug Reports: A Systematic Literature Review</a>' accepted at <a href="https://dl.acm.org/toc/tosem/justaccepted">TOSEM</a> as a journal paper.</li>
+  <li class="award"><span class="news-badge award">Award</span><span class="news-date">Jan 2025</span>Awarded the <a href="https://research.spec.org/news/2025-01-31-00-00-winner-of-spec-kaivalya-dixit-distinguished-dissertation-award-2024/"><strong>SPEC Kaivalya Dixit Distinguished Dissertation Award 2024</strong></a>, a prominent award in computer benchmarking, performance evaluation, and experimental system analysis.</li>
+</ul>
+
+<button id="toggle-older-news" class="news-toggle-btn" onclick="toggleOlderNews()">Show older news</button>
+
+<div id="older-news" style="display: none; margin-top: 0.5rem;">
+<ul class="news-timeline">
+  <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Nov 2024</span>'<a href="https://ieeexplore.ieee.org/abstract/document/10832565">Accuracy Can Lie: On the Impact of Surrogate Model in Configuration Tuning</a>' accepted at <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32">TSE</a> as a journal paper.</li>
+  <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Oct 2024</span>'<a href="https://arxiv.org/abs/2409.07629">Dividable Configuration Performance Learning</a>' accepted at <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32">TSE</a> as a journal paper.</li>
+  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Sep 2024</span>Selected as <strong>Junior Program Committee member</strong> for the <em>ACM/IEEE International Conference on Mining Software Repositories</em> <a href="https://conf.researchr.org/home/msr-2025">(MSR 2025)</a>.</li>
+  <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Aug 2024</span>'<a href="https://arxiv.org/abs/2403.03322">Deep Configuration Performance Learning: A Systematic Survey and Taxonomy</a>' accepted at <a href="https://dl.acm.org/journal/tosem">TOSEM</a> as a survey paper.</li>
+  <li class="award"><span class="news-badge award">Award</span><span class="news-date">Jul 2024</span>The team I led received the <strong>SSBSE'24 Challenge Track award</strong> for '<a href="https://arxiv.org/abs/2407.14982">GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation</a>'.</li>
+  <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">May 2024</span>'<a href="https://arxiv.org/abs/2407.14982">GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation</a>' accepted at <a href="https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge">SSBSE 2024</a> as a challenge track paper.</li>
+  <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Jan 2024</span>'<a href="https://arxiv.org/abs/2402.03183">Predicting Configuration Performance in Multiple Environments with Sequential Meta-Learning</a>' accepted at <a href="https://conf.researchr.org/home/fse-2024">FSE 2024</a> (acceptance rate 11.6%, 56/483).</li>
+  <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">May 2023</span>'<a href="https://arxiv.org/pdf/2306.06651">Predicting Software Performance with Divide-and-Learn</a>' accepted at <a href="https://2023.esec-fse.org/">ESEC/FSE 2023</a> (acceptance rate 12.7%, 60/473).</li>
+  <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">May 2022</span>'<a href="https://arxiv.org/abs/2203.15988">Does Configuration Encoding Matter in Learning Software Performance? An Empirical Study on Encoding Schemes</a>' accepted at <a href="https://conf.researchr.org/details/msr-2022/msr-2022-technical-papers/1/Does-Configuration-Encoding-Matter-in-Learning-Software-Performance-An-Empirical-Stu">MSR 2022</a> (acceptance rate 34%, 45/138).</li>
+</ul>
 </div>
 
 <script>
 function toggleOlderNews() {
   const olderNews = document.getElementById('older-news');
   const button = document.getElementById('toggle-older-news');
-  
   if (olderNews.style.display === 'none') {
     olderNews.style.display = 'block';
     button.textContent = 'Hide older news';
