@@ -5,45 +5,89 @@ permalink: /events/
 author_profile: true
 ---
 
-## ASE 2025
-![ASE 2025](/images/event_images/ase25.jpg)
-*Presenting at [ASE 2025](https://conf.researchr.org/home/ase-2025)*
+<style>
+.events-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1rem 0 2.5rem 0;
+}
+.event-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+}
+.event-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+.event-card .event-caption {
+  padding: 0.6rem 0.8rem;
+  font-size: 0.85em;
+  color: #444;
+  line-height: 1.4;
+}
+@media (max-width: 640px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 
-## SSBSE 2025
-![SSBSE 2025](/images/event_images/ssbse25.jpg)
-*Presenting at [SSBSE 2025](https://conf.researchr.org/home/ssbse-2025)*
+## 2025
 
-## AIware 2025
-![AIware 2025](/images/event_images/aiware25.jpg)
-*Session Chair at [AIware 2025](https://conf.researchr.org/home/aiware-2025)*
+<div class="events-grid">
+  <div class="event-card">
+    <img src="/images/event_images/ase25.jpg" alt="ASE 2025">
+    <div class="event-caption">Presenting at <a href="https://conf.researchr.org/home/ase-2025">ASE 2025</a></div>
+  </div>
+  <div class="event-card">
+    <img src="/images/event_images/ssbse25.jpg" alt="SSBSE 2025">
+    <div class="event-caption">Presenting at <a href="https://conf.researchr.org/home/ssbse-2025">SSBSE 2025</a></div>
+  </div>
+  <div class="event-card">
+    <img src="/images/event_images/aiware25.jpg" alt="AIware 2025">
+    <div class="event-caption">Session Chair at <a href="https://conf.researchr.org/home/aiware-2025">AIware 2025</a></div>
+  </div>
+  <div class="event-card">
+    <img src="/images/event_images/spec-award.jpg" alt="SPEC Award">
+    <div class="event-caption">Trophy of the <a href="https://research.spec.org/awards/past-winners/2024/">SPEC Kaivalya Dixit Distinguished Dissertation Award</a></div>
+  </div>
+  <div class="event-card">
+    <img src="/images/event_images/icpe25.png" alt="ICPE 2025">
+    <div class="event-caption">Attending (online) SPEC Kaivalya Dixit Distinguished Dissertation Award Ceremony at <a href="https://research.spec.org/awards/past-winners/2024/">ICPE 2025</a></div>
+  </div>
+</div>
 
-## ICPE 2025
-![ICPE 2025](/images/event_images/spec-award.jpg)
-*Trophy of the [SPEC Kaivalya Dixit Distinguished Dissertation Award](https://research.spec.org/awards/past-winners/2024/)*
+## 2024
 
-![ICPE 2025](/images/event_images/icpe25.png)
-*Attending (online) SPEC Kaivalya Dixit Distinguished Dissertation Award Ceremony at [ICPE'25](https://research.spec.org/awards/past-winners/2024/)*
+<div class="events-grid">
+  <div class="event-card">
+    <img src="/images/event_images/KTPConf24.jpg" alt="KTP Conference 2024">
+    <div class="event-caption">Attending <a href="https://www.ktp-uk.org/">KTP Conference 2024</a></div>
+  </div>
+  <div class="event-card">
+    <img src="/images/event_images/fse24.jpg" alt="FSE 2024">
+    <div class="event-caption">Presenting at <a href="https://conf.researchr.org/home/fse-2024">FSE 2024</a></div>
+  </div>
+  <div class="event-card">
+    <img src="/images/event_images/ssbse24.jpg" alt="SSBSE 2024">
+    <div class="event-caption">Presenting at <a href="https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge">SSBSE 2024</a></div>
+  </div>
+  <div class="event-card">
+    <img src="/images/event_images/cow24.jpg" alt="COW 2024">
+    <div class="event-caption">Attending <a href="https://www.ucl.ac.uk/crest/events/2024/mar/66th-crest-open-workshop-ssbse-challenge-track-collaborative-jam-session">66th COW 2024</a></div>
+  </div>
+</div>
 
-## KTP Conference 2024
-![KTP Conference 2024](/images/event_images/KTPConf24.jpg)
-*Attending [KTP Conference 2024](https://www.ktp-uk.org/)*
+## 2023
 
-## FSE 2024
-![FSE 2024](/images/event_images/fse24.jpg)
-*Presenting at [FSE 2024](https://conf.researchr.org/home/fse-2024)*
-
-<!-- ![FSE 2024](/images/event_images/fse24-2.jpg)
-*Attending [FSE 2024](https://conf.researchr.org/home/fse-2024)* -->
-
-## SSBSE 2024
-![SSBSE 2024](/images/event_images/ssbse24.jpg)
-*Presenting at [SSBSE 2024](https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge)*
-
-## COW 2024
-![COW 2024](/images/event_images/cow24.jpg)
-*Attending [66th COW 2024](https://www.ucl.ac.uk/crest/events/2024/mar/66th-crest-open-workshop-ssbse-challenge-track-collaborative-jam-session)*
-
-## FSE 2023
-![FSE 2023](/images/event_images/fse23.jpg)
-*Presenting at [FSE 2023](https://2023.esec-fse.org/)*
-
+<div class="events-grid">
+  <div class="event-card">
+    <img src="/images/event_images/fse23.jpg" alt="FSE 2023">
+    <div class="event-caption">Presenting at <a href="https://2023.esec-fse.org/">FSE 2023</a></div>
+  </div>
+</div>
