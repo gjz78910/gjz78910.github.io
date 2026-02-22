@@ -25,10 +25,11 @@ author_profile: true
 }
 .event-card img {
   width: 100%;
-  height: 210px;
+  aspect-ratio: 3/2;
   object-fit: cover;
   display: block;
 }
+.page__title { display: none; }
 .event-card .event-caption {
   padding: 0.6rem 0.8rem;
   font-size: 0.85em;
