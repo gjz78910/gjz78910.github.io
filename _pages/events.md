@@ -17,6 +17,11 @@ author_profile: true
   border-radius: 4px;
   overflow: hidden;
   background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
 }
 .event-card img {
   width: 100%;
