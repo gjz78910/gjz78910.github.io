@@ -8,38 +8,90 @@ redirect_from:
   - /about.html
 ---
 
-I'm an AI4SE researcher building trustworthy, efficient, and sustainable software using AI. I currently work as a Research Associate in AI for Software Engineering at [King's College London](https://www.kcl.ac.uk/), contributing to the [ITEA GENIUS project](https://itea4.org/project/genius.html)—a multinational collaboration leveraging GenAI and LLMs to enhance software development life cycle. I am a member of the [Software Systems (SSY) group](https://www.kcl.ac.uk/research/ssy) in the [Department of Informatics](https://www.kcl.ac.uk/informatics), supervised by [Dr Jie M. Zhang](https://www.kcl.ac.uk/people/jie-zhang), [Dr Gunel Jahangirova](https://www.kcl.ac.uk/people/gunel-jahangirova), and [Prof Mohammad Reza Mousavi](https://www.kcl.ac.uk/people/mohammad-reza-mousavi). My work focuses on developing quality assurance methods for LLM-based software engineering, ensuring the functionality, quality, and architectural soundness of both human and AI-generated software systems.
+I'm an AI4SE researcher building trustworthy, efficient, and sustainable software using AI. 
+
+I currently work as a Research Associate in AI for Software Engineering at [King's College London](https://www.kcl.ac.uk/), contributing to the [ITEA GENIUS project](https://itea4.org/project/genius.html)—a multinational collaboration leveraging GenAI and LLMs to enhance software development life cycle. I am a member of the [Software Systems (SSY) group](https://www.kcl.ac.uk/research/ssy) in the [Department of Informatics](https://www.kcl.ac.uk/informatics), supervised by [Dr Jie M. Zhang](https://www.kcl.ac.uk/people/jie-zhang), [Dr Gunel Jahangirova](https://www.kcl.ac.uk/people/gunel-jahangirova), and [Prof Mohammad Reza Mousavi](https://www.kcl.ac.uk/people/mohammad-reza-mousavi). My work focuses on developing quality assurance methods for LLM-based software engineering, ensuring the functionality, quality, and architectural soundness of both human and AI-generated software systems.
 
 Previously, from June 2024 to November 2025, I worked as a postdoctoral [KTP Associate](https://www.ktp-uk.org/) with both the [University of Leeds](https://www.leeds.ac.uk/) and [TurinTech AI](https://www.turintech.ai/), focusing on compiler- and LLM-based code optimisation. We successfully completed the two-year KTP plan in just one and a half years. At the University of Leeds, I was a member of the [Intelligent Systems Software Lab (ISSL)](https://issl-uk.com/) and the [Distributed Systems and Services (DSS)](https://distributed-systems.leeds.ac.uk/) research group, supervised by [Prof Jie Xu](https://eps.leeds.ac.uk/computing/staff/331/professor-jie-xu) and [Prof Zheng Wang](https://zwang4.github.io/). At TurinTech AI, I was a member of the Data Science team led by [Dr Fan Wu](https://scholar.google.com/citations?user=p8z2_usAAAAJ&hl=en) and [Dr Paul Brookes](https://www.linkedin.com/in/paul-brookes-125288b2/).
 
 I completed my PhD in Dec 2024 in the [Department of Computer Science](https://www.lboro.ac.uk/departments/compsci/) at [Loughborough University](https://www.lboro.ac.uk/), supervised by [Dr Tao Chen](https://scholar.google.co.uk/citations?user=K4teyvoAAAAJ&hl=en) in the [<kbd>IDEAS Laboratory</kbd>](https://ideas-labo.github.io/) (Intelligent Dependability Engineering for Adaptive Software Laboratory). My PhD thesis received the [SPEC Kaivalya Dixit Distinguished Dissertation Award 2024](https://research.spec.org/awards/past-winners/2024/), a prominent award in computer benchmarking, performance evaluation, and experimental system analysis.
 
-## Research Focus
+## Research Interests
+
 I work across different AI-powered techniques for software performance engineering, from foundational machine learning models to cutting‑edge GenAI systems.
 
-- **Doctoral research — Software configuration performance engineering**
-  - Developed [ML/DL approaches](https://dl.acm.org/doi/full/10.1145/3702986) that learn the 
-    high‑dimensional configuration options to 
-    predict and optimise performance without 
-    exhaustive benchmarking, addressing critial 
-    challenges such as [feature sparsity](https://ieeexplore.ieee.org/abstract/document/10744216), [rugged performance spaces](https://ieeexplore.ieee.org/abstract/document/10832565), and [cross‑environment drift](https://dl.acm.org/doi/abs/10.1145/3643743) (versions/hardware/workloads).
-  - **Why it matters**: This 
-    enables earlier performance issue detection, 
-    software adaptability and autoscaling, and 
-    faster product evolution with far fewer 
-    measurements.
+<style>
+.research-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1rem 0 1.5rem 0;
+}
+.research-card {
+  border: 1px solid #e0e0e0;
+  border-top: 3px solid #5cb85c;
+  border-radius: 4px;
+  padding: 1rem 1.1rem 0.9rem;
+  background: #fff;
+}
+.research-card-title {
+  font-weight: bold;
+  font-size: 0.95em;
+  margin-bottom: 0.6rem;
+  color: #222;
+}
+.research-card-body {
+  font-size: 0.88em;
+  line-height: 1.55;
+  margin-bottom: 0.75rem;
+}
+.research-card-why {
+  font-size: 0.83em;
+  color: #555;
+  border-top: 1px solid #eee;
+  padding-top: 0.55rem;
+  line-height: 1.45;
+}
+@media (max-width: 640px) {
+  .research-grid { grid-template-columns: 1fr; }
+}
+</style>
 
-- **Current research — GenAI for industrial code performance optimisation**
-  - Lead work on [search-based multi‑LLM optimisation](https://arxiv.org/abs/2501.01277) and [meta‑prompting](https://arxiv.org/abs/2508.01443) for robust code scoring/optimization, combined with [ensembling](https://arxiv.org/abs/2503.13505) and compiler techniques; implemented in commercial platforms via the collaboration with [TurinTech AI](https://www.turintech.ai/) and evaluated on real production workloads.
-  - **Why it matters**: Our methods deliver verifiable speedups and cost reductions on production codebases while making GenAI systems more reliable and auditable in practice.
+<div class="research-grid">
 
-- **Ongoing interests — AI-driven performance engineering, AI4SE, SE4AI**
-  - LLM performance modeling (hybrid models + online adaptive tuning), performance‑aware GenAI systems (dynamic prompt engineering + configuration tuning), trustworthy GenAI (RLHF + uncertainty verification), and industry standards/tooling (benchmarks, profiling + static analysis validation, CI/CD integration).
-  - **Why it matters**: These directions make GenAI 
-  systems predictable and safe in real-world 
-  workloads, enabling reproducible evaluation, 
-  faster industrial adoption, and lower compute 
-  and carbon footprints.
+  <div class="research-card">
+    <div class="research-card-title">Software Configuration Performance Engineering</div>
+    <div class="research-card-body">
+      Data-driven <a href="https://dl.acm.org/doi/full/10.1145/3702986">ML/DL approaches</a> that learn high‑dimensional configuration spaces to predict and optimise performance without exhaustive benchmarking, tackling challenges such as <a href="https://ieeexplore.ieee.org/abstract/document/10744216">feature sparsity</a>, <a href="https://ieeexplore.ieee.org/abstract/document/10832565">rugged performance spaces</a>, and <a href="https://dl.acm.org/doi/abs/10.1145/3643743">cross‑environment drift</a> (versions, hardware, workloads).
+    </div>
+    <div class="research-card-why"><strong>Why it matters:</strong> Enables earlier performance issue detection, software adaptability and autoscaling, and faster product evolution with far fewer measurements.</div>
+  </div>
+
+  <div class="research-card">
+    <div class="research-card-title">Trustworthy AI-assisted Software Development</div>
+    <div class="research-card-body">
+      Quality assurance and optimisation methods for LLM‑based software engineering — focusing on how we <a href="https://arxiv.org/abs/2601.04886">evaluate</a>, <a href="https://arxiv.org/abs/2601.04886">compare</a>, and improve AI-assisted coding workflows under realistic constraints (correctness, robustness, cost, sustainability), using SBSE‑style strategies to orchestrate LLMs and make results more reliable in practice.
+    </div>
+    <div class="research-card-why"><strong>Why it matters:</strong> Turns LLM-assisted coding from "best‑effort generation" into an auditable engineering process, improving reproducibility and safety while reducing wasted compute.</div>
+  </div>
+
+  <div class="research-card">
+    <div class="research-card-title">GenAI for Code Performance Optimisation</div>
+    <div class="research-card-body">
+      <a href="https://arxiv.org/abs/2501.01277">Search-based multi‑LLM optimisation</a> and <a href="https://arxiv.org/abs/2508.01443">meta‑prompting</a> for robust code scoring and optimisation, combined with <a href="https://arxiv.org/abs/2503.13505">ensembling</a> and compiler techniques; implemented in commercial platforms via <a href="https://www.turintech.ai/">TurinTech AI</a> and evaluated on real production workloads.
+    </div>
+    <div class="research-card-why"><strong>Why it matters:</strong> Delivers verifiable speedups and cost reductions on production codebases while making GenAI systems more reliable and auditable in practice.</div>
+  </div>
+
+  <div class="research-card">
+    <div class="research-card-title">General AI4SE &amp; SE4AI</div>
+    <div class="research-card-body">
+      LLM performance modeling (hybrid models + online adaptive tuning), performance‑aware GenAI systems (dynamic prompt engineering + configuration tuning), trustworthy GenAI (RLHF + uncertainty verification), and industry standards and tooling (benchmarks, profiling, static analysis, CI/CD integration).
+    </div>
+    <div class="research-card-why"><strong>Why it matters:</strong> Makes GenAI systems predictable and safe in real-world workloads, enabling reproducible evaluation, faster industrial adoption, and lower compute and carbon footprints.</div>
+  </div>
+
+</div>
 
 If you’re interested in collaboration, please feel free to reach out!
 
