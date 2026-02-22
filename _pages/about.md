@@ -33,6 +33,11 @@ I work across different AI-powered techniques for software performance engineeri
   border-radius: 4px;
   padding: 1rem 1.1rem 0.9rem;
   background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.research-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
 }
 .research-card-title {
   font-weight: bold;
@@ -72,7 +77,7 @@ I work across different AI-powered techniques for software performance engineeri
     <div class="research-card-body">
       Quality assurance and optimisation methods for LLM‑based software engineering — focusing on how we <a href="https://arxiv.org/abs/2601.04886">evaluate</a>, <a href="https://arxiv.org/abs/2601.04886">compare</a>, and improve AI-assisted coding workflows under realistic constraints (correctness, robustness, cost, sustainability), using SBSE‑style strategies to orchestrate LLMs and make results more reliable in practice.
     </div>
-    <div class="research-card-why"><strong>Why it matters:</strong> Turns LLM-assisted coding from "best‑effort generation" into an auditable engineering process, improving reproducibility and safety while reducing wasted compute.</div>
+    <div class="research-card-why"><strong>Why it matters:</strong> Transforms unverified, ad-hoc LLM-assisted coding into a reproducible engineering process, reducing computing resources and carbon footprint.</div>
   </div>
 
   <div class="research-card">
