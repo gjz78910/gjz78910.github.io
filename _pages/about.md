@@ -245,11 +245,20 @@ function toggleOlderNews() {
   border-color: #5cb85c;
   color: #fff;
 }
-.pub-list { margin: 0; }
+.pub-list { margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
 .pub-item {
+  font-size: 0.9em;
   text-align: justify;
-  margin-bottom: 0.75rem;
   line-height: 1.5;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 0.6rem 0.85rem;
+  background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.pub-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.09);
 }
 .pub-badge {
   display: inline;
