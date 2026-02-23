@@ -27,7 +27,7 @@ I'm an AI4SE researcher building trustworthy, efficient, and sustainable softwar
 
 <div class="bio-para">
 <div class="bio-para-text" markdown="1">
-I currently work as a Research Associate in AI for Software Engineering at [King's College London](https://www.kcl.ac.uk/), contributing to the [ITEA4 GENIUS project](https://itea4.org/project/genius.html)—a multinational collaboration leveraging GenAI and LLMs to enhance software development life cycle. I am a member of the [Software Systems (SSY) group](https://www.kcl.ac.uk/research/ssy) in the [Department of Informatics](https://www.kcl.ac.uk/informatics), supervised by [Dr Jie M. Zhang](https://www.kcl.ac.uk/people/jie-zhang), [Dr Gunel Jahangirova](https://www.kcl.ac.uk/people/gunel-jahangirova), and [Prof Mohammad Reza Mousavi](https://www.kcl.ac.uk/people/mohammad-reza-mousavi). My work focuses on developing quality assurance methods for LLM-based software engineering, ensuring the functionality, quality, and architectural soundness of both human and AI-generated software systems.
+I currently work as a Research Associate in AI for Software Engineering at [King's College London](https://www.kcl.ac.uk/), contributing to the [ITEA4 GENIUS project](https://itea4.org/project/genius.html)—a multinational collaboration leveraging GenAI and LLMs to enhance software development life cycle. I am a member of the [Software Systems (SSY) group](https://www.kcl.ac.uk/research/ssy) in the [Department of Informatics](https://www.kcl.ac.uk/informatics), supervised by [Dr Jie M. Zhang](https://sites.google.com/view/jie-zhang/home), [Dr Gunel Jahangirova](https://www.kcl.ac.uk/people/gunel-jahangirova), and [Prof Mohammad Reza Mousavi](https://www.kcl.ac.uk/people/mohammad-reza-mousavi). My work focuses on developing quality assurance methods for LLM-based software engineering, ensuring the functionality, quality, and architectural soundness of both human and AI-generated software systems.
 </div>
 <img class="bio-logo" src="/images/event_images/kcl_logo.png" alt="King's College London" style="max-height: 100px;">
 </div>
@@ -64,7 +64,7 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
 }
 .research-card-img {
   width: 100%;
-  aspect-ratio: 5/3;
+  aspect-ratio: 3/1;
   object-fit: cover;
   display: block;
 }
