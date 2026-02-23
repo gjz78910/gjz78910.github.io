@@ -47,6 +47,10 @@ author_profile: true
 
 <div class="events-grid">
   <div class="event-card">
+    <img src="/images/event_images/icse25_award.jpg" alt="ICSE 2025 Distinguished Reviewer Award">
+    <div class="event-caption"><strong>Distinguished Reviewer Award</strong> at <a href="https://conf.researchr.org/home/icse-2025">ICSE 2025</a> Shadow PC</div>
+  </div>
+  <div class="event-card">
     <img src="/images/event_images/ase25.jpg" alt="ASE 2025">
     <div class="event-caption">Presenting at <a href="https://conf.researchr.org/home/ase-2025">ASE 2025</a></div>
   </div>
@@ -64,11 +68,7 @@ author_profile: true
   </div>
   <div class="event-card">
     <img src="/images/event_images/icpe25.jpeg" alt="ICPE 2025">
-    <div class="event-caption">Attending (online) SPEC Kaivalya Dixit Distinguished Dissertation Award Ceremony at <a href="https://research.spec.org/awards/past-winners/2024/">ICPE 2025</a></div>
-  </div>
-  <div class="event-card">
-    <img src="/images/event_images/icse25_award.jpg" alt="ICSE 2025 Distinguished Reviewer Award">
-    <div class="event-caption">Received the <strong>Distinguished Reviewer Award</strong> at <a href="https://conf.researchr.org/home/icse-2025">ICSE 2025</a> Shadow PC</div>
+    <div class="event-caption">SPEC Kaivalya Dixit Distinguished Dissertation <strong>Award Ceremony</strong> at <a href="https://research.spec.org/awards/past-winners/2024/">ICPE 2025</a></div>
   </div>
 </div>
 
@@ -84,16 +84,16 @@ author_profile: true
     <div class="event-caption">Presenting at <a href="https://conf.researchr.org/home/fse-2024">FSE 2024</a></div>
   </div>
   <div class="event-card">
+    <img src="/images/event_images/ssbse24_award.jpg" alt="SSBSE 2024 Challenge Award">
+    <div class="event-caption"><strong>Challenge Winning Award</strong> at <a href="https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge">SSBSE 2024</a></div>
+  </div>
+  <div class="event-card">
     <img src="/images/event_images/ssbse24.jpg" alt="SSBSE 2024">
     <div class="event-caption">Presenting at <a href="https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge">SSBSE 2024</a></div>
   </div>
   <div class="event-card">
     <img src="/images/event_images/cow24.jpeg" alt="COW 2024">
     <div class="event-caption">Attending <a href="https://www.ucl.ac.uk/crest/events/2024/mar/66th-crest-open-workshop-ssbse-challenge-track-collaborative-jam-session">66th COW 2024</a></div>
-  </div>
-  <div class="event-card">
-    <img src="/images/event_images/ssbse24_award.jpg" alt="SSBSE 2024 Challenge Award">
-    <div class="event-caption"><strong>Challenge Track Winner</strong> at <a href="https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge">SSBSE 2024</a></div>
   </div>
 </div>
 
