@@ -63,11 +63,12 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .research-card-img {
-  width: calc(100% + 2.2rem);
-  margin: 0.5rem -1.1rem;
+  display: block;
+  width: 100%;
   aspect-ratio: 3/1.1;
   object-fit: cover;
-  display: block;
+  margin: 0.5rem auto;
+  border-radius: 3px;
 }
 .research-card-content {
   padding: 0.85rem 1.1rem 0.9rem;
