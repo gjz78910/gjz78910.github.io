@@ -70,6 +70,10 @@ author_profile: true
     <img src="/images/event_images/icpe25.jpeg" alt="ICPE 2025">
     <div class="event-caption">SPEC Kaivalya Dixit Distinguished Dissertation <strong>Award Ceremony</strong> at <a href="https://research.spec.org/awards/past-winners/2024/">ICPE 2025</a></div>
   </div>
+    <div class="event-card">
+    <img src="/images/event_images/cow68.jpg" alt="68th COW">
+    <div class="event-caption">Attending <a href="https://www.ucl.ac.uk/crest/events/2025/sep/68th-crest-open-workshop-ssbse-challenge-track-collaborative-jam-session">68th COW</a></div>
+  </div>
 </div>
 
 ## 2024
@@ -92,8 +96,8 @@ author_profile: true
     <div class="event-caption">Presenting at <a href="https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge">SSBSE 2024</a></div>
   </div>
   <div class="event-card">
-    <img src="/images/event_images/cow24.jpeg" alt="COW 2024">
-    <div class="event-caption">Attending <a href="https://www.ucl.ac.uk/crest/events/2024/mar/66th-crest-open-workshop-ssbse-challenge-track-collaborative-jam-session">66th COW 2024</a></div>
+    <img src="/images/event_images/cow66.jpeg" alt="66th COW">
+    <div class="event-caption">Attending <a href="https://www.ucl.ac.uk/crest/events/2024/mar/66th-crest-open-workshop-ssbse-challenge-track-collaborative-jam-session">66th COW</a></div>
   </div>
 </div>
 
