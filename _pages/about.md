@@ -11,23 +11,30 @@ redirect_from:
 I'm an AI4SE researcher building trustworthy, efficient, and sustainable software using AI.
 
 <style>
-.bio-para { overflow: hidden; margin-bottom: 1em; }
-.bio-logo { float: right; max-height: 120px; width: auto; margin: 0.1em 0 0.6em 1.2em; border-radius: 4px; }
+.bio-para { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1em; }
+.bio-para-text { flex: 1; min-width: 0; }
+.bio-logo { width: auto; border-radius: 4px; flex-shrink: 0; }
 </style>
 
-<div class="bio-para" markdown="1">
-<img class="bio-logo" src="/images/event_images/kcl_logo.png" alt="King's College London" style="max-height: 100px;">
+<div class="bio-para">
+<div class="bio-para-text" markdown="1">
 I currently work as a Research Associate in AI for Software Engineering at [King's College London](https://www.kcl.ac.uk/), contributing to the [ITEA GENIUS project](https://itea4.org/project/genius.html)—a multinational collaboration leveraging GenAI and LLMs to enhance software development life cycle. I am a member of the [Software Systems (SSY) group](https://www.kcl.ac.uk/research/ssy) in the [Department of Informatics](https://www.kcl.ac.uk/informatics), supervised by [Dr Jie M. Zhang](https://www.kcl.ac.uk/people/jie-zhang), [Dr Gunel Jahangirova](https://www.kcl.ac.uk/people/gunel-jahangirova), and [Prof Mohammad Reza Mousavi](https://www.kcl.ac.uk/people/mohammad-reza-mousavi). My work focuses on developing quality assurance methods for LLM-based software engineering, ensuring the functionality, quality, and architectural soundness of both human and AI-generated software systems.
 </div>
-
-<div class="bio-para" markdown="1">
-<img class="bio-logo" src="/images/event_images/ktp_logos.jpg" alt="University of Leeds / TurinTech AI" style="max-height: 120px;">
-Previously, from June 2024 to November 2025, I worked as a postdoctoral [KTP Associate](https://www.ktp-uk.org/) with both the [University of Leeds](https://www.leeds.ac.uk/) and [TurinTech AI](https://www.turintech.ai/), focusing on compiler- and LLM-based code optimisation. We successfully completed the two-year KTP plan in just one and a half years. At the University of Leeds, I was a member of the [Intelligent Systems Software Lab (ISSL)](https://issl-uk.com/) and the [Distributed Systems and Services (DSS)](https://distributed-systems.leeds.ac.uk/) research group, supervised by [Prof Jie Xu](https://eps.leeds.ac.uk/computing/staff/331/professor-jie-xu) and [Prof Zheng Wang](https://zwang4.github.io/). At TurinTech AI, I was a member of the Data Science team led by [Dr Fan Wu](https://scholar.google.com/citations?user=p8z2_usAAAAJ&hl=en) and [Dr Paul Brookes](https://www.linkedin.com/in/paul-brookes-125288b2/).
+<img class="bio-logo" src="/images/event_images/kcl_logo.png" alt="King's College London" style="max-height: 100px;">
 </div>
 
-<div class="bio-para" markdown="1">
-<img class="bio-logo" src="/images/event_images/spec-award.jpg" alt="SPEC Kaivalya Dixit Distinguished Dissertation Award" style="max-height: 160px;">
+<div class="bio-para">
+<div class="bio-para-text" markdown="1">
+Previously, from June 2024 to November 2025, I worked as a postdoctoral [KTP Associate](https://www.ktp-uk.org/) with both the [University of Leeds](https://www.leeds.ac.uk/) and [TurinTech AI](https://www.turintech.ai/), focusing on compiler- and LLM-based code optimisation. We successfully completed the two-year KTP plan in just one and a half years. At the University of Leeds, I was a member of the [Intelligent Systems Software Lab (ISSL)](https://issl-uk.com/) and the [Distributed Systems and Services (DSS)](https://distributed-systems.leeds.ac.uk/) research group, supervised by [Prof Jie Xu](https://eps.leeds.ac.uk/computing/staff/331/professor-jie-xu) and [Prof Zheng Wang](https://zwang4.github.io/). At TurinTech AI, I was a member of the Data Science team led by [Dr Fan Wu](https://scholar.google.com/citations?user=p8z2_usAAAAJ&hl=en) and [Dr Paul Brookes](https://www.linkedin.com/in/paul-brookes-125288b2/).
+</div>
+<img class="bio-logo" src="/images/event_images/ktp_logos.jpg" alt="University of Leeds / TurinTech AI" style="max-height: 120px;">
+</div>
+
+<div class="bio-para">
+<div class="bio-para-text" markdown="1">
 I completed my PhD in Dec 2024 in the [Department of Computer Science](https://www.lboro.ac.uk/departments/compsci/) at [Loughborough University](https://www.lboro.ac.uk/), supervised by [Dr Tao Chen](https://scholar.google.co.uk/citations?user=K4teyvoAAAAJ&hl=en) in the [<kbd>IDEAS Laboratory</kbd>](https://ideas-labo.github.io/) (Intelligent Dependability Engineering for Adaptive Software Laboratory). My PhD thesis received the [SPEC Kaivalya Dixit Distinguished Dissertation Award 2024](https://research.spec.org/awards/past-winners/2024/), a prominent award in computer benchmarking, performance evaluation, and experimental system analysis.
+</div>
+<img class="bio-logo" src="/images/event_images/spec-award.jpg" alt="SPEC Kaivalya Dixit Distinguished Dissertation Award" style="max-height: 160px;">
 </div>
 
 ## Research Interests
