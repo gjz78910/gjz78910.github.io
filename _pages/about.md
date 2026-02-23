@@ -63,7 +63,8 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .research-card-img {
-  width: 100%;
+  width: calc(100% + 2.2rem);
+  margin: 0.5rem -1.1rem;
   aspect-ratio: 3/1.1;
   object-fit: cover;
   display: block;
@@ -103,45 +104,45 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
 <div class="research-grid">
 
   <div class="research-card">
-    <img class="research-card-img" src="/images/event_images/config_perf_eng.jpeg" alt="Software Configuration Performance Engineering">
     <div class="research-card-content">
     <div class="research-card-title">Software Configuration Performance Engineering</div>
     <div class="research-card-body">
       Data-driven <a href="https://dl.acm.org/doi/full/10.1145/3702986">ML/DL approaches</a> that learn high‑dimensional configuration spaces to predict and optimise performance without exhaustive benchmarking, tackling challenges such as <a href="https://ieeexplore.ieee.org/abstract/document/10744216">feature sparsity</a>, <a href="https://ieeexplore.ieee.org/abstract/document/10832565">rugged performance spaces</a>, and <a href="https://dl.acm.org/doi/abs/10.1145/3643743">cross‑environment drift</a> (versions, hardware, workloads).
     </div>
+    <img class="research-card-img" src="/images/event_images/config_perf_eng.jpeg" alt="Software Configuration Performance Engineering">
     <div class="research-card-why"><strong>Why it matters:</strong> Enables earlier performance issue detection, software adaptability and autoscaling, and faster product evolution with far fewer measurements.</div>
     </div>
   </div>
 
   <div class="research-card">
-    <img class="research-card-img" src="/images/event_images/trust_SDLC.jpeg" alt="Trustworthy AI-assisted Software Development">
     <div class="research-card-content">
     <div class="research-card-title">Trustworthy AI-assisted Software Development</div>
     <div class="research-card-body">
       Quality assurance and optimisation methods for LLM‑based software engineering — focusing on how we <a href="https://arxiv.org/abs/2601.04886">evaluate</a>, <a href="https://arxiv.org/abs/2601.04886">compare</a>, and improve AI-assisted coding workflows under realistic constraints (correctness, robustness, cost, sustainability), using SBSE‑style strategies to orchestrate LLMs and make results more reliable in practice.
     </div>
+    <img class="research-card-img" src="/images/event_images/trust_SDLC.jpeg" alt="Trustworthy AI-assisted Software Development">
     <div class="research-card-why"><strong>Why it matters:</strong> Transforms unverified, ad-hoc LLM-assisted coding into a reproducible engineering process, reducing computing resources and carbon footprint.</div>
     </div>
   </div>
 
   <div class="research-card">
-    <img class="research-card-img" src="/images/event_images/code_opt.jpeg" alt="GenAI for Code Performance Optimisation">
     <div class="research-card-content">
     <div class="research-card-title">GenAI for Code Performance Optimisation</div>
     <div class="research-card-body">
       <a href="https://arxiv.org/abs/2501.01277">Search-based multi‑LLM optimisation</a> and <a href="https://arxiv.org/abs/2508.01443">meta‑prompting</a> for robust code scoring and optimisation, combined with <a href="https://arxiv.org/abs/2503.13505">ensembling</a> and compiler techniques; implemented in commercial platforms via <a href="https://www.turintech.ai/">TurinTech AI</a> and evaluated on real production workloads.
     </div>
+    <img class="research-card-img" src="/images/event_images/code_opt.jpeg" alt="GenAI for Code Performance Optimisation">
     <div class="research-card-why"><strong>Why it matters:</strong> Delivers verifiable speedups and cost reductions on production codebases while making GenAI systems more reliable and auditable in practice.</div>
     </div>
   </div>
 
   <div class="research-card">
-    <img class="research-card-img" src="/images/event_images/SE4AI.jpeg" alt="General AI4SE & SE4AI">
     <div class="research-card-content">
     <div class="research-card-title">General AI4SE &amp; SE4AI</div>
     <div class="research-card-body">
       LLM performance modeling (hybrid models + online adaptive tuning), performance‑aware GenAI systems (dynamic prompt engineering + configuration tuning), trustworthy GenAI (RLHF + uncertainty verification), and industry standards and tooling (benchmarks, profiling, static analysis, CI/CD integration).
     </div>
+    <img class="research-card-img" src="/images/event_images/SE4AI.jpeg" alt="General AI4SE & SE4AI">
     <div class="research-card-why"><strong>Why it matters:</strong> Makes GenAI systems predictable and safe in real-world workloads, enabling reproducible evaluation, faster industrial adoption, and lower compute and carbon footprints.</div>
     </div>
   </div>
