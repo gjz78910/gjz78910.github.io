@@ -12,7 +12,7 @@ I'm an AI4SE researcher building trustworthy, efficient, and sustainable softwar
 
 <style>
 .bio-para { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1em; }
-.bio-para-text { flex: 1; min-width: 0; }
+.bio-para-text { flex: 1; min-width: 0; text-align: justify; }
 .bio-logo { width: auto; border-radius: 4px; flex-shrink: 0; }
 </style>
 
@@ -68,6 +68,7 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
   font-size: 0.88em;
   line-height: 1.55;
   margin-bottom: 0.75rem;
+  text-align: justify;
 }
 .research-card-why {
   font-size: 0.83em;
@@ -133,6 +134,7 @@ If you’re interested in collaboration, please feel free to reach out!
   padding: 0 0 0.85rem 0.5rem;
   font-size: 0.9em;
   line-height: 1.5;
+  text-align: justify;
 }
 .news-timeline li::before {
   content: '';
