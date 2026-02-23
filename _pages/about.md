@@ -64,7 +64,7 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
 }
 .research-card-img {
   width: 100%;
-  aspect-ratio: 3/1;
+  aspect-ratio: 16/9;
   object-fit: cover;
   display: block;
 }
@@ -103,7 +103,7 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
 <div class="research-grid">
 
   <div class="research-card">
-    <img class="research-card-img" src="/images/event_images/config_perf_eng.png" alt="Software Configuration Performance Engineering">
+    <img class="research-card-img" src="/images/event_images/config_perf_eng.jpeg" alt="Software Configuration Performance Engineering">
     <div class="research-card-content">
     <div class="research-card-title">Software Configuration Performance Engineering</div>
     <div class="research-card-body">
@@ -114,7 +114,7 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
   </div>
 
   <div class="research-card">
-    <img class="research-card-img" src="/images/event_images/trust_SDLC.png" alt="Trustworthy AI-assisted Software Development">
+    <img class="research-card-img" src="/images/event_images/trust_SDLC.jpeg" alt="Trustworthy AI-assisted Software Development">
     <div class="research-card-content">
     <div class="research-card-title">Trustworthy AI-assisted Software Development</div>
     <div class="research-card-body">
@@ -125,7 +125,7 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
   </div>
 
   <div class="research-card">
-    <img class="research-card-img" src="/images/event_images/code_opt.png" alt="GenAI for Code Performance Optimisation">
+    <img class="research-card-img" src="/images/event_images/code_opt.jpeg" alt="GenAI for Code Performance Optimisation">
     <div class="research-card-content">
     <div class="research-card-title">GenAI for Code Performance Optimisation</div>
     <div class="research-card-body">
@@ -136,7 +136,7 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
   </div>
 
   <div class="research-card">
-    <img class="research-card-img" src="/images/event_images/SE4AI.png" alt="General AI4SE & SE4AI">
+    <img class="research-card-img" src="/images/event_images/SE4AI.jpeg" alt="General AI4SE & SE4AI">
     <div class="research-card-content">
     <div class="research-card-title">General AI4SE &amp; SE4AI</div>
     <div class="research-card-body">
