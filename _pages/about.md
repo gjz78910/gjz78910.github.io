@@ -11,9 +11,27 @@ redirect_from:
 I'm an AI4SE researcher building trustworthy, efficient, and sustainable software using AI.
 
 <style>
-.bio-para { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1em; }
+.bio-para {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.bio-para:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+}
 .bio-para-text { flex: 1; min-width: 0; text-align: justify; }
 .bio-logo { width: auto; border-radius: 4px; flex-shrink: 0; }
+@media (max-width: 640px) {
+  .bio-para { flex-direction: column; align-items: flex-start; }
+  .bio-logo { align-self: center; margin-top: 0.75rem; }
+}
 </style>
 
 <div class="bio-para">
