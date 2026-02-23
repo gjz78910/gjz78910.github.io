@@ -64,7 +64,7 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
 }
 .research-card-img {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 3/1.1;
   object-fit: cover;
   display: block;
 }
