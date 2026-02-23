@@ -12,11 +12,11 @@ I'm an AI4SE researcher building trustworthy, efficient, and sustainable softwar
 
 <style>
 .bio-para { overflow: hidden; margin-bottom: 1em; }
-.bio-logo { float: right; max-height: 80px; width: auto; margin: 0.1em 0 0.6em 1.2em; border-radius: 4px; }
+.bio-logo { float: right; max-height: 120px; width: auto; margin: 0.1em 0 0.6em 1.2em; border-radius: 4px; }
 </style>
 
 <div class="bio-para" markdown="1">
-<img class="bio-logo" src="/images/event_images/kcl_logo.jpeg" alt="King's College London">
+<img class="bio-logo" src="/images/event_images/kcl_logo.png" alt="King's College London">
 I currently work as a Research Associate in AI for Software Engineering at [King's College London](https://www.kcl.ac.uk/), contributing to the [ITEA GENIUS project](https://itea4.org/project/genius.html)—a multinational collaboration leveraging GenAI and LLMs to enhance software development life cycle. I am a member of the [Software Systems (SSY) group](https://www.kcl.ac.uk/research/ssy) in the [Department of Informatics](https://www.kcl.ac.uk/informatics), supervised by [Dr Jie M. Zhang](https://www.kcl.ac.uk/people/jie-zhang), [Dr Gunel Jahangirova](https://www.kcl.ac.uk/people/gunel-jahangirova), and [Prof Mohammad Reza Mousavi](https://www.kcl.ac.uk/people/mohammad-reza-mousavi). My work focuses on developing quality assurance methods for LLM-based software engineering, ensuring the functionality, quality, and architectural soundness of both human and AI-generated software systems.
 </div>
 
@@ -250,8 +250,6 @@ function toggleOlderNews() {
   font-size: 0.9em;
   text-align: justify;
   line-height: 1.5;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
   padding: 0.6rem 0.85rem;
   background: #fff;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
