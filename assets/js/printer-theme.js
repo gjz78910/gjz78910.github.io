@@ -57,10 +57,44 @@
     var pool = soundPools[id];
     if (!pool || !pool.players || pool.players.length === 0) return;
 
-    var player = pool.players[pool.index];
-    pool.index = (pool.index + 1) % pool.players.length;
+    var player = null;
+    var i;
+    var idx;
+    var candidate;
+    var len = pool.players.length;
+
+    // Prefer a buffered player that is currently idle.
+    for (i = 0; i < len; i++) {
+      idx = (pool.index + i) % len;
+      candidate = pool.players[idx];
+      if (candidate.readyState >= 2 && (candidate.paused || candidate.ended)) {
+        player = candidate;
+        pool.index = (idx + 1) % len;
+        break;
+      }
+    }
+
+    // Otherwise pick any buffered player.
+    if (!player) {
+      for (i = 0; i < len; i++) {
+        idx = (pool.index + i) % len;
+        candidate = pool.players[idx];
+        if (candidate.readyState >= 2) {
+          player = candidate;
+          pool.index = (idx + 1) % len;
+          break;
+        }
+      }
+    }
+
+    // Last resort: use next pool entry.
+    if (!player) {
+      player = pool.players[pool.index];
+      pool.index = (pool.index + 1) % len;
+    }
 
     try {
+      if (player.readyState < 2) player.load();
       player.currentTime = 0;
       var p = player.play();
       if (p && p.catch) {
@@ -141,7 +175,7 @@
           // Keep a short delay so click-triggered audio starts before navigation.
           setTimeout(function () {
             window.location.href = '/printer/';
-          }, 220);
+          }, 420);
         }
       });
     }
@@ -161,7 +195,7 @@
           sessionStorage.setItem('printer-nav', 'events');
           setTimeout(function () {
             window.location.href = '/printer/events/';
-          }, 220);
+          }, 420);
         }
       });
     }
