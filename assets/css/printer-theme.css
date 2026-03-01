@@ -78,16 +78,10 @@
 
 /* =============================================================
    SLOT BOTTOM BAR  (z-index: 2 — above paper, below frame)
-
-   This is a sibling of .printer-frame in .printer-container.
-   It sits in normal flow directly after the frame.
-   The paper (z:1) is pulled up by margin-top to sit in the gap
-   between the frame's bottom border and this bar.
    ============================================================= */
 .slot-bottom-bar {
   height: 7px;
   background: #1a1714;
-  /* Inset left/right by 28px to align with the side walls */
   margin-left: 28px;
   margin-right: 28px;
   position: relative;
@@ -98,17 +92,21 @@
 /* =============================================================
    PAPER OUTPUT AREA  (z-index: 1 — bottommost layer)
 
-   margin-top = -(gap + slot-bottom-bar) = -(20 + 7) = -27px
-   This pulls the paper top up to the gap top (frame bottom border).
-   The paper is then visible in the 20px gap between frame and bar.
+   overflow: hidden clips the paper while it slides up during
+   animation — prevents it from showing through the printer frame.
+   The clip starts right at the slot-bottom-bar bottom edge.
+
+   margin-top: 0  — sits directly below the slot-bottom-bar.
+   The paper sheet starts at translateY(-100%) and animates to 0.
    margin-left/right = 28px matches the side walls.
    ============================================================= */
 .paper-output-area {
   margin-left: 28px;
   margin-right: 28px;
-  margin-top: -27px;   /* pull up: gap(20) + slot-bottom-bar(7) */
+  margin-top: 0;
   position: relative;
   z-index: 1;
+  overflow: hidden;   /* clips paper during feed-in so it doesn't show behind frame */
 }
 
 /* =============================================================
@@ -448,7 +446,7 @@
   .printer-brand { font-size: 1.1rem; }
   .paper-output-area { margin-left: 16px; margin-right: 16px; }
   .slot-bottom-bar { margin-left: 16px; margin-right: 16px; }
-  .printer-frame::before, .printer-frame::after { width: 16px; }
+  .printer-frame::before, .printer-frame::after { width: 16px; bottom: -20px; height: 20px; }
   .paper-sheet { padding: 2rem 1.5rem 2.5rem; min-height: 400px; }
 }
 
@@ -457,7 +455,7 @@
   .printer-frame { padding: 1.25rem 1.25rem 1rem; }
   .paper-output-area { margin-left: 10px; margin-right: 10px; }
   .slot-bottom-bar { margin-left: 10px; margin-right: 10px; }
-  .printer-frame::before, .printer-frame::after { width: 10px; }
+  .printer-frame::before, .printer-frame::after { width: 10px; bottom: -20px; height: 20px; }
   .paper-sheet { padding: 1.5rem 1.25rem 2rem; }
   .paper-content { font-size: 0.93rem; }
 }
