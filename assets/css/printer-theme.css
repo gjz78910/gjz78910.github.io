@@ -47,20 +47,20 @@
   z-index: 2;
 
   /*
-    The slot IS the border-bottom of the frame.
-    A thin dark line spanning the full frame width — exactly like the reference.
-    No pseudo-element, no floating bar.
+    The slot IS the border-bottom of the frame —
+    a thin dark line spanning the full frame width.
+    margin-bottom: -5px makes the frame overlap the paper top
+    by exactly 5px so the paper appears to emerge from the slot.
   */
   border-bottom: 5px solid #1a1612;
+  margin-bottom: -5px;
 
-  /* 3D slab shadows */
+  /* 3D slab shadows — NO left/right spread that would show past paper edges */
   box-shadow:
     0 2px 0 rgba(255,255,255,0.9) inset,
     2px 0 0 rgba(255,255,255,0.55) inset,
     0 -4px 0 #b0aba0 inset,
     -2px 0 0 rgba(0,0,0,0.06) inset,
-    8px 0 20px rgba(0,0,0,0.15),
-    -8px 0 20px rgba(0,0,0,0.15),
     0 10px 0 #a0a098,
     0 14px 40px rgba(0,0,0,0.28),
     0 30px 80px rgba(0,0,0,0.10);
@@ -234,25 +234,26 @@
    Negative margin pulls it flush against the frame bottom.
    ============================================================= */
 .paper-output-area {
+  width: 100%;
   position: relative;
   z-index: 1;
+  /* overflow:hidden clips paper during feed-in animation */
   overflow: hidden;
-  /* Pull up so paper top is hidden behind the frame border-bottom */
-  margin-top: -5px;
+  /* No margin-top — frame's margin-bottom:-5px handles the overlap */
+  margin-top: 0;
 }
 
 /* =============================================================
    PAPER SHEET — pure white
    ============================================================= */
 .paper-sheet {
+  width: 100%;
   background: #ffffff;
   border-radius: 0 0 8px 8px;
   padding: 2.5rem 3rem 3rem;
   box-shadow:
     0 12px 50px rgba(0,0,0,0.16),
-    0 4px 12px rgba(0,0,0,0.1),
-    4px 0 8px rgba(0,0,0,0.05),
-    -4px 0 8px rgba(0,0,0,0.05);
+    0 4px 12px rgba(0,0,0,0.1);
   min-height: 520px;
 
   /* Initial state: hidden above, ready to feed down */
