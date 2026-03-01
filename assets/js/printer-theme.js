@@ -21,50 +21,24 @@
   /* Active nav button                                                    */
   /* ------------------------------------------------------------------ */
 
-  function setActiveButton() {
+  function setActiveButton(page) {
     var aboutBtn  = document.getElementById('btn-about');
     var eventsBtn = document.getElementById('btn-events');
     if (!aboutBtn || !eventsBtn) return;
-
-    aboutBtn.classList.remove('active');
-    eventsBtn.classList.remove('active');
-    aboutBtn.setAttribute('aria-current', 'false');
-    eventsBtn.setAttribute('aria-current', 'false');
-
-    // Only mark active if user navigated here via a button click
-    if (sessionStorage.getItem('printer-active') === 'about' && isAboutPage()) {
-      aboutBtn.classList.add('active');
-      aboutBtn.setAttribute('aria-current', 'page');
-    } else if (sessionStorage.getItem('printer-active') === 'events' && isEventsPage()) {
-      eventsBtn.classList.add('active');
-      eventsBtn.setAttribute('aria-current', 'page');
-    }
+    aboutBtn.classList.toggle('active', page === 'about');
+    eventsBtn.classList.toggle('active', page === 'events');
+    aboutBtn.setAttribute('aria-current', page === 'about' ? 'page' : 'false');
+    eventsBtn.setAttribute('aria-current', page === 'events' ? 'page' : 'false');
   }
 
   /* ------------------------------------------------------------------ */
-  /* Content visibility                                                   */
-  /* On first load (no sessionStorage key), hide the paper content       */
-  /* so the paper appears blank. Content shows only after a button click. */
-  /* ------------------------------------------------------------------ */
-
-  function initContentVisibility() {
-    var content = document.querySelector('.paper-content');
-    if (!content) return;
-
-    var activated = sessionStorage.getItem('printer-active');
-    if (!activated) {
-      // First visit — hide content, show blank paper
-      content.style.visibility = 'hidden';
-    }
-  }
-
-  /* ------------------------------------------------------------------ */
-  /* Paper feed-in on page load                                           */
+  /* Paper animation                                                      */
   /* ------------------------------------------------------------------ */
 
   function feedPaperIn() {
     var paper = document.getElementById('current-paper');
     if (!paper) return;
+    paper.style.display = 'block';
     paper.classList.remove('feeding-in');
     requestAnimationFrame(function () {
       requestAnimationFrame(function () {
@@ -74,24 +48,19 @@
   }
 
   /* ------------------------------------------------------------------ */
-  /* SOUNDS                                                               */
+  /* SOUNDS — play directly on the audio element, no cloneNode           */
   /* ------------------------------------------------------------------ */
 
-  function playKeyClick() {
-    var audio = document.getElementById('button-sound');
+  function playSound(id) {
+    var audio = document.getElementById(id);
     if (!audio) return;
-    // Clone and play to avoid delay from currentTime reset
-    var clone = audio.cloneNode();
-    clone.volume = audio.volume;
-    clone.play().catch(function () {});
-  }
-
-  function playPrintSound() {
-    var audio = document.getElementById('print-sound');
-    if (!audio) return;
-    var clone = audio.cloneNode();
-    clone.volume = audio.volume;
-    clone.play().catch(function () {});
+    // Reset and play — this is synchronous enough for click handlers
+    try {
+      audio.pause();
+      audio.currentTime = 0;
+      var p = audio.play();
+      if (p && p.catch) p.catch(function () {});
+    } catch (e) {}
   }
 
   /* ------------------------------------------------------------------ */
@@ -104,55 +73,37 @@
 
     if (aboutBtn) {
       aboutBtn.addEventListener('click', function () {
-        // Play sounds immediately — no delay
-        playKeyClick();
-        playPrintSound();
-        // Mark which page was activated
-        sessionStorage.setItem('printer-active', 'about');
-        if (!isAboutPage()) {
-          window.location.href = '/printer/';
-        } else {
-          // Already on about page — just show content and animate
+        playSound('button-sound');
+        if (isAboutPage()) {
+          // Already here — just show/animate content
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';
-          setActiveButton();
+          setActiveButton('about');
+          playSound('print-sound');
           feedPaperIn();
+        } else {
+          sessionStorage.setItem('printer-nav', 'about');
+          playSound('print-sound');
+          window.location.href = '/printer/';
         }
       });
     }
 
     if (eventsBtn) {
       eventsBtn.addEventListener('click', function () {
-        playKeyClick();
-        playPrintSound();
-        sessionStorage.setItem('printer-active', 'events');
-        if (!isEventsPage()) {
-          window.location.href = '/printer/events/';
-        } else {
+        playSound('button-sound');
+        if (isEventsPage()) {
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';
-          setActiveButton();
+          setActiveButton('events');
+          playSound('print-sound');
           feedPaperIn();
+        } else {
+          sessionStorage.setItem('printer-nav', 'events');
+          playSound('print-sound');
+          window.location.href = '/printer/events/';
         }
       });
-    }
-  }
-
-  /* ------------------------------------------------------------------ */
-  /* Page load: feed paper in if content is active                       */
-  /* ------------------------------------------------------------------ */
-
-  function initPageLoad() {
-    var activated = sessionStorage.getItem('printer-active');
-    if (activated) {
-      // User navigated here via button — show content and animate
-      var content = document.querySelector('.paper-content');
-      if (content) content.style.visibility = 'visible';
-      feedPaperIn();
-      playPrintSound();
-    } else {
-      // First visit — animate blank paper in (no content)
-      feedPaperIn();
     }
   }
 
@@ -161,10 +112,31 @@
   /* ------------------------------------------------------------------ */
 
   function init() {
-    initContentVisibility();
-    setActiveButton();
+    var paper = document.getElementById('current-paper');
+    var nav = sessionStorage.getItem('printer-nav');
+
+    // Determine active page from sessionStorage
+    if (nav === 'about' && isAboutPage()) {
+      setActiveButton('about');
+    } else if (nav === 'events' && isEventsPage()) {
+      setActiveButton('events');
+    } else {
+      setActiveButton('');
+    }
+
+    if (nav) {
+      // Navigated here via button — show content and animate paper in
+      var content = document.querySelector('.paper-content');
+      if (content) content.style.visibility = 'visible';
+      if (paper) paper.style.display = 'block';
+      feedPaperIn();
+      playSound('print-sound');
+    } else {
+      // First load / direct visit — hide paper completely, show blank printer
+      if (paper) paper.style.display = 'none';
+    }
+
     setupNavigation();
-    initPageLoad();
   }
 
   if (document.readyState === 'loading') {

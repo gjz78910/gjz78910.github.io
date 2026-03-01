@@ -75,7 +75,21 @@
     0 30px 80px rgba(0,0,0,0.10);
 }
 
-/* Side walls: hang 16px below frame border, same width as paper margin */
+/*
+   SLOT GEOMETRY:
+     frame border-bottom : 3px dark  (top bar)
+     gap                 : 16px      (paper visible here)
+     slot-bottom-bar     : 3px dark  (bottom bar)
+
+   Bars use margin: 16px  → bars are 12px wider than paper on each side.
+   Side walls: 28px wide, bridging from frame edge to bar edge.
+   Paper: margin 28px (inset from frame edge, fits inside side walls).
+
+   The bars extend 12px beyond the paper on each side — matching the
+   real-world look where the slot opening is slightly wider than the paper.
+*/
+
+/* Side walls: 28px wide, hang 16px below frame into the gap */
 .printer-frame::before,
 .printer-frame::after {
   content: '';
@@ -92,13 +106,13 @@
 
 /* =============================================================
    SLOT BOTTOM BAR  (z-index: 2)
-   Inset by 28px to align with side walls.
+   margin: 16px → extends 12px beyond paper (28px) on each side
    ============================================================= */
 .slot-bottom-bar {
   height: 3px;
   background: #1a1714;
-  margin-left: 28px;
-  margin-right: 28px;
+  margin-left: 16px;
+  margin-right: 16px;
   position: relative;
   z-index: 2;
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
@@ -106,10 +120,8 @@
 
 /* =============================================================
    PAPER OUTPUT AREA  (z-index: 1)
-
-   Top edge = gap top (frame border-box bottom).
-   margin-top = -(gap 16px + slot-bottom-bar 3px) = -19px
-   overflow:hidden clips paper at the top edge while animating.
+   margin: 28px → paper is narrower than the bars (fits inside)
+   margin-top = -(gap 16px + bottom-bar 3px) = -19px
    ============================================================= */
 .paper-output-area {
   margin-left: 28px;
@@ -455,18 +467,20 @@
   .printer-frame { padding: 1.5rem 1.5rem 1.2rem; }
   .printer-avatar { width: 52px; height: 52px; }
   .printer-brand { font-size: 1.1rem; }
-  .paper-output-area { margin-left: 16px; margin-right: 16px; }
-  .slot-bottom-bar { margin-left: 16px; margin-right: 16px; }
-  .printer-frame::before, .printer-frame::after { width: 16px; bottom: -16px; height: 16px; }
+  /* bars: 10px, paper: 20px → bars 10px wider on each side */
+  .slot-bottom-bar { margin-left: 10px; margin-right: 10px; }
+  .paper-output-area { margin-left: 20px; margin-right: 20px; }
+  .printer-frame::before, .printer-frame::after { width: 20px; bottom: -16px; height: 16px; }
   .paper-sheet { padding: 2rem 1.5rem 2.5rem; min-height: 400px; }
 }
 
 @media (max-width: 480px) {
   .printer-theme-body { padding: 1rem 0.5rem 4rem; }
   .printer-frame { padding: 1.25rem 1.25rem 1rem; }
-  .paper-output-area { margin-left: 10px; margin-right: 10px; }
-  .slot-bottom-bar { margin-left: 10px; margin-right: 10px; }
-  .printer-frame::before, .printer-frame::after { width: 10px; bottom: -16px; height: 16px; }
+  /* bars: 6px, paper: 14px → bars 8px wider on each side */
+  .slot-bottom-bar { margin-left: 6px; margin-right: 6px; }
+  .paper-output-area { margin-left: 14px; margin-right: 14px; }
+  .printer-frame::before, .printer-frame::after { width: 14px; bottom: -16px; height: 16px; }
   .paper-sheet { padding: 1.5rem 1.25rem 2rem; }
   .paper-content { font-size: 0.93rem; }
 }
