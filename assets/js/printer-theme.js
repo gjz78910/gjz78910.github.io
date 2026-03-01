@@ -83,13 +83,11 @@
   }
 
   /* ------------------------------------------------------------------ */
-  /* KEY CLICK SOUND                                                      */
+  /* KEY CLICK — tape/radio button feel                                   */
   /*                                                                      */
-  /* Mechanical tape/radio button feel:                                   */
-  /*  - A deep low-frequency "thunk" (the mechanism body)                 */
-  /*  - A mid-frequency "clack" transient (the contact snap)             */
-  /*  - A short spring resonance that rings and decays                   */
-  /* No high-frequency mouse-click noise.                                */
+  /* A real tape button makes a soft "clunk": the mechanism body          */
+  /* bottoms out with a low thud, then a brief plastic resonance.         */
+  /* No high-frequency click. Soft, muted, mechanical.                   */
   /* ------------------------------------------------------------------ */
 
   function playKeyClick() {
@@ -99,58 +97,59 @@
       var ctx = new AudioCtx();
       var now = ctx.currentTime;
 
-      /* Layer 1: Low thunk — the body of the mechanism hitting home */
-      var thunkOsc = ctx.createOscillator();
-      thunkOsc.type = 'sine';
-      thunkOsc.frequency.setValueAtTime(180, now);
-      thunkOsc.frequency.exponentialRampToValueAtTime(60, now + 0.06);
+      /* --- Body thud: sine sweep 200→55 Hz, 55ms --- */
+      var thud = ctx.createOscillator();
+      thud.type = 'sine';
+      thud.frequency.setValueAtTime(200, now);
+      thud.frequency.exponentialRampToValueAtTime(55, now + 0.055);
 
-      var thunkGain = ctx.createGain();
-      thunkGain.gain.setValueAtTime(0.55, now);
-      thunkGain.gain.exponentialRampToValueAtTime(0.001, now + 0.07);
+      var thudGain = ctx.createGain();
+      thudGain.gain.setValueAtTime(0.5, now);
+      thudGain.gain.exponentialRampToValueAtTime(0.001, now + 0.055);
 
-      thunkOsc.connect(thunkGain);
-      thunkGain.connect(ctx.destination);
-      thunkOsc.start(now);
-      thunkOsc.stop(now + 0.07);
+      thud.connect(thudGain);
+      thudGain.connect(ctx.destination);
+      thud.start(now);
+      thud.stop(now + 0.055);
 
-      /* Layer 2: Mid clack — the contact snap */
-      var clackOsc = ctx.createOscillator();
-      clackOsc.type = 'square';
-      clackOsc.frequency.setValueAtTime(900, now);
-      clackOsc.frequency.exponentialRampToValueAtTime(300, now + 0.03);
+      /* --- Plastic resonance: sine at 380 Hz, rings for 70ms --- */
+      var ring = ctx.createOscillator();
+      ring.type = 'sine';
+      ring.frequency.setValueAtTime(380, now + 0.005);
 
-      var clackGain = ctx.createGain();
-      clackGain.gain.setValueAtTime(0.18, now);
-      clackGain.gain.exponentialRampToValueAtTime(0.001, now + 0.03);
+      var ringGain = ctx.createGain();
+      ringGain.gain.setValueAtTime(0, now);
+      ringGain.gain.linearRampToValueAtTime(0.06, now + 0.008);
+      ringGain.gain.exponentialRampToValueAtTime(0.001, now + 0.075);
 
-      /* Low-pass to soften the square wave — less clicky, more thuddy */
+      ring.connect(ringGain);
+      ringGain.connect(ctx.destination);
+      ring.start(now);
+      ring.stop(now + 0.075);
+
+      /* --- Very brief noise burst for the contact snap --- */
+      var bufLen = Math.floor(ctx.sampleRate * 0.012);
+      var noiseBuf = ctx.createBuffer(1, bufLen, ctx.sampleRate);
+      var nd = noiseBuf.getChannelData(0);
+      for (var i = 0; i < bufLen; i++) nd[i] = Math.random() * 2 - 1;
+
+      var noiseSrc = ctx.createBufferSource();
+      noiseSrc.buffer = noiseBuf;
+
+      /* Low-pass at 800 Hz — muffled, not clicky */
       var lp = ctx.createBiquadFilter();
       lp.type = 'lowpass';
-      lp.frequency.value = 1200;
-      lp.Q.value = 0.7;
+      lp.frequency.value = 800;
 
-      clackOsc.connect(lp);
-      lp.connect(clackGain);
-      clackGain.connect(ctx.destination);
-      clackOsc.start(now);
-      clackOsc.stop(now + 0.03);
+      var noiseGain = ctx.createGain();
+      noiseGain.gain.setValueAtTime(0.12, now);
+      noiseGain.gain.exponentialRampToValueAtTime(0.001, now + 0.012);
 
-      /* Layer 3: Spring resonance — rings at ~500 Hz, decays over 80ms */
-      var springOsc = ctx.createOscillator();
-      springOsc.type = 'sine';
-      springOsc.frequency.setValueAtTime(520, now + 0.01);
-      springOsc.frequency.exponentialRampToValueAtTime(480, now + 0.09);
-
-      var springGain = ctx.createGain();
-      springGain.gain.setValueAtTime(0, now);
-      springGain.gain.linearRampToValueAtTime(0.08, now + 0.012);
-      springGain.gain.exponentialRampToValueAtTime(0.001, now + 0.09);
-
-      springOsc.connect(springGain);
-      springGain.connect(ctx.destination);
-      springOsc.start(now);
-      springOsc.stop(now + 0.09);
+      noiseSrc.connect(lp);
+      lp.connect(noiseGain);
+      noiseGain.connect(ctx.destination);
+      noiseSrc.start(now);
+      noiseSrc.stop(now + 0.012);
 
       setTimeout(function () { try { ctx.close(); } catch(e) {} }, 300);
 
@@ -158,12 +157,14 @@
   }
 
   /* ------------------------------------------------------------------ */
-  /* PRINT SOUND                                                          */
+  /* PRINT SOUND — ~1.2s dot-matrix paper feed                           */
   /*                                                                      */
-  /* Simulates a dot-matrix printer feeding paper:                        */
-  /*  - Stepper motor: rhythmic low-frequency pulses (~12 Hz)            */
-  /*  - Paper friction: mid-frequency noise, amplitude-modulated         */
-  /*  - Carriage return thud at start                                    */
+  /* Three layers:                                                        */
+  /*  1. Stepper motor: low bandpass noise (280 Hz) modulated at 14 Hz   */
+  /*     = the rhythmic stepping sound of paper advancing                 */
+  /*  2. Paper friction: mid bandpass noise (1200 Hz) with slow wobble   */
+  /*     = paper sliding against the platen roller                        */
+  /*  3. Carriage thud: sine sweep at start = the print head homing      */
   /* ------------------------------------------------------------------ */
 
   function playPrintSound() {
@@ -175,36 +176,33 @@
       var now      = ctx.currentTime;
       var duration = 1.2;
       var sr       = ctx.sampleRate;
+      var frames   = Math.floor(sr * duration);
 
-      /* --- Stepper motor: rhythmic pulses at ~12 Hz --- */
-      /* We simulate this with a sawtooth LFO modulating a noise source */
-      var motorBuf = ctx.createBuffer(1, Math.floor(sr * duration), sr);
+      /* --- Layer 1: stepper motor --- */
+      var motorBuf  = ctx.createBuffer(1, frames, sr);
       var motorData = motorBuf.getChannelData(0);
-      for (var i = 0; i < motorData.length; i++) {
-        motorData[i] = Math.random() * 2 - 1;
-      }
+      for (var i = 0; i < frames; i++) motorData[i] = Math.random() * 2 - 1;
 
       var motorSrc = ctx.createBufferSource();
       motorSrc.buffer = motorBuf;
 
-      /* Bandpass centred at 280 Hz — the low motor rumble */
       var motorBp = ctx.createBiquadFilter();
       motorBp.type = 'bandpass';
       motorBp.frequency.value = 280;
-      motorBp.Q.value = 3;
+      motorBp.Q.value = 3.5;
 
       var motorGain = ctx.createGain();
       motorGain.gain.setValueAtTime(0, now);
-      motorGain.gain.linearRampToValueAtTime(0.4, now + 0.05);
-      motorGain.gain.setValueAtTime(0.4, now + duration - 0.15);
+      motorGain.gain.linearRampToValueAtTime(0.45, now + 0.06);
+      motorGain.gain.setValueAtTime(0.45, now + duration - 0.12);
       motorGain.gain.linearRampToValueAtTime(0, now + duration);
 
-      /* LFO at 12 Hz = stepper steps */
+      /* LFO at 14 Hz = stepper pulses */
       var stepLfo = ctx.createOscillator();
       stepLfo.type = 'sawtooth';
-      stepLfo.frequency.value = 12;
+      stepLfo.frequency.value = 14;
       var stepLfoGain = ctx.createGain();
-      stepLfoGain.gain.value = 0.25;
+      stepLfoGain.gain.value = 0.28;
       stepLfo.connect(stepLfoGain);
       stepLfoGain.connect(motorGain.gain);
 
@@ -212,63 +210,56 @@
       motorBp.connect(motorGain);
       motorGain.connect(ctx.destination);
 
-      /* --- Paper friction: higher-frequency noise, slower modulation --- */
-      var frictionBuf = ctx.createBuffer(1, Math.floor(sr * duration), sr);
-      var frictionData = frictionBuf.getChannelData(0);
-      for (var j = 0; j < frictionData.length; j++) {
-        frictionData[j] = Math.random() * 2 - 1;
-      }
+      /* --- Layer 2: paper friction --- */
+      var frBuf  = ctx.createBuffer(1, frames, sr);
+      var frData = frBuf.getChannelData(0);
+      for (var j = 0; j < frames; j++) frData[j] = Math.random() * 2 - 1;
 
-      var frictionSrc = ctx.createBufferSource();
-      frictionSrc.buffer = frictionBuf;
+      var frSrc = ctx.createBufferSource();
+      frSrc.buffer = frBuf;
 
-      /* Bandpass at 1400 Hz — paper-on-roller friction */
-      var frictionBp = ctx.createBiquadFilter();
-      frictionBp.type = 'bandpass';
-      frictionBp.frequency.value = 1400;
-      frictionBp.Q.value = 2;
+      var frBp = ctx.createBiquadFilter();
+      frBp.type = 'bandpass';
+      frBp.frequency.value = 1200;
+      frBp.Q.value = 2;
 
-      var frictionGain = ctx.createGain();
-      frictionGain.gain.setValueAtTime(0, now);
-      frictionGain.gain.linearRampToValueAtTime(0.12, now + 0.08);
-      frictionGain.gain.setValueAtTime(0.12, now + duration - 0.2);
-      frictionGain.gain.linearRampToValueAtTime(0, now + duration);
+      var frGain = ctx.createGain();
+      frGain.gain.setValueAtTime(0, now);
+      frGain.gain.linearRampToValueAtTime(0.10, now + 0.09);
+      frGain.gain.setValueAtTime(0.10, now + duration - 0.18);
+      frGain.gain.linearRampToValueAtTime(0, now + duration);
 
-      /* Slow wobble at 3 Hz = paper feed irregularity */
-      var wobbleLfo = ctx.createOscillator();
-      wobbleLfo.type = 'sine';
-      wobbleLfo.frequency.value = 3;
-      var wobbleLfoGain = ctx.createGain();
-      wobbleLfoGain.gain.value = 0.06;
-      wobbleLfo.connect(wobbleLfoGain);
-      wobbleLfoGain.connect(frictionGain.gain);
+      /* Slow wobble at 2.5 Hz = paper feed irregularity */
+      var wobble = ctx.createOscillator();
+      wobble.type = 'sine';
+      wobble.frequency.value = 2.5;
+      var wobbleGain = ctx.createGain();
+      wobbleGain.gain.value = 0.05;
+      wobble.connect(wobbleGain);
+      wobbleGain.connect(frGain.gain);
 
-      frictionSrc.connect(frictionBp);
-      frictionBp.connect(frictionGain);
-      frictionGain.connect(ctx.destination);
+      frSrc.connect(frBp);
+      frBp.connect(frGain);
+      frGain.connect(ctx.destination);
 
-      /* --- Carriage return thud at the very start --- */
-      var thudOsc = ctx.createOscillator();
-      thudOsc.type = 'sine';
-      thudOsc.frequency.setValueAtTime(120, now);
-      thudOsc.frequency.exponentialRampToValueAtTime(40, now + 0.08);
+      /* --- Layer 3: carriage thud at start --- */
+      var thud = ctx.createOscillator();
+      thud.type = 'sine';
+      thud.frequency.setValueAtTime(110, now);
+      thud.frequency.exponentialRampToValueAtTime(38, now + 0.09);
       var thudGain = ctx.createGain();
-      thudGain.gain.setValueAtTime(0.5, now);
-      thudGain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
-      thudOsc.connect(thudGain);
+      thudGain.gain.setValueAtTime(0.55, now);
+      thudGain.gain.exponentialRampToValueAtTime(0.001, now + 0.09);
+      thud.connect(thudGain);
       thudGain.connect(ctx.destination);
-      thudOsc.start(now);
-      thudOsc.stop(now + 0.08);
+      thud.start(now);
+      thud.stop(now + 0.09);
 
       /* Start everything */
-      motorSrc.start(now);
-      motorSrc.stop(now + duration);
-      frictionSrc.start(now);
-      frictionSrc.stop(now + duration);
-      stepLfo.start(now);
-      stepLfo.stop(now + duration);
-      wobbleLfo.start(now);
-      wobbleLfo.stop(now + duration);
+      motorSrc.start(now); motorSrc.stop(now + duration);
+      frSrc.start(now);    frSrc.stop(now + duration);
+      stepLfo.start(now);  stepLfo.stop(now + duration);
+      wobble.start(now);   wobble.stop(now + duration);
 
       setTimeout(function () { try { ctx.close(); } catch(e) {} },
         (duration + 0.3) * 1000);

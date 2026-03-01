@@ -20,106 +20,60 @@
   align-items: flex-start;
   justify-content: center;
   font-family: 'Courier Prime', 'Courier New', monospace;
-  /* Stack paper behind frame */
-  flex-direction: column;
 }
 
 /* =============================================================
-   OUTER WRAPPER — constrains both frame and paper to same width
+   CONTAINER
+   Normal block flow: frame on top, paper below.
+   Frame uses negative bottom margin to pull paper up behind it.
    ============================================================= */
-.printer-theme-body {
-  /* We position frame + paper relative to each other using
-     normal flow: frame first, then paper. Frame has negative
-     bottom margin to pull paper up behind it. */
-}
-
-/* =============================================================
-   PRINTER FRAME  (z-index: 2 — sits ON TOP of paper)
-
-   The bottom of the frame IS the slot.
-   We use ::after to render the dark slot bar that spans
-   the full frame width, exactly like the reference image.
-   ============================================================= */
-.printer-frame {
+.printer-container {
   width: 100%;
   max-width: 900px;
-  align-self: center;
+}
 
+/* =============================================================
+   PRINTER FRAME  (z-index: 2)
+   Rounded top corners, flat bottom — the slot is the ::after bar.
+   Left/right box-shadow gives the side walls / 3D slab feel.
+   ============================================================= */
+.printer-frame {
   background: linear-gradient(175deg,
     #f8f4ec 0%, #f2ede3 30%, #ebe5db 65%, #e0dbd0 100%
   );
   border-radius: 18px 18px 0 0;
-  padding: 2rem 2.5rem 1.6rem;
+  padding: 2rem 2.5rem 1.4rem;
   position: relative;
   z-index: 2;
 
-  /* 3D slab shadow */
+  /* 3D slab:
+     - top/left inset highlights = lit top-left face
+     - bottom inset shadow = depth of bottom edge
+     - outer left/right shadows = side walls
+     - bottom solid shadow = physical thickness of machine
+  */
   box-shadow:
-    /* top highlight */
-    0 2px 0 rgba(255,255,255,0.85) inset,
-    /* left highlight */
-    2px 0 0 rgba(255,255,255,0.5) inset,
-    /* bottom inner shadow (depth of the bottom face) */
-    0 -4px 0 #b8b3a8 inset,
-    /* right inner shadow */
+    0 2px 0 rgba(255,255,255,0.9) inset,
+    2px 0 0 rgba(255,255,255,0.55) inset,
+    0 -4px 0 #b0aba0 inset,
     -2px 0 0 rgba(0,0,0,0.06) inset,
-    /* side drop shadows */
-    6px 0 18px rgba(0,0,0,0.12),
-    -6px 0 18px rgba(0,0,0,0.12),
-    /* thick bottom edge — the physical depth of the machine */
-    0 10px 0 #a8a49a,
-    /* ambient drop shadow */
-    0 14px 40px rgba(0,0,0,0.25),
+    8px 0 20px rgba(0,0,0,0.15),
+    -8px 0 20px rgba(0,0,0,0.15),
+    0 10px 0 #a0a098,
+    0 14px 40px rgba(0,0,0,0.28),
     0 30px 80px rgba(0,0,0,0.10);
 }
 
-/*
-  THE SLOT BAR — full-width dark strip at the very bottom of the frame.
-  This is the paper exit slot, exactly as in the reference image:
-  a thin dark horizontal line spanning the entire frame width.
-  The paper slides out from underneath this bar.
-*/
+/* Slot bar — full-width dark strip at bottom of frame */
 .printer-frame::after {
   content: '';
-  display: block;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 10px;
-
-  /* Deep dark slot — gradient gives it depth (lighter at top = light
-     entering the tunnel, darker at bottom = shadow inside) */
-  background: linear-gradient(to bottom,
-    #1a1612 0%,
-    #0d0b08 40%,
-    #080604 100%
-  );
-
-  /* Inset shadow at the top edge = the slot opening recesses inward */
-  box-shadow:
-    0 -3px 6px rgba(0,0,0,0.5) inset,
-    0 3px 10px rgba(0,0,0,0.4);
-
-  border-radius: 0;
-}
-
-/* =============================================================
-   PAPER OUTPUT AREA  (z-index: 1 — behind the frame)
-
-   overflow:hidden clips the paper during the feed-in animation
-   so it appears to emerge from inside the slot.
-   Width matches the frame exactly.
-   ============================================================= */
-.paper-output-area {
-  width: 100%;
-  max-width: 900px;
-  align-self: center;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  /* Pull up behind the frame's bottom edge + slot bar */
-  margin-top: -10px;
+  background: linear-gradient(to bottom, #1a1612 0%, #080604 100%);
+  box-shadow: 0 -3px 6px rgba(0,0,0,0.5) inset, 0 4px 10px rgba(0,0,0,0.5);
 }
 
 /* =============================================================
@@ -152,7 +106,6 @@
     0 0 0 5px #b8b3a8,
     0 4px 12px rgba(0,0,0,0.3);
 }
-
 .printer-avatar img {
   width: 100%; height: 100%;
   object-fit: cover; display: block;
@@ -166,14 +119,15 @@
   min-width: 0;
 }
 
+/* Name — Special Elite (typewriter stamp) */
 .printer-brand {
   font-family: 'Special Elite', 'Courier New', serif;
   color: #1c1c1c;
   font-size: 1.3rem;
-  font-weight: 400;
   line-height: 1.2;
 }
 
+/* Bio — Courier Prime (clean monospace) */
 .printer-tagline {
   font-family: 'Courier Prime', 'Courier New', monospace;
   color: #6a6560;
@@ -201,36 +155,9 @@
 .printer-link:hover { color: #1c1c1c; }
 .printer-link svg { flex-shrink: 0; opacity: 0.65; }
 
-.printer-header-right {
-  display: flex;
-  align-items: flex-start;
-  padding-top: 0.2rem;
-}
-
-.printer-status-indicator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.3rem;
-}
-
-.status-dot {
-  width: 11px; height: 11px;
-  background: radial-gradient(circle at 35% 35%, #7de07d, #2e8b2e);
-  border-radius: 50%;
-  box-shadow: 0 0 7px rgba(55,175,55,0.9), 0 0 16px rgba(55,175,55,0.4);
-  display: block;
-}
-
-.status-text {
-  font-family: 'Courier Prime', monospace;
-  color: #8a8278;
-  font-size: 0.6rem;
-  letter-spacing: 1px;
-}
-
 /* =============================================================
    NAVIGATION — 3D keyboard keys
+   All text: Courier Prime (consistent typewriter, no hand-draw)
    ============================================================= */
 .printer-nav {
   display: flex;
@@ -240,13 +167,14 @@
 }
 
 .printer-nav-btn {
-  font-family: 'Special Elite', 'Courier New', serif;
+  /* Courier Prime — consistent with all other text */
+  font-family: 'Courier Prime', 'Courier New', monospace;
   font-size: 0.82rem;
+  font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   cursor: pointer;
   user-select: none;
-  position: relative;
 
   background: linear-gradient(to bottom,
     #f4efe5 0%, #ebe6db 45%, #ddd8cc 85%, #d0cbbf 100%
@@ -292,7 +220,7 @@
   border-left-color: #b3afa3;
 }
 
-/* Active (current page) — recessed, darker, same key shape */
+/* Active page — recessed, darker, same key shape */
 .printer-nav-btn.active {
   background: linear-gradient(to bottom,
     #c8c3b7 0%, #bdb8ac 50%, #b0ab9f 100%
@@ -310,11 +238,22 @@
 }
 
 /* =============================================================
+   PAPER OUTPUT AREA  (z-index: 1 — behind the frame)
+   overflow:hidden clips paper during feed-in animation.
+   Negative margin-top pulls it up behind the slot bar.
+   ============================================================= */
+.paper-output-area {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-top: -10px; /* tuck behind the slot bar */
+}
+
+/* =============================================================
    PAPER SHEET — pure white
    ============================================================= */
 .paper-sheet {
   background: #ffffff;
-  /* No top border-radius — paper emerges from the slot */
   border-radius: 0 0 8px 8px;
   padding: 2.5rem 3rem 3rem;
   box-shadow:
@@ -322,7 +261,6 @@
     0 4px 12px rgba(0,0,0,0.1),
     4px 0 8px rgba(0,0,0,0.05),
     -4px 0 8px rgba(0,0,0,0.05);
-  position: relative;
   min-height: 520px;
 
   /* Initial state: hidden above, ready to feed down */
@@ -331,7 +269,7 @@
 }
 
 /* =============================================================
-   PAPER ANIMATION — feed in only
+   PAPER ANIMATION
    ============================================================= */
 @keyframes paperFeedIn {
   0%   { transform: translateY(-100%); opacity: 0; }
@@ -344,15 +282,20 @@
 }
 
 /* =============================================================
-   PAPER CONTENT TYPOGRAPHY — all typewriter fonts
+   PAPER CONTENT TYPOGRAPHY
+   All body text: Courier Prime
+   Headings: Special Elite
    ============================================================= */
 .paper-content {
-  position: relative;
-  z-index: 1;
   color: #1a1510;
   line-height: 1.85;
   font-size: 1rem;
   font-family: 'Courier Prime', 'Courier New', monospace;
+}
+
+/* Force all nested elements to inherit Courier Prime unless overridden */
+.paper-content * {
+  font-family: inherit;
 }
 
 .paper-content h1,
@@ -382,7 +325,7 @@
 .paper-content a {
   color: #1a5fa0;
   text-decoration: none;
-  font-family: 'Courier Prime', monospace;
+  font-family: 'Courier Prime', 'Courier New', monospace;
 }
 .paper-content a:hover { text-decoration: underline; }
 
@@ -420,34 +363,33 @@
 .paper-content pre code { background: none; padding: 0; }
 
 /* =============================================================
-   POLAROID EVENT CARDS
+   POLAROID EVENT CARDS — straight, no rotation
+   White frame, thick bottom label area
    ============================================================= */
 .events-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem 1.5rem;
+  gap: 1.5rem;
   margin: 1rem 0 2.5rem 0;
 }
 
 .event-card {
   background: #ffffff;
-  padding: 10px 10px 44px 10px;
+  /* Polaroid: equal padding on sides/top, thick bottom for label */
+  padding: 8px 8px 0 8px;
   box-shadow:
-    0 4px 16px rgba(0,0,0,0.18),
-    0 1px 4px rgba(0,0,0,0.12);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  position: relative;
+    0 3px 12px rgba(0,0,0,0.15),
+    0 1px 4px rgba(0,0,0,0.10);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  /* No rotation — straight */
+  transform: none;
 }
 
-.event-card:nth-child(odd)  { transform: rotate(-1.2deg); }
-.event-card:nth-child(even) { transform: rotate(0.8deg); }
-
 .event-card:hover {
-  transform: rotate(0deg) translateY(-6px) scale(1.03) !important;
   box-shadow:
-    0 12px 32px rgba(0,0,0,0.22),
-    0 2px 8px rgba(0,0,0,0.14);
-  z-index: 5;
+    0 8px 24px rgba(0,0,0,0.2),
+    0 2px 8px rgba(0,0,0,0.12);
+  transform: translateY(-3px);
 }
 
 .event-card img {
@@ -457,23 +399,23 @@
   display: block;
 }
 
+/* Caption sits below the image in normal flow — not absolute */
 .event-card .event-caption {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
+  padding: 0.5rem 0.4rem 0.6rem;
   font-family: 'Courier Prime', 'Courier New', monospace;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: #333;
-  line-height: 1.3;
-  overflow: hidden;
+  line-height: 1.4;
+  /* Allow text to wrap naturally */
+  white-space: normal;
+  overflow: visible;
+  min-height: 2.8rem;
 }
 
 .event-card .event-caption a {
   color: #1a5fa0;
   text-decoration: none;
+  font-family: 'Courier Prime', monospace;
 }
 .event-card .event-caption a:hover { text-decoration: underline; }
 
@@ -482,8 +424,6 @@
    ============================================================= */
 @media (max-width: 640px) {
   .events-grid { grid-template-columns: 1fr; }
-  .event-card:nth-child(odd),
-  .event-card:nth-child(even) { transform: rotate(0deg); }
 }
 
 @media (max-width: 768px) {
