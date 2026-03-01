@@ -85,7 +85,7 @@ layout: compress
       <!-- LAYER 2: slot-bottom-bar — sits above paper, below frame -->
       <div class="slot-bottom-bar"></div>
 
-      <!-- LAYER 1 (bottom): Paper -->
+      <!-- LAYER 1 (bottom): Paper (overlaps tray when loaded) -->
       <div class="paper-output-area" id="paper-output-area">
         <div class="paper-sheet" id="current-paper">
           <div class="paper-content">
@@ -93,6 +93,9 @@ layout: compress
           </div>
         </div>
       </div>
+
+      <!-- LAYER 0: Beige tray — visible when no paper loaded, covered by paper when printing -->
+      <div class="paper-tray" id="paper-tray"></div>
 
     </div><!-- /printer-container -->
 

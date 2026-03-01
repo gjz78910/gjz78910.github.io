@@ -89,13 +89,22 @@
    real-world look where the slot opening is slightly wider than the paper.
 */
 
-/* Side walls: 28px wide, hang 16px below frame into the gap */
+/*
+   SLOT GEOMETRY:
+     frame border-bottom : 3px dark  (top bar — full frame width, clearly wider than paper)
+     gap                 : 16px      (paper visible here; side walls fill L/R)
+     slot-bottom-bar     : 3px dark  (bottom bar — margin: 8px, clearly wider than paper)
+     paper-output-area   : margin: 36px (narrower than bars, fits inside side walls)
+     paper-tray          : beige continuation below slot, visible when no paper loaded
+*/
+
+/* Side walls: 36px wide (= paper margin), hang 16px below frame into the gap */
 .printer-frame::before,
 .printer-frame::after {
   content: '';
   position: absolute;
   bottom: -16px;
-  width: 28px;
+  width: 36px;
   height: 16px;
   background: linear-gradient(to bottom, #ddd8cc 0%, #ccc7bc 100%);
   box-shadow: inset 0 1px 3px rgba(0,0,0,0.18);
@@ -106,26 +115,61 @@
 
 /* =============================================================
    SLOT BOTTOM BAR  (z-index: 2)
-   margin: 16px → extends 12px beyond paper (28px) on each side
+   margin: 8px → clearly wider than paper (36px) on each side
    ============================================================= */
 .slot-bottom-bar {
   height: 3px;
   background: #1a1714;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin-left: 8px;
+  margin-right: 8px;
   position: relative;
   z-index: 2;
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
 /* =============================================================
+   PAPER TRAY  (z-index: 0)
+   Beige continuation below the slot — looks like the printer body
+   extending downward. Visible when no paper is loaded.
+   When paper is shown, paper-output-area (z:1) sits on top of it.
+
+   Position: absolute within .printer-container.
+   top is calculated as: frame height + 0px (slot gap is already
+   accounted for by the frame border + side walls).
+   We use top: auto and instead anchor to the slot-bottom-bar bottom
+   by making it a sibling that follows in stacking order.
+
+   Actually: absolute, top = 100% of frame. The frame's bottom edge
+   (including border) is where the slot starts. The tray should start
+   at the slot gap top = frame bottom border bottom.
+   We can't know frame height in CSS, so use a simpler approach:
+   make it a normal-flow element that pulls up with negative margin
+   equal to the paper-output-area's own margin-top (-19px), so when
+   paper-output-area has zero height (paper hidden), the tray starts
+   at the right place.
+   ============================================================= */
+.paper-tray {
+  margin-left: 36px;
+  margin-right: 36px;
+  background: linear-gradient(to bottom, #e8e3d8 0%, #ddd8cc 50%, #d4cfc4 100%);
+  min-height: 200px;
+  border-radius: 0 0 8px 8px;
+  position: relative;
+  z-index: 0;
+  box-shadow:
+    inset 0 2px 8px rgba(0,0,0,0.10),
+    0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* =============================================================
    PAPER OUTPUT AREA  (z-index: 1)
-   margin: 28px → paper is narrower than the bars (fits inside)
+   margin: 36px → paper fits inside side walls
    margin-top = -(gap 16px + bottom-bar 3px) = -19px
+   overflow:hidden clips paper at the top edge while animating.
    ============================================================= */
 .paper-output-area {
-  margin-left: 28px;
-  margin-right: 28px;
+  margin-left: 36px;
+  margin-right: 36px;
   margin-top: -19px;
   position: relative;
   z-index: 1;
@@ -467,20 +511,20 @@
   .printer-frame { padding: 1.5rem 1.5rem 1.2rem; }
   .printer-avatar { width: 52px; height: 52px; }
   .printer-brand { font-size: 1.1rem; }
-  /* bars: 10px, paper: 20px → bars 10px wider on each side */
-  .slot-bottom-bar { margin-left: 10px; margin-right: 10px; }
-  .paper-output-area { margin-left: 20px; margin-right: 20px; }
-  .printer-frame::before, .printer-frame::after { width: 20px; bottom: -16px; height: 16px; }
+  .slot-bottom-bar { margin-left: 8px; margin-right: 8px; }
+  .paper-output-area { margin-left: 24px; margin-right: 24px; }
+  .paper-tray { margin-left: 24px; margin-right: 24px; }
+  .printer-frame::before, .printer-frame::after { width: 24px; bottom: -16px; height: 16px; }
   .paper-sheet { padding: 2rem 1.5rem 2.5rem; min-height: 400px; }
 }
 
 @media (max-width: 480px) {
   .printer-theme-body { padding: 1rem 0.5rem 4rem; }
   .printer-frame { padding: 1.25rem 1.25rem 1rem; }
-  /* bars: 6px, paper: 14px → bars 8px wider on each side */
   .slot-bottom-bar { margin-left: 6px; margin-right: 6px; }
-  .paper-output-area { margin-left: 14px; margin-right: 14px; }
-  .printer-frame::before, .printer-frame::after { width: 14px; bottom: -16px; height: 16px; }
+  .paper-output-area { margin-left: 18px; margin-right: 18px; }
+  .paper-tray { margin-left: 18px; margin-right: 18px; }
+  .printer-frame::before, .printer-frame::after { width: 18px; bottom: -16px; height: 16px; }
   .paper-sheet { padding: 1.5rem 1.25rem 2rem; }
   .paper-content { font-size: 0.93rem; }
 }

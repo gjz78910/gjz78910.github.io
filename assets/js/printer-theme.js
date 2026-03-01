@@ -74,16 +74,18 @@
     if (aboutBtn) {
       aboutBtn.addEventListener('click', function () {
         playSound('button-sound');
+        playSound('print-sound');
+        hideTray();
         if (isAboutPage()) {
           // Already here — just show/animate content
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';
+          var paper = document.getElementById('current-paper');
+          if (paper) paper.style.display = 'block';
           setActiveButton('about');
-          playSound('print-sound');
           feedPaperIn();
         } else {
           sessionStorage.setItem('printer-nav', 'about');
-          playSound('print-sound');
           window.location.href = '/printer/';
         }
       });
@@ -92,15 +94,17 @@
     if (eventsBtn) {
       eventsBtn.addEventListener('click', function () {
         playSound('button-sound');
+        playSound('print-sound');
+        hideTray();
         if (isEventsPage()) {
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';
+          var paper = document.getElementById('current-paper');
+          if (paper) paper.style.display = 'block';
           setActiveButton('events');
-          playSound('print-sound');
           feedPaperIn();
         } else {
           sessionStorage.setItem('printer-nav', 'events');
-          playSound('print-sound');
           window.location.href = '/printer/events/';
         }
       });
@@ -110,6 +114,16 @@
   /* ------------------------------------------------------------------ */
   /* Init                                                                 */
   /* ------------------------------------------------------------------ */
+
+  function showTray() {
+    var tray = document.getElementById('paper-tray');
+    if (tray) tray.style.display = 'block';
+  }
+
+  function hideTray() {
+    var tray = document.getElementById('paper-tray');
+    if (tray) tray.style.display = 'none';
+  }
 
   function init() {
     var paper = document.getElementById('current-paper');
@@ -125,15 +139,17 @@
     }
 
     if (nav) {
-      // Navigated here via button — show content and animate paper in
+      // Navigated here via button — show content, hide tray, animate paper in
       var content = document.querySelector('.paper-content');
       if (content) content.style.visibility = 'visible';
       if (paper) paper.style.display = 'block';
+      hideTray();
       feedPaperIn();
       playSound('print-sound');
     } else {
-      // First load / direct visit — hide paper completely, show blank printer
+      // First load / direct visit — hide paper, show beige tray
       if (paper) paper.style.display = 'none';
+      showTray();
     }
 
     setupNavigation();
