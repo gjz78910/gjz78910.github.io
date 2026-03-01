@@ -141,6 +141,7 @@
 .slot-bottom-bar {
   height: var(--slot-bar-height);
   background: #1a1714;
+  margin-top: var(--slot-gap-height);
   margin-left: var(--slot-side-inset);
   margin-right: var(--slot-side-inset);
   position: relative;
@@ -171,7 +172,7 @@
 .paper-output-area {
   margin-left: var(--paper-side-inset);
   margin-right: var(--paper-side-inset);
-  margin-top: calc(-1 * (var(--slot-gap-height) + var(--slot-bar-height) + var(--paper-slot-overlap)));
+  margin-top: calc(-1 * (var(--slot-gap-height) + var(--slot-bar-height) - var(--paper-slot-overlap)));
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -518,7 +519,11 @@
   .printer-frame { padding: 1.5rem 1.5rem 1.2rem; }
   .printer-avatar { width: 52px; height: 52px; }
   .printer-brand { font-size: 1.1rem; }
-  .slot-bottom-bar { margin-left: var(--slot-side-inset); margin-right: var(--slot-side-inset); }
+  .slot-bottom-bar {
+    margin-top: var(--slot-gap-height);
+    margin-left: var(--slot-side-inset);
+    margin-right: var(--slot-side-inset);
+  }
   .paper-output-area { margin-left: var(--paper-side-inset); margin-right: var(--paper-side-inset); }
   .slot-body-fill { margin: 0; }
   .paper-sheet { padding: 2rem 1.5rem 2.5rem; min-height: 400px; }
@@ -533,7 +538,11 @@
   }
   .printer-theme-body { padding: 1rem 0.5rem 4rem; }
   .printer-frame { padding: 1.25rem 1.25rem 1rem; }
-  .slot-bottom-bar { margin-left: var(--slot-side-inset); margin-right: var(--slot-side-inset); }
+  .slot-bottom-bar {
+    margin-top: var(--slot-gap-height);
+    margin-left: var(--slot-side-inset);
+    margin-right: var(--slot-side-inset);
+  }
   .paper-output-area { margin-left: var(--paper-side-inset); margin-right: var(--paper-side-inset); }
   .slot-body-fill { margin: 0; }
   .paper-sheet { padding: 1.5rem 1.25rem 2rem; }
