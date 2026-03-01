@@ -63,12 +63,14 @@
 
     var i;
     var player = pool.players[0];
+    var targetVolume = id === 'print-sound' ? 0.5 : 1;
 
     // Force-interrupt any in-progress playback for this sound.
     for (i = 0; i < pool.players.length; i++) {
       try {
         pool.players[i].pause();
         pool.players[i].currentTime = 0;
+        pool.players[i].volume = targetVolume;
       } catch (err) {}
     }
 
