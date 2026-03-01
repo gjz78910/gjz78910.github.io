@@ -4,8 +4,8 @@
   'use strict';
 
   var soundPools = {};
-  var BUTTON_SOUND_DELAY_MS = 500;
-  var pendingActionTimer = null;
+  var PAPER_ANIMATION_DELAY_MS = 500;
+  var pendingPrintTimer = null;
 
   /* ------------------------------------------------------------------ */
   /* Page detection                                                       */
@@ -128,16 +128,20 @@
     initSoundPool('button-sound', 4);
   }
 
-  function clearPendingAction() {
-    if (pendingActionTimer) {
-      clearTimeout(pendingActionTimer);
-      pendingActionTimer = null;
+  function clearPendingPrint() {
+    if (pendingPrintTimer) {
+      clearTimeout(pendingPrintTimer);
+      pendingPrintTimer = null;
     }
   }
 
-  function startPrintingNow() {
+  function startPrintingWithDelay() {
+    clearPendingPrint();
     playSound('print-sound');
-    feedPaperIn();
+    pendingPrintTimer = setTimeout(function () {
+      feedPaperIn();
+      pendingPrintTimer = null;
+    }, PAPER_ANIMATION_DELAY_MS);
   }
 
   /* ------------------------------------------------------------------ */
@@ -151,21 +155,16 @@
     if (aboutBtn) {
       aboutBtn.addEventListener('click', function () {
         playSound('button-sound');
-        clearPendingAction();
         if (isAboutPage()) {
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';
           var paper = document.getElementById('current-paper');
           if (paper) paper.style.display = 'block';
           setActiveButton('about');
-          pendingActionTimer = setTimeout(function () {
-            startPrintingNow();
-          }, BUTTON_SOUND_DELAY_MS);
+          startPrintingWithDelay();
         } else {
           sessionStorage.setItem('printer-nav', 'about');
-          pendingActionTimer = setTimeout(function () {
-            window.location.href = '/printer/';
-          }, BUTTON_SOUND_DELAY_MS);
+          window.location.href = '/printer/';
         }
       });
     }
@@ -173,21 +172,16 @@
     if (eventsBtn) {
       eventsBtn.addEventListener('click', function () {
         playSound('button-sound');
-        clearPendingAction();
         if (isEventsPage()) {
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';
           var paper = document.getElementById('current-paper');
           if (paper) paper.style.display = 'block';
           setActiveButton('events');
-          pendingActionTimer = setTimeout(function () {
-            startPrintingNow();
-          }, BUTTON_SOUND_DELAY_MS);
+          startPrintingWithDelay();
         } else {
           sessionStorage.setItem('printer-nav', 'events');
-          pendingActionTimer = setTimeout(function () {
-            window.location.href = '/printer/events/';
-          }, BUTTON_SOUND_DELAY_MS);
+          window.location.href = '/printer/events/';
         }
       });
     }
@@ -216,7 +210,7 @@
       var content = document.querySelector('.paper-content');
       if (content) content.style.visibility = 'visible';
       if (paper) paper.style.display = 'block';
-      startPrintingNow();
+      startPrintingWithDelay();
     } else {
       // Direct visit — hide paper entirely, just show the printer body
       if (paper) paper.style.display = 'none';
