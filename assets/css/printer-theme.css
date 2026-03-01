@@ -1,5 +1,5 @@
 /* =============================================================
-   Printer Theme — nooc.me faithful reproduction
+   Printer Theme — 3D polish edition
    ============================================================= */
 
 /* --- Fonts --- */
@@ -11,17 +11,14 @@
 }
 
 /* =============================================================
-   PAGE BACKGROUND
-   Warm beige with a subtle dot-grid (like graph paper / nooc.me)
+   PAGE BACKGROUND — warm beige dot-grid desktop
    ============================================================= */
 .printer-theme-body {
   margin: 0;
   padding: 3rem 1.5rem 8rem;
   min-height: 100vh;
-  /* Warm beige base */
-  background-color: #e8e3d8;
-  /* Subtle dot grid overlay */
-  background-image: radial-gradient(circle, #c8c3b8 1px, transparent 1px);
+  background-color: #e0dbd0;
+  background-image: radial-gradient(circle, #c4bfb4 1px, transparent 1px);
   background-size: 24px 24px;
   display: flex;
   align-items: flex-start;
@@ -37,36 +34,56 @@
   max-width: 1100px;
 }
 
+/* Perspective wrapper gives the 3D tilt context */
 .printer-wrapper {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  perspective: 1800px;
 }
 
 /* =============================================================
-   PRINTER FRAME
-   Wider than the paper — this is the physical machine body.
-   Rounded top corners, flat bottom (paper exits here).
+   PRINTER FRAME — 3D plastic body
+   Wider than the paper. Rounded top, flat bottom (slot exits here).
    ============================================================= */
 .printer-frame {
-  background: #f5f0e8;
-  border-radius: 20px 20px 0 0;
-  box-shadow:
-    0 -1px 0 #e0dbd0 inset,          /* subtle inner top highlight */
-    0 6px 32px rgba(0, 0, 0, 0.12);
+  /* Warm cream surface with subtle top-to-bottom gradient (curved plastic) */
+  background: linear-gradient(
+    to bottom,
+    #faf6ee 0%,
+    #f5f0e8 40%,
+    #ede8df 100%
+  );
+  border-radius: 22px 22px 0 0;
   padding: 2rem 2.5rem 0;
   position: relative;
-  z-index: 2;
+  z-index: 10;
+
+  /* 3D depth: top highlight, side edges, thick bottom shadow = thick plastic slab */
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.9) inset,        /* top inner highlight */
+    1px 0 0 rgba(255,255,255,0.5) inset,         /* left inner highlight */
+    -1px 0 0 rgba(0,0,0,0.06) inset,             /* right inner shadow */
+    0 -3px 0 #d4cfc6 inset,                      /* bottom inner edge (thickness) */
+    4px 0 8px rgba(0,0,0,0.08),                  /* right side shadow */
+    -4px 0 8px rgba(0,0,0,0.08),                 /* left side shadow */
+    0 8px 0 #c8c3ba,                             /* bottom edge — the "thickness" of the body */
+    0 8px 32px rgba(0,0,0,0.18),                 /* ambient drop shadow */
+    0 20px 60px rgba(0,0,0,0.10);                /* far ambient */
+
+  /* Very subtle forward tilt — makes it feel like a physical object on a desk */
+  transform: rotateX(1.5deg);
+  transform-origin: top center;
 }
 
 /* =============================================================
-   PRINTER HEADER
+   PRINTER HEADER ROW
    ============================================================= */
 .printer-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 1.6rem;
+  padding-bottom: 1.2rem;
 }
 
 .printer-header-left {
@@ -79,16 +96,17 @@
 .printer-avatar {
   width: 56px;
   height: 56px;
-  background: #1c1c1c;
+  background: radial-gradient(circle at 35% 35%, #3a3a3a, #111);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  box-shadow:
+    0 3px 10px rgba(0,0,0,0.4),
+    0 1px 0 rgba(255,255,255,0.15) inset;
 }
 
-/* Brand name — Space Mono, bold, wide tracking */
 .printer-brand-group {
   display: flex;
   flex-direction: column;
@@ -130,9 +148,11 @@
 .status-dot {
   width: 14px;
   height: 14px;
-  background: #4caf50;
+  background: radial-gradient(circle at 35% 35%, #6fcf6f, #3a9e3a);
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(76, 175, 80, 0.7);
+  box-shadow:
+    0 0 10px rgba(76,175,80,0.8),
+    0 0 20px rgba(76,175,80,0.3);
   display: block;
 }
 
@@ -146,7 +166,83 @@
 }
 
 /* =============================================================
-   NAVIGATION ROW — pill buttons
+   IDENTITY PLATE — profile info embedded in the printer body
+   Sits between the header and the nav, like a label on the machine
+   ============================================================= */
+.printer-identity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.04), rgba(0,0,0,0.02));
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.07);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.7) inset,
+    0 2px 4px rgba(0,0,0,0.06);
+}
+
+.printer-identity-photo img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.8);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  display: block;
+}
+
+.printer-identity-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.printer-identity-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1c1c1c;
+  margin-bottom: 0.15rem;
+  line-height: 1.2;
+}
+
+.printer-identity-bio {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: #6a6560;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+.printer-identity-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.8rem;
+}
+
+.identity-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: #6a6560;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.identity-link:hover {
+  color: #1c1c1c;
+}
+
+.identity-link svg {
+  flex-shrink: 0;
+  opacity: 0.65;
+}
+
+/* =============================================================
+   NAVIGATION — 3D keyboard-style buttons
    ============================================================= */
 .printer-nav {
   display: flex;
@@ -157,90 +253,171 @@
 
 .printer-nav-btn {
   font-family: 'Space Mono', 'Courier New', monospace;
-  background: transparent;
+  /* Raised key surface gradient */
+  background: linear-gradient(to bottom, #f2ede3 0%, #e4dfd5 60%, #d8d3c9 100%);
   color: #3a3530;
-  border: 1.5px solid #ccc8be;
-  padding: 0.5rem 1.3rem;
-  border-radius: 999px;
+  /* Key border: lighter top/sides, darker bottom = raised edge */
+  border-top: 1px solid #e8e3d9;
+  border-left: 1px solid #ddd8ce;
+  border-right: 1px solid #ccc8be;
+  border-bottom: 1px solid #b8b3a8;
+  border-radius: 6px;
+  padding: 0.5rem 1.3rem 0.65rem;
   font-size: 0.78rem;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
   text-transform: uppercase;
   line-height: 1;
   user-select: none;
+  position: relative;
+
+  /* The "height" of the key — bottom shadow = physical thickness */
+  box-shadow:
+    0 4px 0 #a09890,                          /* key bottom edge (thickness) */
+    0 5px 8px rgba(0,0,0,0.22),               /* ambient shadow below key */
+    0 1px 0 rgba(255,255,255,0.8) inset;      /* top surface highlight */
+
+  transition: background 0.1s ease, box-shadow 0.1s ease, transform 0.1s ease, border-color 0.1s ease;
 }
 
 .printer-nav-btn:hover {
-  background: #ebe6dc;
-  border-color: #b8b3a8;
+  background: linear-gradient(to bottom, #f8f3e9 0%, #ece7dd 60%, #e0dbd1 100%);
+  box-shadow:
+    0 4px 0 #a09890,
+    0 6px 10px rgba(0,0,0,0.25),
+    0 1px 0 rgba(255,255,255,0.9) inset;
 }
 
-.printer-nav-btn.active {
-  background: #1c1c1c;
-  color: #f5f0e8;
-  border-color: #1c1c1c;
-}
-
+/* Key press — physically pushes down */
 .printer-nav-btn:active {
-  transform: scale(0.97);
+  transform: translateY(3px);
+  box-shadow:
+    0 1px 0 #a09890,
+    0 2px 4px rgba(0,0,0,0.15),
+    0 1px 0 rgba(255,255,255,0.5) inset;
+  background: linear-gradient(to bottom, #ddd8ce 0%, #d4cfc5 100%);
+  border-top-color: #ccc8be;
+}
+
+/* Active/selected page — pressed-in state */
+.printer-nav-btn.active {
+  background: linear-gradient(to bottom, #2a2520 0%, #1c1c1c 100%);
+  color: #f0ebe0;
+  border-top: 1px solid #3a3530;
+  border-left: 1px solid #2a2520;
+  border-right: 1px solid #1a1510;
+  border-bottom: 1px solid #111;
+  transform: translateY(2px);
+  box-shadow:
+    0 2px 0 #0a0a0a,
+    0 3px 6px rgba(0,0,0,0.3),
+    0 1px 0 rgba(255,255,255,0.08) inset;
 }
 
 /* =============================================================
-   PAPER EXIT SLOT
-   Dark horizontal bar at the very bottom of the printer frame.
-   This is the opening the paper feeds through.
+   3D RECESSED PAPER EXIT SLOT
+   Three-layer construction: top lip → dark cavity → bottom lip
+   The paper emerges from inside the cavity.
    ============================================================= */
 .printer-slot {
-  /* Bleed to frame edges (negate frame padding) */
-  margin: 0 -2.5rem;
-  height: 18px;
-  background: #2a2520;
+  margin: 0 -2.5rem;          /* bleed to frame edges */
   position: relative;
-  overflow: hidden;
-  border-radius: 0;
+  z-index: 5;
+  overflow: visible;           /* allow shadows to spill out */
 }
 
-/* Subtle gloss line inside the slot */
-.printer-slot-opening {
-  position: absolute;
-  top: 4px;
-  left: 10%;
-  right: 10%;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 1px;
+/* Top lip — the front face of the printer above the slot opening.
+   Its bottom shadow falls into the cavity, creating depth. */
+.printer-slot-top-lip {
+  height: 10px;
+  background: linear-gradient(to bottom, #ede8df, #d8d3c9);
+  border-bottom: 1px solid #b8b3a8;
+  box-shadow:
+    0 6px 14px rgba(0,0,0,0.45),   /* shadow cast down into cavity */
+    0 3px 6px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 3;
+}
+
+/* Cavity — the dark interior of the slot.
+   Gradient: darkest at top (shadow from lip), slightly lighter in middle
+   (ambient light bouncing off back wall), dark again at bottom. */
+.printer-slot-cavity {
+  height: 20px;
+  background: linear-gradient(
+    to bottom,
+    #0d0b08 0%,
+    #1e1a14 30%,
+    #2a2318 60%,
+    #1a1510 100%
+  );
+  position: relative;
+  z-index: 2;
+  /* Subtle horizontal scratch lines on the back wall */
+  background-image:
+    linear-gradient(to bottom, #0d0b08 0%, #1e1a14 30%, #2a2318 60%, #1a1510 100%),
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 3px,
+      rgba(255,255,255,0.015) 3px,
+      rgba(255,255,255,0.015) 4px
+    );
+}
+
+/* Bottom lip — the front face below the slot opening.
+   Receives shadow from the cavity above, and casts its own
+   shadow down onto the paper emerging below. */
+.printer-slot-bottom-lip {
+  height: 8px;
+  background: linear-gradient(to bottom, #c8c3ba, #d4cfc6);
+  border-top: 1px solid #b0aba0;
+  box-shadow:
+    0 -4px 8px rgba(0,0,0,0.35) inset,   /* shadow from cavity above */
+    0 4px 10px rgba(0,0,0,0.25);          /* shadow cast onto paper below */
+  position: relative;
+  z-index: 3;
 }
 
 /* =============================================================
    PAPER OUTPUT AREA
-   Clips the paper during the feed-in animation so it appears
-   to emerge from the slot above.
+   Clips paper during feed-in. Sits directly below the slot.
+   z-index lower than slot lips so paper appears to emerge from inside.
    ============================================================= */
 .paper-output-area {
   position: relative;
-  z-index: 1;
+  z-index: 4;                  /* above cavity (2) but below lips (3) — paper threads through */
   overflow: hidden;
-  /* Width matches paper, centered under the wider frame */
   max-width: 860px;
   margin: 0 auto;
-  /* Extend clipping region upward into the slot */
-  margin-top: 0;
+  /* Slight negative margin pulls paper up into the slot cavity */
+  margin-top: -2px;
 }
 
 /* =============================================================
-   PAPER SHEET
-   White, narrower than the frame, rounded bottom corners.
-   Starts hidden above (translateY -100%) and feeds down.
+   PAPER SHEET — textured, warm off-white
    ============================================================= */
 .paper-sheet {
-  background: #ffffff;
+  /* Warm off-white base */
+  background-color: #faf8f4;
+  /* Paper texture: very faint horizontal ruled lines */
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 27px,
+      rgba(180, 170, 155, 0.12) 27px,
+      rgba(180, 170, 155, 0.12) 28px
+    );
   border-radius: 0 0 12px 12px;
   padding: 2.5rem 3rem 3rem;
   box-shadow:
-    0 8px 40px rgba(0, 0, 0, 0.13),
-    0 2px 8px rgba(0, 0, 0, 0.07);
+    0 8px 40px rgba(0,0,0,0.14),
+    0 2px 8px rgba(0,0,0,0.08),
+    /* Left/right edge shadows give paper a slight curl/thickness feel */
+    3px 0 6px rgba(0,0,0,0.04),
+    -3px 0 6px rgba(0,0,0,0.04);
   position: relative;
   min-height: 520px;
   /* Initial state: hidden above, ready to feed down */
@@ -249,104 +426,16 @@
 }
 
 /* =============================================================
-   PAPER ANIMATIONS
-   Feed in: paper slides down out of slot (like a real printer)
-   Feed out: paper retracts back up into slot on navigate
+   PAPER ANIMATION — feed in only (no retract)
    ============================================================= */
 @keyframes paperFeedIn {
   0%   { transform: translateY(-100%); opacity: 0; }
-  8%   { opacity: 1; }
+  6%   { opacity: 1; }
   100% { transform: translateY(0);     opacity: 1; }
-}
-
-@keyframes paperFeedOut {
-  0%   { transform: translateY(0);     opacity: 1; }
-  92%  { opacity: 1; }
-  100% { transform: translateY(-100%); opacity: 0; }
 }
 
 .paper-sheet.feeding-in {
   animation: paperFeedIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.paper-sheet.feeding-out {
-  animation: paperFeedOut 0.65s cubic-bezier(0.55, 0, 1, 0.45) forwards;
-}
-
-/* =============================================================
-   PROFILE STRIP (About page only)
-   Horizontal card at top of paper: photo left, info right
-   ============================================================= */
-.paper-profile {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  margin-bottom: 0;
-  padding-bottom: 1.5rem;
-}
-
-.paper-profile-photo img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #f0ece4;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  display: block;
-}
-
-.paper-profile-info {
-  flex: 1;
-  min-width: 0;
-}
-
-.paper-profile-name {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #1c1c1c;
-  margin-bottom: 0.3rem;
-  line-height: 1.2;
-}
-
-.paper-profile-bio {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.92rem;
-  color: #555;
-  margin-bottom: 0.75rem;
-  line-height: 1.5;
-}
-
-.paper-profile-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-}
-
-.profile-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.82rem;
-  color: #555;
-  text-decoration: none;
-  transition: color 0.15s ease;
-}
-
-.profile-link:hover {
-  color: #1c1c1c;
-}
-
-.profile-link svg {
-  flex-shrink: 0;
-  opacity: 0.7;
-}
-
-.paper-profile-divider {
-  border: none;
-  border-top: 1px solid #ede9e0;
-  margin: 0 0 2rem 0;
 }
 
 /* =============================================================
@@ -378,7 +467,7 @@
 .paper-content h1 { font-size: 2rem; }
 .paper-content h2 {
   font-size: 1.5rem;
-  border-bottom: 1px solid #ede9e0;
+  border-bottom: 1px solid #e8e3da;
   padding-bottom: 0.4rem;
 }
 .paper-content h3 { font-size: 1.2rem; }
@@ -423,7 +512,7 @@
 }
 
 .paper-content code {
-  background: #f5f0e8;
+  background: #f0ece4;
   padding: 0.15rem 0.4rem;
   border-radius: 4px;
   font-size: 0.88em;
@@ -431,7 +520,7 @@
 }
 
 .paper-content pre {
-  background: #f5f0e8;
+  background: #f0ece4;
   padding: 1rem 1.5rem;
   border-radius: 8px;
   overflow-x: auto;
@@ -453,6 +542,7 @@
 
   .printer-frame {
     padding: 1.5rem 1.5rem 0;
+    transform: none; /* remove tilt on mobile */
   }
 
   .printer-slot {
@@ -474,6 +564,12 @@
     height: 22px;
   }
 
+  .printer-identity {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
   .paper-output-area {
     max-width: 100%;
   }
@@ -481,16 +577,6 @@
   .paper-sheet {
     padding: 2rem 1.5rem 2.5rem;
     min-height: 400px;
-  }
-
-  .paper-profile {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .paper-profile-links {
-    justify-content: center;
   }
 
   .paper-content h1 { font-size: 1.6rem; }

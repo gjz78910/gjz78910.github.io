@@ -1,5 +1,5 @@
 // Printer Theme JavaScript
-// Paper feeds out of the slot on load; feeds back in on navigate.
+// Paper feeds out of the slot on load (feed-in only — no retract on navigate).
 // Sound: bandpass-filtered white noise burst simulating a mechanical print head.
 
 (function () {
@@ -51,7 +51,7 @@
     var paper = document.getElementById('current-paper');
     if (!paper) return;
 
-    paper.classList.remove('feeding-in', 'feeding-out');
+    paper.classList.remove('feeding-in');
 
     // Two rAF frames ensure the browser has painted the initial hidden state
     requestAnimationFrame(function () {
@@ -62,7 +62,8 @@
   }
 
   /* ------------------------------------------------------------------ */
-  /* Navigation with feed-out animation                                   */
+  /* Navigation — no feed-out; navigate immediately after sound starts   */
+  /* The new page loads and its paper feeds in fresh from the slot.      */
   /* ------------------------------------------------------------------ */
 
   function setupNavigation() {
@@ -81,18 +82,13 @@
     if (page === 'about'  && isAboutPage())  return;
     if (page === 'events' && isEventsPage()) return;
 
-    var paper = document.getElementById('current-paper');
-    if (!paper) return;
-
+    // Start the print sound, then navigate almost immediately so the
+    // sound plays while the new page loads and its paper feeds in.
     playPrintSound();
 
-    paper.classList.remove('feeding-in');
-    paper.classList.add('feeding-out');
-
-    // Navigate after feed-out animation completes (0.65s)
     setTimeout(function () {
       window.location.href = page === 'about' ? '/printer/' : '/printer/events/';
-    }, 650);
+    }, 80);
   }
 
   /* ------------------------------------------------------------------ */
