@@ -55,31 +55,31 @@
     var audio = document.getElementById(id);
     if (!audio) return;
     try {
-      audio.currentTime = 0;
-      var p = audio.play();
+      // Use a fresh element each click so repeated taps always replay sound.
+      var clone = audio.cloneNode(true);
+      clone.removeAttribute('id');
+      clone.preload = 'auto';
+      clone.style.display = 'none';
+      document.body.appendChild(clone);
+
+      function cleanup() {
+        if (clone.parentNode) clone.parentNode.removeChild(clone);
+      }
+
+      clone.addEventListener('ended', cleanup, { once: true });
+      clone.addEventListener('error', cleanup, { once: true });
+
+      var p = clone.play();
       if (p && p.catch) {
         p.catch(function () {
-          // Fallback for browsers that reject replay on reused audio elements.
-          try {
-            var clone = audio.cloneNode(true);
-            clone.removeAttribute('id');
-            clone.preload = 'auto';
-            document.body.appendChild(clone);
-            var cp = clone.play();
-            if (cp && cp.finally) {
-              cp.finally(function () {
-                if (clone.parentNode) clone.parentNode.removeChild(clone);
-              });
-            } else {
-              setTimeout(function () {
-                if (clone.parentNode) clone.parentNode.removeChild(clone);
-              }, 2500);
-            }
-          } catch (err) {}
+          cleanup();
         });
       }
+
+      // Safety cleanup in case ended/error events do not fire.
+      setTimeout(cleanup, 5000);
     } catch (e) {
-      try { audio.load(); audio.play(); } catch (err) {}
+      try { audio.pause(); audio.currentTime = 0; audio.play(); } catch (err) {}
     }
   }
 
