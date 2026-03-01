@@ -83,7 +83,10 @@
           feedPaperIn();
         } else {
           sessionStorage.setItem('printer-nav', 'about');
-          window.location.href = '/printer/';
+          // 100ms delay lets audio start before page unloads
+          setTimeout(function () {
+            window.location.href = '/printer/';
+          }, 100);
         }
       });
     }
@@ -101,7 +104,9 @@
           feedPaperIn();
         } else {
           sessionStorage.setItem('printer-nav', 'events');
-          window.location.href = '/printer/events/';
+          setTimeout(function () {
+            window.location.href = '/printer/events/';
+          }, 100);
         }
       });
     }
