@@ -130,10 +130,10 @@
    ============================================================= */
 .paper-output-area {
   width: 100%;
-  /* Pull paper top up into the slot gap (slot-middle=16 + slot-bottom-bar=8 = 24px) */
+  /* Pull paper top up into the slot gap (slot-middle 16px + slot-bottom-bar 8px = 24px).
+     No overflow:hidden — the slot-assembly (inside the frame) paints on top and acts
+     as the visual mask. The paper starts hidden via translateY(-100%) on .paper-sheet. */
   margin-top: -24px;
-  overflow: hidden;
-  /* No position/z-index — stays in normal flow BELOW the frame's stacking context */
 }
 
 /* =============================================================
