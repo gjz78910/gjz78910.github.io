@@ -300,6 +300,9 @@
 }
 
 .printer-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Courier Prime', 'Courier New', monospace;
   font-size: 0.82rem;
   font-weight: 700;
@@ -318,8 +321,8 @@
   border-right:  1.5px solid #b5b0a5;
   border-bottom: 1.5px solid #a5a095;
   border-radius: 6px;
-  padding: 0.55rem 1.4rem 0.7rem;
-  line-height: 1;
+  padding: 0.62rem 1.4rem;
+  line-height: 1.05;
 
   box-shadow:
     0 5px 0 #888078,
