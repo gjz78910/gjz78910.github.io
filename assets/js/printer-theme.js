@@ -4,8 +4,6 @@
   'use strict';
 
   var soundPools = {};
-  var NAV_SOUND_DELAY_MS = 2800;
-  var navigationPending = false;
 
   /* ------------------------------------------------------------------ */
   /* Page detection                                                       */
@@ -59,40 +57,15 @@
     var pool = soundPools[id];
     if (!pool || !pool.players || pool.players.length === 0) return;
 
-    var player = null;
     var i;
-    var idx;
-    var candidate;
-    var len = pool.players.length;
+    var player = pool.players[0];
 
-    // Prefer a buffered player that is currently idle.
-    for (i = 0; i < len; i++) {
-      idx = (pool.index + i) % len;
-      candidate = pool.players[idx];
-      if (candidate.readyState >= 2 && (candidate.paused || candidate.ended)) {
-        player = candidate;
-        pool.index = (idx + 1) % len;
-        break;
-      }
-    }
-
-    // Otherwise pick any buffered player.
-    if (!player) {
-      for (i = 0; i < len; i++) {
-        idx = (pool.index + i) % len;
-        candidate = pool.players[idx];
-        if (candidate.readyState >= 2) {
-          player = candidate;
-          pool.index = (idx + 1) % len;
-          break;
-        }
-      }
-    }
-
-    // Last resort: use next pool entry.
-    if (!player) {
-      player = pool.players[pool.index];
-      pool.index = (pool.index + 1) % len;
+    // Force-interrupt any in-progress playback for this sound.
+    for (i = 0; i < pool.players.length; i++) {
+      try {
+        pool.players[i].pause();
+        pool.players[i].currentTime = 0;
+      } catch (err) {}
     }
 
     try {
@@ -153,15 +126,6 @@
     initSoundPool('button-sound', 4);
   }
 
-  function navigateWithSound(url, navKey) {
-    if (navigationPending) return;
-    navigationPending = true;
-    sessionStorage.setItem('printer-nav', navKey);
-    setTimeout(function () {
-      window.location.href = url;
-    }, NAV_SOUND_DELAY_MS);
-  }
-
   /* ------------------------------------------------------------------ */
   /* Navigation                                                           */
   /* ------------------------------------------------------------------ */
@@ -182,7 +146,8 @@
           setActiveButton('about');
           feedPaperIn();
         } else {
-          navigateWithSound('/printer/', 'about');
+          sessionStorage.setItem('printer-nav', 'about');
+          window.location.href = '/printer/';
         }
       });
     }
@@ -199,7 +164,8 @@
           setActiveButton('events');
           feedPaperIn();
         } else {
-          navigateWithSound('/printer/events/', 'events');
+          sessionStorage.setItem('printer-nav', 'events');
+          window.location.href = '/printer/events/';
         }
       });
     }
