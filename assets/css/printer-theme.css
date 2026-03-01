@@ -31,8 +31,9 @@
   position: relative;
   --slot-gap-height: 16px;
   --slot-bar-height: 3px;
-  --paper-side-inset: 56px;
-  --bottom-frame-height: 34px;
+  --slot-side-inset: 20px;
+  --paper-side-inset: 36px;
+  --bottom-frame-height: 28px;
 }
 
 /* =============================================================
@@ -121,10 +122,10 @@
 /* Side walls: 20px wide, hang 16px below frame into the gap */
 .printer-frame::before,
 .printer-frame::after {
-  content: none;
+  content: '';
   position: absolute;
   bottom: calc(-1 * var(--slot-gap-height));
-  width: var(--paper-side-inset);
+  width: var(--slot-side-inset);
   height: var(--slot-gap-height);
   background: linear-gradient(to bottom, #e8e4da 0%, #ddd8cc 100%);
   z-index: 3;
@@ -139,7 +140,8 @@
 .slot-bottom-bar {
   height: var(--slot-bar-height);
   background: #1a1714;
-  margin: 0;
+  margin-left: var(--slot-side-inset);
+  margin-right: var(--slot-side-inset);
   position: relative;
   z-index: 2;
   box-shadow: 0 2px 5px rgba(0,0,0,0.35);
@@ -506,14 +508,15 @@
 
 @media (max-width: 768px) {
   .printer-container {
-    --paper-side-inset: 42px;
-    --bottom-frame-height: 30px;
+    --slot-side-inset: 18px;
+    --paper-side-inset: 30px;
+    --bottom-frame-height: 24px;
   }
   .printer-theme-body { padding: 1.5rem 0.75rem 5rem; }
   .printer-frame { padding: 1.5rem 1.5rem 1.2rem; }
   .printer-avatar { width: 52px; height: 52px; }
   .printer-brand { font-size: 1.1rem; }
-  .slot-bottom-bar { margin: 0; }
+  .slot-bottom-bar { margin-left: var(--slot-side-inset); margin-right: var(--slot-side-inset); }
   .paper-output-area { margin-left: var(--paper-side-inset); margin-right: var(--paper-side-inset); }
   .slot-body-fill { margin: 0; }
   .paper-sheet { padding: 2rem 1.5rem 2.5rem; min-height: 400px; }
@@ -521,12 +524,13 @@
 
 @media (max-width: 480px) {
   .printer-container {
-    --paper-side-inset: 28px;
-    --bottom-frame-height: 26px;
+    --slot-side-inset: 14px;
+    --paper-side-inset: 22px;
+    --bottom-frame-height: 22px;
   }
   .printer-theme-body { padding: 1rem 0.5rem 4rem; }
   .printer-frame { padding: 1.25rem 1.25rem 1rem; }
-  .slot-bottom-bar { margin: 0; }
+  .slot-bottom-bar { margin-left: var(--slot-side-inset); margin-right: var(--slot-side-inset); }
   .paper-output-area { margin-left: var(--paper-side-inset); margin-right: var(--paper-side-inset); }
   .slot-body-fill { margin: 0; }
   .paper-sheet { padding: 1.5rem 1.25rem 2rem; }
