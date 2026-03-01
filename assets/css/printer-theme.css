@@ -29,6 +29,9 @@
   width: 100%;
   max-width: 900px;
   position: relative;
+  --slot-gap-height: 16px;
+  --slot-bar-height: 3px;
+  --paper-side-inset: 36px;
 }
 
 /* =============================================================
@@ -119,9 +122,9 @@
 .printer-frame::after {
   content: '';
   position: absolute;
-  bottom: -16px;
-  width: 20px;
-  height: 16px;
+  bottom: calc(-1 * var(--slot-gap-height));
+  width: var(--paper-side-inset);
+  height: var(--slot-gap-height);
   background: linear-gradient(to bottom, #e8e4da 0%, #ddd8cc 100%);
   z-index: 3;
 }
@@ -133,7 +136,7 @@
    Paper is margin:20px → bar is 20px wider on each side
    ============================================================= */
 .slot-bottom-bar {
-  height: 3px;
+  height: var(--slot-bar-height);
   background: #1a1714;
   margin: 0;
   position: relative;
@@ -143,13 +146,11 @@
 
 /* =============================================================
    SLOT BODY FILL  (z-index: 0)
-   Same margin as paper (20px) → same width as paper.
-   Sits between the side walls below the slot.
-   Covered by paper (z:1) when loaded.
+   Full-width lower frame under the slot.
+   Covered by paper (z:1) once paper is loaded.
    ============================================================= */
 .slot-body-fill {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 0;
   background: linear-gradient(to bottom, #e8e4da 0%, #ddd8cc 100%);
   min-height: 40px;
   border-radius: 0 0 6px 6px;
@@ -159,14 +160,14 @@
 
 /* =============================================================
    PAPER OUTPUT AREA  (z-index: 1)
-   margin:20px → paper fits inside side walls
-   margin-top: -(gap 16px + bottom-bar 3px) = -19px
-   overflow:hidden clips paper during animation
+   Uses --paper-side-inset so paper is narrower than the slot bars.
+   Negative top margin aligns paper with the slot opening.
+   overflow:hidden clips paper during feed animation.
    ============================================================= */
 .paper-output-area {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: -19px;
+  margin-left: var(--paper-side-inset);
+  margin-right: var(--paper-side-inset);
+  margin-top: calc(-1 * (var(--slot-gap-height) + var(--slot-bar-height)));
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -503,24 +504,38 @@
 }
 
 @media (max-width: 768px) {
+  .printer-container {
+    --paper-side-inset: 28px;
+  }
   .printer-theme-body { padding: 1.5rem 0.75rem 5rem; }
   .printer-frame { padding: 1.5rem 1.5rem 1.2rem; }
   .printer-avatar { width: 52px; height: 52px; }
   .printer-brand { font-size: 1.1rem; }
   .slot-bottom-bar { margin: 0; }
-  .paper-output-area { margin-left: 20px; margin-right: 20px; }
-  .slot-body-fill { margin-left: 20px; margin-right: 20px; }
-  .printer-frame::before, .printer-frame::after { width: 20px; bottom: -16px; height: 16px; }
+  .paper-output-area { margin-left: var(--paper-side-inset); margin-right: var(--paper-side-inset); }
+  .slot-body-fill { margin: 0; }
+  .printer-frame::before, .printer-frame::after {
+    width: var(--paper-side-inset);
+    bottom: calc(-1 * var(--slot-gap-height));
+    height: var(--slot-gap-height);
+  }
   .paper-sheet { padding: 2rem 1.5rem 2.5rem; min-height: 400px; }
 }
 
 @media (max-width: 480px) {
+  .printer-container {
+    --paper-side-inset: 20px;
+  }
   .printer-theme-body { padding: 1rem 0.5rem 4rem; }
   .printer-frame { padding: 1.25rem 1.25rem 1rem; }
   .slot-bottom-bar { margin: 0; }
-  .paper-output-area { margin-left: 20px; margin-right: 20px; }
-  .slot-body-fill { margin-left: 20px; margin-right: 20px; }
-  .printer-frame::before, .printer-frame::after { width: 20px; bottom: -16px; height: 16px; }
+  .paper-output-area { margin-left: var(--paper-side-inset); margin-right: var(--paper-side-inset); }
+  .slot-body-fill { margin: 0; }
+  .printer-frame::before, .printer-frame::after {
+    width: var(--paper-side-inset);
+    bottom: calc(-1 * var(--slot-gap-height));
+    height: var(--slot-gap-height);
+  }
   .paper-sheet { padding: 1.5rem 1.25rem 2rem; }
   .paper-content { font-size: 0.93rem; }
 }
