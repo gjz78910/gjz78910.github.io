@@ -46,12 +46,14 @@
   position: relative;
   z-index: 2;
 
-  /* 3D slab:
-     - top/left inset highlights = lit top-left face
-     - bottom inset shadow = depth of bottom edge
-     - outer left/right shadows = side walls
-     - bottom solid shadow = physical thickness of machine
+  /*
+    The slot IS the border-bottom of the frame.
+    A thin dark line spanning the full frame width — exactly like the reference.
+    No pseudo-element, no floating bar.
   */
+  border-bottom: 5px solid #1a1612;
+
+  /* 3D slab shadows */
   box-shadow:
     0 2px 0 rgba(255,255,255,0.9) inset,
     2px 0 0 rgba(255,255,255,0.55) inset,
@@ -62,18 +64,6 @@
     0 10px 0 #a0a098,
     0 14px 40px rgba(0,0,0,0.28),
     0 30px 80px rgba(0,0,0,0.10);
-}
-
-/* Slot bar — full-width dark strip at bottom of frame */
-.printer-frame::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 10px;
-  background: linear-gradient(to bottom, #1a1612 0%, #080604 100%);
-  box-shadow: 0 -3px 6px rgba(0,0,0,0.5) inset, 0 4px 10px rgba(0,0,0,0.5);
 }
 
 /* =============================================================
@@ -239,14 +229,16 @@
 
 /* =============================================================
    PAPER OUTPUT AREA  (z-index: 1 — behind the frame)
-   overflow:hidden clips paper during feed-in animation.
-   Negative margin-top pulls it up behind the slot bar.
+   Same width as the frame. overflow:hidden clips the paper
+   during feed-in so it appears to emerge from the slot.
+   Negative margin pulls it flush against the frame bottom.
    ============================================================= */
 .paper-output-area {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  margin-top: -10px; /* tuck behind the slot bar */
+  /* Pull up so paper top is hidden behind the frame border-bottom */
+  margin-top: -5px;
 }
 
 /* =============================================================
