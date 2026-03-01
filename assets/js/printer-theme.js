@@ -161,9 +161,9 @@
 
     if (aboutBtn) {
       aboutBtn.addEventListener('click', function () {
-        playSound('print-sound');
-        playSound('button-sound');
         if (isAboutPage()) {
+          playSound('print-sound');
+          playSound('button-sound');
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';
           var paper = document.getElementById('current-paper');
@@ -171,20 +171,22 @@
           setActiveButton('about');
           feedPaperIn();
         } else {
+          playSound('button-sound');
+          // Play full printer sound on destination page to avoid unload cutoff.
+          sessionStorage.setItem('printer-play-print-sound', '1');
           sessionStorage.setItem('printer-nav', 'about');
-          // Keep a short delay so click-triggered audio starts before navigation.
           setTimeout(function () {
             window.location.href = '/printer/';
-          }, 420);
+          }, 150);
         }
       });
     }
 
     if (eventsBtn) {
       eventsBtn.addEventListener('click', function () {
-        playSound('print-sound');
-        playSound('button-sound');
         if (isEventsPage()) {
+          playSound('print-sound');
+          playSound('button-sound');
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';
           var paper = document.getElementById('current-paper');
@@ -192,10 +194,13 @@
           setActiveButton('events');
           feedPaperIn();
         } else {
+          playSound('button-sound');
+          // Play full printer sound on destination page to avoid unload cutoff.
+          sessionStorage.setItem('printer-play-print-sound', '1');
           sessionStorage.setItem('printer-nav', 'events');
           setTimeout(function () {
             window.location.href = '/printer/events/';
-          }, 420);
+          }, 150);
         }
       });
     }
@@ -208,6 +213,9 @@
   function init() {
     var paper = document.getElementById('current-paper');
     var nav = sessionStorage.getItem('printer-nav');
+    var shouldPlayPrintSound = sessionStorage.getItem('printer-play-print-sound') === '1';
+
+    initSounds();
 
     if (nav === 'about' && isAboutPage()) {
       setActiveButton('about');
@@ -223,12 +231,16 @@
       if (content) content.style.visibility = 'visible';
       if (paper) paper.style.display = 'block';
       feedPaperIn();
+      if (shouldPlayPrintSound) {
+        playSound('print-sound');
+        sessionStorage.removeItem('printer-play-print-sound');
+      }
     } else {
       // Direct visit — hide paper entirely, just show the printer body
       if (paper) paper.style.display = 'none';
+      sessionStorage.removeItem('printer-play-print-sound');
     }
 
-    initSounds();
     setupNavigation();
   }
 
