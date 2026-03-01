@@ -36,7 +36,7 @@
   --slot-side-inset: 26px;
   --paper-side-inset: calc(var(--slot-side-inset) + var(--slot-paper-overhang));
   --paper-slot-overlap: 2px;
-  --bottom-frame-height: 28px;
+  --bottom-frame-height: var(--slot-gap-height);
 }
 
 /* =============================================================
@@ -145,8 +145,13 @@
   margin-left: var(--slot-side-inset);
   margin-right: var(--slot-side-inset);
   position: relative;
-  z-index: 0;
+  z-index: 1;
+  opacity: 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.35);
+}
+
+.printer-container.paper-loaded .slot-bottom-bar {
+  opacity: 1;
 }
 
 /* =============================================================
@@ -174,7 +179,7 @@
   margin-right: var(--paper-side-inset);
   margin-top: calc(-1 * (var(--slot-bar-height) + var(--paper-slot-overlap)));
   position: relative;
-  z-index: 1;
+  z-index: 2;
   overflow: hidden;
 }
 
@@ -513,7 +518,7 @@
     --slot-side-inset: 22px;
     --paper-side-inset: calc(var(--slot-side-inset) + var(--slot-paper-overhang));
     --paper-slot-overlap: 2px;
-    --bottom-frame-height: 24px;
+    --bottom-frame-height: var(--slot-gap-height);
   }
   .printer-theme-body { padding: 1.5rem 0.75rem 5rem; }
   .printer-frame { padding: 1.5rem 1.5rem 1.2rem; }
@@ -534,7 +539,7 @@
     --slot-side-inset: 16px;
     --paper-side-inset: calc(var(--slot-side-inset) + var(--slot-paper-overhang));
     --paper-slot-overlap: 1px;
-    --bottom-frame-height: 22px;
+    --bottom-frame-height: var(--slot-gap-height);
   }
   .printer-theme-body { padding: 1rem 0.5rem 4rem; }
   .printer-frame { padding: 1.25rem 1.25rem 1rem; }

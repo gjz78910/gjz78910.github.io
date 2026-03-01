@@ -31,6 +31,12 @@
     eventsBtn.setAttribute('aria-current', page === 'events' ? 'page' : 'false');
   }
 
+  function setPaperLoadedState(loaded) {
+    var container = document.querySelector('.printer-container');
+    if (!container) return;
+    container.classList.toggle('paper-loaded', !!loaded);
+  }
+
   /* ------------------------------------------------------------------ */
   /* Paper animation                                                      */
   /* ------------------------------------------------------------------ */
@@ -79,6 +85,7 @@
           if (content) content.style.visibility = 'visible';
           var paper = document.getElementById('current-paper');
           if (paper) paper.style.display = 'block';
+          setPaperLoadedState(true);
           setActiveButton('about');
           feedPaperIn();
         } else {
@@ -100,6 +107,7 @@
           if (content) content.style.visibility = 'visible';
           var paper = document.getElementById('current-paper');
           if (paper) paper.style.display = 'block';
+          setPaperLoadedState(true);
           setActiveButton('events');
           feedPaperIn();
         } else {
@@ -133,11 +141,13 @@
       var content = document.querySelector('.paper-content');
       if (content) content.style.visibility = 'visible';
       if (paper) paper.style.display = 'block';
+      setPaperLoadedState(true);
       feedPaperIn();
       playSound('print-sound');
     } else {
       // Direct visit — hide paper entirely, just show the printer body
       if (paper) paper.style.display = 'none';
+      setPaperLoadedState(false);
     }
 
     setupNavigation();
