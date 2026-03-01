@@ -32,7 +32,7 @@ author_profile: false
     <img src="/images/event_images/icpe25.jpeg" alt="ICPE 2025">
     <div class="event-caption">SPEC Kaivalya Dixit Distinguished Dissertation <strong>Award Ceremony</strong> at <a href="https://research.spec.org/awards/past-winners/2024/">ICPE 2025</a></div>
   </div>
-    <div class="event-card">
+  <div class="event-card">
     <img src="/images/event_images/cow68.jpg" alt="68th COW">
     <div class="event-caption">Attending <a href="https://www.ucl.ac.uk/crest/events/2025/sep/68th-crest-open-workshop-ssbse-challenge-track-collaborative-jam-session">68th COW</a></div>
   </div>
@@ -71,40 +71,3 @@ author_profile: false
     <div class="event-caption">Presenting at <a href="https://2023.esec-fse.org/">FSE 2023</a></div>
   </div>
 </div>
-
-<style>
-.events-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-  margin: 1rem 0 2.5rem 0;
-}
-.event-card {
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  overflow: hidden;
-  background: #fff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.event-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
-}
-.event-card img {
-  width: 100%;
-  aspect-ratio: 3/2;
-  object-fit: cover;
-  display: block;
-}
-.event-card .event-caption {
-  padding: 0.6rem 0.8rem;
-  font-size: 0.85em;
-  color: #444;
-  line-height: 1.4;
-}
-@media (max-width: 640px) {
-  .events-grid {
-    grid-template-columns: 1fr;
-  }
-}
-</style>

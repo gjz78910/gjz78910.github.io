@@ -2,7 +2,7 @@
    Printer Theme
    ============================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:wght@400;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -19,61 +19,48 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Courier Prime', 'Courier New', monospace;
 }
 
 /* =============================================================
-   LAYOUT WRAPPER
-   The printer-container sets the max-width for the whole unit.
-   The printer-frame is full width of the container.
-   The paper is narrower — centered within the frame.
+   CONTAINER
+   Sets the overall width. Frame is full width; paper is narrower.
+   --paper-w is the shared variable for slot opening + paper width.
    ============================================================= */
 .printer-container {
   width: 100%;
   max-width: 900px;
-}
-
-.printer-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  --paper-w: 640px;
+  --side-wall-w: 1fr;  /* side walls fill remaining space equally */
   position: relative;
 }
 
 /* =============================================================
-   PRINTER FRAME — thick 3D plastic body
+   PRINTER FRAME  (z-index: 10)
    ============================================================= */
 .printer-frame {
   background: linear-gradient(175deg,
-    #f8f4ec 0%,
-    #f2ede3 30%,
-    #ebe5db 65%,
-    #e0dbd0 100%
+    #f8f4ec 0%, #f2ede3 30%, #ebe5db 65%, #e0dbd0 100%
   );
   border-radius: 18px 18px 0 0;
   padding: 2rem 2.5rem 0;
   position: relative;
-  z-index: 20;
+  z-index: 10;
 
   box-shadow:
-    /* top inner highlight */
     0 2px 0 rgba(255,255,255,0.9) inset,
     2px 0 0 rgba(255,255,255,0.55) inset,
-    /* bottom inner dark edge */
     0 -5px 0 #c0bbb0 inset,
     -2px 0 0 rgba(0,0,0,0.07) inset,
-    /* outer side shadows */
     7px 0 14px rgba(0,0,0,0.13),
     -7px 0 14px rgba(0,0,0,0.13),
-    /* thick bottom edge = physical depth of the body */
     0 12px 0 #aeaaa0,
-    /* ambient desk shadow */
     0 14px 45px rgba(0,0,0,0.28),
     0 28px 90px rgba(0,0,0,0.13);
 }
 
 /* =============================================================
-   PRINTER HEADER
+   HEADER
    ============================================================= */
 .printer-top {
   display: flex;
@@ -104,10 +91,8 @@
 }
 
 .printer-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
 }
 
 .printer-brand-group {
@@ -119,18 +104,17 @@
 }
 
 .printer-brand {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Special Elite', 'Courier New', serif;
   color: #1c1c1c;
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.2;
 }
 
 .printer-tagline {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Courier Prime', 'Courier New', monospace;
   color: #6a6560;
   font-size: 0.82rem;
-  font-weight: 400;
   line-height: 1.4;
 }
 
@@ -145,13 +129,12 @@
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.77rem;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: 0.78rem;
   color: #6a6560;
   text-decoration: none;
   transition: color 0.15s ease;
 }
-
 .printer-link:hover { color: #1c1c1c; }
 .printer-link svg { flex-shrink: 0; opacity: 0.65; }
 
@@ -169,8 +152,7 @@
 }
 
 .status-dot {
-  width: 11px;
-  height: 11px;
+  width: 11px; height: 11px;
   background: radial-gradient(circle at 35% 35%, #7de07d, #2e8b2e);
   border-radius: 50%;
   box-shadow: 0 0 7px rgba(55,175,55,0.9), 0 0 16px rgba(55,175,55,0.4);
@@ -178,7 +160,7 @@
 }
 
 .status-text {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Courier Prime', monospace;
   color: #8a8278;
   font-size: 0.6rem;
   letter-spacing: 1px;
@@ -187,7 +169,8 @@
 
 /* =============================================================
    NAVIGATION — 3D keyboard keys
-   Active state: pressed-in (darker, depressed) — NOT pure black
+   Active = same key shape but recessed (translateY + darker face)
+   matching the nooc.me reference exactly
    ============================================================= */
 .printer-nav {
   display: flex;
@@ -199,33 +182,28 @@
 .printer-nav-btn {
   font-family: 'Special Elite', 'Courier New', serif;
   font-size: 0.82rem;
-  font-weight: 400;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   cursor: pointer;
   user-select: none;
   position: relative;
 
-  /* Key face */
+  /* Raised key face */
   background: linear-gradient(to bottom,
-    #f4efe5 0%,
-    #ebe6db 45%,
-    #ddd8cc 85%,
-    #d0cbbf 100%
+    #f4efe5 0%, #ebe6db 45%, #ddd8cc 85%, #d0cbbf 100%
   );
   color: #2a2520;
 
-  /* Asymmetric borders = raised key illusion */
+  /* Asymmetric borders = raised key */
   border-top:    1.5px solid #f0ece2;
   border-left:   1.5px solid #e8e3d8;
   border-right:  1.5px solid #b5b0a5;
   border-bottom: 1.5px solid #a5a095;
-
   border-radius: 6px;
   padding: 0.55rem 1.4rem 0.7rem;
   line-height: 1;
 
-  /* Physical key height via solid bottom shadow */
+  /* Physical key height */
   box-shadow:
     0 5px 0 #888078,
     0 7px 10px rgba(0,0,0,0.25),
@@ -237,10 +215,7 @@
 
 .printer-nav-btn:hover {
   background: linear-gradient(to bottom,
-    #faf5eb 0%,
-    #f0ebe0 45%,
-    #e3ded2 85%,
-    #d6d1c5 100%
+    #faf5eb 0%, #f0ebe0 45%, #e3ded2 85%, #d6d1c5 100%
   );
   box-shadow:
     0 5px 0 #888078,
@@ -249,7 +224,7 @@
     2px 0 0 rgba(255,255,255,0.5) inset;
 }
 
-/* Key physically depresses on click */
+/* Key depresses on click */
 .printer-nav-btn:active {
   transform: translateY(4px);
   box-shadow:
@@ -261,189 +236,160 @@
   border-left-color: #b3afa3;
 }
 
-/* Active/selected page:
-   Key stays pressed in — warm dark brown, NOT pure black.
-   Looks like a held-down key on a vintage typewriter. */
+/*
+  ACTIVE (current page) — matches nooc.me reference:
+  Same rounded key shape, slightly darker warm beige face,
+  pressed down 3px. NOT black — just a deeper, shadowed version
+  of the same key material.
+*/
 .printer-nav-btn.active {
   background: linear-gradient(to bottom,
-    #4a4035 0%,
-    #3a3028 50%,
-    #2e2820 100%
+    #c8c3b7 0%, #bdb8ac 50%, #b0ab9f 100%
   );
-  color: #e8e0d0;
-  border-top:    1.5px solid #5a5045;
-  border-left:   1.5px solid #4a4035;
-  border-right:  1.5px solid #1a1510;
-  border-bottom: 1.5px solid #120e0a;
+  color: #1a1510;
+  border-top:    1.5px solid #d0cbbf;
+  border-left:   1.5px solid #c8c3b7;
+  border-right:  1.5px solid #8a8578;
+  border-bottom: 1.5px solid #7a7568;
   transform: translateY(3px);
   box-shadow:
-    0 2px 0 #0e0c08,
-    0 3px 8px rgba(0,0,0,0.35),
-    /* subtle warm inner glow — not flat black */
-    0 1px 0 rgba(255,200,100,0.06) inset;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    0 2px 0 #6a6558,
+    0 3px 8px rgba(0,0,0,0.2),
+    0 1px 0 rgba(255,255,255,0.2) inset;
 }
 
 /* =============================================================
-   SLOT ASSEMBLY
-   Structural breakdown:
-     slot-top-face      — full-width printer body strip above opening
-     slot-middle-row    — left wall | opening | right wall
-     slot-bottom-face   — full-width strip below opening (z-index > paper)
-
-   The paper output area sits between the frame and the bottom face,
-   so the bottom face overlaps the paper top edge = paper inside machine.
+   SLOT TOP SECTION  (inside printer-frame, at the bottom)
+   Left wall | narrow dark opening | right wall
+   The opening width = --paper-w
    ============================================================= */
-.printer-slot-assembly {
-  margin: 0 -2.5rem;
-  position: relative;
-  z-index: 15;
-}
-
-/* Top face: printer body surface just above the slot.
-   Casts shadow downward into the opening. */
-.slot-top-face {
-  height: 10px;
-  background: linear-gradient(to bottom, #e5e0d6, #ccc8bc);
-  border-bottom: 1px solid #b0aba0;
-  box-shadow:
-    0 5px 12px rgba(0,0,0,0.5),
-    0 3px 6px rgba(0,0,0,0.3);
-  position: relative;
-  z-index: 4;
-}
-
-/* Middle row: side walls flanking the narrow opening */
-.slot-middle-row {
+.slot-top-section {
   display: flex;
   align-items: stretch;
+  margin: 0 -2.5rem;   /* bleed to frame edges */
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 
-/* Side walls — same material as the printer body.
-   These make the slot look like a real rectangular hole
-   cut into the machine, not a full-width stripe. */
 .slot-side-wall {
   flex: 1;
-  background: linear-gradient(to bottom, #ccc8bc, #d8d3c8);
-  /* Inner shadow on the wall face adjacent to the opening */
+  background: linear-gradient(to bottom, #ddd8ce, #ccc8bc);
+  /* Inner shadow toward the opening = depth on the wall face */
 }
 
-.slot-side-wall--left {
-  box-shadow: inset -4px 0 8px rgba(0,0,0,0.25);
-  border-right: 1px solid #a0a098;
+.slot-top-section .slot-side-wall:first-child {
+  box-shadow: inset -6px 0 10px rgba(0,0,0,0.18);
+  border-right: 1px solid #aaa8a0;
+}
+.slot-top-section .slot-side-wall:last-child {
+  box-shadow: inset 6px 0 10px rgba(0,0,0,0.18);
+  border-left: 1px solid #aaa8a0;
 }
 
-.slot-side-wall--right {
-  box-shadow: inset 4px 0 8px rgba(0,0,0,0.25);
-  border-left: 1px solid #a0a098;
-}
-
-/* The actual dark opening — thin and narrow */
+/* The dark slot opening — thin tunnel */
 .slot-opening {
-  /* Width matches paper-output-area max-width */
-  width: 680px;
+  width: var(--paper-w);
   flex-shrink: 0;
+  height: 14px;   /* thin slot */
   background: linear-gradient(to bottom,
-    #060504 0%,
-    #100e08 35%,
-    #181410 65%,
-    #0c0a06 100%
+    #080604 0%, #141008 40%, #1c1610 70%, #0e0c08 100%
   );
   position: relative;
   overflow: hidden;
+  /* Top shadow from the printer face above */
+  box-shadow: 0 -4px 8px rgba(0,0,0,0.5) inset;
 }
 
 /* Subtle gloss line inside the tunnel */
-.slot-opening-inner {
+.slot-gloss {
   position: absolute;
   top: 3px;
-  left: 8%;
-  right: 8%;
+  left: 10%;
+  right: 10%;
   height: 1px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.07);
   border-radius: 1px;
 }
 
-/* Bottom face: printer body surface below the slot.
-   HIGH z-index so it sits IN FRONT of the paper.
-   This makes the paper appear to emerge from inside the machine. */
-.slot-bottom-face {
-  height: 12px;
-  background: linear-gradient(to bottom, #b8b3a8, #ccc8bc);
-  border-top: 1px solid #9a9590;
-  position: relative;
-  z-index: 25;  /* above paper (z-index 10) */
-  box-shadow:
-    0 -5px 10px rgba(0,0,0,0.45) inset,
-    0 6px 14px rgba(0,0,0,0.3);
-}
-
 /* =============================================================
-   PAPER OUTPUT AREA
-   Width must match .slot-opening width exactly.
-   overflow:hidden clips paper during feed-in.
-   z-index between slot-top-face and slot-bottom-face.
+   PAPER OUTPUT AREA  (z-index: 20 — above frame, below overlay)
+   overflow:hidden clips paper during feed-in animation
    ============================================================= */
 .paper-output-area {
   position: relative;
-  z-index: 10;
+  z-index: 20;
   overflow: hidden;
-  width: 680px;
+  width: var(--paper-w);
   margin: 0 auto;
-  /* Pull up so paper top edge is hidden behind slot-bottom-face */
-  margin-top: -12px;
+  /* No margin-top — the slot-bottom-overlay will overlap from above */
 }
 
 /* =============================================================
-   PAPER SHEET — frosted/matte texture, warm off-white
-   No ruled lines — just a subtle grain/frost effect
+   SLOT BOTTOM OVERLAY  (z-index: 30 — in front of paper)
+   This is the printer face BELOW the slot.
+   Left wall | transparent gap (paper shows through) | right wall
+   The gap width = --paper-w, matching the paper exactly.
+   Because this sits in front of the paper, the paper appears
+   to emerge from inside the machine.
+   ============================================================= */
+.slot-bottom-overlay {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  z-index: 30;
+  /* Negative margin pulls it up to overlap the paper top */
+  margin-top: -18px;
+  /* Must be full container width to cover the sides */
+  width: 100%;
+  height: 18px;
+  pointer-events: none;  /* don't block paper scrolling */
+}
+
+.slot-bottom-overlay .slot-side-wall {
+  flex: 1;
+  background: linear-gradient(to bottom, #c8c3b8, #d4cfc6);
+  /* Shadow cast down onto the paper edge */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.slot-bottom-overlay .slot-side-wall:first-child {
+  box-shadow:
+    inset -6px 0 10px rgba(0,0,0,0.18),
+    0 4px 12px rgba(0,0,0,0.25);
+  border-right: 1px solid #aaa8a0;
+}
+.slot-bottom-overlay .slot-side-wall:last-child {
+  box-shadow:
+    inset 6px 0 10px rgba(0,0,0,0.18),
+    0 4px 12px rgba(0,0,0,0.25);
+  border-left: 1px solid #aaa8a0;
+}
+
+/* The gap — paper shows through here */
+.slot-bottom-gap {
+  width: var(--paper-w);
+  flex-shrink: 0;
+  /* Transparent — paper is visible underneath */
+  background: transparent;
+  /* Shadow from the printer face above, cast onto the paper */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+  pointer-events: none;
+}
+
+/* =============================================================
+   PAPER SHEET — pure white
    ============================================================= */
 .paper-sheet {
-  background-color: #f7f4ee;
-
-  /* Frosted paper texture:
-     Two overlapping fine noise patterns at different scales
-     create a matte, slightly grainy surface — like quality printer paper. */
-  background-image:
-    /* Fine diagonal grain */
-    repeating-linear-gradient(
-      47deg,
-      transparent 0px,
-      transparent 2px,
-      rgba(150, 138, 118, 0.04) 2px,
-      rgba(150, 138, 118, 0.04) 3px
-    ),
-    /* Coarser cross-grain */
-    repeating-linear-gradient(
-      -43deg,
-      transparent 0px,
-      transparent 4px,
-      rgba(150, 138, 118, 0.03) 4px,
-      rgba(150, 138, 118, 0.03) 5px
-    ),
-    /* Very subtle vertical variation — paper fibre direction */
-    repeating-linear-gradient(
-      to right,
-      transparent 0px,
-      transparent 8px,
-      rgba(140, 130, 110, 0.02) 8px,
-      rgba(140, 130, 110, 0.02) 9px
-    );
-
-  border-radius: 0 0 10px 10px;
+  background: #ffffff;
+  border-radius: 0 0 8px 8px;
   padding: 2.5rem 3rem 3rem;
-
   box-shadow:
     0 12px 50px rgba(0,0,0,0.16),
     0 4px 12px rgba(0,0,0,0.1),
     4px 0 8px rgba(0,0,0,0.05),
     -4px 0 8px rgba(0,0,0,0.05);
-
   position: relative;
   min-height: 520px;
-
   /* Initial state: hidden above, ready to feed down */
   transform: translateY(-100%);
   opacity: 0;
@@ -455,7 +401,7 @@
 @keyframes paperFeedIn {
   0%   { transform: translateY(-100%); opacity: 0; }
   5%   { opacity: 1; }
-  100% { transform: translateY(0);     opacity: 1; }
+  100% { transform: translateY(0); opacity: 1; }
 }
 
 .paper-sheet.feeding-in {
@@ -463,12 +409,12 @@
 }
 
 /* =============================================================
-   PAPER CONTENT TYPOGRAPHY — typewriter feel
+   PAPER CONTENT — all typewriter fonts
    ============================================================= */
 .paper-content {
   position: relative;
   z-index: 1;
-  color: #2c2820;
+  color: #1a1510;
   line-height: 1.85;
   font-size: 1rem;
   font-family: 'Courier Prime', 'Courier New', monospace;
@@ -481,49 +427,37 @@
 .paper-content h5,
 .paper-content h6 {
   color: #1a1510;
-  font-weight: 700;
+  font-family: 'Special Elite', 'Courier New', serif;
+  font-weight: 400;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
-  font-family: 'Special Elite', 'Courier New', serif;
   line-height: 1.3;
 }
 
 .paper-content h1 { font-size: 2rem; }
 .paper-content h2 {
   font-size: 1.5rem;
-  border-bottom: 1px solid #ddd8cc;
+  border-bottom: 1px solid #e0dbd0;
   padding-bottom: 0.4rem;
 }
 .paper-content h3 { font-size: 1.2rem; }
 
-.paper-content p {
-  margin-bottom: 1.1rem;
-  color: #332e28;
-}
+.paper-content p { margin-bottom: 1.1rem; }
 
 .paper-content a {
   color: #1a5fa0;
   text-decoration: none;
+  font-family: 'Courier Prime', monospace;
 }
-
 .paper-content a:hover { text-decoration: underline; }
 
-.paper-content ul,
-.paper-content ol {
+.paper-content ul, .paper-content ol {
   margin-left: 1.5rem;
   margin-bottom: 1.1rem;
 }
+.paper-content li { margin-bottom: 0.4rem; }
 
-.paper-content li {
-  margin-bottom: 0.4rem;
-  color: #332e28;
-}
-
-.paper-content img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
+.paper-content img { max-width: 100%; height: auto; border-radius: 4px; }
 
 .paper-content blockquote {
   border-left: 3px solid #ccc8bc;
@@ -534,7 +468,7 @@
 }
 
 .paper-content code {
-  background: #edeae0;
+  background: #f0ece4;
   padding: 0.15rem 0.4rem;
   border-radius: 3px;
   font-size: 0.9em;
@@ -542,69 +476,111 @@
 }
 
 .paper-content pre {
-  background: #edeae0;
+  background: #f0ece4;
   padding: 1rem 1.5rem;
   border-radius: 6px;
   overflow-x: auto;
   margin-bottom: 1.1rem;
 }
+.paper-content pre code { background: none; padding: 0; }
 
-.paper-content pre code {
-  background: none;
-  padding: 0;
+/* =============================================================
+   POLAROID / INSTANT PHOTO EVENT CARDS
+   White frame, thick bottom border (the Polaroid label area),
+   slight rotation, drop shadow
+   ============================================================= */
+.events-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 1.5rem;
+  margin: 1rem 0 2.5rem 0;
+}
+
+.event-card {
+  background: #ffffff;
+  /* Polaroid frame: equal padding on sides/top, thick bottom for label */
+  padding: 10px 10px 44px 10px;
+  box-shadow:
+    0 4px 16px rgba(0,0,0,0.18),
+    0 1px 4px rgba(0,0,0,0.12);
+  /* Slight random tilt — alternating left/right for natural feel */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+/* Alternate tilt direction */
+.event-card:nth-child(odd)  { transform: rotate(-1.2deg); }
+.event-card:nth-child(even) { transform: rotate(0.8deg); }
+
+.event-card:hover {
+  transform: rotate(0deg) translateY(-6px) scale(1.03) !important;
+  box-shadow:
+    0 12px 32px rgba(0,0,0,0.22),
+    0 2px 8px rgba(0,0,0,0.14);
+  z-index: 5;
+}
+
+.event-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+.event-card .event-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: 0.75rem;
+  color: #333;
+  line-height: 1.3;
+  overflow: hidden;
+}
+
+.event-card .event-caption a {
+  color: #1a5fa0;
+  text-decoration: none;
+  font-family: 'Courier Prime', monospace;
+}
+.event-card .event-caption a:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .events-grid { grid-template-columns: 1fr; }
+  .event-card:nth-child(odd),
+  .event-card:nth-child(even) { transform: rotate(0deg); }
 }
 
 /* =============================================================
-   RESPONSIVE
-   The paper width always stays within the frame.
-   On small screens the slot-opening and paper-output-area
-   shrink together so paper never bleeds outside the frame walls.
+   RESPONSIVE — paper and slot opening always same width,
+   always narrower than the frame (side walls always visible)
    ============================================================= */
 @media (max-width: 900px) {
-  .slot-opening,
-  .paper-output-area {
-    width: calc(100% - 120px); /* leave room for side walls */
-  }
+  .printer-container { --paper-w: calc(100% - 100px); }
 }
 
 @media (max-width: 768px) {
   .printer-theme-body { padding: 1.5rem 0.75rem 5rem; }
-
   .printer-frame { padding: 1.5rem 1.5rem 0; }
-
-  .printer-slot-assembly { margin: 0 -1.5rem; }
-
+  .slot-top-section { margin: 0 -1.5rem; }
+  .printer-container { --paper-w: calc(100% - 60px); }
   .printer-avatar { width: 52px; height: 52px; }
-
   .printer-brand { font-size: 1.1rem; }
-
-  .slot-opening,
-  .paper-output-area {
-    width: calc(100% - 80px);
-  }
-
-  .paper-sheet {
-    padding: 2rem 1.5rem 2.5rem;
-    min-height: 400px;
-  }
-
+  .paper-sheet { padding: 2rem 1.5rem 2.5rem; min-height: 400px; }
   .paper-content h1 { font-size: 1.6rem; }
   .paper-content h2 { font-size: 1.3rem; }
 }
 
 @media (max-width: 480px) {
   .printer-theme-body { padding: 1rem 0.5rem 4rem; }
-
   .printer-frame { padding: 1.25rem 1.25rem 0; }
-
-  .printer-slot-assembly { margin: 0 -1.25rem; }
-
-  .slot-opening,
-  .paper-output-area {
-    width: calc(100% - 50px);
-  }
-
+  .slot-top-section { margin: 0 -1.25rem; }
+  .printer-container { --paper-w: calc(100% - 40px); }
   .paper-sheet { padding: 1.5rem 1.25rem 2rem; }
-
   .paper-content { font-size: 0.93rem; }
 }

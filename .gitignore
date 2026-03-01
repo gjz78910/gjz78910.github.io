@@ -1,2 +1,6 @@
 _site/
 
+# Agent / IDE tooling — not part of the site
+AGENTS.md
+.claude/
+.cursor/
