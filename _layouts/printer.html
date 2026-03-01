@@ -21,7 +21,7 @@ layout: compress
 
     <div class="printer-container">
 
-      <!-- 1. PRINTER FRAME — z:2, sits on top -->
+      <!-- LAYER 1: Printer frame body (z-index: 1) -->
       <div class="printer-frame">
 
         <div class="printer-top">
@@ -69,13 +69,32 @@ layout: compress
 
       </div><!-- /printer-frame -->
 
-      <!-- 2. PAPER — z:1, slides out from under the frame's bottom edge -->
+      <!-- LAYER 2: Paper — slides out from the slot (z-index: 2) -->
       <div class="paper-output-area" id="paper-output-area">
         <div class="paper-sheet" id="current-paper">
           <div class="paper-content">
             {{ content }}
           </div>
         </div>
+      </div>
+
+      <!--
+        LAYER 3: Slot overlay — sits on top of everything (z-index: 3)
+        Consists of:
+          - .slot-top-bar   : dark bar that overlaps the top of the paper
+          - .slot-side-left : left wall of the slot opening
+          - .slot-side-right: right wall of the slot opening
+          - .slot-bottom-bar: dark bar below the paper gap, above the printer frame bottom
+        Together they form a rectangular tunnel the paper feeds through.
+      -->
+      <div class="slot-overlay">
+        <div class="slot-top-bar"></div>
+        <div class="slot-middle">
+          <div class="slot-side-left"></div>
+          <div class="slot-gap"></div>
+          <div class="slot-side-right"></div>
+        </div>
+        <div class="slot-bottom-bar"></div>
       </div>
 
     </div><!-- /printer-container -->
