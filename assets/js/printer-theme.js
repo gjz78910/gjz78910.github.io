@@ -4,7 +4,9 @@
   'use strict';
 
   var soundPools = {};
+  var BUTTON_SOUND_DELAY_MS = 500;
   var PAPER_ANIMATION_DELAY_MS = 1000;
+  var pendingActionTimer = null;
   var pendingPrintTimer = null;
 
   /* ------------------------------------------------------------------ */
@@ -125,6 +127,14 @@
 
   function initSounds() {
     initSoundPool('print-sound', 4);
+    initSoundPool('button-sound', 4);
+  }
+
+  function clearPendingAction() {
+    if (pendingActionTimer) {
+      clearTimeout(pendingActionTimer);
+      pendingActionTimer = null;
+    }
   }
 
   function clearPendingPrint() {
@@ -153,32 +163,46 @@
 
     if (aboutBtn) {
       aboutBtn.addEventListener('click', function () {
+        playSound('button-sound');
+        clearPendingAction();
         if (isAboutPage()) {
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';
           var paper = document.getElementById('current-paper');
           if (paper) paper.style.display = 'block';
           setActiveButton('about');
-          startPrintingWithDelay();
+          pendingActionTimer = setTimeout(function () {
+            startPrintingWithDelay();
+            pendingActionTimer = null;
+          }, BUTTON_SOUND_DELAY_MS);
         } else {
           sessionStorage.setItem('printer-nav', 'about');
-          window.location.href = '/printer/';
+          pendingActionTimer = setTimeout(function () {
+            window.location.href = '/printer/';
+          }, BUTTON_SOUND_DELAY_MS);
         }
       });
     }
 
     if (eventsBtn) {
       eventsBtn.addEventListener('click', function () {
+        playSound('button-sound');
+        clearPendingAction();
         if (isEventsPage()) {
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';
           var paper = document.getElementById('current-paper');
           if (paper) paper.style.display = 'block';
           setActiveButton('events');
-          startPrintingWithDelay();
+          pendingActionTimer = setTimeout(function () {
+            startPrintingWithDelay();
+            pendingActionTimer = null;
+          }, BUTTON_SOUND_DELAY_MS);
         } else {
           sessionStorage.setItem('printer-nav', 'events');
-          window.location.href = '/printer/events/';
+          pendingActionTimer = setTimeout(function () {
+            window.location.href = '/printer/events/';
+          }, BUTTON_SOUND_DELAY_MS);
         }
       });
     }
