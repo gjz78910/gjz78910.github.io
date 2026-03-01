@@ -4,6 +4,8 @@
   'use strict';
 
   var soundPools = {};
+  var BUTTON_SOUND_DELAY_MS = 500;
+  var pendingActionTimer = null;
 
   /* ------------------------------------------------------------------ */
   /* Page detection                                                       */
@@ -126,6 +128,18 @@
     initSoundPool('button-sound', 4);
   }
 
+  function clearPendingAction() {
+    if (pendingActionTimer) {
+      clearTimeout(pendingActionTimer);
+      pendingActionTimer = null;
+    }
+  }
+
+  function startPrintingNow() {
+    playSound('print-sound');
+    feedPaperIn();
+  }
+
   /* ------------------------------------------------------------------ */
   /* Navigation                                                           */
   /* ------------------------------------------------------------------ */
@@ -136,36 +150,44 @@
 
     if (aboutBtn) {
       aboutBtn.addEventListener('click', function () {
-        playSound('print-sound');
         playSound('button-sound');
+        clearPendingAction();
         if (isAboutPage()) {
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';
           var paper = document.getElementById('current-paper');
           if (paper) paper.style.display = 'block';
           setActiveButton('about');
-          feedPaperIn();
+          pendingActionTimer = setTimeout(function () {
+            startPrintingNow();
+          }, BUTTON_SOUND_DELAY_MS);
         } else {
           sessionStorage.setItem('printer-nav', 'about');
-          window.location.href = '/printer/';
+          pendingActionTimer = setTimeout(function () {
+            window.location.href = '/printer/';
+          }, BUTTON_SOUND_DELAY_MS);
         }
       });
     }
 
     if (eventsBtn) {
       eventsBtn.addEventListener('click', function () {
-        playSound('print-sound');
         playSound('button-sound');
+        clearPendingAction();
         if (isEventsPage()) {
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';
           var paper = document.getElementById('current-paper');
           if (paper) paper.style.display = 'block';
           setActiveButton('events');
-          feedPaperIn();
+          pendingActionTimer = setTimeout(function () {
+            startPrintingNow();
+          }, BUTTON_SOUND_DELAY_MS);
         } else {
           sessionStorage.setItem('printer-nav', 'events');
-          window.location.href = '/printer/events/';
+          pendingActionTimer = setTimeout(function () {
+            window.location.href = '/printer/events/';
+          }, BUTTON_SOUND_DELAY_MS);
         }
       });
     }
@@ -194,7 +216,7 @@
       var content = document.querySelector('.paper-content');
       if (content) content.style.visibility = 'visible';
       if (paper) paper.style.display = 'block';
-      feedPaperIn();
+      startPrintingNow();
     } else {
       // Direct visit — hide paper entirely, just show the printer body
       if (paper) paper.style.display = 'none';
