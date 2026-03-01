@@ -76,97 +76,84 @@
 }
 
 /*
-   SLOT GEOMETRY (all z-indices relative to .printer-container):
-     z:4  frame (border-bottom = slot top-bar, full width)
-     z:3  side walls (pseudo-elements, 32px wide, 16px tall, beige)
-     z:2  slot-bottom-bar (margin: 0 → full width, same as frame border)
-     z:1  paper-output-area (margin: 32px → fits inside side walls)
-     z:0  slot-body-fill (full width beige, below slot-bottom-bar,
-           covered by paper when loaded; makes left+right body look continuous)
+   SLOT GEOMETRY — clean redesign:
 
-   Both bars are full frame width (or margin:0) so they clearly extend
-   beyond the paper (margin:32px) on each side.
-   Side walls are 32px wide = paper margin, bridging the gap L/R.
+   .printer-frame  (z:3): frame body. border-bottom = slot TOP bar (full width).
+                          No pseudo-elements — removed.
+
+   .slot-frame     (z:2): sits in normal flow right after .printer-frame.
+                          Full container width. Has a dark border-top (slot BOTTOM bar).
+                          ::before and ::after are the LEFT and RIGHT beige walls —
+                          they cover the full height of slot-frame (gap + body below).
+                          The center between them is transparent → paper shows through.
+                          pointer-events:none so it doesn't block clicks.
+
+   .paper-output-area (z:1): margin matches slot-frame pseudo-element width (28px).
+                          margin-top = -(frame border-bottom 3px) = -3px, tucked
+                          behind the frame's bottom border so paper starts inside slot.
+                          overflow:hidden clips paper during animation.
+
+   Paper is 28px inset from each edge.
+   slot-frame pseudo-elements are 28px wide → they cover exactly the paper's L/R margins.
+   slot-frame border-top (dark) spans FULL width → clearly wider than paper.
+   frame border-bottom (dark) spans FULL width → clearly wider than paper.
+   Both dark bars extend 28px beyond paper on each side — visually obvious.
 */
 
-/*
-   SLOT GEOMETRY — final:
-     Top bar   : frame border-bottom, full width                  (z:3)
-     Side walls: 20px wide, 16px tall, beige                      (z:3)
-     Gap       : 16px tall, paper visible in center               
-     Bottom bar: margin:0 → full width                            (z:2)
-     Paper     : margin:20px → 20px narrower each side than bars  (z:1)
-     Body fill : margin:20px → same width as paper, beige         (z:0)
-
-   Side walls are 20px wide. Bar is full width.
-   Bar extends (full_width - 20px*2) beyond side walls → 
-   bar's dark ends are visible 0px beyond side walls.
-   Wait — side walls START at left:0 and right:0, width 20px.
-   Bar goes from 0 to full_width.
-   Paper goes from 20px to (full_width - 20px).
-   So bar is 20px wider than paper on each side — visually clear
-   because the side walls (z:3) cover the bar (z:2) only in the
-   16px gap zone, but the bar is BELOW the gap (slot-bottom-bar
-   is in normal flow below the frame), so the side walls don't
-   cover the bottom bar at all. The bottom bar IS visibly wider.
-
-   The top bar (frame border-bottom) IS covered by side walls at
-   the ends, but extends the full frame width underneath.
-*/
-
-/* Side walls: 20px wide, hang 16px below frame into the gap */
+/* Remove pseudo-elements from frame — slot-frame handles the walls */
 .printer-frame::before,
-.printer-frame::after {
-  content: '';
-  position: absolute;
-  bottom: -16px;
-  width: 20px;
-  height: 16px;
-  background: linear-gradient(to bottom, #e8e4da 0%, #ddd8cc 100%);
-  z-index: 3;
-}
-.printer-frame::before { left: 0; }
-.printer-frame::after  { right: 0; }
+.printer-frame::after { display: none; }
 
 /* =============================================================
-   SLOT BOTTOM BAR  (z-index: 2) — full width, no margin
-   Paper is margin:20px → bar is 20px wider on each side
+   SLOT FRAME  (z-index: 2)
+   Full width. border-top = slot bottom dark bar.
+   ::before/::after = left/right beige walls (cover gap + body).
+   Center is transparent — paper (z:1) shows through.
    ============================================================= */
-.slot-bottom-bar {
-  height: 3px;
-  background: #1a1714;
-  margin: 0;
+.slot-frame {
   position: relative;
   z-index: 2;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.35);
+  margin-top: 16px;                 /* creates the 16px gap (paper visible here) */
+  border-top: 3px solid #1a1714;   /* slot bottom bar — full width */
+  pointer-events: none;
+  height: 50px;                     /* height of the beige body below the slot */
 }
 
-/* =============================================================
-   SLOT BODY FILL  (z-index: 0)
-   Same margin as paper (20px) → same width as paper.
-   Sits between the side walls below the slot.
-   Covered by paper (z:1) when loaded.
-   ============================================================= */
-.slot-body-fill {
-  margin-left: 20px;
-  margin-right: 20px;
-  background: linear-gradient(to bottom, #e8e4da 0%, #ddd8cc 100%);
-  min-height: 40px;
-  border-radius: 0 0 6px 6px;
-  position: relative;
-  z-index: 0;
+/* Left beige wall — same color as printer frame */
+.slot-frame::before {
+  content: '';
+  position: absolute;
+  top: -16px;          /* extends up 16px into the gap */
+  left: 0;
+  width: 28px;
+  height: calc(100% + 16px);   /* gap + slot-frame body */
+  background: linear-gradient(to bottom, #ebe5db 0%, #e0dbd0 100%);
+  border-radius: 0 0 0 6px;
+}
+
+/* Right beige wall — same color as printer frame */
+.slot-frame::after {
+  content: '';
+  position: absolute;
+  top: -16px;
+  right: 0;
+  width: 28px;
+  height: calc(100% + 16px);
+  background: linear-gradient(to bottom, #ebe5db 0%, #e0dbd0 100%);
+  border-radius: 0 0 6px 0;
 }
 
 /* =============================================================
    PAPER OUTPUT AREA  (z-index: 1)
-   margin:20px → paper fits inside side walls
-   margin-top: -(gap 16px + bottom-bar 3px) = -19px
-   overflow:hidden clips paper during animation
+   margin: 28px → paper fits inside the beige walls
+   margin-top: -(slot-frame margin-top 16px + border-top 3px + slot-frame height 50px)
+             = -69px  → pulls paper top to gap top (frame border-bottom bottom edge)
+   overflow:hidden clips paper during animation.
    ============================================================= */
 .paper-output-area {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: -19px;
+  margin-left: 28px;
+  margin-right: 28px;
+  margin-top: -69px;   /* -(16 gap + 3 border + 50 slot-frame height) */
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -507,20 +494,16 @@
   .printer-frame { padding: 1.5rem 1.5rem 1.2rem; }
   .printer-avatar { width: 52px; height: 52px; }
   .printer-brand { font-size: 1.1rem; }
-  .slot-bottom-bar { margin: 0; }
-  .paper-output-area { margin-left: 20px; margin-right: 20px; }
-  .slot-body-fill { margin-left: 20px; margin-right: 20px; }
-  .printer-frame::before, .printer-frame::after { width: 20px; bottom: -16px; height: 16px; }
+  .paper-output-area { margin-left: 28px; margin-right: 28px; }
+  .slot-frame::before, .slot-frame::after { width: 28px; }
   .paper-sheet { padding: 2rem 1.5rem 2.5rem; min-height: 400px; }
 }
 
 @media (max-width: 480px) {
   .printer-theme-body { padding: 1rem 0.5rem 4rem; }
   .printer-frame { padding: 1.25rem 1.25rem 1rem; }
-  .slot-bottom-bar { margin: 0; }
-  .paper-output-area { margin-left: 20px; margin-right: 20px; }
-  .slot-body-fill { margin-left: 20px; margin-right: 20px; }
-  .printer-frame::before, .printer-frame::after { width: 20px; bottom: -16px; height: 16px; }
+  .paper-output-area { margin-left: 28px; margin-right: 28px; }
+  .slot-frame::before, .slot-frame::after { width: 28px; }
   .paper-sheet { padding: 1.5rem 1.25rem 2rem; }
   .paper-content { font-size: 0.93rem; }
 }

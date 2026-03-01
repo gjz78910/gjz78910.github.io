@@ -82,10 +82,15 @@ layout: compress
 
       </div><!-- /printer-frame -->
 
-      <!-- LAYER 2: slot-bottom-bar — sits above paper, below frame -->
-      <div class="slot-bottom-bar"></div>
+      <!-- SLOT FRAME: dark bottom bar + beige side walls + beige body below.
+           z-index:2 so it paints over paper edges (paper is z:1).
+           Paper feeds through the center opening. -->
+      <div class="slot-frame">
+        <!-- Paper output lives INSIDE slot-frame so it's clipped by overflow:hidden
+             but paper-output-area has its own z-index to layer correctly -->
+      </div>
 
-      <!-- LAYER 1: Paper output (z:1, overlaps slot-body-fill when loaded) -->
+      <!-- LAYER 1: Paper output — z:1, inside the slot opening -->
       <div class="paper-output-area" id="paper-output-area">
         <div class="paper-sheet" id="current-paper">
           <div class="paper-content">
@@ -93,10 +98,6 @@ layout: compress
           </div>
         </div>
       </div>
-
-      <!-- LAYER 0: Beige body fill — makes left+right frame walls continuous below slot.
-           Covered by paper (z:1) when paper is loaded. -->
-      <div class="slot-body-fill"></div>
 
     </div><!-- /printer-container -->
 
