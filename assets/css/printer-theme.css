@@ -14,8 +14,6 @@
   padding: 4rem 1.5rem 8rem;
   min-height: 100vh;
   background-color: #d8d3c8;
-  background-image: radial-gradient(circle, #bfbab0 1.2px, transparent 1.2px);
-  background-size: 22px 22px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
