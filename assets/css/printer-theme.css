@@ -29,10 +29,13 @@
   width: 100%;
   max-width: 900px;
   position: relative;
+  --printer-frame-bg: linear-gradient(175deg, #f8f4ec 0%, #f2ede3 30%, #ebe5db 65%, #e0dbd0 100%);
   --slot-gap-height: 16px;
   --slot-bar-height: 3px;
-  --slot-side-inset: 20px;
-  --paper-side-inset: 36px;
+  --slot-paper-overhang: 5px;
+  --slot-side-inset: 26px;
+  --paper-side-inset: calc(var(--slot-side-inset) + var(--slot-paper-overhang));
+  --paper-slot-overlap: 2px;
   --bottom-frame-height: 28px;
 }
 
@@ -62,9 +65,7 @@
 */
 
 .printer-frame {
-  background: linear-gradient(175deg,
-    #f8f4ec 0%, #f2ede3 30%, #ebe5db 65%, #e0dbd0 100%
-  );
+  background: var(--printer-frame-bg);
   border-radius: 18px 18px 0 0;
   border-bottom: 3px solid #1a1714;  /* slot top-bar — thin */
   padding: 2rem 2.5rem 1.8rem;
@@ -154,7 +155,7 @@
    ============================================================= */
 .slot-body-fill {
   margin: 0;
-  background: linear-gradient(to bottom, #e8e4da 0%, #ddd8cc 100%);
+  background: var(--printer-frame-bg);
   height: var(--bottom-frame-height);
   border-radius: 0 0 6px 6px;
   position: relative;
@@ -170,7 +171,7 @@
 .paper-output-area {
   margin-left: var(--paper-side-inset);
   margin-right: var(--paper-side-inset);
-  margin-top: calc(-1 * (var(--slot-gap-height) + var(--slot-bar-height)));
+  margin-top: calc(-1 * (var(--slot-gap-height) + var(--slot-bar-height) + var(--paper-slot-overlap)));
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -508,8 +509,9 @@
 
 @media (max-width: 768px) {
   .printer-container {
-    --slot-side-inset: 18px;
-    --paper-side-inset: 30px;
+    --slot-side-inset: 22px;
+    --paper-side-inset: calc(var(--slot-side-inset) + var(--slot-paper-overhang));
+    --paper-slot-overlap: 2px;
     --bottom-frame-height: 24px;
   }
   .printer-theme-body { padding: 1.5rem 0.75rem 5rem; }
@@ -524,8 +526,9 @@
 
 @media (max-width: 480px) {
   .printer-container {
-    --slot-side-inset: 14px;
-    --paper-side-inset: 22px;
+    --slot-side-inset: 16px;
+    --paper-side-inset: calc(var(--slot-side-inset) + var(--slot-paper-overhang));
+    --paper-slot-overlap: 1px;
     --bottom-frame-height: 22px;
   }
   .printer-theme-body { padding: 1rem 0.5rem 4rem; }
