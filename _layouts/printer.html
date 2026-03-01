@@ -67,34 +67,35 @@ layout: compress
           <button class="printer-nav-btn" data-page="events" id="btn-events" aria-current="false">EVENTS</button>
         </div>
 
+        <!--
+          SLOT — lives INSIDE the frame so it paints on top of the paper.
+          Absolutely positioned, hangs off the frame's bottom edge.
+          Structure (top→bottom):
+            slot-top-bar   : dark bar — the top lip of the slot opening
+            slot-middle    : [left-wall | transparent gap | right-wall]
+            slot-bottom-bar: dark bar — the bottom lip, sits above the paper
+          The paper (below the frame in normal flow) shows through the gap.
+        -->
+        <div class="slot-assembly">
+          <div class="slot-top-bar"></div>
+          <div class="slot-middle">
+            <div class="slot-side-left"></div>
+            <div class="slot-gap"></div>
+            <div class="slot-side-right"></div>
+          </div>
+          <div class="slot-bottom-bar"></div>
+        </div>
+
       </div><!-- /printer-frame -->
 
-      <!-- LAYER 2: Paper — slides out from the slot (z-index: 2) -->
+      <!-- Paper — sits below the frame in normal flow.
+           The slot-assembly (inside the frame) hangs over it. -->
       <div class="paper-output-area" id="paper-output-area">
         <div class="paper-sheet" id="current-paper">
           <div class="paper-content">
             {{ content }}
           </div>
         </div>
-      </div>
-
-      <!--
-        LAYER 3: Slot overlay — sits on top of everything (z-index: 3)
-        Consists of:
-          - .slot-top-bar   : dark bar that overlaps the top of the paper
-          - .slot-side-left : left wall of the slot opening
-          - .slot-side-right: right wall of the slot opening
-          - .slot-bottom-bar: dark bar below the paper gap, above the printer frame bottom
-        Together they form a rectangular tunnel the paper feeds through.
-      -->
-      <div class="slot-overlay">
-        <div class="slot-top-bar"></div>
-        <div class="slot-middle">
-          <div class="slot-side-left"></div>
-          <div class="slot-gap"></div>
-          <div class="slot-side-right"></div>
-        </div>
-        <div class="slot-bottom-bar"></div>
       </div>
 
     </div><!-- /printer-container -->

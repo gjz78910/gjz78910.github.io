@@ -32,8 +32,8 @@
 }
 
 /* =============================================================
-   PRINTER FRAME  (z-index: 1)
-   Rounded top corners. No border-bottom — slot overlay handles it.
+   PRINTER FRAME
+   overflow:visible so the slot-assembly can hang below the frame.
    ============================================================= */
 .printer-frame {
   background: linear-gradient(175deg,
@@ -41,8 +41,8 @@
   );
   border-radius: 18px 18px 0 0;
   padding: 2rem 2.5rem 1.8rem;
-  position: relative;
-  z-index: 1;
+  position: relative;  /* stacking context for slot-assembly */
+  overflow: visible;   /* allow slot-assembly to extend below */
 
   box-shadow:
     0 2px 0 rgba(255,255,255,0.9) inset,
@@ -55,86 +55,80 @@
 }
 
 /* =============================================================
-   SLOT OVERLAY  (z-index: 3 — above paper AND frame)
+   SLOT ASSEMBLY — lives INSIDE .printer-frame
+   Absolutely positioned, anchored to the frame's bottom edge.
+   Extends downward below the frame via overflow:visible on frame.
 
-   Sits in normal flow right after .printer-frame.
-   Pulled up with negative margin-top to overlap the frame bottom.
+   The paper (in normal flow below the frame) shows through
+   the transparent .slot-gap. The slot bars sit on top of the
+   paper because they are painted as part of the frame's
+   stacking context, which is above the paper in DOM order.
 
-   Visual structure (top → bottom):
-     ┌──────────────────────────────┐  ← slot-top-bar (10px dark)
-     │ ▓▓▓ [  paper shows here  ] ▓▓▓ │  ← slot-middle: side walls + transparent gap
-     └──────────────────────────────┘  ← slot-bottom-bar (10px dark)
-
-   The paper (z=2) sits between z=1 (frame) and z=3 (slot),
-   so it appears to pass through the slot opening.
+   Heights:
+     slot-top-bar  : 8px  — top lip
+     slot-middle   : 16px — the opening (paper visible here)
+     slot-bottom-bar: 8px — bottom lip
+   Total: 32px hanging below frame bottom.
    ============================================================= */
-.slot-overlay {
-  position: relative;
-  z-index: 3;
+.slot-assembly {
+  position: absolute;
+  bottom: 0;           /* anchored to frame's bottom edge */
+  left: 0;
   width: 100%;
-  /* Pull up by (slot-top-bar + slot-middle) = 10+18 = 28px
-     so the top-bar overlaps the frame bottom and the gap
-     is exactly where the paper top will be */
-  margin-top: -28px;
+  /* Shift down so the assembly straddles the frame bottom:
+     top-bar sits inside the frame, middle+bottom-bar hang below */
+  transform: translateY(calc(100% - 8px)); /* 8px = slot-top-bar height */
   display: flex;
   flex-direction: column;
   pointer-events: none;
 }
 
 .slot-top-bar {
-  height: 10px;
+  height: 8px;
   width: 100%;
   background: #1c1814;
-  box-shadow:
-    0 -1px 0 #2e2a26,
-    0 3px 8px rgba(0,0,0,0.55);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
 .slot-middle {
   display: flex;
   width: 100%;
-  height: 18px; /* gap — paper feeds through here */
+  height: 16px; /* transparent gap — paper shows through */
 }
 
 .slot-side-left,
 .slot-side-right {
-  width: 14px;
+  width: 12px;
   flex-shrink: 0;
   background: #1c1814;
-  /* inner shadow gives depth to the tunnel walls */
-  box-shadow: inset 0 2px 6px rgba(0,0,0,0.7);
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.8);
 }
 
 .slot-gap {
   flex: 1;
-  background: transparent; /* paper shows through */
+  background: transparent;
 }
 
 .slot-bottom-bar {
-  height: 10px;
+  height: 8px;
   width: 100%;
   background: #1c1814;
-  box-shadow:
-    0 1px 0 #2e2a26,
-    0 4px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
 }
 
 /* =============================================================
-   PAPER OUTPUT AREA  (z-index: 2 — above frame, below slot)
-
-   Sits in normal flow after .slot-overlay.
-   Pulled up with negative margin-top so the paper top starts
-   inside the slot gap (18px = slot-middle height).
-   overflow:hidden clips the paper during feed-in animation so
-   it appears to emerge from inside the slot.
+   PAPER OUTPUT AREA
+   Sits in normal flow below .printer-frame.
+   Pulled up by (slot-middle + slot-bottom-bar) = 16+8 = 24px
+   so the paper top starts inside the slot gap.
+   overflow:hidden clips paper during feed-in animation.
    ============================================================= */
 .paper-output-area {
-  position: relative;
-  z-index: 2;
   width: 100%;
-  /* Pull up so paper top is at the slot gap level */
-  margin-top: -18px;
+  margin-top: -24px; /* pull paper top up into the slot gap */
   overflow: hidden;
+  position: relative;
+  z-index: 0; /* below the frame's stacking context */
 }
 
 /* =============================================================
