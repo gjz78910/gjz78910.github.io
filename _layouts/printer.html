@@ -19,9 +19,19 @@ layout: compress
 
   <body class="printer-theme-body">
 
+    <!--
+      STACKING ORDER (bottom → top):
+        1. .paper-output-area  (z-index: 1) — the paper
+        2. .slot-bottom-bar    (z-index: 2) — dark bar ABOVE paper, BELOW frame
+        3. .printer-frame      (z-index: 3) — the printer body + slot-top-bar
+
+      The slot opening (gap) is the space between the frame's bottom edge
+      and the slot-bottom-bar's top edge. The paper shows through this gap.
+      Frame walls (.slot-side-left/.slot-side-right) are part of the frame layer.
+    -->
     <div class="printer-container">
 
-      <!-- LAYER 1: Printer frame body (z-index: 1) -->
+      <!-- LAYER 3 (top): Printer frame -->
       <div class="printer-frame">
 
         <div class="printer-top">
@@ -67,29 +77,15 @@ layout: compress
           <button class="printer-nav-btn" data-page="events" id="btn-events" aria-current="false">EVENTS</button>
         </div>
 
-        <!--
-          SLOT — lives INSIDE the frame so it paints on top of the paper.
-          Absolutely positioned, hangs off the frame's bottom edge.
-          Structure (top→bottom):
-            slot-top-bar   : dark bar — the top lip of the slot opening
-            slot-middle    : [left-wall | transparent gap | right-wall]
-            slot-bottom-bar: dark bar — the bottom lip, sits above the paper
-          The paper (below the frame in normal flow) shows through the gap.
-        -->
-        <div class="slot-assembly">
-          <div class="slot-top-bar"></div>
-          <div class="slot-middle">
-            <div class="slot-side-left"></div>
-            <div class="slot-gap"></div>
-            <div class="slot-side-right"></div>
-          </div>
-          <div class="slot-bottom-bar"></div>
-        </div>
+        <!-- Frame bottom edge: the slot-top-bar is the frame's own bottom border.
+             Left/right side walls are pseudo-elements on the frame. -->
 
       </div><!-- /printer-frame -->
 
-      <!-- Paper — sits below the frame in normal flow.
-           The slot-assembly (inside the frame) paints on top of it. -->
+      <!-- LAYER 2: slot-bottom-bar — sits above paper, below frame -->
+      <div class="slot-bottom-bar"></div>
+
+      <!-- LAYER 1 (bottom): Paper -->
       <div class="paper-output-area" id="paper-output-area">
         <div class="paper-sheet" id="current-paper">
           <div class="paper-content">
@@ -100,14 +96,14 @@ layout: compress
 
     </div><!-- /printer-container -->
 
-        <audio id="print-sound" preload="auto" style="display:none;">
-          <source src="{{ base_path }}/assets/audio/printer_sound.mov" type="video/quicktime">
-          <source src="{{ base_path }}/assets/audio/printer_sound.mp3" type="audio/mpeg">
-        </audio>
-        <audio id="button-sound" preload="auto" style="display:none;">
-          <source src="{{ base_path }}/assets/audio/button_sound.mov" type="video/quicktime">
-          <source src="{{ base_path }}/assets/audio/button_sound.mp3" type="audio/mpeg">
-        </audio>
+    <audio id="print-sound" preload="auto" style="display:none;">
+      <source src="{{ base_path }}/assets/audio/printer_sound.mov" type="video/quicktime">
+      <source src="{{ base_path }}/assets/audio/printer_sound.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="button-sound" preload="auto" style="display:none;">
+      <source src="{{ base_path }}/assets/audio/button_sound.mov" type="video/quicktime">
+      <source src="{{ base_path }}/assets/audio/button_sound.mp3" type="audio/mpeg">
+    </audio>
 
     <script src="{{ base_path }}/assets/js/printer-theme.js"></script>
   </body>

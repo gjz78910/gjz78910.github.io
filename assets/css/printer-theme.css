@@ -32,17 +32,25 @@
 }
 
 /* =============================================================
-   PRINTER FRAME
-   overflow:visible so the slot-assembly can hang below.
+   PRINTER FRAME  (z-index: 3 — topmost layer)
+
+   The frame's bottom border IS the slot top-bar (the dark line
+   above the paper gap). Left/right ::before/::after pseudo-elements
+   form the side walls that flank the paper.
+
+   Gap height = 20px (space between frame bottom and slot-bottom-bar).
+   Side wall width = 28px on each side.
    ============================================================= */
 .printer-frame {
   background: linear-gradient(175deg,
     #f8f4ec 0%, #f2ede3 30%, #ebe5db 65%, #e0dbd0 100%
   );
   border-radius: 18px 18px 0 0;
+  /* Bottom border = slot top-bar (dark line above the gap) */
+  border-bottom: 7px solid #1a1714;
   padding: 2rem 2.5rem 1.8rem;
-  position: relative;   /* stacking context for slot-assembly */
-  overflow: visible;    /* allow slot-assembly to extend below */
+  position: relative;
+  z-index: 3;   /* above paper (z:1) and slot-bottom-bar (z:2) */
 
   box-shadow:
     0 2px 0 rgba(255,255,255,0.9) inset,
@@ -53,80 +61,54 @@
     0 30px 80px rgba(0,0,0,0.10);
 }
 
-/* =============================================================
-   SLOT ASSEMBLY — inside .printer-frame, absolutely positioned.
-
-   Goal: paper appears BETWEEN the two dark bars, exactly like image 2.
-
-   Geometry (slot-top-bar=6px, slot-gap=18px, slot-bottom-bar=6px):
-     top: calc(100% - 6px)  →  assembly top = 6px before frame bottom
-       slot-top-bar  top    = frame_bottom - 6px   (inside frame)
-       slot-top-bar  bottom = frame_bottom          (frame edge)
-       slot-gap      top    = frame_bottom
-       slot-gap      bottom = frame_bottom + 18px
-       slot-bottom-bar top  = frame_bottom + 18px
-       slot-bottom-bar bot  = frame_bottom + 24px
-
-   paper-output-area margin-top = -(slot-gap + slot-bottom-bar)
-     = -(18 + 6) = -24px
-   → paper top = frame_bottom + 24px - 24px = frame_bottom  ✓
-     paper top aligns with slot-gap top, paper is BETWEEN the bars.
-
-   z-index: 10 ensures both bars paint on top of the paper.
-   ============================================================= */
-.slot-assembly {
+/* Left side wall — extends 20px below the frame to cover the gap */
+.printer-frame::before,
+.printer-frame::after {
+  content: '';
   position: absolute;
-  top: calc(100% - 6px);  /* top-bar overlaps last 6px of frame */
-  left: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.slot-top-bar {
-  height: 6px;
-  background: #1a1714;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.6);
-}
-
-.slot-middle {
-  display: flex;
-  height: 18px;   /* transparent gap — paper visible here */
-}
-
-.slot-side-left,
-.slot-side-right {
+  bottom: -20px;   /* hangs 20px below the frame's border-box bottom */
   width: 28px;
-  flex-shrink: 0;
-  /* Match the printer frame color so they look like frame walls */
-  background: linear-gradient(to bottom, #ebe5db 0%, #ddd8cc 100%);
-  box-shadow: inset 2px 0 5px rgba(0,0,0,0.25), inset -2px 0 5px rgba(0,0,0,0.25);
+  height: 20px;    /* exactly the gap height */
+  background: linear-gradient(to bottom, #ddd8cc 0%, #ccc7bc 100%);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 3;      /* same layer as frame — above paper */
 }
+.printer-frame::before { left: 0; border-radius: 0 0 0 4px; }
+.printer-frame::after  { right: 0; border-radius: 0 0 4px 0; }
 
-.slot-gap {
-  flex: 1;
-  background: transparent;
-}
+/* =============================================================
+   SLOT BOTTOM BAR  (z-index: 2 — above paper, below frame)
 
+   This is a sibling of .printer-frame in .printer-container.
+   It sits in normal flow directly after the frame.
+   The paper (z:1) is pulled up by margin-top to sit in the gap
+   between the frame's bottom border and this bar.
+   ============================================================= */
 .slot-bottom-bar {
-  height: 6px;
+  height: 7px;
   background: #1a1714;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+  /* Inset left/right by 28px to align with the side walls */
+  margin-left: 28px;
+  margin-right: 28px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.45);
 }
 
 /* =============================================================
-   PAPER OUTPUT AREA
-   margin-top = -(slot-gap + slot-bottom-bar) = -(18+6) = -24px
-   Paper top aligns with slot-gap top → paper is between the bars.
-   margin-left/right = 28px (side-wall width) → frame walls visible.
-   NO overflow:hidden — slot-assembly (z-index:10) masks the paper.
+   PAPER OUTPUT AREA  (z-index: 1 — bottommost layer)
+
+   margin-top = -(gap + slot-bottom-bar) = -(20 + 7) = -27px
+   This pulls the paper top up to the gap top (frame bottom border).
+   The paper is then visible in the 20px gap between frame and bar.
+   margin-left/right = 28px matches the side walls.
    ============================================================= */
 .paper-output-area {
   margin-left: 28px;
   margin-right: 28px;
-  margin-top: -24px;
+  margin-top: -27px;   /* pull up: gap(20) + slot-bottom-bar(7) */
+  position: relative;
+  z-index: 1;
 }
 
 /* =============================================================
@@ -148,7 +130,7 @@
 }
 
 /* =============================================================
-   PAPER ANIMATION
+   PAPER ANIMATION — feeds in from inside the slot
    ============================================================= */
 @keyframes paperFeedIn {
   0%   { transform: translateY(-100%); opacity: 0; }
@@ -465,7 +447,8 @@
   .printer-avatar { width: 52px; height: 52px; }
   .printer-brand { font-size: 1.1rem; }
   .paper-output-area { margin-left: 16px; margin-right: 16px; }
-  .slot-side-left, .slot-side-right { width: 16px; }
+  .slot-bottom-bar { margin-left: 16px; margin-right: 16px; }
+  .printer-frame::before, .printer-frame::after { width: 16px; }
   .paper-sheet { padding: 2rem 1.5rem 2.5rem; min-height: 400px; }
 }
 
@@ -473,7 +456,8 @@
   .printer-theme-body { padding: 1rem 0.5rem 4rem; }
   .printer-frame { padding: 1.25rem 1.25rem 1rem; }
   .paper-output-area { margin-left: 10px; margin-right: 10px; }
-  .slot-side-left, .slot-side-right { width: 10px; }
+  .slot-bottom-bar { margin-left: 10px; margin-right: 10px; }
+  .printer-frame::before, .printer-frame::after { width: 10px; }
   .paper-sheet { padding: 1.5rem 1.25rem 2rem; }
   .paper-content { font-size: 0.93rem; }
 }
