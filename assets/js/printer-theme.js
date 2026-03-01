@@ -55,11 +55,32 @@
     var audio = document.getElementById(id);
     if (!audio) return;
     try {
-      audio.pause();
       audio.currentTime = 0;
       var p = audio.play();
-      if (p && p.catch) p.catch(function () {});
-    } catch (e) {}
+      if (p && p.catch) {
+        p.catch(function () {
+          // Fallback for browsers that reject replay on reused audio elements.
+          try {
+            var clone = audio.cloneNode(true);
+            clone.removeAttribute('id');
+            clone.preload = 'auto';
+            document.body.appendChild(clone);
+            var cp = clone.play();
+            if (cp && cp.finally) {
+              cp.finally(function () {
+                if (clone.parentNode) clone.parentNode.removeChild(clone);
+              });
+            } else {
+              setTimeout(function () {
+                if (clone.parentNode) clone.parentNode.removeChild(clone);
+              }, 2500);
+            }
+          } catch (err) {}
+        });
+      }
+    } catch (e) {
+      try { audio.load(); audio.play(); } catch (err) {}
+    }
   }
 
   /* ------------------------------------------------------------------ */
@@ -72,8 +93,8 @@
 
     if (aboutBtn) {
       aboutBtn.addEventListener('click', function () {
-        playSound('button-sound');
         playSound('print-sound');
+        playSound('button-sound');
         if (isAboutPage()) {
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';
@@ -93,8 +114,8 @@
 
     if (eventsBtn) {
       eventsBtn.addEventListener('click', function () {
-        playSound('button-sound');
         playSound('print-sound');
+        playSound('button-sound');
         if (isEventsPage()) {
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';

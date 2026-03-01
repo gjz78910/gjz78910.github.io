@@ -36,7 +36,7 @@
   --slot-side-inset: 26px;
   --paper-side-inset: calc(var(--slot-side-inset) + var(--slot-paper-overhang));
   --paper-slot-overlap: 2px;
-  --bottom-frame-height: var(--slot-gap-height);
+  --bottom-frame-height: calc(var(--slot-bar-height) + 2px);
 }
 
 /* =============================================================
@@ -513,7 +513,6 @@
     --slot-side-inset: 22px;
     --paper-side-inset: calc(var(--slot-side-inset) + var(--slot-paper-overhang));
     --paper-slot-overlap: 2px;
-    --bottom-frame-height: var(--slot-gap-height);
   }
   .printer-theme-body { padding: 1.5rem 0.75rem 5rem; }
   .printer-frame { padding: 1.5rem 1.5rem 1.2rem; }
@@ -534,7 +533,6 @@
     --slot-side-inset: 16px;
     --paper-side-inset: calc(var(--slot-side-inset) + var(--slot-paper-overhang));
     --paper-slot-overlap: 1px;
-    --bottom-frame-height: var(--slot-gap-height);
   }
   .printer-theme-body { padding: 1rem 0.5rem 4rem; }
   .printer-frame { padding: 1.25rem 1.25rem 1rem; }
