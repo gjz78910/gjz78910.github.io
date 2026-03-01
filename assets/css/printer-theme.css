@@ -76,55 +76,71 @@
 }
 
 /*
-   SLOT GEOMETRY:
-     frame border-bottom : 3px dark  (top bar — full frame width)
-     gap                 : 16px      (side walls fill L/R, paper center)
-     slot-bottom-bar     : 3px dark  (bottom bar — margin: 8px)
-     paper-output-area   : margin: 36px (fits inside side walls)
+   SLOT GEOMETRY (all z-indices relative to .printer-container):
+     z:4  frame (border-bottom = slot top-bar, full width)
+     z:3  side walls (pseudo-elements, 32px wide, 16px tall, beige)
+     z:2  slot-bottom-bar (margin: 0 → full width, same as frame border)
+     z:1  paper-output-area (margin: 32px → fits inside side walls)
+     z:0  slot-body-fill (full width beige, below slot-bottom-bar,
+           covered by paper when loaded; makes left+right body look continuous)
 
-   Bottom bar (8px) is 28px wider than paper (36px) on each side.
-   Top bar (frame border) is full width — also wider than paper.
-   Side walls: 36px wide, exactly match paper margin.
+   Both bars are full frame width (or margin:0) so they clearly extend
+   beyond the paper (margin:32px) on each side.
+   Side walls are 32px wide = paper margin, bridging the gap L/R.
 */
 
-/* Side walls: 36px wide, hang 16px below frame into the gap */
+/* Side walls: 32px wide, hang 16px below frame border into the gap */
 .printer-frame::before,
 .printer-frame::after {
   content: '';
   position: absolute;
   bottom: -16px;
-  width: 36px;
+  width: 32px;
   height: 16px;
-  background: linear-gradient(to bottom, #ddd8cc 0%, #ccc7bc 100%);
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.18);
+  background: linear-gradient(to bottom, #e8e4da 0%, #ddd8cc 100%);
   z-index: 3;
 }
-.printer-frame::before { left: 0; border-radius: 0 0 0 3px; }
-.printer-frame::after  { right: 0; border-radius: 0 0 3px 0; }
+.printer-frame::before { left: 0; }
+.printer-frame::after  { right: 0; }
 
 /* =============================================================
    SLOT BOTTOM BAR  (z-index: 2)
-   margin: 8px → 28px wider than paper on each side
+   No margin → full frame width, clearly wider than paper (32px each side)
    ============================================================= */
 .slot-bottom-bar {
   height: 3px;
   background: #1a1714;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin: 0;
   position: relative;
   z-index: 2;
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
 /* =============================================================
+   SLOT BODY FILL  (z-index: 0)
+   Beige block below the slot — makes the left/right frame walls
+   look continuous. Covered by paper (z:1) when paper is loaded.
+   No margin → same full width as the frame, matching the body.
+   ============================================================= */
+.slot-body-fill {
+  background: linear-gradient(175deg, #f0ece3 0%, #e8e3d8 50%, #ddd8cc 100%);
+  min-height: 120px;
+  border-radius: 0 0 14px 14px;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* =============================================================
    PAPER OUTPUT AREA  (z-index: 1)
-   margin: 36px → fits inside side walls
-   margin-top: -19px pulls top edge up to gap top
-   overflow:hidden clips paper during animation
+   margin: 32px → fits inside side walls, narrower than both bars
+   margin-top: -19px = -(gap 16px + bottom-bar 3px), pulls top
+   edge up to the gap top so paper emerges between the two bars.
+   overflow:hidden clips paper during feed-in animation.
    ============================================================= */
 .paper-output-area {
-  margin-left: 36px;
-  margin-right: 36px;
+  margin-left: 32px;
+  margin-right: 32px;
   margin-top: -19px;
   position: relative;
   z-index: 1;
@@ -159,7 +175,7 @@
 }
 
 .paper-sheet.feeding-in {
-  animation: paperFeedIn 1.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: paperFeedIn 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
 /* =============================================================
@@ -466,7 +482,7 @@
   .printer-frame { padding: 1.5rem 1.5rem 1.2rem; }
   .printer-avatar { width: 52px; height: 52px; }
   .printer-brand { font-size: 1.1rem; }
-  .slot-bottom-bar { margin-left: 8px; margin-right: 8px; }
+  .slot-bottom-bar { margin: 0; }
   .paper-output-area { margin-left: 24px; margin-right: 24px; }
   .printer-frame::before, .printer-frame::after { width: 24px; bottom: -16px; height: 16px; }
   .paper-sheet { padding: 2rem 1.5rem 2.5rem; min-height: 400px; }
@@ -475,7 +491,7 @@
 @media (max-width: 480px) {
   .printer-theme-body { padding: 1rem 0.5rem 4rem; }
   .printer-frame { padding: 1.25rem 1.25rem 1rem; }
-  .slot-bottom-bar { margin-left: 6px; margin-right: 6px; }
+  .slot-bottom-bar { margin: 0; }
   .paper-output-area { margin-left: 18px; margin-right: 18px; }
   .printer-frame::before, .printer-frame::after { width: 18px; bottom: -16px; height: 16px; }
   .paper-sheet { padding: 1.5rem 1.25rem 2rem; }
