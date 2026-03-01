@@ -4,6 +4,8 @@
   'use strict';
 
   var soundPools = {};
+  var NAV_SOUND_DELAY_MS = 2800;
+  var navigationPending = false;
 
   /* ------------------------------------------------------------------ */
   /* Page detection                                                       */
@@ -151,6 +153,15 @@
     initSoundPool('button-sound', 4);
   }
 
+  function navigateWithSound(url, navKey) {
+    if (navigationPending) return;
+    navigationPending = true;
+    sessionStorage.setItem('printer-nav', navKey);
+    setTimeout(function () {
+      window.location.href = url;
+    }, NAV_SOUND_DELAY_MS);
+  }
+
   /* ------------------------------------------------------------------ */
   /* Navigation                                                           */
   /* ------------------------------------------------------------------ */
@@ -171,10 +182,7 @@
           setActiveButton('about');
           feedPaperIn();
         } else {
-          sessionStorage.setItem('printer-nav', 'about');
-          setTimeout(function () {
-            window.location.href = '/printer/';
-          }, 150);
+          navigateWithSound('/printer/', 'about');
         }
       });
     }
@@ -191,10 +199,7 @@
           setActiveButton('events');
           feedPaperIn();
         } else {
-          sessionStorage.setItem('printer-nav', 'events');
-          setTimeout(function () {
-            window.location.href = '/printer/events/';
-          }, 150);
+          navigateWithSound('/printer/events/', 'events');
         }
       });
     }
