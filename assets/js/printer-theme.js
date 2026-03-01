@@ -31,12 +31,30 @@
     aboutBtn.setAttribute('aria-current', 'false');
     eventsBtn.setAttribute('aria-current', 'false');
 
-    if (isAboutPage()) {
+    // Only mark active if user navigated here via a button click
+    if (sessionStorage.getItem('printer-active') === 'about' && isAboutPage()) {
       aboutBtn.classList.add('active');
       aboutBtn.setAttribute('aria-current', 'page');
-    } else if (isEventsPage()) {
+    } else if (sessionStorage.getItem('printer-active') === 'events' && isEventsPage()) {
       eventsBtn.classList.add('active');
       eventsBtn.setAttribute('aria-current', 'page');
+    }
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* Content visibility                                                   */
+  /* On first load (no sessionStorage key), hide the paper content       */
+  /* so the paper appears blank. Content shows only after a button click. */
+  /* ------------------------------------------------------------------ */
+
+  function initContentVisibility() {
+    var content = document.querySelector('.paper-content');
+    if (!content) return;
+
+    var activated = sessionStorage.getItem('printer-active');
+    if (!activated) {
+      // First visit — hide content, show blank paper
+      content.style.visibility = 'hidden';
     }
   }
 
@@ -62,15 +80,18 @@
   function playKeyClick() {
     var audio = document.getElementById('button-sound');
     if (!audio) return;
-    audio.currentTime = 0;
-    audio.play().catch(function () {});
+    // Clone and play to avoid delay from currentTime reset
+    var clone = audio.cloneNode();
+    clone.volume = audio.volume;
+    clone.play().catch(function () {});
   }
 
   function playPrintSound() {
     var audio = document.getElementById('print-sound');
     if (!audio) return;
-    audio.currentTime = 0;
-    audio.play().catch(function () {});
+    var clone = audio.cloneNode();
+    clone.volume = audio.volume;
+    clone.play().catch(function () {});
   }
 
   /* ------------------------------------------------------------------ */
@@ -83,55 +104,55 @@
 
     if (aboutBtn) {
       aboutBtn.addEventListener('click', function () {
-        // Play button sound immediately on click (no delay)
+        // Play sounds immediately — no delay
         playKeyClick();
+        playPrintSound();
+        // Mark which page was activated
+        sessionStorage.setItem('printer-active', 'about');
         if (!isAboutPage()) {
-          // Play print sound and navigate — sound fires concurrently
-          playPrintSound();
           window.location.href = '/printer/';
+        } else {
+          // Already on about page — just show content and animate
+          var content = document.querySelector('.paper-content');
+          if (content) content.style.visibility = 'visible';
+          setActiveButton();
+          feedPaperIn();
         }
       });
     }
+
     if (eventsBtn) {
       eventsBtn.addEventListener('click', function () {
         playKeyClick();
+        playPrintSound();
+        sessionStorage.setItem('printer-active', 'events');
         if (!isEventsPage()) {
-          playPrintSound();
           window.location.href = '/printer/events/';
+        } else {
+          var content = document.querySelector('.paper-content');
+          if (content) content.style.visibility = 'visible';
+          setActiveButton();
+          feedPaperIn();
         }
       });
     }
   }
 
   /* ------------------------------------------------------------------ */
-  /* First-load print sound                                               */
-  /* Browsers block autoplay until first user interaction.               */
-  /* We attempt to play immediately; if blocked, play on first click.    */
+  /* Page load: feed paper in if content is active                       */
   /* ------------------------------------------------------------------ */
 
-  function setupPageLoadSound() {
-    var audio = document.getElementById('print-sound');
-    if (!audio) return;
-
-    // Try playing immediately (works if user navigated from another page)
-    var promise = audio.play();
-    if (promise !== undefined) {
-      promise.catch(function () {
-        // Autoplay blocked — play on the very first interaction
-        var played = false;
-        function onFirstInteraction() {
-          if (played) return;
-          played = true;
-          audio.currentTime = 0;
-          audio.play().catch(function () {});
-          document.removeEventListener('click', onFirstInteraction);
-          document.removeEventListener('keydown', onFirstInteraction);
-          document.removeEventListener('touchstart', onFirstInteraction);
-        }
-        document.addEventListener('click', onFirstInteraction, { once: true });
-        document.addEventListener('keydown', onFirstInteraction, { once: true });
-        document.addEventListener('touchstart', onFirstInteraction, { once: true });
-      });
+  function initPageLoad() {
+    var activated = sessionStorage.getItem('printer-active');
+    if (activated) {
+      // User navigated here via button — show content and animate
+      var content = document.querySelector('.paper-content');
+      if (content) content.style.visibility = 'visible';
+      feedPaperIn();
+      playPrintSound();
+    } else {
+      // First visit — animate blank paper in (no content)
+      feedPaperIn();
     }
   }
 
@@ -140,10 +161,10 @@
   /* ------------------------------------------------------------------ */
 
   function init() {
+    initContentVisibility();
     setActiveButton();
     setupNavigation();
-    feedPaperIn();
-    setupPageLoadSound();
+    initPageLoad();
   }
 
   if (document.readyState === 'loading') {
