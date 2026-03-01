@@ -112,6 +112,8 @@
     setActiveButton();
     setupNavigation();
     feedPaperIn();
+    // Play printer sound on every page load (simulates printing the current page)
+    playPrintSound();
   }
 
   if (document.readyState === 'loading') {

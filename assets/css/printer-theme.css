@@ -23,7 +23,7 @@
 }
 
 /* =============================================================
-   CONTAINER
+   CONTAINER — wraps frame + paper
    ============================================================= */
 .printer-container {
   width: 100%;
@@ -33,7 +33,7 @@
 
 /* =============================================================
    PRINTER FRAME
-   overflow:visible so the slot-assembly can hang below the frame.
+   overflow:visible so the slot-assembly can hang below.
    ============================================================= */
 .printer-frame {
   background: linear-gradient(175deg,
@@ -41,10 +41,9 @@
   );
   border-radius: 18px 18px 0 0;
   padding: 2rem 2.5rem 1.8rem;
-  position: relative;  /* stacking context for slot-assembly */
-  overflow: visible;   /* allow slot-assembly to extend below */
+  position: relative;   /* stacking context for slot-assembly */
+  overflow: visible;    /* allow slot-assembly to extend below */
 
-  /* NOTE: no solid-color bottom shadow — it would paint over the slot-assembly children */
   box-shadow:
     0 2px 0 rgba(255,255,255,0.9) inset,
     2px 0 0 rgba(255,255,255,0.55) inset,
@@ -55,82 +54,123 @@
 }
 
 /* =============================================================
-   SLOT ASSEMBLY — lives INSIDE .printer-frame
-   Absolutely positioned, anchored to the frame's bottom edge.
-   Extends downward below the frame via overflow:visible on frame.
+   SLOT ASSEMBLY — inside .printer-frame, absolutely positioned.
 
-   The paper (in normal flow below the frame) shows through
-   the transparent .slot-gap. The slot bars sit on top of the
-   paper because they are painted as part of the frame's
-   stacking context, which is above the paper in DOM order.
+   Dimensions:
+     slot-top-bar   : 8px  — dark top lip
+     slot-middle    : 20px — [side-wall | transparent gap | side-wall]
+     slot-bottom-bar: 8px  — dark bottom lip
+   Total height: 36px
 
-   Heights:
-     slot-top-bar  : 8px  — top lip
-     slot-middle   : 16px — the opening (paper visible here)
-     slot-bottom-bar: 8px — bottom lip
-   Total: 32px hanging below frame bottom.
+   Placement (bottom: -28px):
+     slot-top-bar top    = frame_bottom - 36px + 8px  = inside frame ✓
+     slot-middle         = frame_bottom - 28px .. frame_bottom - 8px
+     slot-bottom-bar     = frame_bottom - 8px  .. frame_bottom + 0px
+   Wait — let's use bottom: 0 so the assembly bottom edge is at
+   the frame's bottom edge:
+     slot-bottom-bar bottom = frame_bottom
+     slot-bottom-bar top    = frame_bottom - 8px
+     slot-middle bottom     = frame_bottom - 8px
+     slot-middle top        = frame_bottom - 28px
+     slot-top-bar bottom    = frame_bottom - 28px
+     slot-top-bar top       = frame_bottom - 36px  (inside frame)
+
+   The paper-output-area margin-top = -(slot-middle + slot-bottom-bar)
+   = -(20 + 8) = -28px so the paper top starts at slot-middle top.
    ============================================================= */
 .slot-assembly {
   position: absolute;
-  /* bottom:-24px places the assembly so:
-     - slot-top-bar (8px)  : last 8px inside the frame  (covered by frame bg → needs z-index)
-     - slot-middle (16px)  : straddles the frame bottom  (paper shows through the gap)
-     - slot-bottom-bar (8px): 8px below the frame bottom */
-  bottom: -24px;
+  bottom: 0;        /* assembly bottom = frame bottom */
   left: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   pointer-events: none;
-  z-index: 2; /* above the frame's own background paint */
+  z-index: 10;      /* paints above frame background and above paper */
 }
 
 .slot-top-bar {
   height: 8px;
-  width: 100%;
-  background: #1c1814;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  background: #1a1714;
+  box-shadow:
+    0 2px 6px rgba(0,0,0,0.55),
+    0 1px 0 #0a0806 inset;
 }
 
 .slot-middle {
   display: flex;
-  width: 100%;
-  height: 16px; /* transparent gap — paper shows through */
+  height: 20px;   /* the opening — paper shows through the gap */
 }
 
 .slot-side-left,
 .slot-side-right {
-  width: 12px;
+  width: 28px;    /* beige-colored frame walls on each side */
   flex-shrink: 0;
-  background: #1c1814;
-  box-shadow: inset 0 2px 5px rgba(0,0,0,0.8);
+  background: linear-gradient(to bottom, #d8d3c8 0%, #c8c3b8 100%);
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.4), inset 0 -1px 3px rgba(0,0,0,0.2);
 }
 
 .slot-gap {
   flex: 1;
-  background: transparent;
+  background: transparent;  /* paper shows through here */
 }
 
 .slot-bottom-bar {
   height: 8px;
-  width: 100%;
-  background: #1c1814;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+  background: #1a1714;
+  box-shadow:
+    0 3px 10px rgba(0,0,0,0.5),
+    0 -1px 0 #0a0806 inset;
 }
 
 /* =============================================================
    PAPER OUTPUT AREA
    Sits in normal flow below .printer-frame.
-   Pulled up by (slot-middle + slot-bottom-bar) = 16+8 = 24px
-   so the paper top starts inside the slot gap.
-   overflow:hidden clips paper during feed-in animation.
+   margin-top = -(slot-middle + slot-bottom-bar) = -(20+8) = -28px
+   This pulls the paper top up to align with the slot-middle top,
+   so paper emerges from inside the slot opening.
+
+   NO overflow:hidden — the slot-assembly (z-index:10) acts as
+   the visual mask. The paper starts hidden via translateY(-100%).
    ============================================================= */
 .paper-output-area {
+  /* Inset left/right to match the side-wall width (28px each),
+     so paper is always within the slot's frame walls */
+  margin-left: 28px;
+  margin-right: 28px;
+  margin-top: -28px;   /* pull up into the slot gap */
+  /* No overflow:hidden, no z-index — stays below the frame's stacking context */
+}
+
+/* =============================================================
+   PAPER SHEET — pure white
+   ============================================================= */
+.paper-sheet {
   width: 100%;
-  /* Pull paper top up into the slot gap (slot-middle 16px + slot-bottom-bar 8px = 24px).
-     No overflow:hidden — the slot-assembly (inside the frame) paints on top and acts
-     as the visual mask. The paper starts hidden via translateY(-100%) on .paper-sheet. */
-  margin-top: -24px;
+  background: #ffffff;
+  border-radius: 0 0 6px 6px;
+  padding: 2.5rem 3rem 3rem;
+  box-shadow:
+    0 12px 50px rgba(0,0,0,0.16),
+    0 4px 12px rgba(0,0,0,0.1);
+  min-height: 520px;
+
+  /* Initial state: hidden above, ready to feed down */
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* =============================================================
+   PAPER ANIMATION
+   ============================================================= */
+@keyframes paperFeedIn {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  5%   { opacity: 1; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.paper-sheet.feeding-in {
+  animation: paperFeedIn 1.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 /* =============================================================
@@ -185,7 +225,7 @@
   line-height: 1.2;
 }
 
-/* Bio — Courier Prime (clean monospace) */
+/* Bio — Courier Prime */
 .printer-tagline {
   font-family: 'Courier Prime', 'Courier New', monospace;
   color: #6a6560;
@@ -215,7 +255,6 @@
 
 /* =============================================================
    NAVIGATION — 3D keyboard keys
-   All text: Courier Prime (consistent typewriter, no hand-draw)
    ============================================================= */
 .printer-nav {
   display: flex;
@@ -225,7 +264,6 @@
 }
 
 .printer-nav-btn {
-  /* Courier Prime — consistent with all other text */
   font-family: 'Courier Prime', 'Courier New', monospace;
   font-size: 0.82rem;
   font-weight: 700;
@@ -278,7 +316,7 @@
   border-left-color: #b3afa3;
 }
 
-/* Active page — recessed, darker, same key shape */
+/* Active page — recessed, same key shape */
 .printer-nav-btn.active {
   background: linear-gradient(to bottom,
     #c8c3b7 0%, #bdb8ac 50%, #b0ab9f 100%
@@ -296,56 +334,7 @@
 }
 
 /* =============================================================
-   PAPER OUTPUT AREA  (z-index: 1 — behind the frame)
-   Same width as the frame. overflow:hidden clips the paper
-   during feed-in so it appears to emerge from the slot.
-   Negative margin pulls it flush against the frame bottom.
-   ============================================================= */
-.paper-output-area {
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  /* overflow:hidden clips paper during feed-in animation */
-  overflow: hidden;
-  /* No margin-top — frame's margin-bottom:-5px handles the overlap */
-  margin-top: 0;
-}
-
-/* =============================================================
-   PAPER SHEET — pure white
-   ============================================================= */
-.paper-sheet {
-  width: 100%;
-  background: #ffffff;
-  border-radius: 0 0 8px 8px;
-  padding: 2.5rem 3rem 3rem;
-  box-shadow:
-    0 12px 50px rgba(0,0,0,0.16),
-    0 4px 12px rgba(0,0,0,0.1);
-  min-height: 520px;
-
-  /* Initial state: hidden above, ready to feed down */
-  transform: translateY(-100%);
-  opacity: 0;
-}
-
-/* =============================================================
-   PAPER ANIMATION
-   ============================================================= */
-@keyframes paperFeedIn {
-  0%   { transform: translateY(-100%); opacity: 0; }
-  5%   { opacity: 1; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-.paper-sheet.feeding-in {
-  animation: paperFeedIn 1.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-/* =============================================================
-   PAPER CONTENT TYPOGRAPHY
-   All body text: Courier Prime
-   Headings: Courier Prime Bold
+   PAPER CONTENT TYPOGRAPHY — all Courier Prime
    ============================================================= */
 .paper-content {
   color: #1a1510;
@@ -354,7 +343,6 @@
   font-family: 'Courier Prime', 'Courier New', monospace;
 }
 
-/* Force all nested elements to inherit Courier Prime unless overridden */
 .paper-content * {
   font-family: inherit;
 }
@@ -424,8 +412,8 @@
 .paper-content pre code { background: none; padding: 0; }
 
 /* =============================================================
-   POLAROID EVENT CARDS — straight, no rotation
-   White frame, thick bottom label area
+   POLAROID EVENT CARDS — straight, wider frames
+   top/left/right: 26px  |  bottom: 36px (for caption label)
    ============================================================= */
 .events-grid {
   display: grid;
@@ -436,13 +424,12 @@
 
 .event-card {
   background: #ffffff;
-  /* Wider Polaroid frame: 16px sides/top, 52px bottom for label */
-  padding: 16px 16px 0 16px;
+  /* 26px frame on top/sides, 36px on bottom for the caption label */
+  padding: 26px 26px 0 26px;
   box-shadow:
     0 3px 12px rgba(0,0,0,0.15),
     0 1px 4px rgba(0,0,0,0.10);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
-  transform: none;
 }
 
 .event-card:hover {
@@ -454,22 +441,20 @@
 
 .event-card img {
   width: 100%;
-  aspect-ratio: 3/2;   /* enforce 3:2 ratio */
+  aspect-ratio: 3/2;
   object-fit: cover;
   display: block;
 }
 
-/* Caption sits below the image in normal flow — not absolute */
 .event-card .event-caption {
-  padding: 0.5rem 0.4rem 0.6rem;
+  padding: 0.65rem 0.4rem 0.75rem;
   font-family: 'Courier Prime', 'Courier New', monospace;
   font-size: 0.78rem;
   color: #333;
   line-height: 1.4;
-  /* Allow text to wrap naturally */
   white-space: normal;
   overflow: visible;
-  min-height: 2.8rem;
+  min-height: 36px;
 }
 
 .event-card .event-caption a {
@@ -491,12 +476,16 @@
   .printer-frame { padding: 1.5rem 1.5rem 1.2rem; }
   .printer-avatar { width: 52px; height: 52px; }
   .printer-brand { font-size: 1.1rem; }
+  .paper-output-area { margin-left: 16px; margin-right: 16px; }
+  .slot-side-left, .slot-side-right { width: 16px; }
   .paper-sheet { padding: 2rem 1.5rem 2.5rem; min-height: 400px; }
 }
 
 @media (max-width: 480px) {
   .printer-theme-body { padding: 1rem 0.5rem 4rem; }
   .printer-frame { padding: 1.25rem 1.25rem 1rem; }
+  .paper-output-area { margin-left: 10px; margin-right: 10px; }
+  .slot-side-left, .slot-side-right { width: 10px; }
   .paper-sheet { padding: 1.5rem 1.25rem 2rem; }
   .paper-content { font-size: 0.93rem; }
 }
