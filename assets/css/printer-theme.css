@@ -172,7 +172,7 @@
 .paper-output-area {
   margin-left: var(--paper-side-inset);
   margin-right: var(--paper-side-inset);
-  margin-top: calc(-1 * (var(--slot-bar-height) + var(--paper-slot-overlap)));
+  margin-top: calc(-1 * (var(--bottom-frame-height) + var(--slot-bar-height) + var(--paper-slot-overlap)));
   position: relative;
   z-index: 2;
   overflow: hidden;
