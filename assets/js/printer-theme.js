@@ -48,13 +48,12 @@
   }
 
   /* ------------------------------------------------------------------ */
-  /* SOUNDS — play directly on the audio element, no cloneNode           */
+  /* Sounds                                                               */
   /* ------------------------------------------------------------------ */
 
   function playSound(id) {
     var audio = document.getElementById(id);
     if (!audio) return;
-    // Reset and play — this is synchronous enough for click handlers
     try {
       audio.pause();
       audio.currentTime = 0;
@@ -75,9 +74,7 @@
       aboutBtn.addEventListener('click', function () {
         playSound('button-sound');
         playSound('print-sound');
-        hideTray();
         if (isAboutPage()) {
-          // Already here — just show/animate content
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';
           var paper = document.getElementById('current-paper');
@@ -95,7 +92,6 @@
       eventsBtn.addEventListener('click', function () {
         playSound('button-sound');
         playSound('print-sound');
-        hideTray();
         if (isEventsPage()) {
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';
@@ -115,21 +111,10 @@
   /* Init                                                                 */
   /* ------------------------------------------------------------------ */
 
-  function showTray() {
-    var tray = document.getElementById('paper-tray');
-    if (tray) tray.style.display = 'block';
-  }
-
-  function hideTray() {
-    var tray = document.getElementById('paper-tray');
-    if (tray) tray.style.display = 'none';
-  }
-
   function init() {
     var paper = document.getElementById('current-paper');
     var nav = sessionStorage.getItem('printer-nav');
 
-    // Determine active page from sessionStorage
     if (nav === 'about' && isAboutPage()) {
       setActiveButton('about');
     } else if (nav === 'events' && isEventsPage()) {
@@ -139,17 +124,15 @@
     }
 
     if (nav) {
-      // Navigated here via button — show content, hide tray, animate paper in
+      // Came here via button click — show content and animate
       var content = document.querySelector('.paper-content');
       if (content) content.style.visibility = 'visible';
       if (paper) paper.style.display = 'block';
-      hideTray();
       feedPaperIn();
       playSound('print-sound');
     } else {
-      // First load / direct visit — hide paper, show beige tray
+      // Direct visit — hide paper entirely, just show the printer body
       if (paper) paper.style.display = 'none';
-      showTray();
     }
 
     setupNavigation();
