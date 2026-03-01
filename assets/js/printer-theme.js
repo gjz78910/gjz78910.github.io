@@ -3,6 +3,8 @@
 (function () {
   'use strict';
 
+  var soundPools = {};
+
   /* ------------------------------------------------------------------ */
   /* Page detection                                                       */
   /* ------------------------------------------------------------------ */
@@ -52,35 +54,67 @@
   /* ------------------------------------------------------------------ */
 
   function playSound(id) {
-    var audio = document.getElementById(id);
-    if (!audio) return;
+    var pool = soundPools[id];
+    if (!pool || !pool.players || pool.players.length === 0) return;
+
+    var player = pool.players[pool.index];
+    pool.index = (pool.index + 1) % pool.players.length;
+
     try {
-      // Use a fresh element each click so repeated taps always replay sound.
-      var clone = audio.cloneNode(true);
-      clone.removeAttribute('id');
-      clone.preload = 'auto';
-      clone.style.display = 'none';
-      document.body.appendChild(clone);
-
-      function cleanup() {
-        if (clone.parentNode) clone.parentNode.removeChild(clone);
-      }
-
-      clone.addEventListener('ended', cleanup, { once: true });
-      clone.addEventListener('error', cleanup, { once: true });
-
-      var p = clone.play();
+      player.currentTime = 0;
+      var p = player.play();
       if (p && p.catch) {
         p.catch(function () {
-          cleanup();
+          // Fallback one-shot player in case the pooled instance is blocked.
+          try {
+            var fallback = new Audio(pool.src);
+            fallback.preload = 'auto';
+            var fp = fallback.play();
+            if (fp && fp.catch) fp.catch(function () {});
+          } catch (err) {}
         });
       }
-
-      // Safety cleanup in case ended/error events do not fire.
-      setTimeout(cleanup, 5000);
     } catch (e) {
-      try { audio.pause(); audio.currentTime = 0; audio.play(); } catch (err) {}
+      try {
+        var emergency = new Audio(pool.src);
+        emergency.preload = 'auto';
+        emergency.play();
+      } catch (err) {}
     }
+  }
+
+  function getSoundSrc(id) {
+    var audio = document.getElementById(id);
+    if (!audio) return null;
+
+    if (audio.currentSrc) return audio.currentSrc;
+
+    var source = audio.querySelector('source[type="audio/mpeg"]') || audio.querySelector('source');
+    return source ? source.src : null;
+  }
+
+  function initSoundPool(id, size) {
+    var src = getSoundSrc(id);
+    if (!src) return;
+
+    var players = [];
+    for (var i = 0; i < size; i++) {
+      var player = new Audio(src);
+      player.preload = 'auto';
+      player.load();
+      players.push(player);
+    }
+
+    soundPools[id] = {
+      src: src,
+      players: players,
+      index: 0
+    };
+  }
+
+  function initSounds() {
+    initSoundPool('print-sound', 4);
+    initSoundPool('button-sound', 4);
   }
 
   /* ------------------------------------------------------------------ */
@@ -160,6 +194,7 @@
       if (paper) paper.style.display = 'none';
     }
 
+    initSounds();
     setupNavigation();
   }
 
