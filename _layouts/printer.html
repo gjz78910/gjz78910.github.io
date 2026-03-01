@@ -1,0 +1,52 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+  <head>
+    {% include head.html %}
+    <link rel="stylesheet" href="{{ base_path }}/assets/css/printer-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="printer-theme-body">
+    <div class="printer-container">
+      <!-- Printer Frame -->
+      <div class="printer-frame">
+        <div class="printer-top">
+          <div class="printer-brand">{{ site.title }}</div>
+          <div class="printer-controls">
+            <button class="printer-nav-btn" data-page="about" id="btn-about">About</button>
+            <button class="printer-nav-btn" data-page="events" id="btn-events">Events</button>
+          </div>
+        </div>
+        <div class="printer-body">
+          <div class="printer-paper-feed"></div>
+          <div class="printer-output-area">
+            <div class="paper-container" id="paper-container">
+              <div class="paper-sheet active" id="current-paper">
+                <div class="paper-content">
+                  {{ content }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="printer-status" id="printer-status">Ready</div>
+      </div>
+    </div>
+
+    <!-- Optional: Add print-sound.mp3 to assets/audio/ for custom sound -->
+    <audio id="print-sound" preload="auto" style="display: none;">
+      <source src="{{ base_path }}/assets/audio/print-sound.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script src="{{ base_path }}/assets/js/printer-theme.js"></script>
+    {% include scripts.html %}
+  </body>
+</html>
