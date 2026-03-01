@@ -4,7 +4,7 @@
   'use strict';
 
   var soundPools = {};
-  var PAPER_ANIMATION_DELAY_MS = 500;
+  var PAPER_ANIMATION_DELAY_MS = 1000;
   var pendingPrintTimer = null;
 
   /* ------------------------------------------------------------------ */
@@ -125,7 +125,6 @@
 
   function initSounds() {
     initSoundPool('print-sound', 4);
-    initSoundPool('button-sound', 4);
   }
 
   function clearPendingPrint() {
@@ -154,7 +153,6 @@
 
     if (aboutBtn) {
       aboutBtn.addEventListener('click', function () {
-        playSound('button-sound');
         if (isAboutPage()) {
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';
@@ -171,7 +169,6 @@
 
     if (eventsBtn) {
       eventsBtn.addEventListener('click', function () {
-        playSound('button-sound');
         if (isEventsPage()) {
           var content = document.querySelector('.paper-content');
           if (content) content.style.visibility = 'visible';
