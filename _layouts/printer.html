@@ -13,7 +13,7 @@ layout: compress
     <meta name="description" content="{{ site.description }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ base_path }}/assets/css/printer-theme.css">
   </head>
 
@@ -80,9 +80,12 @@ layout: compress
 
     </div><!-- /printer-container -->
 
-    <audio id="print-sound" preload="auto" style="display:none;">
-      <source src="{{ base_path }}/assets/audio/print-sound.mp3" type="audio/mpeg">
-    </audio>
+        <audio id="print-sound" preload="auto" style="display:none;">
+          <source src="{{ base_path }}/assets/audio/printer_sound.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="button-sound" preload="auto" style="display:none;">
+          <source src="{{ base_path }}/assets/audio/button_sound.mp3" type="audio/mpeg">
+        </audio>
 
     <script src="{{ base_path }}/assets/js/printer-theme.js"></script>
   </body>
