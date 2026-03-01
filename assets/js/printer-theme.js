@@ -83,10 +83,10 @@
           feedPaperIn();
         } else {
           sessionStorage.setItem('printer-nav', 'about');
-          // 100ms delay lets audio start before page unloads
+          // Keep a short delay so click-triggered audio starts before navigation.
           setTimeout(function () {
             window.location.href = '/printer/';
-          }, 100);
+          }, 220);
         }
       });
     }
@@ -106,7 +106,7 @@
           sessionStorage.setItem('printer-nav', 'events');
           setTimeout(function () {
             window.location.href = '/printer/events/';
-          }, 100);
+          }, 220);
         }
       });
     }
@@ -134,7 +134,6 @@
       if (content) content.style.visibility = 'visible';
       if (paper) paper.style.display = 'block';
       feedPaperIn();
-      playSound('print-sound');
     } else {
       // Direct visit — hide paper entirely, just show the printer body
       if (paper) paper.style.display = 'none';

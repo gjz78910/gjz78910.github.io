@@ -31,7 +31,7 @@
   position: relative;
   --printer-frame-bg: linear-gradient(175deg, #f8f4ec 0%, #f2ede3 30%, #ebe5db 65%, #e0dbd0 100%);
   --slot-gap-height: 16px;
-  --slot-bar-height: 3px;
+  --slot-bar-height: 6px;
   --slot-paper-overhang: 5px;
   --slot-side-inset: 26px;
   --paper-side-inset: calc(var(--slot-side-inset) + var(--slot-paper-overhang));
@@ -67,7 +67,7 @@
 .printer-frame {
   background: var(--printer-frame-bg);
   border-radius: 18px 18px 0 0;
-  border-bottom: 3px solid #1a1714;  /* slot top-bar — thin */
+  border-bottom: var(--slot-bar-height) solid #1a1714;
   padding: 2rem 2.5rem 1.8rem;
   position: relative;
   z-index: 3;
