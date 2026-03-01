@@ -56,90 +56,77 @@
 /* =============================================================
    SLOT ASSEMBLY — inside .printer-frame, absolutely positioned.
 
-   Dimensions:
-     slot-top-bar   : 8px  — dark top lip
-     slot-middle    : 20px — [side-wall | transparent gap | side-wall]
-     slot-bottom-bar: 8px  — dark bottom lip
-   Total height: 36px
+   Goal: paper appears BETWEEN the two dark bars, exactly like image 2.
 
-   Placement (bottom: -28px):
-     slot-top-bar top    = frame_bottom - 36px + 8px  = inside frame ✓
-     slot-middle         = frame_bottom - 28px .. frame_bottom - 8px
-     slot-bottom-bar     = frame_bottom - 8px  .. frame_bottom + 0px
-   Wait — let's use bottom: 0 so the assembly bottom edge is at
-   the frame's bottom edge:
-     slot-bottom-bar bottom = frame_bottom
-     slot-bottom-bar top    = frame_bottom - 8px
-     slot-middle bottom     = frame_bottom - 8px
-     slot-middle top        = frame_bottom - 28px
-     slot-top-bar bottom    = frame_bottom - 28px
-     slot-top-bar top       = frame_bottom - 36px  (inside frame)
+   Geometry (slot-top-bar=6px, slot-gap=18px, slot-bottom-bar=6px):
+     top: calc(100% - 6px)  →  assembly top = 6px before frame bottom
+       slot-top-bar  top    = frame_bottom - 6px   (inside frame)
+       slot-top-bar  bottom = frame_bottom          (frame edge)
+       slot-gap      top    = frame_bottom
+       slot-gap      bottom = frame_bottom + 18px
+       slot-bottom-bar top  = frame_bottom + 18px
+       slot-bottom-bar bot  = frame_bottom + 24px
 
-   The paper-output-area margin-top = -(slot-middle + slot-bottom-bar)
-   = -(20 + 8) = -28px so the paper top starts at slot-middle top.
+   paper-output-area margin-top = -(slot-gap + slot-bottom-bar)
+     = -(18 + 6) = -24px
+   → paper top = frame_bottom + 24px - 24px = frame_bottom  ✓
+     paper top aligns with slot-gap top, paper is BETWEEN the bars.
+
+   z-index: 10 ensures both bars paint on top of the paper.
    ============================================================= */
 .slot-assembly {
   position: absolute;
-  bottom: 0;        /* assembly bottom = frame bottom */
+  top: calc(100% - 6px);  /* top-bar overlaps last 6px of frame */
   left: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   pointer-events: none;
-  z-index: 10;      /* paints above frame background and above paper */
+  z-index: 10;
 }
 
 .slot-top-bar {
-  height: 8px;
+  height: 6px;
   background: #1a1714;
-  box-shadow:
-    0 2px 6px rgba(0,0,0,0.55),
-    0 1px 0 #0a0806 inset;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.6);
 }
 
 .slot-middle {
   display: flex;
-  height: 20px;   /* the opening — paper shows through the gap */
+  height: 18px;   /* transparent gap — paper visible here */
 }
 
 .slot-side-left,
 .slot-side-right {
-  width: 28px;    /* beige-colored frame walls on each side */
+  width: 28px;
   flex-shrink: 0;
-  background: linear-gradient(to bottom, #d8d3c8 0%, #c8c3b8 100%);
-  box-shadow: inset 0 2px 6px rgba(0,0,0,0.4), inset 0 -1px 3px rgba(0,0,0,0.2);
+  /* Match the printer frame color so they look like frame walls */
+  background: linear-gradient(to bottom, #ebe5db 0%, #ddd8cc 100%);
+  box-shadow: inset 2px 0 5px rgba(0,0,0,0.25), inset -2px 0 5px rgba(0,0,0,0.25);
 }
 
 .slot-gap {
   flex: 1;
-  background: transparent;  /* paper shows through here */
+  background: transparent;
 }
 
 .slot-bottom-bar {
-  height: 8px;
+  height: 6px;
   background: #1a1714;
-  box-shadow:
-    0 3px 10px rgba(0,0,0,0.5),
-    0 -1px 0 #0a0806 inset;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
 }
 
 /* =============================================================
    PAPER OUTPUT AREA
-   Sits in normal flow below .printer-frame.
-   margin-top = -(slot-middle + slot-bottom-bar) = -(20+8) = -28px
-   This pulls the paper top up to align with the slot-middle top,
-   so paper emerges from inside the slot opening.
-
-   NO overflow:hidden — the slot-assembly (z-index:10) acts as
-   the visual mask. The paper starts hidden via translateY(-100%).
+   margin-top = -(slot-gap + slot-bottom-bar) = -(18+6) = -24px
+   Paper top aligns with slot-gap top → paper is between the bars.
+   margin-left/right = 28px (side-wall width) → frame walls visible.
+   NO overflow:hidden — slot-assembly (z-index:10) masks the paper.
    ============================================================= */
 .paper-output-area {
-  /* Inset left/right to match the side-wall width (28px each),
-     so paper is always within the slot's frame walls */
   margin-left: 28px;
   margin-right: 28px;
-  margin-top: -28px;   /* pull up into the slot gap */
-  /* No overflow:hidden, no z-index — stays below the frame's stacking context */
+  margin-top: -24px;
 }
 
 /* =============================================================
@@ -454,7 +441,8 @@
   line-height: 1.4;
   white-space: normal;
   overflow: visible;
-  min-height: 36px;
+  /* min 3 lines: font-size(0.78rem ≈ 12.5px) × line-height(1.4) × 3 + padding ≈ 52px */
+  min-height: calc(0.78rem * 1.4 * 3 + 1.4rem);
 }
 
 .event-card .event-caption a {

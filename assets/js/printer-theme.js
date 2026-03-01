@@ -64,12 +64,16 @@
     var eventsBtn = document.getElementById('btn-events');
 
     if (aboutBtn) {
-      aboutBtn.addEventListener('mousedown', playKeyClick);
-      aboutBtn.addEventListener('click', function () { navigateTo('about'); });
+      aboutBtn.addEventListener('click', function () {
+        playKeyClick();
+        navigateTo('about');
+      });
     }
     if (eventsBtn) {
-      eventsBtn.addEventListener('mousedown', playKeyClick);
-      eventsBtn.addEventListener('click', function () { navigateTo('events'); });
+      eventsBtn.addEventListener('click', function () {
+        playKeyClick();
+        navigateTo('events');
+      });
     }
   }
 
