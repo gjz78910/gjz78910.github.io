@@ -16,50 +16,63 @@ layout: compress
 
   <body class="printer-theme-body">
     <div class="printer-container">
-      <!-- Printer Frame -->
-      <div class="printer-frame">
-        <div class="printer-top">
-          <div class="printer-header-left">
-            <div class="printer-icon">
-              <div class="printer-icon-circle">
-                <span class="printer-icon-arrow">↑</span>
+      <div class="printer-wrapper">
+
+        <!-- Printer Frame (the physical machine) -->
+        <div class="printer-frame">
+
+          <!-- Top: Avatar + Brand + Status -->
+          <div class="printer-top">
+            <div class="printer-header-left">
+              <div class="printer-avatar">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 4C8.58 4 5 7.58 5 12C5 14.76 6.36 17.2 8.46 18.72L7 20.18C6.62 20.56 6.88 21.2 7.42 21.2H18.58C19.12 21.2 19.38 20.56 19 20.18L17.54 18.72C19.64 17.2 21 14.76 21 12C21 7.58 17.42 4 13 4Z" fill="#e8823a"/>
+                  <path d="M13 2V6M13 2L11 4M13 2L15 4" stroke="#e8823a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="printer-brand-group">
+                <div class="printer-brand">{{ site.name | default: site.title | upcase }}</div>
+                <div class="printer-tagline">{{ site.name | default: site.title | upcase }} THE NOOB</div>
               </div>
             </div>
-            <div class="printer-brand-group">
-              <div class="printer-brand">{{ site.name | default: site.title }}</div>
-              <div class="printer-tagline">{{ site.name | default: site.title }} THE NOOB</div>
-            </div>
-          </div>
-          <div class="printer-header-right">
-            <div class="printer-status-indicator">
-              <span class="status-dot"></span>
-              <span class="status-text">ON</span>
-            </div>
-          </div>
-        </div>
-        <div class="printer-nav">
-          <button class="printer-nav-btn" data-page="about" id="btn-about">ABOUT</button>
-          <button class="printer-nav-btn" data-page="events" id="btn-events">EVENTS</button>
-        </div>
-        <div class="printer-body">
-          <div class="printer-output-area">
-            <div class="paper-container" id="paper-container">
-              <div class="paper-sheet active" id="current-paper">
-                <div class="paper-content">
-                  {{ content }}
-                </div>
+            <div class="printer-header-right">
+              <div class="printer-status-indicator">
+                <span class="status-dot"></span>
+                <span class="status-text">ON</span>
               </div>
             </div>
           </div>
+
+          <!-- Navigation -->
+          <div class="printer-nav">
+            <button class="printer-nav-btn" data-page="about" id="btn-about">ABOUT</button>
+            <button class="printer-nav-btn" data-page="events" id="btn-events">EVENTS</button>
+          </div>
+
+          <!-- Paper slot at bottom of frame -->
+          <div class="printer-slot">
+            <div class="printer-slot-line"></div>
+          </div>
+
         </div>
+        <!-- End Printer Frame -->
+
+        <!-- Paper output area — paper slides out from slot below frame -->
+        <div class="paper-output-area" id="paper-output-area">
+          <div class="paper-sheet" id="current-paper">
+            <div class="paper-content">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <!-- Optional: Add print-sound.mp3 to assets/audio/ for custom sound -->
     <audio id="print-sound" preload="auto" style="display: none;">
       <source src="{{ base_path }}/assets/audio/print-sound.mp3" type="audio/mpeg">
     </audio>
-    
+
     <script src="{{ base_path }}/assets/js/printer-theme.js"></script>
     {% include scripts.html %}
   </body>

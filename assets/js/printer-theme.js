@@ -1,179 +1,168 @@
 // Printer Theme JavaScript
+// Paper feeds out from slot on load; feeds back in on navigate.
 
-(function() {
+(function () {
   'use strict';
 
-  // Initialize printer theme
-  function initPrinterTheme() {
-    const currentPath = window.location.pathname;
-    const isAboutPage = currentPath === '/printer/' || currentPath === '/printer' || currentPath.endsWith('/printer/');
-    const isEventsPage = currentPath.includes('/printer/events') || currentPath.includes('/events/');
+  /* ------------------------------------------------------------------ */
+  /* Helpers                                                              */
+  /* ------------------------------------------------------------------ */
 
-    // Set active button
-    if (isAboutPage) {
-      document.getElementById('btn-about')?.classList.add('active');
-      document.getElementById('btn-events')?.classList.remove('active');
-    } else if (isEventsPage) {
-      document.getElementById('btn-events')?.classList.add('active');
-      document.getElementById('btn-about')?.classList.remove('active');
-    }
-
-    // Setup navigation buttons
-    setupNavigation();
+  function isAboutPage() {
+    var p = window.location.pathname;
+    return p === '/printer/' || p === '/printer' || p.endsWith('/printer/');
   }
 
-  // Setup navigation buttons
+  function isEventsPage() {
+    var p = window.location.pathname;
+    return p.includes('/printer/events');
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* Active button state                                                  */
+  /* ------------------------------------------------------------------ */
+
+  function setActiveButton() {
+    var aboutBtn  = document.getElementById('btn-about');
+    var eventsBtn = document.getElementById('btn-events');
+    if (!aboutBtn || !eventsBtn) return;
+
+    aboutBtn.classList.remove('active');
+    eventsBtn.classList.remove('active');
+
+    if (isAboutPage()) {
+      aboutBtn.classList.add('active');
+    } else if (isEventsPage()) {
+      eventsBtn.classList.add('active');
+    }
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* Paper feed-in animation on page load                                 */
+  /* ------------------------------------------------------------------ */
+
+  function feedPaperIn() {
+    var paper = document.getElementById('current-paper');
+    var area  = document.getElementById('paper-output-area');
+    if (!paper || !area) return;
+
+    // Reveal the output area so paper is visible as it slides down
+    area.style.overflow = 'hidden';
+
+    // Remove any leftover animation classes
+    paper.classList.remove('feeding-in', 'feeding-out');
+
+    // Small rAF delay so browser paints the initial hidden state first
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        paper.classList.add('feeding-in');
+      });
+    });
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* Navigation with feed-out animation                                   */
+  /* ------------------------------------------------------------------ */
+
   function setupNavigation() {
-    const aboutBtn = document.getElementById('btn-about');
-    const eventsBtn = document.getElementById('btn-events');
+    var aboutBtn  = document.getElementById('btn-about');
+    var eventsBtn = document.getElementById('btn-events');
 
     if (aboutBtn) {
-      aboutBtn.addEventListener('click', function() {
-        navigateToPage('about');
+      aboutBtn.addEventListener('click', function () {
+        navigateTo('about');
       });
     }
 
     if (eventsBtn) {
-      eventsBtn.addEventListener('click', function() {
-        navigateToPage('events');
+      eventsBtn.addEventListener('click', function () {
+        navigateTo('events');
       });
     }
   }
 
-  // Navigate to a page with printing animation
-  function navigateToPage(page) {
-    const currentPath = window.location.pathname;
-    const isAboutPage = currentPath === '/printer/' || currentPath === '/printer' || currentPath.endsWith('/printer/');
-    const isEventsPage = currentPath.includes('/printer/events') || currentPath.includes('/events/');
+  function navigateTo(page) {
+    // Don't navigate if already on that page
+    if (page === 'about'  && isAboutPage())  return;
+    if (page === 'events' && isEventsPage()) return;
 
-    // Don't navigate if already on the target page
-    if ((page === 'about' && isAboutPage) || (page === 'events' && isEventsPage)) {
-      return;
-    }
+    var paper = document.getElementById('current-paper');
+    if (!paper) return;
 
-    // Play print sound
+    // Play sound
     playPrintSound();
 
-    // Update status
-    const statusEl = document.getElementById('printer-status');
-    if (statusEl) {
-      statusEl.textContent = 'Printing...';
-      statusEl.classList.add('printing');
-    }
+    // Feed paper back into slot
+    paper.classList.remove('feeding-in');
+    paper.classList.add('feeding-out');
 
-    // Animate paper out
-    const paperContainer = document.getElementById('paper-container');
-    const currentPaper = document.getElementById('current-paper');
-    
-    if (currentPaper) {
-      currentPaper.classList.remove('active');
-      currentPaper.classList.add('printing-out');
-
-      // After animation, navigate
-      setTimeout(function() {
-        // Determine target URL
-        let targetUrl;
-        if (page === 'about') {
-          targetUrl = '/printer/';
-        } else if (page === 'events') {
-          targetUrl = '/printer/events/';
-        }
-
-        // Navigate to new page
-        if (targetUrl) {
-          window.location.href = targetUrl;
-        }
-      }, 800); // Match animation duration
-    }
+    // After animation completes, navigate
+    setTimeout(function () {
+      var url = page === 'about' ? '/printer/' : '/printer/events/';
+      window.location.href = url;
+    }, 700); // matches paperFeedOut duration (0.7s)
   }
 
-  // Play print sound effect
+  /* ------------------------------------------------------------------ */
+  /* Print sound (Web Audio API, synthesised)                             */
+  /* ------------------------------------------------------------------ */
+
   function playPrintSound() {
     try {
-      // Create audio context for generating print sound
-      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-      
-      // Generate a simple print-like sound
-      const oscillator = audioContext.createOscillator();
-      const gainNode = audioContext.createGain();
-      
-      oscillator.connect(gainNode);
-      gainNode.connect(audioContext.destination);
-      
-      // Configure sound
-      oscillator.frequency.setValueAtTime(200, audioContext.currentTime);
-      oscillator.frequency.exponentialRampToValueAtTime(100, audioContext.currentTime + 0.1);
-      
-      gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.15);
-      
-      oscillator.start(audioContext.currentTime);
-      oscillator.stop(audioContext.currentTime + 0.15);
+      var AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtx) return;
+      var ctx = new AudioCtx();
 
-      // Add a second tone for more realistic print sound
-      setTimeout(function() {
-        const oscillator2 = audioContext.createOscillator();
-        const gainNode2 = audioContext.createGain();
-        
-        oscillator2.connect(gainNode2);
-        gainNode2.connect(audioContext.destination);
-        
-        oscillator2.frequency.setValueAtTime(150, audioContext.currentTime);
-        oscillator2.frequency.exponentialRampToValueAtTime(80, audioContext.currentTime + 0.1);
-        
-        gainNode2.gain.setValueAtTime(0.2, audioContext.currentTime);
-        gainNode2.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.12);
-        
-        oscillator2.start(audioContext.currentTime);
-        oscillator2.stop(audioContext.currentTime + 0.12);
-      }, 50);
-    } catch (error) {
-      // Fallback: Try using HTML5 audio if available
-      const audio = document.getElementById('print-sound');
+      // Simulate a mechanical print head sweep: bursts of noise
+      var bufferSize = ctx.sampleRate * 0.6; // 0.6 s
+      var buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      var data   = buffer.getChannelData(0);
+
+      for (var i = 0; i < bufferSize; i++) {
+        // Sparse noise bursts
+        data[i] = (Math.random() * 2 - 1) * (Math.sin(i / 200) > 0.3 ? 0.15 : 0);
+      }
+
+      var source = ctx.createBufferSource();
+      source.buffer = buffer;
+
+      // Low-pass filter to make it sound mechanical, not harsh
+      var filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.value = 1800;
+
+      var gain = ctx.createGain();
+      gain.gain.setValueAtTime(0.4, ctx.currentTime);
+      gain.gain.linearRampToValueAtTime(0, ctx.currentTime + 0.6);
+
+      source.connect(filter);
+      filter.connect(gain);
+      gain.connect(ctx.destination);
+      source.start();
+    } catch (e) {
+      // Fallback: HTML5 audio element
+      var audio = document.getElementById('print-sound');
       if (audio) {
         audio.currentTime = 0;
-        audio.play().catch(function(err) {
-          console.log('Could not play sound:', err);
-        });
+        audio.play().catch(function () {});
       }
     }
   }
 
-  // Animate paper in when page loads
-  function animatePaperIn() {
-    const currentPaper = document.getElementById('current-paper');
-    if (currentPaper) {
-      // Small delay to ensure DOM is ready
-      setTimeout(function() {
-        currentPaper.classList.add('active');
-      }, 100);
-    }
+  /* ------------------------------------------------------------------ */
+  /* Init                                                                 */
+  /* ------------------------------------------------------------------ */
 
-    // Update status after animation
-    setTimeout(function() {
-      const statusEl = document.getElementById('printer-status');
-      if (statusEl) {
-        statusEl.textContent = 'Ready';
-        statusEl.classList.remove('printing');
-      }
-    }, 1200);
+  function init() {
+    setActiveButton();
+    setupNavigation();
+    feedPaperIn();
   }
 
-  // Initialize when DOM is ready
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-      initPrinterTheme();
-      animatePaperIn();
-    });
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    initPrinterTheme();
-    animatePaperIn();
+    init();
   }
-
-  // Handle browser back/forward buttons
-  window.addEventListener('popstate', function() {
-    initPrinterTheme();
-    animatePaperIn();
-  });
 
 })();
