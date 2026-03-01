@@ -31,7 +31,8 @@
   position: relative;
   --slot-gap-height: 16px;
   --slot-bar-height: 3px;
-  --paper-side-inset: 36px;
+  --paper-side-inset: 56px;
+  --bottom-frame-height: 34px;
 }
 
 /* =============================================================
@@ -120,7 +121,7 @@
 /* Side walls: 20px wide, hang 16px below frame into the gap */
 .printer-frame::before,
 .printer-frame::after {
-  content: '';
+  content: none;
   position: absolute;
   bottom: calc(-1 * var(--slot-gap-height));
   width: var(--paper-side-inset);
@@ -152,7 +153,7 @@
 .slot-body-fill {
   margin: 0;
   background: linear-gradient(to bottom, #e8e4da 0%, #ddd8cc 100%);
-  min-height: 40px;
+  height: var(--bottom-frame-height);
   border-radius: 0 0 6px 6px;
   position: relative;
   z-index: 0;
@@ -505,7 +506,8 @@
 
 @media (max-width: 768px) {
   .printer-container {
-    --paper-side-inset: 28px;
+    --paper-side-inset: 42px;
+    --bottom-frame-height: 30px;
   }
   .printer-theme-body { padding: 1.5rem 0.75rem 5rem; }
   .printer-frame { padding: 1.5rem 1.5rem 1.2rem; }
@@ -514,28 +516,19 @@
   .slot-bottom-bar { margin: 0; }
   .paper-output-area { margin-left: var(--paper-side-inset); margin-right: var(--paper-side-inset); }
   .slot-body-fill { margin: 0; }
-  .printer-frame::before, .printer-frame::after {
-    width: var(--paper-side-inset);
-    bottom: calc(-1 * var(--slot-gap-height));
-    height: var(--slot-gap-height);
-  }
   .paper-sheet { padding: 2rem 1.5rem 2.5rem; min-height: 400px; }
 }
 
 @media (max-width: 480px) {
   .printer-container {
-    --paper-side-inset: 20px;
+    --paper-side-inset: 28px;
+    --bottom-frame-height: 26px;
   }
   .printer-theme-body { padding: 1rem 0.5rem 4rem; }
   .printer-frame { padding: 1.25rem 1.25rem 1rem; }
   .slot-bottom-bar { margin: 0; }
   .paper-output-area { margin-left: var(--paper-side-inset); margin-right: var(--paper-side-inset); }
   .slot-body-fill { margin: 0; }
-  .printer-frame::before, .printer-frame::after {
-    width: var(--paper-side-inset);
-    bottom: calc(-1 * var(--slot-gap-height));
-    height: var(--slot-gap-height);
-  }
   .paper-sheet { padding: 1.5rem 1.25rem 2rem; }
   .paper-content { font-size: 0.93rem; }
 }
