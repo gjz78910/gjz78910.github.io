@@ -5,75 +5,127 @@ layout: compress
 {% include base_path %}
 
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+<html lang="en" class="no-js">
   <head>
-    {% include head.html %}
-    <link rel="stylesheet" href="{{ base_path }}/assets/css/printer-theme.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ base_path }}/assets/css/printer-theme.css">
   </head>
 
   <body class="printer-theme-body">
     <div class="printer-container">
       <div class="printer-wrapper">
 
-        <!-- Printer Frame (the physical machine) -->
+        <!-- ═══════════════════════════════════════════
+             PRINTER FRAME (the physical machine)
+             Wider than the paper that comes out below
+             ═══════════════════════════════════════════ -->
         <div class="printer-frame">
 
-          <!-- Top: Avatar + Brand + Status -->
+          <!-- Header: avatar + brand + status -->
           <div class="printer-top">
             <div class="printer-header-left">
+              <!-- Dark circle avatar with orange arrow icon -->
               <div class="printer-avatar">
-                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13 4C8.58 4 5 7.58 5 12C5 14.76 6.36 17.2 8.46 18.72L7 20.18C6.62 20.56 6.88 21.2 7.42 21.2H18.58C19.12 21.2 19.38 20.56 19 20.18L17.54 18.72C19.64 17.2 21 14.76 21 12C21 7.58 17.42 4 13 4Z" fill="#e8823a"/>
-                  <path d="M13 2V6M13 2L11 4M13 2L15 4" stroke="#e8823a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <!-- Upward arrow -->
+                  <path d="M14 20V10M14 10L9 15M14 10L19 15" stroke="#e8823a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
               <div class="printer-brand-group">
-                <div class="printer-brand">{{ site.name | default: site.title | upcase }}</div>
-                <div class="printer-tagline">{{ site.name | default: site.title | upcase }} THE NOOB</div>
+                <div class="printer-brand">{{ site.title }}</div>
+                <div class="printer-tagline">{{ site.title | upcase }} THE NOOB</div>
               </div>
             </div>
             <div class="printer-header-right">
               <div class="printer-status-indicator">
-                <span class="status-dot"></span>
+                <span class="status-dot" aria-label="Online"></span>
                 <span class="status-text">ON</span>
               </div>
             </div>
           </div>
 
           <!-- Navigation -->
-          <div class="printer-nav">
-            <button class="printer-nav-btn" data-page="about" id="btn-about">ABOUT</button>
-            <button class="printer-nav-btn" data-page="events" id="btn-events">EVENTS</button>
+          <div class="printer-nav" role="navigation" aria-label="Main navigation">
+            <button class="printer-nav-btn" data-page="about" id="btn-about" aria-current="false">ABOUT</button>
+            <button class="printer-nav-btn" data-page="events" id="btn-events" aria-current="false">EVENTS</button>
           </div>
 
-          <!-- Paper slot at bottom of frame -->
-          <div class="printer-slot">
-            <div class="printer-slot-line"></div>
+          <!-- Paper exit slot — the dark slit paper feeds through -->
+          <div class="printer-slot" aria-hidden="true">
+            <div class="printer-slot-opening"></div>
           </div>
 
         </div>
-        <!-- End Printer Frame -->
+        <!-- /printer-frame -->
 
-        <!-- Paper output area — paper slides out from slot below frame -->
+        <!-- ═══════════════════════════════════════════
+             PAPER OUTPUT AREA
+             Paper slides down out of the slot above
+             ═══════════════════════════════════════════ -->
         <div class="paper-output-area" id="paper-output-area">
           <div class="paper-sheet" id="current-paper">
+
+            {% if page.permalink == '/printer/' or page.permalink == '/printer' %}
+            <!-- Profile strip — only on About page -->
+            <div class="paper-profile">
+              <div class="paper-profile-photo">
+                <img src="{{ base_path }}/images/{{ site.author.avatar }}" alt="{{ site.author.name }}" width="90" height="90">
+              </div>
+              <div class="paper-profile-info">
+                <div class="paper-profile-name">{{ site.author.name }}</div>
+                <div class="paper-profile-bio">{{ site.author.bio }}</div>
+                <div class="paper-profile-links">
+                  {% if site.author.email %}
+                  <a href="mailto:{{ site.author.email }}" class="profile-link" title="Email" aria-label="Email">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    {{ site.author.email }}
+                  </a>
+                  {% endif %}
+                  {% if site.author.github %}
+                  <a href="https://github.com/{{ site.author.github }}" class="profile-link" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                    GitHub
+                  </a>
+                  {% endif %}
+                  {% if site.author.googlescholar %}
+                  <a href="{{ site.author.googlescholar }}" class="profile-link" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z"/></svg>
+                    Scholar
+                  </a>
+                  {% endif %}
+                  {% if site.author.linkedin %}
+                  <a href="https://linkedin.com/in/{{ site.author.linkedin }}" class="profile-link" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    LinkedIn
+                  </a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            <hr class="paper-profile-divider">
+            {% endif %}
+
             <div class="paper-content">
               {{ content }}
             </div>
+
           </div>
         </div>
+        <!-- /paper-output-area -->
 
       </div>
     </div>
 
-    <audio id="print-sound" preload="auto" style="display: none;">
+    <audio id="print-sound" preload="auto" style="display:none;">
       <source src="{{ base_path }}/assets/audio/print-sound.mp3" type="audio/mpeg">
     </audio>
 
     <script src="{{ base_path }}/assets/js/printer-theme.js"></script>
-    {% include scripts.html %}
   </body>
 </html>
