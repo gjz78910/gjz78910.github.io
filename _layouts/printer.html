@@ -13,7 +13,7 @@ layout: compress
     <meta name="description" content="{{ site.description }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:wght@400;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ base_path }}/assets/css/printer-theme.css">
   </head>
 
@@ -21,20 +21,20 @@ layout: compress
     <div class="printer-container">
       <div class="printer-wrapper">
 
+        <!-- ═══════════════════════════════════════════════════════
+             PRINTER FRAME
+             ═══════════════════════════════════════════════════════ -->
         <div class="printer-frame">
 
           <!-- Header: profile photo + name/bio + status dot -->
           <div class="printer-top">
             <div class="printer-header-left">
-              <!-- Profile photo replaces the black circle -->
               <div class="printer-avatar">
                 <img src="{{ base_path }}/images/{{ site.author.avatar }}" alt="{{ site.author.name }}">
               </div>
               <div class="printer-brand-group">
                 <div class="printer-brand">{{ site.author.name }}</div>
-                <!-- Bio replaces the "xxx THE NOOB" tagline -->
                 <div class="printer-tagline">{{ site.author.bio }}</div>
-                <!-- Social links row -->
                 <div class="printer-links">
                   {% if site.author.email %}
                   <a href="mailto:{{ site.author.email }}" class="printer-link" title="Email" aria-label="Email">
@@ -71,23 +71,48 @@ layout: compress
             </div>
           </div>
 
-          <!-- Navigation — 3D keyboard-style buttons -->
+          <!-- Navigation buttons -->
           <div class="printer-nav" role="navigation" aria-label="Main navigation">
             <button class="printer-nav-btn" data-page="about" id="btn-about" aria-current="false">ABOUT</button>
             <button class="printer-nav-btn" data-page="events" id="btn-events" aria-current="false">EVENTS</button>
           </div>
 
-          <!-- 3D recessed paper exit slot -->
-          <div class="printer-slot" aria-hidden="true">
-            <div class="printer-slot-top-lip"></div>
-            <div class="printer-slot-cavity"></div>
-            <div class="printer-slot-bottom-lip"></div>
+          <!-- ═══════════════════════════════════════════════════════
+               SLOT ASSEMBLY
+               Three horizontal zones stacked:
+                 1. .slot-top-face   — printer body face above the opening
+                 2. .slot-opening    — the actual dark hole (thin)
+                 3. .slot-bottom-face — printer body face below the opening
+               Left and right of the opening: solid side walls (.slot-side-wall)
+               that show the frame continues on both sides.
+               ═══════════════════════════════════════════════════════ -->
+          <div class="printer-slot-assembly" aria-hidden="true">
+
+            <!-- Full-width top face strip -->
+            <div class="slot-top-face"></div>
+
+            <!-- Middle row: left wall | dark opening | right wall -->
+            <div class="slot-middle-row">
+              <div class="slot-side-wall slot-side-wall--left"></div>
+              <div class="slot-opening">
+                <div class="slot-opening-inner"></div>
+              </div>
+              <div class="slot-side-wall slot-side-wall--right"></div>
+            </div>
+
+            <!-- Full-width bottom face strip — sits IN FRONT of paper (z-index) -->
+            <div class="slot-bottom-face"></div>
+
           </div>
 
         </div>
         <!-- /printer-frame -->
 
-        <!-- Paper output area — paper slides down from the slot -->
+        <!-- ═══════════════════════════════════════════════════════
+             PAPER OUTPUT AREA
+             Width constrained to match the slot opening width.
+             overflow:hidden clips paper during feed-in animation.
+             ═══════════════════════════════════════════════════════ -->
         <div class="paper-output-area" id="paper-output-area">
           <div class="paper-sheet" id="current-paper">
             <div class="paper-content">

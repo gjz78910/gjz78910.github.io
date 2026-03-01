@@ -71,9 +71,12 @@
     var eventsBtn = document.getElementById('btn-events');
 
     if (aboutBtn) {
+      // Keyboard click fires on mousedown (immediate tactile feel)
+      aboutBtn.addEventListener('mousedown', function () { playKeyClick(); });
       aboutBtn.addEventListener('click', function () { navigateTo('about'); });
     }
     if (eventsBtn) {
+      eventsBtn.addEventListener('mousedown', function () { playKeyClick(); });
       eventsBtn.addEventListener('click', function () { navigateTo('events'); });
     }
   }
@@ -82,13 +85,72 @@
     if (page === 'about'  && isAboutPage())  return;
     if (page === 'events' && isEventsPage()) return;
 
-    // Start the print sound, then navigate almost immediately so the
-    // sound plays while the new page loads and its paper feeds in.
+    // Print sound plays, then navigate so the new page feeds in
     playPrintSound();
 
     setTimeout(function () {
       window.location.href = page === 'about' ? '/printer/' : '/printer/events/';
     }, 80);
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* Keyboard key click sound                                            */
+  /* Sharp mechanical click: very short noise burst + high-freq tick    */
+  /* ------------------------------------------------------------------ */
+
+  function playKeyClick() {
+    try {
+      var AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtx) return;
+
+      var ctx = new AudioCtx();
+      var now = ctx.currentTime;
+
+      // --- Noise burst (the body of the click) ---
+      var bufLen = Math.floor(ctx.sampleRate * 0.04); // 40ms
+      var buf = ctx.createBuffer(1, bufLen, ctx.sampleRate);
+      var data = buf.getChannelData(0);
+      for (var i = 0; i < bufLen; i++) {
+        data[i] = (Math.random() * 2 - 1);
+      }
+
+      var src = ctx.createBufferSource();
+      src.buffer = buf;
+
+      // High-pass filter: removes low rumble, keeps the crisp click
+      var hp = ctx.createBiquadFilter();
+      hp.type = 'highpass';
+      hp.frequency.value = 3500;
+      hp.Q.value = 0.8;
+
+      var gain = ctx.createGain();
+      gain.gain.setValueAtTime(0.45, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.035);
+
+      src.connect(hp);
+      hp.connect(gain);
+      gain.connect(ctx.destination);
+      src.start(now);
+      src.stop(now + 0.04);
+
+      // --- Tonal tick (the spring/mechanism resonance) ---
+      var osc = ctx.createOscillator();
+      osc.type = 'square';
+      osc.frequency.setValueAtTime(1200, now);
+      osc.frequency.exponentialRampToValueAtTime(400, now + 0.025);
+
+      var oscGain = ctx.createGain();
+      oscGain.gain.setValueAtTime(0.12, now);
+      oscGain.gain.exponentialRampToValueAtTime(0.001, now + 0.025);
+
+      osc.connect(oscGain);
+      oscGain.connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.025);
+
+      setTimeout(function () { try { ctx.close(); } catch(e) {} }, 200);
+
+    } catch (e) { /* silent fail */ }
   }
 
   /* ------------------------------------------------------------------ */
