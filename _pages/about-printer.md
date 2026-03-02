@@ -221,7 +221,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 .news-timeline li::before {
   content: '';
   position: absolute;
-  left: calc(var(--news-line-x) - 3px);
+  left: calc(var(--news-line-x) - 4px);
   top: 0.38em;
   width: 8px;
   height: 8px;
@@ -244,13 +244,11 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   letter-spacing: 0.5px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #4f493f;
+  color: #fff;
   border-radius: 4px;
-  border: 1px solid rgba(0,0,0,0.16);
+  border: none;
   background-repeat: no-repeat;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.18),
-    inset 0 -1px 0 rgba(0,0,0,0.10);
+  box-shadow: none;
   white-space: nowrap;
   vertical-align: middle;
   margin-right: 0;
@@ -259,12 +257,12 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 .news-badge::after {
   content: none;
 }
-.news-badge.paper   { color: #fff; border-color: rgba(70,120,70,0.5); background-image: radial-gradient(10px 5px at 14px -1px, rgba(142,142,142,0.55), transparent 72%), radial-gradient(10px 5px at calc(100% - 14px) -1px, rgba(142,142,142,0.55), transparent 72%), linear-gradient(to bottom, #67be6d 0%, #56ae5d 100%); }
-.news-badge.award   { color: #fff; border-color: rgba(150,70,70,0.5); background-image: radial-gradient(10px 5px at 14px -1px, rgba(142,142,142,0.55), transparent 72%), radial-gradient(10px 5px at calc(100% - 14px) -1px, rgba(142,142,142,0.55), transparent 72%), linear-gradient(to bottom, #e07474 0%, #cf6363 100%); }
-.news-badge.service { color: #fff; border-color: rgba(45,90,130,0.5); background-image: radial-gradient(10px 5px at 14px -1px, rgba(142,142,142,0.55), transparent 72%), radial-gradient(10px 5px at calc(100% - 14px) -1px, rgba(142,142,142,0.55), transparent 72%), linear-gradient(to bottom, #2a9acc 0%, #1988b8 100%); }
+.news-badge.paper   { background-image: radial-gradient(10px 5px at 14px -1px, rgba(125,125,125,0.56), transparent 70%), radial-gradient(10px 5px at calc(100% - 14px) -1px, rgba(125,125,125,0.56), transparent 70%), linear-gradient(to bottom, #67be6d 0%, #56ae5d 100%); }
+.news-badge.award   { background-image: radial-gradient(10px 5px at 14px -1px, rgba(125,125,125,0.56), transparent 70%), radial-gradient(10px 5px at calc(100% - 14px) -1px, rgba(125,125,125,0.56), transparent 70%), linear-gradient(to bottom, #e07474 0%, #cf6363 100%); }
+.news-badge.service { background-image: radial-gradient(10px 5px at 14px -1px, rgba(125,125,125,0.56), transparent 70%), radial-gradient(10px 5px at calc(100% - 14px) -1px, rgba(125,125,125,0.56), transparent 70%), linear-gradient(to bottom, #2a9acc 0%, #1988b8 100%); }
 .news-date {
   grid-column: 1;
-  text-align: left;
+  text-align: right;
   font-size: 0.83em;
   color: #999;
   line-height: 1.4;
