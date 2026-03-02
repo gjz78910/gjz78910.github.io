@@ -23,6 +23,11 @@
     return p === '/events/' || p === '/events' || p.includes('/printer/events');
   }
 
+  function isPublicationsPage() {
+    var p = window.location.pathname;
+    return p === '/publications/' || p === '/publications' || p.includes('/printer/publications');
+  }
+
   /* ------------------------------------------------------------------ */
   /* Active nav button                                                    */
   /* ------------------------------------------------------------------ */
@@ -30,11 +35,14 @@
   function setActiveButton(page) {
     var aboutBtn  = document.getElementById('btn-about');
     var eventsBtn = document.getElementById('btn-events');
-    if (!aboutBtn || !eventsBtn) return;
+    var publicationsBtn = document.getElementById('btn-publications');
+    if (!aboutBtn || !eventsBtn || !publicationsBtn) return;
     aboutBtn.classList.toggle('active', page === 'about');
     eventsBtn.classList.toggle('active', page === 'events');
+    publicationsBtn.classList.toggle('active', page === 'publications');
     aboutBtn.setAttribute('aria-current', page === 'about' ? 'page' : 'false');
     eventsBtn.setAttribute('aria-current', page === 'events' ? 'page' : 'false');
+    publicationsBtn.setAttribute('aria-current', page === 'publications' ? 'page' : 'false');
   }
 
   /* ------------------------------------------------------------------ */
@@ -162,6 +170,7 @@
   function setupNavigation() {
     var aboutBtn  = document.getElementById('btn-about');
     var eventsBtn = document.getElementById('btn-events');
+    var publicationsBtn = document.getElementById('btn-publications');
 
     if (aboutBtn) {
       aboutBtn.addEventListener('click', function () {
@@ -208,6 +217,29 @@
         }
       });
     }
+
+    if (publicationsBtn) {
+      publicationsBtn.addEventListener('click', function () {
+        playSound('button-sound');
+        clearPendingAction();
+        if (isPublicationsPage()) {
+          var content = document.querySelector('.paper-content');
+          if (content) content.style.visibility = 'visible';
+          var paper = document.getElementById('current-paper');
+          if (paper) paper.style.display = 'block';
+          setActiveButton('publications');
+          pendingActionTimer = setTimeout(function () {
+            startPrintingWithDelay();
+            pendingActionTimer = null;
+          }, BUTTON_SOUND_DELAY_MS);
+        } else {
+          sessionStorage.setItem('printer-nav', 'publications');
+          pendingActionTimer = setTimeout(function () {
+            window.location.href = '/publications/';
+          }, BUTTON_SOUND_DELAY_MS);
+        }
+      });
+    }
   }
 
   /* ------------------------------------------------------------------ */
@@ -224,6 +256,14 @@
       setActiveButton('about');
     } else if (nav === 'events' && isEventsPage()) {
       setActiveButton('events');
+    } else if (nav === 'publications' && isPublicationsPage()) {
+      setActiveButton('publications');
+    } else if (isAboutPage()) {
+      setActiveButton('about');
+    } else if (isEventsPage()) {
+      setActiveButton('events');
+    } else if (isPublicationsPage()) {
+      setActiveButton('publications');
     } else {
       setActiveButton('');
     }
