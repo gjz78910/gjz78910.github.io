@@ -204,7 +204,6 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   list-style: none;
   padding: 0 0 0 1.3rem;
   margin: 0.75rem 0 0.5rem;
-  max-width: 46rem;
   border-left: 2px solid #e0e0e0;
 }
 .news-timeline li {
@@ -212,7 +211,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   padding: 0 0 0.85rem 0.5rem;
   font-size: 0.9em;
   line-height: 1.5;
-  text-align: justify;
+  text-align: left;
 }
 .news-timeline li::before {
   content: '';
