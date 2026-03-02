@@ -190,12 +190,12 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 }
 .news-timeline {
   list-style: none;
-  --news-date-w: 4.1rem;
+  --news-date-w: 3.7rem;
   --news-tag-w: 4.2rem;
-  --news-gap: 1.1rem;
+  --news-gap: 0.9rem;
   --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
   padding: 0;
-  margin: 0.75rem 0 0.5rem -1.4rem;
+  margin: 0.75rem 0 0.5rem -1.8rem;
   position: relative;
   width: 100%;
   max-width: none;
@@ -285,11 +285,11 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 }
 @media (max-width: 820px) {
   .news-timeline {
-    --news-date-w: 3.6rem;
-    --news-tag-w: 3.7rem;
-    --news-gap: 0.75rem;
+    --news-date-w: 3.3rem;
+    --news-tag-w: 3.6rem;
+    --news-gap: 0.65rem;
     --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
-    margin-left: -1.1rem;
+    margin-left: -1.4rem;
   }
   .news-date {
     font-size: 0.79em;
@@ -297,11 +297,11 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 }
 @media (max-width: 560px) {
   .news-timeline {
-    --news-date-w: 3.4rem;
-    --news-tag-w: 3.6rem;
-    --news-gap: 0.5rem;
+    --news-date-w: 3.2rem;
+    --news-tag-w: 3.5rem;
+    --news-gap: 0.42rem;
     --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
-    margin-left: -0.8rem;
+    margin-left: -1.1rem;
   }
   .news-badge { font-size: 68%; }
 }
