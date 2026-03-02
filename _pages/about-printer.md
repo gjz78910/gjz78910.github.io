@@ -76,15 +76,15 @@ If you're interested in collaboration, please feel free to reach out!
 ## News
 
 <ul class="news-timeline">
-  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Feb 2026</span>Served as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/issta-2026"><em>ISSTA 2026</em></a>.</li>
+  <li class="service"><span class="news-badge service">Svc</span><span class="news-date">Feb 2026</span>Served as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/issta-2026"><em>ISSTA 2026</em></a>.</li>
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Jan 2026</span>'<a href="https://arxiv.org/abs/2601.04886">Analyzing Message-Code Inconsistency in AI Coding Agent-Authored Pull Requests</a>' and '<a href="">Comparing AI Coding Agents: A Task-Stratified Analysis of Pull Request Acceptance</a>' accepted at <a href="https://2026.msrconf.org/track/msr-2026-mining-challenge#Call-for-Mining-Challenge-Papers">MSR 2026</a> Mining Challenge track.</li>
-  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Jan 2026</span>Served as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/icst-2026"><em>ICST 2026</em></a>.</li>
+  <li class="service"><span class="news-badge service">Svc</span><span class="news-date">Jan 2026</span>Served as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/icst-2026"><em>ICST 2026</em></a>.</li>
   <li class="award"><span class="news-badge award">Award</span><span class="news-date">Nov 2025</span>Received the <strong>Distinguished Reviewer</strong> award at <a href="https://conf.researchr.org/home/icse-2025"><em>ICSE 2025</em></a> Shadow PC.</li>
-  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Oct 2025</span>Served as <strong>Junior Program Committee Member</strong> for <a href="https://2026.msrconf.org/"><em>MSR 2026</em></a>.</li>
+  <li class="service"><span class="news-badge service">Svc</span><span class="news-date">Oct 2025</span>Served as <strong>Junior Program Committee Member</strong> for <a href="https://2026.msrconf.org/"><em>MSR 2026</em></a>.</li>
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Oct 2025</span>'<a href="placeholder-link">GA4GC: Greener Agent for Greener Code via Multi-Objective Configuration Optimization</a>' accepted at <a href="https://conf.researchr.org/home/ssbse-2025">SSBSE 2025</a> as a challenge track paper.</li>
-  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Sep 2025</span>Served as <strong>Program Committee Member</strong> for <a href="https://www2026.thewebconf.org/"><em>WWW 2026</em></a>.</li>
+  <li class="service"><span class="news-badge service">Svc</span><span class="news-date">Sep 2025</span>Served as <strong>Program Committee Member</strong> for <a href="https://www2026.thewebconf.org/"><em>WWW 2026</em></a>.</li>
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Sep 2025</span>'<a href="https://arxiv.org/abs/2508.01443">Tuning LLM-based Code Optimization via Meta-Prompting: An Industrial Perspective</a>' accepted at <a href="https://conf.researchr.org/home/ase-2025">ASE 2025</a> as an industry showcase paper (acceptance rate 44%, 61/139).</li>
-  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Jul 2025</span>Served as <strong>Shadow Program Committee Member</strong> for <a href="https://conf.researchr.org/home/icse-2026"><em>ICSE 2026</em></a>.</li>
+  <li class="service"><span class="news-badge service">Svc</span><span class="news-date">Jul 2025</span>Served as <strong>Shadow Program Committee Member</strong> for <a href="https://conf.researchr.org/home/icse-2026"><em>ICSE 2026</em></a>.</li>
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Jun 2025</span>'<a href="https://arxiv.org/abs/2507.08730">Dually Hierarchical Drift Adaptation for Online Configuration Performance Learning</a>' accepted at <a href="https://conf.researchr.org/home/icse-2026">ICSE 2026</a> in the first round (acceptance rate 9.29%, 60/646).</li>
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Jun 2025</span>'<a href="https://dl.acm.org/doi/abs/10.1145/3750040">Learning Software Bug Reports: A Systematic Literature Review</a>' accepted at <a href="https://dl.acm.org/toc/tosem/justaccepted">TOSEM</a> as a journal paper.</li>
   <li class="award"><span class="news-badge award">Award</span><span class="news-date">Jan 2025</span>Awarded the <a href="https://research.spec.org/news/2025-01-31-00-00-winner-of-spec-kaivalya-dixit-distinguished-dissertation-award-2024/"><strong>SPEC Kaivalya Dixit Distinguished Dissertation Award 2024</strong></a>, a prominent award in computer benchmarking, performance evaluation, and experimental system analysis.</li>
@@ -96,7 +96,7 @@ If you're interested in collaboration, please feel free to reach out!
 <ul class="news-timeline">
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Nov 2024</span>'<a href="https://ieeexplore.ieee.org/abstract/document/10832565">Accuracy Can Lie: On the Impact of Surrogate Model in Configuration Tuning</a>' accepted at <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32">TSE</a> as a journal paper.</li>
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Oct 2024</span>'<a href="https://arxiv.org/abs/2409.07629">Dividable Configuration Performance Learning</a>' accepted at <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32">TSE</a> as a journal paper.</li>
-  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Sep 2024</span>Served as <strong>Junior Program Committee Member</strong> for <a href="https://conf.researchr.org/home/msr-2025"><em>MSR 2025</em></a>.</li>
+  <li class="service"><span class="news-badge service">Svc</span><span class="news-date">Sep 2024</span>Served as <strong>Junior Program Committee Member</strong> for <a href="https://conf.researchr.org/home/msr-2025"><em>MSR 2025</em></a>.</li>
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Aug 2024</span>'<a href="https://arxiv.org/abs/2403.03322">Deep Configuration Performance Learning: A Systematic Survey and Taxonomy</a>' accepted at <a href="https://dl.acm.org/journal/tosem">TOSEM</a> as a survey paper.</li>
   <li class="award"><span class="news-badge award">Award</span><span class="news-date">Jul 2024</span>The team I led received the <strong>SSBSE'24 Challenge Track award</strong> for '<a href="https://arxiv.org/abs/2407.14982">GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation</a>'.</li>
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">May 2024</span>'<a href="https://arxiv.org/abs/2407.14982">GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation</a>' accepted at <a href="https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge">SSBSE 2024</a> as a challenge track paper.</li>
@@ -192,7 +192,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   list-style: none;
   padding: 0 0 0 1.3rem;
   margin: 0.75rem 0 0.5rem;
-  margin-left: 6.6rem;
+  margin-left: 6.1rem;
   border-left: 2px solid #e0e0e0;
 }
 .news-timeline li {
@@ -217,29 +217,52 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 .news-timeline li.service::before { background: #0087BD; }
 .news-badge {
   display: inline-block;
-  min-width: 4.9rem;
+  min-width: 3.4rem;
   text-align: center;
-  padding: .15em .5em .2em;
-  font-size: 72%;
+  padding: .08em .38em .12em;
+  font-size: 68%;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
   font-weight: bold;
-  color: #fff;
-  border-radius: .25em;
+  color: #5d574d;
+  border-radius: 2px;
+  border: 1px dashed #b8b0a3;
+  background: rgba(255,255,255,0.5);
   white-space: nowrap;
   vertical-align: middle;
   margin-right: 0.25em;
 }
-.news-badge.paper   { background: #5cb85c; }
-.news-badge.award   { background: #e06666; }
-.news-badge.service { background: #0087BD; }
+.news-badge.paper   { color: #4f7a4d; border-color: #79aa76; background: rgba(121,170,118,0.12); }
+.news-badge.award   { color: #8c5555; border-color: #c77e7e; background: rgba(199,126,126,0.12); }
+.news-badge.service { color: #2f6f96; border-color: #6da0c1; background: rgba(109,160,193,0.14); }
 .news-date {
   position: absolute;
-  left: -7.1rem;
+  left: -6.6rem;
   top: 0;
-  width: 5.8rem;
+  width: 5.1rem;
   text-align: right;
   font-size: 0.83em;
   color: #999;
   margin-right: 0;
+}
+@media (max-width: 820px) {
+  .news-timeline {
+    margin-left: 0.25rem;
+    padding-left: 1.05rem;
+  }
+  .news-timeline li {
+    padding-left: 0.4rem;
+  }
+  .news-timeline li::before {
+    left: -1.17rem;
+  }
+  .news-date {
+    position: static;
+    display: inline-block;
+    width: 4.4rem;
+    text-align: left;
+    margin-right: 0.25rem;
+  }
 }
 .news-toggle-btn {
   background: linear-gradient(to bottom, #f8f4ec 0%, #eae3d6 100%);

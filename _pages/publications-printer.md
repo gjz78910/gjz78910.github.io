@@ -20,16 +20,9 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
     <button class="pub-filter" data-filter="journal">Journal</button>
     <button class="pub-filter" data-filter="conference">Conference</button>
   </div>
-
-  <div class="pub-views">
-    <span class="pub-view-label">View:</span>
-    <button class="pub-view-btn active" data-view="readable">Readable</button>
-    <button class="pub-view-btn" data-view="compact">Compact</button>
-    <button class="pub-view-btn" data-view="citation">Citation</button>
-  </div>
 </div>
 
-<div class="pub-list view-readable" id="pub-list">
+<div class="pub-list view-compact" id="pub-list">
   <article class="pub-item" data-type="conference">
     <div class="pub-head"><span class="pub-badge venue">MSR'26</span> <span class="pub-badge ccf">CCF-C</span> <span class="pub-badge ranking">CORE-A</span></div>
     <div class="pub-title"><a href="https://arxiv.org/abs/2601.04886">Analyzing Message-Code Inconsistency in AI Coding Agent-Authored Pull Requests</a></div>
@@ -136,8 +129,6 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
 </div>
 
 <script>
-const pubList = document.getElementById('pub-list');
-
 document.querySelectorAll('.pub-filter').forEach(btn => {
   btn.addEventListener('click', function() {
     document.querySelectorAll('.pub-filter').forEach(b => b.classList.remove('active'));
@@ -146,15 +137,6 @@ document.querySelectorAll('.pub-filter').forEach(btn => {
     document.querySelectorAll('.pub-item').forEach(item => {
       item.style.display = (filter === 'all' || item.dataset.type === filter) ? '' : 'none';
     });
-  });
-});
-
-document.querySelectorAll('.pub-view-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    document.querySelectorAll('.pub-view-btn').forEach(b => b.classList.remove('active'));
-    this.classList.add('active');
-    pubList.classList.remove('view-readable', 'view-compact', 'view-citation');
-    pubList.classList.add('view-' + this.dataset.view);
   });
 });
 </script>
@@ -168,17 +150,13 @@ document.querySelectorAll('.pub-view-btn').forEach(btn => {
   gap: 0.6rem;
   flex-wrap: wrap;
 }
-.pub-filters, .pub-views {
+.pub-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
   align-items: center;
 }
-.pub-view-label {
-  font-size: 0.82em;
-  color: #777;
-}
-.pub-filter, .pub-view-btn {
+.pub-filter {
   background: none;
   border: 1px solid #e0e0e0;
   border-radius: 3px;
@@ -188,11 +166,11 @@ document.querySelectorAll('.pub-view-btn').forEach(btn => {
   color: #555;
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
-.pub-filter:hover, .pub-view-btn:hover {
+.pub-filter:hover {
   border-color: #5cb85c;
   color: #5cb85c;
 }
-.pub-filter.active, .pub-view-btn.active {
+.pub-filter.active {
   background: #5cb85c;
   border-color: #5cb85c;
   color: #fff;
@@ -245,26 +223,6 @@ document.querySelectorAll('.pub-view-btn').forEach(btn => {
 }
 .pub-list.view-compact .pub-title {
   margin-bottom: 0.22rem;
-}
-
-.pub-list.view-citation .pub-item {
-  border-left: 3px solid #ded7ca;
-}
-.pub-list.view-citation .pub-label {
-  display: none;
-}
-.pub-list.view-citation .pub-authors,
-.pub-list.view-citation .pub-venue,
-.pub-list.view-citation .pub-meta {
-  display: inline;
-  margin: 0;
-}
-.pub-list.view-citation .pub-authors::after,
-.pub-list.view-citation .pub-venue::after {
-  content: ", ";
-}
-.pub-list.view-citation .pub-title {
-  margin-bottom: 0.2rem;
 }
 
 .pub-badge {
