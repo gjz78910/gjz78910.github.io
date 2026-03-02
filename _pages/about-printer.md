@@ -178,7 +178,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 .ri-brief-content .ri-brief-image {
   display: block;
   width: 100% !important;
-  max-width: 500px !important;
+  max-width: 600px !important;
   height: auto !important;
   margin: 0.35rem auto 0.55rem;
   border-radius: 4px;
@@ -192,6 +192,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   list-style: none;
   padding: 0 0 0 1.3rem;
   margin: 0.75rem 0 0.5rem;
+  margin-left: 6.6rem;
   border-left: 2px solid #e0e0e0;
 }
 .news-timeline li {
@@ -215,7 +216,9 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 .news-timeline li.award::before   { background: #e06666; }
 .news-timeline li.service::before { background: #0087BD; }
 .news-badge {
-  display: inline;
+  display: inline-block;
+  min-width: 4.9rem;
+  text-align: center;
   padding: .15em .5em .2em;
   font-size: 72%;
   font-weight: bold;
@@ -229,9 +232,14 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 .news-badge.award   { background: #e06666; }
 .news-badge.service { background: #0087BD; }
 .news-date {
+  position: absolute;
+  left: -7.1rem;
+  top: 0;
+  width: 5.8rem;
+  text-align: right;
   font-size: 0.83em;
   color: #999;
-  margin-right: 0.3em;
+  margin-right: 0;
 }
 .news-toggle-btn {
   background: linear-gradient(to bottom, #f8f4ec 0%, #eae3d6 100%);
