@@ -226,7 +226,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   content: '';
   position: absolute;
   left: var(--news-line-x);
-  top: 0.76em;
+  top: 0.66em;
   transform: translate(-50%, -50%);
   width: 8px;
   height: 8px;

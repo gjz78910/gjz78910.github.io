@@ -180,7 +180,7 @@ document.querySelectorAll('.pub-filter').forEach(btn => {
   background: #f7f4ee;
 }
 .pub-filter.active {
-  background: #fffefa;
+  background: #f7f4ee;
   border-color: #a79b8c;
   color: #4d473f;
   box-shadow:
