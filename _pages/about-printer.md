@@ -36,52 +36,98 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
 
 ## Research Interests
 
-<div class="research-grid">
+<p class="ri-preview-note"><em>Below are 3 presentation ideas for the same content so you can compare styles directly.</em></p>
 
-  <div class="research-card">
-    <div class="research-card-content">
-    <div class="research-card-title">Software Configuration Performance Engineering</div>
-    <div class="research-card-body">
-      Data-driven <a href="https://dl.acm.org/doi/full/10.1145/3702986">ML/DL approaches</a> that learn high‑dimensional configuration spaces to predict and optimise performance without exhaustive benchmarking, tackling challenges such as <a href="https://ieeexplore.ieee.org/abstract/document/10744216">feature sparsity</a>, <a href="https://ieeexplore.ieee.org/abstract/document/10832565">rugged performance spaces</a>, and <a href="https://dl.acm.org/doi/abs/10.1145/3643743">cross‑environment drift</a> (versions, hardware, workloads).
-    </div>
-    <img class="research-card-img" src="/images/event_images/config_perf_eng.jpeg" alt="Software Configuration Performance Engineering">
-    <div class="research-card-why"><strong>Why it matters:</strong> Enables earlier performance issue detection, software adaptability and autoscaling, and faster product evolution with far fewer measurements.</div>
+### Idea 1: Dossier List (No Cards)
+<div class="ri-dossier-list">
+  <article class="ri-dossier-item">
+    <h4>Software Configuration Performance Engineering</h4>
+    <p>Data-driven <a href="https://dl.acm.org/doi/full/10.1145/3702986">ML/DL methods</a> to predict and optimise high-dimensional configuration spaces with fewer benchmarks.</p>
+    <p class="ri-why"><strong>Why it matters:</strong> Earlier issue detection and faster product evolution with fewer measurements.</p>
+  </article>
+  <article class="ri-dossier-item">
+    <h4>Trustworthy AI-assisted Software Development</h4>
+    <p>Quality assurance methods for LLM-assisted coding workflows, with emphasis on <a href="https://arxiv.org/abs/2601.04886">evaluation and comparison</a> under real constraints.</p>
+    <p class="ri-why"><strong>Why it matters:</strong> Turns ad-hoc AI coding into a reproducible engineering process.</p>
+  </article>
+  <article class="ri-dossier-item">
+    <h4>GenAI for Code Performance Optimisation</h4>
+    <p><a href="https://arxiv.org/abs/2501.01277">Search-based multi-LLM optimisation</a> with <a href="https://arxiv.org/abs/2508.01443">meta-prompting</a>, ensembling, and compiler techniques for production code.</p>
+    <p class="ri-why"><strong>Why it matters:</strong> Delivers measurable speedups with better reliability and auditability.</p>
+  </article>
+  <article class="ri-dossier-item">
+    <h4>General AI4SE &amp; SE4AI</h4>
+    <p>LLM performance modeling, trustworthy GenAI verification, and engineering tooling integration (benchmarks, profiling, CI/CD).</p>
+    <p class="ri-why"><strong>Why it matters:</strong> Makes GenAI systems more predictable, safe, and industry-ready.</p>
+  </article>
+</div>
+
+### Idea 2: Expandable Research Briefs
+<div class="ri-briefs">
+  <details class="ri-brief" open>
+    <summary>Software Configuration Performance Engineering</summary>
+    <ul>
+      <li>Predict performance in large configuration spaces without exhaustive runs.</li>
+      <li>Focus on sparsity, rugged spaces, and cross-environment drift.</li>
+      <li>Useful for autoscaling and early performance diagnosis.</li>
+    </ul>
+  </details>
+  <details class="ri-brief">
+    <summary>Trustworthy AI-assisted Software Development</summary>
+    <ul>
+      <li>Evaluate and compare LLM-assisted workflows under realistic constraints.</li>
+      <li>Target correctness, robustness, cost, and sustainability together.</li>
+      <li>Improve reliability with SBSE-style orchestration methods.</li>
+    </ul>
+  </details>
+  <details class="ri-brief">
+    <summary>GenAI for Code Performance Optimisation</summary>
+    <ul>
+      <li>Combine prompting, multi-LLM search, and compiler-based optimisation.</li>
+      <li>Validate gains on production-like workloads.</li>
+      <li>Aim for verifiable speedups and lower compute cost.</li>
+    </ul>
+  </details>
+  <details class="ri-brief">
+    <summary>General AI4SE &amp; SE4AI</summary>
+    <ul>
+      <li>Performance-aware GenAI systems and online adaptive tuning.</li>
+      <li>Uncertainty-aware verification and trustworthy deployment patterns.</li>
+      <li>Tooling integration for reproducible industrial adoption.</li>
+    </ul>
+  </details>
+</div>
+
+### Idea 3: Visual Research Strips
+<div class="ri-strips">
+  <div class="ri-strip">
+    <img src="/images/event_images/config_perf_eng.jpeg" alt="Software Configuration Performance Engineering">
+    <div class="ri-strip-text">
+      <h4>Software Configuration Performance Engineering</h4>
+      <p>Learn and optimise high-dimensional performance landscapes with minimal benchmarking.</p>
     </div>
   </div>
-
-  <div class="research-card">
-    <div class="research-card-content">
-    <div class="research-card-title">Trustworthy AI-assisted Software Development</div>
-    <div class="research-card-body">
-      Quality assurance and optimisation methods for LLM‑based software engineering — focusing on how we <a href="https://arxiv.org/abs/2601.04886">evaluate</a>, <a href="https://arxiv.org/abs/2601.04886">compare</a>, and improve AI-assisted coding workflows under realistic constraints (correctness, robustness, cost, sustainability), using SBSE‑style strategies to orchestrate LLMs and make results more reliable in practice.
-    </div>
-    <img class="research-card-img" src="/images/event_images/trust_SDLC.jpeg" alt="Trustworthy AI-assisted Software Development">
-    <div class="research-card-why"><strong>Why it matters:</strong> Transforms unverified, ad-hoc LLM-assisted coding into a reproducible engineering process, reducing computing resources and carbon footprint.</div>
+  <div class="ri-strip">
+    <img src="/images/event_images/trust_SDLC.jpeg" alt="Trustworthy AI-assisted Software Development">
+    <div class="ri-strip-text">
+      <h4>Trustworthy AI-assisted Software Development</h4>
+      <p>Evaluate and improve AI-assisted coding workflows for correctness, robustness, and cost efficiency.</p>
     </div>
   </div>
-
-  <div class="research-card">
-    <div class="research-card-content">
-    <div class="research-card-title">GenAI for Code Performance Optimisation</div>
-    <div class="research-card-body">
-      <a href="https://arxiv.org/abs/2501.01277">Search-based multi‑LLM optimisation</a> and <a href="https://arxiv.org/abs/2508.01443">meta‑prompting</a> for robust code scoring and optimisation, combined with <a href="https://arxiv.org/abs/2503.13505">ensembling</a> and compiler techniques; implemented in commercial platforms via <a href="https://www.turintech.ai/">TurinTech AI</a> and evaluated on real production workloads.
-    </div>
-    <img class="research-card-img" src="/images/event_images/code_opt.jpeg" alt="GenAI for Code Performance Optimisation">
-    <div class="research-card-why"><strong>Why it matters:</strong> Delivers verifiable speedups and cost reductions on production codebases while making GenAI systems more reliable and auditable in practice.</div>
+  <div class="ri-strip">
+    <img src="/images/event_images/code_opt.jpeg" alt="GenAI for Code Performance Optimisation">
+    <div class="ri-strip-text">
+      <h4>GenAI for Code Performance Optimisation</h4>
+      <p>Combine multi-LLM search and meta-prompting for practical and auditable code optimisation.</p>
     </div>
   </div>
-
-  <div class="research-card">
-    <div class="research-card-content">
-    <div class="research-card-title">General AI4SE &amp; SE4AI</div>
-    <div class="research-card-body">
-      LLM performance modeling (hybrid models + online adaptive tuning), performance‑aware GenAI systems (dynamic prompt engineering + configuration tuning), trustworthy GenAI (RLHF + uncertainty verification), and industry standards and tooling (benchmarks, profiling, static analysis, CI/CD integration).
-    </div>
-    <img class="research-card-img" src="/images/event_images/SE4AI.jpeg" alt="General AI4SE & SE4AI">
-    <div class="research-card-why"><strong>Why it matters:</strong> Makes GenAI systems predictable and safe in real-world workloads, enabling reproducible evaluation, faster industrial adoption, and lower compute and carbon footprints.</div>
+  <div class="ri-strip">
+    <img src="/images/event_images/SE4AI.jpeg" alt="General AI4SE & SE4AI">
+    <div class="ri-strip-text">
+      <h4>General AI4SE &amp; SE4AI</h4>
+      <p>Bridge AI and software engineering with performance-aware and trustworthy system design.</p>
     </div>
   </div>
-
 </div>
 
 If you're interested in collaboration, please feel free to reach out!
@@ -151,56 +197,105 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   .bio-para { flex-direction: column; align-items: flex-start; margin-bottom: 1.5rem; }
   .bio-logo { align-self: center; margin-top: 0.2rem; margin-bottom: 0; }
 }
-.research-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-  margin: 1rem 0 1.5rem 0;
+.ri-preview-note {
+  margin: 0.4rem 0 0.9rem;
+  font-size: 0.88em;
+  color: #666;
 }
-.research-card {
-  border: 1px solid #e0e0e0;
+.ri-dossier-list {
+  margin: 0.4rem 0 1.2rem;
+  border-left: 2px solid #d2cbc0;
+  padding-left: 1rem;
+}
+.ri-dossier-item {
+  margin-bottom: 0.9rem;
+}
+.ri-dossier-item h4 {
+  margin: 0 0 0.2rem;
+  font-size: 0.96em;
+}
+.ri-dossier-item p {
+  margin: 0.2rem 0;
+  font-size: 0.87em;
+  line-height: 1.5;
+  text-align: left;
+}
+.ri-why {
+  color: #555;
+}
+.ri-briefs {
+  margin: 0.5rem 0 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ri-brief {
+  border: 1px solid #ded7ca;
   border-radius: 4px;
-  overflow: hidden;
-  background: #fff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: rgba(255,255,255,0.5);
+  padding: 0.35rem 0.6rem;
 }
-.research-card-img {
-  display: block;
+.ri-brief summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9em;
+  list-style: none;
+}
+.ri-brief summary::-webkit-details-marker {
+  display: none;
+}
+.ri-brief summary::before {
+  content: "▸ ";
+  color: #666;
+}
+.ri-brief[open] summary::before {
+  content: "▾ ";
+}
+.ri-brief ul {
+  margin: 0.45rem 0 0.15rem 1.05rem;
+  padding: 0;
+}
+.ri-brief li {
+  font-size: 0.85em;
+  line-height: 1.45;
+  margin-bottom: 0.25rem;
+}
+.ri-strips {
+  margin: 0.5rem 0 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.ri-strip {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0.7rem;
+  align-items: center;
+  border: 1px solid #e0d9cd;
+  border-radius: 4px;
+  padding: 0.45rem;
+  background: rgba(255,255,255,0.42);
+}
+.ri-strip img {
   width: 100%;
-  aspect-ratio: 3/1.1;
+  aspect-ratio: 4/3;
   object-fit: cover;
-  margin: 0.5rem auto;
   border-radius: 3px;
 }
-.research-card-content {
-  padding: 0.85rem 1.1rem 0.9rem;
-  border-top: 3px solid #5cb85c;
+.ri-strip-text h4 {
+  margin: 0 0 0.15rem;
+  font-size: 0.9em;
 }
-.research-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
-}
-.research-card-title {
-  font-weight: bold;
-  font-size: 0.95em;
-  margin-bottom: 0.6rem;
-  color: #222;
-}
-.research-card-body {
-  font-size: 0.88em;
-  line-height: 1.55;
-  margin-bottom: 0.75rem;
-  text-align: justify;
-}
-.research-card-why {
-  font-size: 0.83em;
-  color: #555;
-  border-top: 1px solid #eee;
-  padding-top: 0.55rem;
+.ri-strip-text p {
+  margin: 0;
+  font-size: 0.84em;
   line-height: 1.45;
+  text-align: left;
 }
 @media (max-width: 640px) {
-  .research-grid { grid-template-columns: 1fr; }
+  .ri-strip {
+    grid-template-columns: 1fr;
+  }
 }
 .news-timeline {
   list-style: none;
