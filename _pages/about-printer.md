@@ -76,33 +76,33 @@ If you're interested in collaboration, please feel free to reach out!
 ## News
 
 <ul class="news-timeline">
-  <li class="service"><span class="news-badge service">SVC</span><span class="news-date">Feb 2026</span>Served as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/issta-2026"><em>ISSTA 2026</em></a>.</li>
-  <li class="paper"><span class="news-badge paper">PPR</span><span class="news-date">Jan 2026</span>'<a href="https://arxiv.org/abs/2601.04886">Analyzing Message-Code Inconsistency in AI Coding Agent-Authored Pull Requests</a>' and '<a href="">Comparing AI Coding Agents: A Task-Stratified Analysis of Pull Request Acceptance</a>' accepted at <a href="https://2026.msrconf.org/track/msr-2026-mining-challenge#Call-for-Mining-Challenge-Papers">MSR 2026</a> Mining Challenge track.</li>
-  <li class="service"><span class="news-badge service">SVC</span><span class="news-date">Jan 2026</span>Served as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/icst-2026"><em>ICST 2026</em></a>.</li>
-  <li class="award"><span class="news-badge award">AWD</span><span class="news-date">Nov 2025</span>Received the <strong>Distinguished Reviewer</strong> award at <a href="https://conf.researchr.org/home/icse-2025"><em>ICSE 2025</em></a> Shadow PC.</li>
-  <li class="service"><span class="news-badge service">SVC</span><span class="news-date">Oct 2025</span>Served as <strong>Junior Program Committee Member</strong> for <a href="https://2026.msrconf.org/"><em>MSR 2026</em></a>.</li>
-  <li class="paper"><span class="news-badge paper">PPR</span><span class="news-date">Oct 2025</span>'<a href="placeholder-link">GA4GC: Greener Agent for Greener Code via Multi-Objective Configuration Optimization</a>' accepted at <a href="https://conf.researchr.org/home/ssbse-2025">SSBSE 2025</a> as a challenge track paper.</li>
-  <li class="service"><span class="news-badge service">SVC</span><span class="news-date">Sep 2025</span>Served as <strong>Program Committee Member</strong> for <a href="https://www2026.thewebconf.org/"><em>WWW 2026</em></a>.</li>
-  <li class="paper"><span class="news-badge paper">PPR</span><span class="news-date">Sep 2025</span>'<a href="https://arxiv.org/abs/2508.01443">Tuning LLM-based Code Optimization via Meta-Prompting: An Industrial Perspective</a>' accepted at <a href="https://conf.researchr.org/home/ase-2025">ASE 2025</a> as an industry showcase paper (acceptance rate 44%, 61/139).</li>
-  <li class="service"><span class="news-badge service">SVC</span><span class="news-date">Jul 2025</span>Served as <strong>Shadow Program Committee Member</strong> for <a href="https://conf.researchr.org/home/icse-2026"><em>ICSE 2026</em></a>.</li>
-  <li class="paper"><span class="news-badge paper">PPR</span><span class="news-date">Jun 2025</span>'<a href="https://arxiv.org/abs/2507.08730">Dually Hierarchical Drift Adaptation for Online Configuration Performance Learning</a>' accepted at <a href="https://conf.researchr.org/home/icse-2026">ICSE 2026</a> in the first round (acceptance rate 9.29%, 60/646).</li>
-  <li class="paper"><span class="news-badge paper">PPR</span><span class="news-date">Jun 2025</span>'<a href="https://dl.acm.org/doi/abs/10.1145/3750040">Learning Software Bug Reports: A Systematic Literature Review</a>' accepted at <a href="https://dl.acm.org/toc/tosem/justaccepted">TOSEM</a> as a journal paper.</li>
-  <li class="award"><span class="news-badge award">AWD</span><span class="news-date">Jan 2025</span>Awarded the <a href="https://research.spec.org/news/2025-01-31-00-00-winner-of-spec-kaivalya-dixit-distinguished-dissertation-award-2024/"><strong>SPEC Kaivalya Dixit Distinguished Dissertation Award 2024</strong></a>, a prominent award in computer benchmarking, performance evaluation, and experimental system analysis.</li>
+  <li class="service"><span class="news-date">Feb 2026</span><span class="news-badge service">Service</span><span class="news-content">Served as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/issta-2026"><em>ISSTA 2026</em></a>.</span></li>
+  <li class="paper"><span class="news-date">Jan 2026</span><span class="news-badge paper">Paper</span><span class="news-content">'<a href="https://arxiv.org/abs/2601.04886">Analyzing Message-Code Inconsistency in AI Coding Agent-Authored Pull Requests</a>' and '<a href="">Comparing AI Coding Agents: A Task-Stratified Analysis of Pull Request Acceptance</a>' accepted at <a href="https://2026.msrconf.org/track/msr-2026-mining-challenge#Call-for-Mining-Challenge-Papers">MSR 2026</a> Mining Challenge track.</span></li>
+  <li class="service"><span class="news-date">Jan 2026</span><span class="news-badge service">Service</span><span class="news-content">Served as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/icst-2026"><em>ICST 2026</em></a>.</span></li>
+  <li class="award"><span class="news-date">Nov 2025</span><span class="news-badge award">Award</span><span class="news-content">Received the <strong>Distinguished Reviewer</strong> award at <a href="https://conf.researchr.org/home/icse-2025"><em>ICSE 2025</em></a> Shadow PC.</span></li>
+  <li class="service"><span class="news-date">Oct 2025</span><span class="news-badge service">Service</span><span class="news-content">Served as <strong>Junior Program Committee Member</strong> for <a href="https://2026.msrconf.org/"><em>MSR 2026</em></a>.</span></li>
+  <li class="paper"><span class="news-date">Oct 2025</span><span class="news-badge paper">Paper</span><span class="news-content">'<a href="placeholder-link">GA4GC: Greener Agent for Greener Code via Multi-Objective Configuration Optimization</a>' accepted at <a href="https://conf.researchr.org/home/ssbse-2025">SSBSE 2025</a> as a challenge track paper.</span></li>
+  <li class="service"><span class="news-date">Sep 2025</span><span class="news-badge service">Service</span><span class="news-content">Served as <strong>Program Committee Member</strong> for <a href="https://www2026.thewebconf.org/"><em>WWW 2026</em></a>.</span></li>
+  <li class="paper"><span class="news-date">Sep 2025</span><span class="news-badge paper">Paper</span><span class="news-content">'<a href="https://arxiv.org/abs/2508.01443">Tuning LLM-based Code Optimization via Meta-Prompting: An Industrial Perspective</a>' accepted at <a href="https://conf.researchr.org/home/ase-2025">ASE 2025</a> as an industry showcase paper (acceptance rate 44%, 61/139).</span></li>
+  <li class="service"><span class="news-date">Jul 2025</span><span class="news-badge service">Service</span><span class="news-content">Served as <strong>Shadow Program Committee Member</strong> for <a href="https://conf.researchr.org/home/icse-2026"><em>ICSE 2026</em></a>.</span></li>
+  <li class="paper"><span class="news-date">Jun 2025</span><span class="news-badge paper">Paper</span><span class="news-content">'<a href="https://arxiv.org/abs/2507.08730">Dually Hierarchical Drift Adaptation for Online Configuration Performance Learning</a>' accepted at <a href="https://conf.researchr.org/home/icse-2026">ICSE 2026</a> in the first round (acceptance rate 9.29%, 60/646).</span></li>
+  <li class="paper"><span class="news-date">Jun 2025</span><span class="news-badge paper">Paper</span><span class="news-content">'<a href="https://dl.acm.org/doi/abs/10.1145/3750040">Learning Software Bug Reports: A Systematic Literature Review</a>' accepted at <a href="https://dl.acm.org/toc/tosem/justaccepted">TOSEM</a> as a journal paper.</span></li>
+  <li class="award"><span class="news-date">Jan 2025</span><span class="news-badge award">Award</span><span class="news-content">Awarded the <a href="https://research.spec.org/news/2025-01-31-00-00-winner-of-spec-kaivalya-dixit-distinguished-dissertation-award-2024/"><strong>SPEC Kaivalya Dixit Distinguished Dissertation Award 2024</strong></a>, a prominent award in computer benchmarking, performance evaluation, and experimental system analysis.</span></li>
 </ul>
 
 <button id="toggle-older-news" class="news-toggle-btn" onclick="toggleOlderNews()">Show older news</button>
 
 <div id="older-news" style="display: none; margin-top: 0.5rem;">
 <ul class="news-timeline">
-  <li class="paper"><span class="news-badge paper">PPR</span><span class="news-date">Nov 2024</span>'<a href="https://ieeexplore.ieee.org/abstract/document/10832565">Accuracy Can Lie: On the Impact of Surrogate Model in Configuration Tuning</a>' accepted at <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32">TSE</a> as a journal paper.</li>
-  <li class="paper"><span class="news-badge paper">PPR</span><span class="news-date">Oct 2024</span>'<a href="https://arxiv.org/abs/2409.07629">Dividable Configuration Performance Learning</a>' accepted at <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32">TSE</a> as a journal paper.</li>
-  <li class="service"><span class="news-badge service">SVC</span><span class="news-date">Sep 2024</span>Served as <strong>Junior Program Committee Member</strong> for <a href="https://conf.researchr.org/home/msr-2025"><em>MSR 2025</em></a>.</li>
-  <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Aug 2024</span>'<a href="https://arxiv.org/abs/2403.03322">Deep Configuration Performance Learning: A Systematic Survey and Taxonomy</a>' accepted at <a href="https://dl.acm.org/journal/tosem">TOSEM</a> as a survey paper.</li>
-  <li class="award"><span class="news-badge award">Award</span><span class="news-date">Jul 2024</span>The team I led received the <strong>SSBSE'24 Challenge Track award</strong> for '<a href="https://arxiv.org/abs/2407.14982">GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation</a>'.</li>
-  <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">May 2024</span>'<a href="https://arxiv.org/abs/2407.14982">GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation</a>' accepted at <a href="https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge">SSBSE 2024</a> as a challenge track paper.</li>
-  <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Jan 2024</span>'<a href="https://arxiv.org/abs/2402.03183">Predicting Configuration Performance in Multiple Environments with Sequential Meta-Learning</a>' accepted at <a href="https://conf.researchr.org/home/fse-2024">FSE 2024</a> (acceptance rate 11.6%, 56/483).</li>
-  <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">May 2023</span>'<a href="https://arxiv.org/pdf/2306.06651">Predicting Software Performance with Divide-and-Learn</a>' accepted at <a href="https://2023.esec-fse.org/">ESEC/FSE 2023</a> (acceptance rate 12.7%, 60/473).</li>
-  <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">May 2022</span>'<a href="https://arxiv.org/abs/2203.15988">Does Configuration Encoding Matter in Learning Software Performance? An Empirical Study on Encoding Schemes</a>' accepted at <a href="https://conf.researchr.org/details/msr-2022/msr-2022-technical-papers/1/Does-Configuration-Encoding-Matter-in-Learning-Software-Performance-An-Empirical-Stu">MSR 2022</a> (acceptance rate 34%, 45/138).</li>
+  <li class="paper"><span class="news-date">Nov 2024</span><span class="news-badge paper">Paper</span><span class="news-content">'<a href="https://ieeexplore.ieee.org/abstract/document/10832565">Accuracy Can Lie: On the Impact of Surrogate Model in Configuration Tuning</a>' accepted at <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32">TSE</a> as a journal paper.</span></li>
+  <li class="paper"><span class="news-date">Oct 2024</span><span class="news-badge paper">Paper</span><span class="news-content">'<a href="https://arxiv.org/abs/2409.07629">Dividable Configuration Performance Learning</a>' accepted at <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32">TSE</a> as a journal paper.</span></li>
+  <li class="service"><span class="news-date">Sep 2024</span><span class="news-badge service">Service</span><span class="news-content">Served as <strong>Junior Program Committee Member</strong> for <a href="https://conf.researchr.org/home/msr-2025"><em>MSR 2025</em></a>.</span></li>
+  <li class="paper"><span class="news-date">Aug 2024</span><span class="news-badge paper">Paper</span><span class="news-content">'<a href="https://arxiv.org/abs/2403.03322">Deep Configuration Performance Learning: A Systematic Survey and Taxonomy</a>' accepted at <a href="https://dl.acm.org/journal/tosem">TOSEM</a> as a survey paper.</span></li>
+  <li class="award"><span class="news-date">Jul 2024</span><span class="news-badge award">Award</span><span class="news-content">The team I led received the <strong>SSBSE'24 Challenge Track award</strong> for '<a href="https://arxiv.org/abs/2407.14982">GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation</a>'.</span></li>
+  <li class="paper"><span class="news-date">May 2024</span><span class="news-badge paper">Paper</span><span class="news-content">'<a href="https://arxiv.org/abs/2407.14982">GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation</a>' accepted at <a href="https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge">SSBSE 2024</a> as a challenge track paper.</span></li>
+  <li class="paper"><span class="news-date">Jan 2024</span><span class="news-badge paper">Paper</span><span class="news-content">'<a href="https://arxiv.org/abs/2402.03183">Predicting Configuration Performance in Multiple Environments with Sequential Meta-Learning</a>' accepted at <a href="https://conf.researchr.org/home/fse-2024">FSE 2024</a> (acceptance rate 11.6%, 56/483).</span></li>
+  <li class="paper"><span class="news-date">May 2023</span><span class="news-badge paper">Paper</span><span class="news-content">'<a href="https://arxiv.org/pdf/2306.06651">Predicting Software Performance with Divide-and-Learn</a>' accepted at <a href="https://2023.esec-fse.org/">ESEC/FSE 2023</a> (acceptance rate 12.7%, 60/473).</span></li>
+  <li class="paper"><span class="news-date">May 2022</span><span class="news-badge paper">Paper</span><span class="news-content">'<a href="https://arxiv.org/abs/2203.15988">Does Configuration Encoding Matter in Learning Software Performance? An Empirical Study on Encoding Schemes</a>' accepted at <a href="https://conf.researchr.org/details/msr-2022/msr-2022-technical-papers/1/Does-Configuration-Encoding-Matter-in-Learning-Software-Performance-An-Empirical-Stu">MSR 2022</a> (acceptance rate 34%, 45/138).</span></li>
 </ul>
 </div>
 
@@ -192,7 +192,8 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   list-style: none;
   --news-date-w: 5.6rem;
   --news-tag-w: 4.2rem;
-  --news-line-x: calc(var(--news-date-w) + 0.45rem);
+  --news-gap: 0.48rem;
+  --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
   padding: 0;
   margin: 0.75rem 0 0.5rem;
   position: relative;
@@ -207,9 +208,10 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   background: #e0e0e0;
 }
 .news-timeline li {
-  display: flex;
+  display: grid;
+  grid-template-columns: var(--news-date-w) var(--news-tag-w) minmax(0, 1fr);
+  column-gap: var(--news-gap);
   align-items: start;
-  gap: 0.48rem;
   position: relative;
   padding: 0 0 0.9rem 0;
   font-size: 0.9em;
@@ -244,8 +246,8 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   font-weight: bold;
   color: #4f493f;
   border-radius: 4px;
-  border: 1px solid #c6beb1;
-  background: linear-gradient(to bottom, #f8f2e6 0%, #eee6d8 100%);
+  border: 1px solid rgba(0,0,0,0.12);
+  background: linear-gradient(to bottom, rgba(255,255,255,0.24) 0%, rgba(0,0,0,0.06) 100%);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,0.85),
     inset 0 -1px 0 rgba(0,0,0,0.06);
@@ -261,29 +263,34 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   width: 8px;
   height: 4px;
   background: #fffefa;
-  border-bottom: 1px solid #c6beb1;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.28);
   border-radius: 0 0 5px 5px;
 }
 .news-badge::before { left: 7px; }
 .news-badge::after { right: 7px; }
-.news-badge.paper   { color: #487448; border-color: #79aa76; }
-.news-badge.award   { color: #8b5353; border-color: #c77e7e; }
-.news-badge.service { color: #2d6d94; border-color: #6da0c1; }
+.news-badge.paper   { color: #fff; border-color: rgba(70,120,70,0.6); background-color: #58b45f; }
+.news-badge.award   { color: #fff; border-color: rgba(150,70,70,0.6); background-color: #d96868; }
+.news-badge.service { color: #fff; border-color: rgba(45,90,130,0.6); background-color: #1b8dbf; }
 .news-date {
-  flex: 0 0 var(--news-date-w);
+  grid-column: 1;
   text-align: right;
   font-size: 0.83em;
   color: #999;
   line-height: 1.4;
   padding-top: 0.08rem;
 }
+.news-content {
+  grid-column: 3;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
 @media (max-width: 820px) {
   .news-timeline {
     --news-date-w: 4.4rem;
     --news-tag-w: 3.65rem;
-    --news-line-x: calc(var(--news-date-w) + 0.36rem);
+    --news-gap: 0.36rem;
+    --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
   }
-  .news-timeline li { gap: 0.36rem; }
   .news-date {
     font-size: 0.79em;
   }
@@ -292,9 +299,9 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   .news-timeline {
     --news-date-w: 4.15rem;
     --news-tag-w: 3.45rem;
-    --news-line-x: calc(var(--news-date-w) + 0.28rem);
+    --news-gap: 0.28rem;
+    --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
   }
-  .news-timeline li { gap: 0.28rem; }
   .news-badge { font-size: 64%; }
 }
 .news-toggle-btn {
