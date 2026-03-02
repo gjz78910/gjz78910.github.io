@@ -549,6 +549,6 @@
   }
   .paper-output-area { margin-left: var(--paper-side-inset); margin-right: var(--paper-side-inset); }
   .slot-body-fill { margin: 0; }
-  .paper-sheet { padding: 1.5rem 0.5rem 2rem; }
+  .paper-sheet { padding: 1.5rem 1rem 2rem; }
   .paper-content { font-size: 0.93rem; }
 }
