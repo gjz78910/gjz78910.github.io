@@ -195,7 +195,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   --news-gap: 1.5rem;
   --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
   padding: 0;
-  margin: 0.75rem 0 0.5rem -3rem;
+  margin: 0.75rem 0 0.5rem -6rem;
   position: relative;
   width: 100%;
   max-width: none;
