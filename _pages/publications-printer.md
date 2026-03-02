@@ -161,7 +161,7 @@ document.querySelectorAll('.pub-filter').forEach(btn => {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: #eae3d6;
+  background: #ffffff;
   border: 1px solid #bfb7aa;
   border-radius: 4px;
   padding: 0.28rem 0.85rem;
@@ -177,10 +177,10 @@ document.querySelectorAll('.pub-filter').forEach(btn => {
 }
 .pub-filter:hover {
   border-color: #aaa192;
-  background: #e3d9c9;
+  background: #f7f4ee;
 }
 .pub-filter.active {
-  background: #cfc2b0;
+  background: #fffefa;
   border-color: #a79b8c;
   color: #4d473f;
   box-shadow:

@@ -213,7 +213,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   display: grid;
   grid-template-columns: var(--news-date-w) var(--news-tag-w) minmax(0, 1fr);
   column-gap: var(--news-gap);
-  align-items: center;
+  align-items: start;
   position: relative;
   padding: 0 0 0.9rem 0;
   font-size: 0.9em;
@@ -225,9 +225,9 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 .news-timeline li::before {
   content: '';
   position: absolute;
-  left: calc(var(--news-line-x) - 4px);
-  top: 50%;
-  transform: translateY(-50%);
+  left: var(--news-line-x);
+  top: 0.76em;
+  transform: translate(-50%, -50%);
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -258,6 +258,8 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   white-space: nowrap;
   vertical-align: middle;
   margin-right: 0;
+  align-self: start;
+  margin-top: 0.06em;
 }
 .news-badge::before,
 .news-badge::after {
@@ -272,13 +274,14 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   font-size: 0.83em;
   color: #999;
   line-height: 1.2;
-  padding-top: 0;
+  padding-top: 0.16em;
   white-space: nowrap;
 }
 .news-content {
   grid-column: 3;
   min-width: 0;
   overflow-wrap: break-word;
+  align-self: start;
 }
 @media (max-width: 820px) {
   .news-timeline {
