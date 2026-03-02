@@ -9,6 +9,8 @@ redirect_from:
   - /printer
 ---
 
+## About
+
 I'm an AI4SE researcher building trustworthy, efficient, and sustainable software using AI.
 
 <div class="bio-para">
