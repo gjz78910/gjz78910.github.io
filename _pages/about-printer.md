@@ -190,11 +190,10 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 }
 .news-timeline {
   list-style: none;
-  --news-date-w: 5.4rem;
-  --news-tag-w: 3.55rem;
-  --news-gap: 0.45rem;
-  --news-line-x: calc(var(--news-date-w) + var(--news-gap));
-  padding: 0 0 0 0;
+  --news-date-w: 5.6rem;
+  --news-tag-w: 4.2rem;
+  --news-line-x: calc(var(--news-date-w) + 0.45rem);
+  padding: 0;
   margin: 0.75rem 0 0.5rem;
   position: relative;
 }
@@ -208,12 +207,11 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   background: #e0e0e0;
 }
 .news-timeline li {
-  display: grid;
-  grid-template-columns: var(--news-date-w) var(--news-tag-w) 1fr;
-  column-gap: 0.45rem;
+  display: flex;
   align-items: start;
+  gap: 0.48rem;
   position: relative;
-  padding: 0 0 0.85rem 0;
+  padding: 0 0 0.9rem 0;
   font-size: 0.9em;
   line-height: 1.5;
   text-align: left;
@@ -232,43 +230,72 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 .news-timeline li.award::before   { background: #e06666; }
 .news-timeline li.service::before { background: #0087BD; }
 .news-badge {
-  display: inline-block;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 var(--news-tag-w);
   width: var(--news-tag-w);
   text-align: center;
-  padding: .08em 0 .12em;
-  font-size: 68%;
-  letter-spacing: 0.45px;
+  padding: .12em .12em .18em;
+  font-size: 67%;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #5d574d;
-  border-radius: 2px;
-  border: 1px dashed #b8b0a3;
-  background: rgba(255,255,255,0.5);
+  color: #4f493f;
+  border-radius: 4px;
+  border: 1px solid #c6beb1;
+  background: linear-gradient(to bottom, #f8f2e6 0%, #eee6d8 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.85),
+    inset 0 -1px 0 rgba(0,0,0,0.06);
   white-space: nowrap;
   vertical-align: middle;
   margin-right: 0;
-  transform: rotate(-0.2deg);
 }
-.news-badge.paper   { color: #4f7a4d; border-color: #79aa76; background: rgba(121,170,118,0.12); }
-.news-badge.award   { color: #8c5555; border-color: #c77e7e; background: rgba(199,126,126,0.12); }
-.news-badge.service { color: #2f6f96; border-color: #6da0c1; background: rgba(109,160,193,0.14); }
+.news-badge::before,
+.news-badge::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  width: 8px;
+  height: 4px;
+  background: #fffefa;
+  border-bottom: 1px solid #c6beb1;
+  border-radius: 0 0 5px 5px;
+}
+.news-badge::before { left: 7px; }
+.news-badge::after { right: 7px; }
+.news-badge.paper   { color: #487448; border-color: #79aa76; }
+.news-badge.award   { color: #8b5353; border-color: #c77e7e; }
+.news-badge.service { color: #2d6d94; border-color: #6da0c1; }
 .news-date {
-  grid-column: 1;
-  width: var(--news-date-w);
+  flex: 0 0 var(--news-date-w);
   text-align: right;
   font-size: 0.83em;
   color: #999;
-  margin-right: 0.2rem;
-}
-.news-timeline .news-badge {
-  grid-column: 2;
+  line-height: 1.4;
+  padding-top: 0.08rem;
 }
 @media (max-width: 820px) {
   .news-timeline {
-    --news-date-w: 4.7rem;
-    --news-tag-w: 3.25rem;
-    --news-gap: 0.32rem;
+    --news-date-w: 4.4rem;
+    --news-tag-w: 3.65rem;
+    --news-line-x: calc(var(--news-date-w) + 0.36rem);
   }
+  .news-timeline li { gap: 0.36rem; }
+  .news-date {
+    font-size: 0.79em;
+  }
+}
+@media (max-width: 560px) {
+  .news-timeline {
+    --news-date-w: 4.15rem;
+    --news-tag-w: 3.45rem;
+    --news-line-x: calc(var(--news-date-w) + 0.28rem);
+  }
+  .news-timeline li { gap: 0.28rem; }
+  .news-badge { font-size: 64%; }
 }
 .news-toggle-btn {
   background: linear-gradient(to bottom, #f8f4ec 0%, #eae3d6 100%);
