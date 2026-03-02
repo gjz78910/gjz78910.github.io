@@ -20,12 +20,12 @@
 
   function isEventsPage() {
     var p = window.location.pathname;
-    return p === '/events/' || p === '/events' || p.includes('/printer/events');
+    return p === '/events/' || p === '/events' || p === '/events/index.html' || p.includes('/printer/events');
   }
 
   function isPublicationsPage() {
     var p = window.location.pathname;
-    return p === '/publications/' || p === '/publications' || p.includes('/printer/publications');
+    return p === '/publications/' || p === '/publications' || p === '/publications/index.html' || p.includes('/printer/publications');
   }
 
   /* ------------------------------------------------------------------ */
@@ -36,13 +36,18 @@
     var aboutBtn  = document.getElementById('btn-about');
     var eventsBtn = document.getElementById('btn-events');
     var publicationsBtn = document.getElementById('btn-publications');
-    if (!aboutBtn || !eventsBtn || !publicationsBtn) return;
-    aboutBtn.classList.toggle('active', page === 'about');
-    eventsBtn.classList.toggle('active', page === 'events');
-    publicationsBtn.classList.toggle('active', page === 'publications');
-    aboutBtn.setAttribute('aria-current', page === 'about' ? 'page' : 'false');
-    eventsBtn.setAttribute('aria-current', page === 'events' ? 'page' : 'false');
-    publicationsBtn.setAttribute('aria-current', page === 'publications' ? 'page' : 'false');
+    if (aboutBtn) {
+      aboutBtn.classList.toggle('active', page === 'about');
+      aboutBtn.setAttribute('aria-current', page === 'about' ? 'page' : 'false');
+    }
+    if (eventsBtn) {
+      eventsBtn.classList.toggle('active', page === 'events');
+      eventsBtn.setAttribute('aria-current', page === 'events' ? 'page' : 'false');
+    }
+    if (publicationsBtn) {
+      publicationsBtn.classList.toggle('active', page === 'publications');
+      publicationsBtn.setAttribute('aria-current', page === 'publications' ? 'page' : 'false');
+    }
   }
 
   /* ------------------------------------------------------------------ */
