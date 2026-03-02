@@ -147,7 +147,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 .bio-logo { width: auto; border-radius: 4px; flex-shrink: 0; }
 @media (max-width: 640px) {
   .bio-para { flex-direction: column; align-items: flex-start; margin-bottom: 1.5rem; }
-  .bio-logo { align-self: center; margin-top: 0.4rem; margin-bottom: 0; }
+  .bio-logo { align-self: center; margin-top: 0.2rem; margin-bottom: 0; }
 }
 .research-grid {
   display: grid;
@@ -204,6 +204,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   list-style: none;
   padding: 0 0 0 1.3rem;
   margin: 0.75rem 0 0.5rem;
+  max-width: 46rem;
   border-left: 2px solid #e0e0e0;
 }
 .news-timeline li {
