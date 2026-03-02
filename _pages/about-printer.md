@@ -37,7 +37,7 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
 ## Research Interests
 
 <div class="ri-briefs">
-  <details class="ri-brief" open>
+  <details class="ri-brief">
     <summary>Software Configuration Performance Engineering</summary>
     <div class="ri-brief-content">
       <p>Build data-driven <a href="https://dl.acm.org/doi/full/10.1145/3702986">ML/DL approaches</a> that learn high-dimensional configuration spaces to predict and optimise performance without exhaustive benchmarking, while tackling challenges such as <a href="https://ieeexplore.ieee.org/abstract/document/10744216">feature sparsity</a>, <a href="https://ieeexplore.ieee.org/abstract/document/10832565">rugged performance spaces</a>, and <a href="https://dl.acm.org/doi/abs/10.1145/3643743">cross-environment drift</a> (versions, hardware, workloads).</p>
@@ -175,10 +175,11 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   margin: 0 0 0.55rem;
   text-align: left;
 }
-.ri-brief-image {
+.ri-brief-content .ri-brief-image {
   display: block;
-  width: 100%;
-  max-width: 300px;
+  width: 100% !important;
+  max-width: 350px !important;
+  height: auto !important;
   margin: 0.35rem 0 0.55rem;
   border-radius: 4px;
 }
