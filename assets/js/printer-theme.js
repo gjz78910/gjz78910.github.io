@@ -15,12 +15,12 @@
 
   function isAboutPage() {
     var p = window.location.pathname;
-    return p === '/printer/' || p === '/printer' || p.endsWith('/printer/');
+    return p === '/' || p === '/index.html' || p === '/printer/' || p === '/printer' || p.endsWith('/printer/');
   }
 
   function isEventsPage() {
     var p = window.location.pathname;
-    return p.includes('/printer/events');
+    return p === '/events/' || p === '/events' || p.includes('/printer/events');
   }
 
   /* ------------------------------------------------------------------ */
@@ -180,7 +180,7 @@
         } else {
           sessionStorage.setItem('printer-nav', 'about');
           pendingActionTimer = setTimeout(function () {
-            window.location.href = '/printer/';
+            window.location.href = '/';
           }, BUTTON_SOUND_DELAY_MS);
         }
       });
@@ -203,7 +203,7 @@
         } else {
           sessionStorage.setItem('printer-nav', 'events');
           pendingActionTimer = setTimeout(function () {
-            window.location.href = '/printer/events/';
+            window.location.href = '/events/';
           }, BUTTON_SOUND_DELAY_MS);
         }
       });

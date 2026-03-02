@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Events & Conferences"
-permalink: /events/
+permalink: /classic/events/
 author_profile: true
 ---
 

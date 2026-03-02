@@ -1,8 +1,11 @@
 ---
 layout: printer
-permalink: /printer/events/
+permalink: /events/
 title: "Events & Conferences"
 author_profile: false
+redirect_from:
+  - /printer/events/
+  - /printer/events
 ---
 
 ## 2025

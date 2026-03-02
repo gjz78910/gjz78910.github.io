@@ -1,9 +1,12 @@
 ---
 layout: printer
-permalink: /printer/
+permalink: /
 title: "About"
 excerpt: "About me"
 author_profile: false
+redirect_from:
+  - /printer/
+  - /printer
 ---
 
 I'm an AI4SE researcher building trustworthy, efficient, and sustainable software using AI.
