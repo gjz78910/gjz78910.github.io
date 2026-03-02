@@ -178,9 +178,9 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 .ri-brief-content .ri-brief-image {
   display: block;
   width: 100% !important;
-  max-width: 350px !important;
+  max-width: 500px !important;
   height: auto !important;
-  margin: 0.35rem 0 0.55rem;
+  margin: 0.35rem auto 0.55rem;
   border-radius: 4px;
 }
 .ri-brief-why {
