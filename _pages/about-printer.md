@@ -22,7 +22,7 @@ I currently work as a Research Associate in AI for Software Engineering at [King
 <div class="bio-para-text" markdown="1">
 Previously, from June 2024 to November 2025, I worked as a [KTP Associate](https://www.ktp-uk.org/) with both the [University of Leeds](https://www.leeds.ac.uk/) and [TurinTech AI](https://www.turintech.ai/), focusing on compiler- and LLM-based code optimisation. We successfully completed the two-year KTP plan in just one and a half years. At the University of Leeds, I was a member of the [Intelligent Systems Software Lab (ISSL)](https://issl-uk.com/) and the [Distributed Systems and Services (DSS)](https://distributed-systems.leeds.ac.uk/) research group, supervised by [Prof Jie Xu](https://eps.leeds.ac.uk/computing/staff/331/professor-jie-xu) and [Prof Zheng Wang](https://zwang4.github.io/). At TurinTech AI, I was a member of the Data Science team led by [Dr Fan Wu](https://scholar.google.com/citations?user=p8z2_usAAAAJ&hl=en) and [Dr Paul Brookes](https://www.linkedin.com/in/paul-brookes-125288b2/).
 </div>
-<img class="bio-logo" src="/images/event_images/ktp_logos.jpg" alt="University of Leeds / TurinTech AI" style="max-height: 120px;">
+<img class="bio-logo" src="/images/event_images/ktp_logos.png" alt="University of Leeds / TurinTech AI" style="max-height: 120px;">
 </div>
 
 <div class="bio-para">
