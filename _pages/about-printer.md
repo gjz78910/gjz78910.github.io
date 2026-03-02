@@ -249,12 +249,10 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   text-transform: uppercase;
   font-weight: bold;
   color: #fff;
-  border-radius: 4px;
-  border: 1px solid transparent;
+  border-radius: 999px;
+  border: none;
   background-repeat: no-repeat;
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1);
+  box-shadow: none;
   white-space: nowrap;
   vertical-align: middle;
   margin-right: 0;
@@ -263,9 +261,9 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 .news-badge::after {
   content: none;
 }
-.news-badge.paper   { background-image: linear-gradient(to bottom, #67be6d 0%, #56ae5d 100%), linear-gradient(to bottom, #8f8f8f 0 50%, #56ae5d 50% 100%); }
-.news-badge.award   { background-image: linear-gradient(to bottom, #e07474 0%, #cf6363 100%), linear-gradient(to bottom, #8f8f8f 0 50%, #cf6363 50% 100%); }
-.news-badge.service { background-image: linear-gradient(to bottom, #2a9acc 0%, #1988b8 100%), linear-gradient(to bottom, #8f8f8f 0 50%, #1988b8 50% 100%); }
+.news-badge.paper   { background-color: #56ae5d; }
+.news-badge.award   { background-color: #cf6363; }
+.news-badge.service { background-color: #1988b8; }
 .news-date {
   grid-column: 1;
   text-align: right;
