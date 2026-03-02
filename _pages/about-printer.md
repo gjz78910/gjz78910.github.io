@@ -190,9 +190,9 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 }
 .news-timeline {
   list-style: none;
-  --news-date-w: 3.7rem;
+  --news-date-w: 4.2rem;
   --news-tag-w: 4.2rem;
-  --news-gap: 0.9rem;
+  --news-gap: 1.5rem;
   --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
   padding: 0;
   margin: 0.75rem 0 0.5rem -1.8rem;
