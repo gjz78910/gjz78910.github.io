@@ -249,6 +249,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   text-transform: uppercase;
   font-weight: bold;
   color: #fff;
+  line-height: 1;
   border-radius: 999px;
   border: none;
   background-repeat: no-repeat;

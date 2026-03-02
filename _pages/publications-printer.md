@@ -157,23 +157,35 @@ document.querySelectorAll('.pub-filter').forEach(btn => {
   align-items: center;
 }
 .pub-filter {
-  background: none;
-  border: 1px solid #e0e0e0;
-  border-radius: 3px;
-  padding: .28em .85em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(to bottom, #f8f4ec 0%, #eae3d6 100%);
+  border: 1px solid #bfb7aa;
+  border-radius: 4px;
+  padding: 0.28rem 0.85rem;
+  min-width: 5.6rem;
   font-size: 0.84em;
+  line-height: 1.15;
   cursor: pointer;
-  color: #555;
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  color: #5a544a;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, box-shadow 0.15s;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.75) inset,
+    0 1px 2px rgba(0,0,0,0.08);
 }
 .pub-filter:hover {
-  border-color: #5cb85c;
-  color: #5cb85c;
+  border-color: #aaa192;
+  background: linear-gradient(to bottom, #fbf8f1 0%, #efe8db 100%);
 }
 .pub-filter.active {
-  background: #5cb85c;
-  border-color: #5cb85c;
-  color: #fff;
+  background: linear-gradient(to bottom, #dfd6c8 0%, #cec3b3 100%);
+  border-color: #a79b8c;
+  color: #4d473f;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.45) inset,
+    0 1px 2px rgba(0,0,0,0.12);
 }
 
 .pub-list {
@@ -226,15 +238,17 @@ document.querySelectorAll('.pub-filter').forEach(btn => {
 }
 
 .pub-badge {
-  display: inline;
-  padding: .2em .6em .3em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: .22em .6em .26em;
   font-size: 75%;
   font-weight: bold;
-  line-height: 1;
+  line-height: 1.05;
   color: #fff;
-  text-align: center;
   white-space: nowrap;
-  vertical-align: baseline;
+  vertical-align: middle;
   border-radius: .25em;
 }
 .pub-badge.venue   { background: #5cb85c; }
