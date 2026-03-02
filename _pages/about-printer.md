@@ -40,7 +40,7 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
   <details class="ri-brief" open>
     <summary>Software Configuration Performance Engineering</summary>
     <div class="ri-brief-content">
-      <p>I build data-driven <a href="https://dl.acm.org/doi/full/10.1145/3702986">ML/DL approaches</a> that learn high-dimensional configuration spaces to predict and optimise performance without exhaustive benchmarking, while tackling challenges such as <a href="https://ieeexplore.ieee.org/abstract/document/10744216">feature sparsity</a>, <a href="https://ieeexplore.ieee.org/abstract/document/10832565">rugged performance spaces</a>, and <a href="https://dl.acm.org/doi/abs/10.1145/3643743">cross-environment drift</a> (versions, hardware, workloads).</p>
+      <p>Build data-driven <a href="https://dl.acm.org/doi/full/10.1145/3702986">ML/DL approaches</a> that learn high-dimensional configuration spaces to predict and optimise performance without exhaustive benchmarking, while tackling challenges such as <a href="https://ieeexplore.ieee.org/abstract/document/10744216">feature sparsity</a>, <a href="https://ieeexplore.ieee.org/abstract/document/10832565">rugged performance spaces</a>, and <a href="https://dl.acm.org/doi/abs/10.1145/3643743">cross-environment drift</a> (versions, hardware, workloads).</p>
       <img class="ri-brief-image" src="/images/event_images/config_perf_eng.jpeg" alt="Software Configuration Performance Engineering">
       <p class="ri-brief-why"><strong>Why it matters:</strong> Enables earlier performance issue detection, software adaptability and autoscaling, and faster product evolution with far fewer measurements.</p>
     </div>
@@ -48,7 +48,7 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
   <details class="ri-brief">
     <summary>Trustworthy AI-assisted Software Development</summary>
     <div class="ri-brief-content">
-      <p>I develop quality assurance and optimisation methods for LLM-based software engineering, focusing on how we <a href="https://arxiv.org/abs/2601.04886">evaluate</a>, <a href="https://arxiv.org/abs/2601.04886">compare</a>, and improve AI-assisted coding workflows under realistic constraints (correctness, robustness, cost, sustainability), using SBSE-style strategies to orchestrate LLMs and make results more reliable in practice.</p>
+      <p>Develop quality assurance and optimisation methods for LLM-based software engineering, focusing on how we <a href="https://arxiv.org/abs/2601.04886">evaluate</a>, <a href="https://arxiv.org/abs/2601.04886">compare</a>, and improve AI-assisted coding workflows under realistic constraints (correctness, robustness, cost, sustainability), using SBSE-style strategies to orchestrate LLMs and make results more reliable in practice.</p>
       <img class="ri-brief-image" src="/images/event_images/trust_SDLC.jpeg" alt="Trustworthy AI-assisted Software Development">
       <p class="ri-brief-why"><strong>Why it matters:</strong> Transforms unverified, ad-hoc LLM-assisted coding into a reproducible engineering process, reducing computing resources and carbon footprint.</p>
     </div>
@@ -56,7 +56,7 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
   <details class="ri-brief">
     <summary>GenAI for Code Performance Optimisation</summary>
     <div class="ri-brief-content">
-      <p>I apply <a href="https://arxiv.org/abs/2501.01277">search-based multi-LLM optimisation</a> and <a href="https://arxiv.org/abs/2508.01443">meta-prompting</a> for robust code scoring and optimisation, combined with <a href="https://arxiv.org/abs/2503.13505">ensembling</a> and compiler techniques; these methods are implemented in commercial platforms via <a href="https://www.turintech.ai/">TurinTech AI</a> and evaluated on real production workloads.</p>
+      <p>Apply <a href="https://arxiv.org/abs/2501.01277">search-based multi-LLM optimisation</a> and <a href="https://arxiv.org/abs/2508.01443">meta-prompting</a> for robust code scoring and optimisation, combined with <a href="https://arxiv.org/abs/2503.13505">ensembling</a> and compiler techniques; these methods are implemented in commercial platforms via <a href="https://www.turintech.ai/">TurinTech AI</a> and evaluated on real production workloads.</p>
       <img class="ri-brief-image" src="/images/event_images/code_opt.jpeg" alt="GenAI for Code Performance Optimisation">
       <p class="ri-brief-why"><strong>Why it matters:</strong> Delivers verifiable speedups and cost reductions on production codebases while making GenAI systems more reliable and auditable in practice.</p>
     </div>
@@ -64,7 +64,7 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
   <details class="ri-brief">
     <summary>General AI4SE &amp; SE4AI</summary>
     <div class="ri-brief-content">
-      <p>I explore broader AI4SE and SE4AI directions including LLM performance modeling (hybrid models + online adaptive tuning), performance-aware GenAI systems (dynamic prompt engineering + configuration tuning), trustworthy GenAI (RLHF + uncertainty verification), and industry standards and tooling (benchmarks, profiling, static analysis, CI/CD integration).</p>
+      <p>Explore broader AI4SE and SE4AI directions including LLM performance modeling (hybrid models + online adaptive tuning), performance-aware GenAI systems (dynamic prompt engineering + configuration tuning), trustworthy GenAI (RLHF + uncertainty verification), and industry standards and tooling (benchmarks, profiling, static analysis, CI/CD integration).</p>
       <img class="ri-brief-image" src="/images/event_images/SE4AI.jpeg" alt="General AI4SE &amp; SE4AI">
       <p class="ri-brief-why"><strong>Why it matters:</strong> Makes GenAI systems predictable and safe in real-world workloads, enabling reproducible evaluation, faster industrial adoption, and lower compute and carbon footprints.</p>
     </div>
@@ -76,15 +76,15 @@ If you're interested in collaboration, please feel free to reach out!
 ## News
 
 <ul class="news-timeline">
-  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Feb 2026</span>Invited as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/issta-2026"><em>ISSTA 2026</em></a>.</li>
+  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Feb 2026</span>Served as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/issta-2026"><em>ISSTA 2026</em></a>.</li>
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Jan 2026</span>'<a href="https://arxiv.org/abs/2601.04886">Analyzing Message-Code Inconsistency in AI Coding Agent-Authored Pull Requests</a>' and '<a href="">Comparing AI Coding Agents: A Task-Stratified Analysis of Pull Request Acceptance</a>' accepted at <a href="https://2026.msrconf.org/track/msr-2026-mining-challenge#Call-for-Mining-Challenge-Papers">MSR 2026</a> Mining Challenge track.</li>
-  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Jan 2026</span>Selected as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/icst-2026"><em>ICST 2026</em></a>.</li>
+  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Jan 2026</span>Served as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/icst-2026"><em>ICST 2026</em></a>.</li>
   <li class="award"><span class="news-badge award">Award</span><span class="news-date">Nov 2025</span>Received the <strong>Distinguished Reviewer</strong> award at <a href="https://conf.researchr.org/home/icse-2025"><em>ICSE 2025</em></a> Shadow PC.</li>
-  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Oct 2025</span>Selected as <strong>Junior Program Committee member</strong> for <a href="https://2026.msrconf.org/"><em>MSR 2026</em></a>.</li>
+  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Oct 2025</span>Served as <strong>Junior Program Committee Member</strong> for <a href="https://2026.msrconf.org/"><em>MSR 2026</em></a>.</li>
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Oct 2025</span>'<a href="placeholder-link">GA4GC: Greener Agent for Greener Code via Multi-Objective Configuration Optimization</a>' accepted at <a href="https://conf.researchr.org/home/ssbse-2025">SSBSE 2025</a> as a challenge track paper.</li>
-  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Sep 2025</span>Invited as <strong>Program Committee Member</strong> for <a href="https://www2026.thewebconf.org/"><em>WWW 2026</em></a>.</li>
+  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Sep 2025</span>Served as <strong>Program Committee Member</strong> for <a href="https://www2026.thewebconf.org/"><em>WWW 2026</em></a>.</li>
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Sep 2025</span>'<a href="https://arxiv.org/abs/2508.01443">Tuning LLM-based Code Optimization via Meta-Prompting: An Industrial Perspective</a>' accepted at <a href="https://conf.researchr.org/home/ase-2025">ASE 2025</a> as an industry showcase paper (acceptance rate 44%, 61/139).</li>
-  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Jul 2025</span>Selected as <strong>Shadow Program Committee Member</strong> for <a href="https://conf.researchr.org/home/icse-2026"><em>ICSE 2026</em></a>.</li>
+  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Jul 2025</span>Served as <strong>Shadow Program Committee Member</strong> for <a href="https://conf.researchr.org/home/icse-2026"><em>ICSE 2026</em></a>.</li>
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Jun 2025</span>'<a href="https://arxiv.org/abs/2507.08730">Dually Hierarchical Drift Adaptation for Online Configuration Performance Learning</a>' accepted at <a href="https://conf.researchr.org/home/icse-2026">ICSE 2026</a> in the first round (acceptance rate 9.29%, 60/646).</li>
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Jun 2025</span>'<a href="https://dl.acm.org/doi/abs/10.1145/3750040">Learning Software Bug Reports: A Systematic Literature Review</a>' accepted at <a href="https://dl.acm.org/toc/tosem/justaccepted">TOSEM</a> as a journal paper.</li>
   <li class="award"><span class="news-badge award">Award</span><span class="news-date">Jan 2025</span>Awarded the <a href="https://research.spec.org/news/2025-01-31-00-00-winner-of-spec-kaivalya-dixit-distinguished-dissertation-award-2024/"><strong>SPEC Kaivalya Dixit Distinguished Dissertation Award 2024</strong></a>, a prominent award in computer benchmarking, performance evaluation, and experimental system analysis.</li>
@@ -96,7 +96,7 @@ If you're interested in collaboration, please feel free to reach out!
 <ul class="news-timeline">
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Nov 2024</span>'<a href="https://ieeexplore.ieee.org/abstract/document/10832565">Accuracy Can Lie: On the Impact of Surrogate Model in Configuration Tuning</a>' accepted at <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32">TSE</a> as a journal paper.</li>
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Oct 2024</span>'<a href="https://arxiv.org/abs/2409.07629">Dividable Configuration Performance Learning</a>' accepted at <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32">TSE</a> as a journal paper.</li>
-  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Sep 2024</span>Selected as <strong>Junior Program Committee member</strong> for <a href="https://conf.researchr.org/home/msr-2025"><em>MSR 2025</em></a>.</li>
+  <li class="service"><span class="news-badge service">Service</span><span class="news-date">Sep 2024</span>Served as <strong>Junior Program Committee Member</strong> for <a href="https://conf.researchr.org/home/msr-2025"><em>MSR 2025</em></a>.</li>
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">Aug 2024</span>'<a href="https://arxiv.org/abs/2403.03322">Deep Configuration Performance Learning: A Systematic Survey and Taxonomy</a>' accepted at <a href="https://dl.acm.org/journal/tosem">TOSEM</a> as a survey paper.</li>
   <li class="award"><span class="news-badge award">Award</span><span class="news-date">Jul 2024</span>The team I led received the <strong>SSBSE'24 Challenge Track award</strong> for '<a href="https://arxiv.org/abs/2407.14982">GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation</a>'.</li>
   <li class="paper"><span class="news-badge paper">Paper</span><span class="news-date">May 2024</span>'<a href="https://arxiv.org/abs/2407.14982">GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation</a>' accepted at <a href="https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge">SSBSE 2024</a> as a challenge track paper.</li>
@@ -178,7 +178,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 .ri-brief-image {
   display: block;
   width: 100%;
-  max-width: 350px;
+  max-width: 300px;
   margin: 0.35rem 0 0.55rem;
   border-radius: 4px;
 }
