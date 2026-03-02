@@ -257,11 +257,14 @@
 
 /* Name — Courier Prime Bold */
 .printer-brand {
-  font-family: 'Courier Prime', 'Courier New', 'SimSun', monospace;
+  font-family: 'Courier Prime', 'Courier New', monospace;
   font-weight: 700;
   color: #1c1c1c;
   font-size: 1.3rem;
   line-height: 1.2;
+}
+.printer-brand .chinese-name {
+  font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', sans-serif;
 }
 
 /* Bio — Courier Prime */
