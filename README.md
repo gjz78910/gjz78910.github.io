@@ -1,15 +1,50 @@
-A Github Pages template for academic websites. This was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License. See LICENSE.md.
+A simple academic website built with Jekyll and the Minimal Mistakes theme (via an older fork).  
+Only the most important things you need are listed below.
 
-# Instructions
-1. Change author information: **_config.yml**
-2. Add new publication: 
-   1. Create a new file in the **_publication** folder
-   2. Add pdf file in the **files** folder
-   3. The publication information will automatically appear if the path settings are correct
-3. Update the main page contents: update the **about.md** files in the **_pages** folder
+## Basic structure
+- **Site settings**: `/_config.yml`  
+  - Name, bio, social links, Google Scholar, etc.
+- **Main pages** (shown in the printer-style homepage):
+  - `/_pages/about-printer.md` → main “About” page at `/`
+  - `/_pages/events-printer.md` → events page at `/events/`
+  - `/_pages/publications-printer.md` → selected publications at `/publications/`
+- **Classic (non‑printer) pages**:
+  - `/_pages/about.md`, `/_pages/events.md`, `/_pages/publications.md` (kept for reference at `/classic/...`)
 
-### Adding images:
-1. Place your images in the `images/` folder
-2. Use the format: `![Alt text](/images/filename.jpg)`
-3. Add captions below images using *italic text*
-4. You can organize events by year, type, or any other structure you prefer
+## Editing the homepage content
+1. Open `/_pages/about-printer.md`.
+2. Edit the paragraphs, links, and small inline styles directly in that file.
+3. Images on the main page live in `images/event_images/` and are referenced with:
+   - `<img src="/images/event_images/filename.png" ... >`
+
+## Adding / updating publications
+There are two ways publications appear:
+
+- **Selected publications section** (on the printer “Publications” page):
+  - Edit the list in `/_pages/publications-printer.md` (plain HTML/Markdown entries).
+
+- **Full publications list** (classic archive):
+  1. Create or edit files in `/_publications/` (one file per publication).
+  2. If needed, add the PDF to the `files/` folder and link to it from the publication entry.
+
+## Images and media
+- Put images under `images/` (for example `images/event_images/`).
+- Put PDFs and other files under `files/`.
+- Audio used by the printer animation lives in `assets/audio/` (already wired up).
+
+## Running the site locally
+If you want to preview changes before pushing:
+
+```bash
+bundle install        # first time only
+bundle exec jekyll serve
+```
+
+Then open `http://localhost:4000` in your browser.
+
+## Notes
+- The printer layout and animations are defined in:
+  - Layout: `/_layouts/printer.html`
+  - Styles: `/assets/css/printer-theme.css`
+  - JS: `/assets/js/printer-theme.js`
+- Only change these if you want to modify the printer visual effect itself.***
