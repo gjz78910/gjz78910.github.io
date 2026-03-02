@@ -6,6 +6,8 @@
   var soundPools = {};
   var BUTTON_SOUND_DELAY_MS = 500;
   var PAPER_ANIMATION_DELAY_MS = 1000;
+  var STYLE_PRESET_STORAGE_KEY = 'printer-style-preset';
+  var DEFAULT_STYLE_PRESET = 'book';
   var pendingActionTimer = null;
   var pendingPrintTimer = null;
 
@@ -169,6 +171,53 @@
   }
 
   /* ------------------------------------------------------------------ */
+  /* Style presets                                                        */
+  /* ------------------------------------------------------------------ */
+
+  function normalizeStylePreset(preset) {
+    if (preset === 'book' || preset === 'dossier' || preset === 'journal') {
+      return preset;
+    }
+    return DEFAULT_STYLE_PRESET;
+  }
+
+  function applyStylePreset(preset) {
+    var normalized = normalizeStylePreset(preset);
+    document.body.setAttribute('data-style-preset', normalized);
+    return normalized;
+  }
+
+  function setActiveStyleButton(preset) {
+    var normalized = normalizeStylePreset(preset);
+    var buttons = document.querySelectorAll('.printer-style-btn');
+    for (var i = 0; i < buttons.length; i++) {
+      var isActive = buttons[i].getAttribute('data-style-preset') === normalized;
+      buttons[i].classList.toggle('active', isActive);
+      buttons[i].setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    }
+  }
+
+  function setupStylePresets() {
+    var buttons = document.querySelectorAll('.printer-style-btn');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function () {
+        var preset = this.getAttribute('data-style-preset');
+        var normalized = applyStylePreset(preset);
+        setActiveStyleButton(normalized);
+        localStorage.setItem(STYLE_PRESET_STORAGE_KEY, normalized);
+        playSound('button-sound');
+      });
+    }
+  }
+
+  function initStylePresets() {
+    var saved = localStorage.getItem(STYLE_PRESET_STORAGE_KEY);
+    var activePreset = applyStylePreset(saved || DEFAULT_STYLE_PRESET);
+    setActiveStyleButton(activePreset);
+    setupStylePresets();
+  }
+
+  /* ------------------------------------------------------------------ */
   /* Navigation                                                           */
   /* ------------------------------------------------------------------ */
 
@@ -256,6 +305,7 @@
     var nav = sessionStorage.getItem('printer-nav');
 
     initSounds();
+    initStylePresets();
 
     if (nav === 'about' && isAboutPage()) {
       setActiveButton('about');
