@@ -9,7 +9,7 @@
 :root {
   --pt-page-bg: #d8d3c8;
   --pt-frame-bg: linear-gradient(175deg, #f8f4ec 0%, #f2ede3 30%, #ebe5db 65%, #e0dbd0 100%);
-  --pt-paper-bg: #ffffff;
+  --pt-paper-bg: #faf7f1;
   --pt-ink: #1a1510;
   --pt-ink-soft: #6a6560;
   --pt-link: #1a5fa0;
@@ -22,7 +22,7 @@
 body[data-style-preset='book'] {
   --pt-page-bg: #d8d3c8;
   --pt-frame-bg: linear-gradient(175deg, #f8f4ec 0%, #f2ede3 30%, #ebe5db 65%, #e0dbd0 100%);
-  --pt-paper-bg: #ffffff;
+  --pt-paper-bg: #faf7f1;
   --pt-ink: #1a1510;
   --pt-ink-soft: #6a6560;
   --pt-link: #3c5a78;
@@ -35,7 +35,7 @@ body[data-style-preset='book'] {
 body[data-style-preset='dossier'] {
   --pt-page-bg: #d7cdbd;
   --pt-frame-bg: linear-gradient(175deg, #f1e5d3 0%, #eadcc9 35%, #e1d2bc 70%, #d8c8b0 100%);
-  --pt-paper-bg: #f6efdf;
+  --pt-paper-bg: #faf7f1;
   --pt-ink: #22201c;
   --pt-ink-soft: #6a6257;
   --pt-link: #4e6470;
@@ -616,6 +616,145 @@ body[data-style-preset] .pub-badge.ranking { background: var(--pt-tag-service); 
   background: var(--pt-accent);
   border-color: var(--pt-accent);
   color: #fff;
+}
+
+.printer-layout-presets {
+  margin-top: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.printer-layout-btn {
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  border: 1px solid #b7b1a5;
+  background: rgba(255,255,255,0.35);
+  color: #3a362f;
+  border-radius: 3px;
+  padding: 0.18rem 0.5rem;
+  cursor: pointer;
+}
+
+.printer-layout-btn:hover {
+  border-color: var(--pt-accent);
+  color: var(--pt-accent);
+}
+
+.printer-layout-btn.active {
+  background: var(--pt-accent);
+  border-color: var(--pt-accent);
+  color: #fff;
+}
+
+/* -------------------------------------------------------------
+   Layout presets: text/image presentation variants
+   ------------------------------------------------------------- */
+body[data-layout-preset='reader'] .paper-content {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.04rem;
+  line-height: 1.95;
+}
+
+body[data-layout-preset='reader'] .paper-content h2 {
+  margin-top: 2.2rem;
+  padding-bottom: 0.55rem;
+}
+
+body[data-layout-preset='reader'] .paper-content .bio-para {
+  display: block;
+  margin-bottom: 1.35rem;
+}
+
+body[data-layout-preset='reader'] .paper-content .bio-logo {
+  display: block;
+  margin: 0.8rem auto 0;
+  max-height: 130px !important;
+}
+
+body[data-layout-preset='reader'] .paper-content .events-grid {
+  grid-template-columns: 1fr;
+  max-width: 760px;
+  margin: 1rem auto 2rem;
+}
+
+body[data-layout-preset='reader'] .paper-content .event-card {
+  padding: 18px 18px 0;
+}
+
+body[data-layout-preset='reader'] .paper-content .pub-list {
+  max-width: 760px;
+  margin: 0 auto;
+  gap: 0.75rem;
+}
+
+body[data-layout-preset='reader'] .paper-content .pub-item {
+  background: transparent;
+  box-shadow: none;
+  border-left: 3px solid var(--pt-accent);
+}
+
+body[data-layout-preset='showcase'] .paper-content {
+  max-width: 100%;
+}
+
+body[data-layout-preset='showcase'] .paper-content .bio-para {
+  gap: 1rem;
+  align-items: stretch;
+}
+
+body[data-layout-preset='showcase'] .paper-content .bio-logo {
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.14);
+}
+
+body[data-layout-preset='showcase'] .paper-content .news-timeline {
+  border-left: none;
+  padding-left: 0;
+}
+
+body[data-layout-preset='showcase'] .paper-content .news-timeline li {
+  border: 1px solid #e6dfd2;
+  border-radius: 6px;
+  padding: 0.6rem 0.75rem;
+  margin-bottom: 0.55rem;
+}
+
+body[data-layout-preset='showcase'] .paper-content .news-timeline li::before {
+  left: -0.5rem;
+}
+
+body[data-layout-preset='showcase'] .paper-content .events-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+body[data-layout-preset='showcase'] .paper-content .event-card {
+  border-radius: 8px;
+  border: 1px solid #e5ddd0;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+body[data-layout-preset='showcase'] .paper-content .pub-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+body[data-layout-preset='showcase'] .paper-content .pub-item {
+  border: 1px solid #e5ddd0;
+  border-radius: 6px;
+  height: 100%;
+}
+
+@media (max-width: 860px) {
+  body[data-layout-preset='showcase'] .paper-content .pub-list,
+  body[data-layout-preset='showcase'] .paper-content .events-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =============================================================

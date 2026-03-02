@@ -8,6 +8,8 @@
   var PAPER_ANIMATION_DELAY_MS = 1000;
   var STYLE_PRESET_STORAGE_KEY = 'printer-style-preset';
   var DEFAULT_STYLE_PRESET = 'book';
+  var LAYOUT_PRESET_STORAGE_KEY = 'printer-layout-preset';
+  var DEFAULT_LAYOUT_PRESET = 'classic';
   var pendingActionTimer = null;
   var pendingPrintTimer = null;
 
@@ -217,6 +219,49 @@
     setupStylePresets();
   }
 
+  function normalizeLayoutPreset(preset) {
+    if (preset === 'classic' || preset === 'reader' || preset === 'showcase') {
+      return preset;
+    }
+    return DEFAULT_LAYOUT_PRESET;
+  }
+
+  function applyLayoutPreset(preset) {
+    var normalized = normalizeLayoutPreset(preset);
+    document.body.setAttribute('data-layout-preset', normalized);
+    return normalized;
+  }
+
+  function setActiveLayoutButton(preset) {
+    var normalized = normalizeLayoutPreset(preset);
+    var buttons = document.querySelectorAll('.printer-layout-btn');
+    for (var i = 0; i < buttons.length; i++) {
+      var isActive = buttons[i].getAttribute('data-layout-preset') === normalized;
+      buttons[i].classList.toggle('active', isActive);
+      buttons[i].setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    }
+  }
+
+  function setupLayoutPresets() {
+    var buttons = document.querySelectorAll('.printer-layout-btn');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function () {
+        var preset = this.getAttribute('data-layout-preset');
+        var normalized = applyLayoutPreset(preset);
+        setActiveLayoutButton(normalized);
+        localStorage.setItem(LAYOUT_PRESET_STORAGE_KEY, normalized);
+        playSound('button-sound');
+      });
+    }
+  }
+
+  function initLayoutPresets() {
+    var saved = localStorage.getItem(LAYOUT_PRESET_STORAGE_KEY);
+    var activePreset = applyLayoutPreset(saved || DEFAULT_LAYOUT_PRESET);
+    setActiveLayoutButton(activePreset);
+    setupLayoutPresets();
+  }
+
   /* ------------------------------------------------------------------ */
   /* Navigation                                                           */
   /* ------------------------------------------------------------------ */
@@ -306,6 +351,7 @@
 
     initSounds();
     initStylePresets();
+    initLayoutPresets();
 
     if (nav === 'about' && isAboutPage()) {
       setActiveButton('about');
