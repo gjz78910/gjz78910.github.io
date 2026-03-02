@@ -195,7 +195,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   --news-gap: 1.5rem;
   --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
   padding: 0;
-  margin: 0.75rem 0 0.5rem -1.8rem;
+  margin: 0.75rem 0 0.5rem -3rem;
   position: relative;
   width: 100%;
   max-width: none;
@@ -287,7 +287,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 @media (max-width: 820px) {
   .news-timeline {
     --news-date-w: 3.5rem;
-    --news-tag-w: 3.6rem;
+    --news-tag-w: 3.5rem;
     --news-gap: 1rem;
     --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
     margin-left: -10em;
@@ -298,7 +298,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 }
 @media (max-width: 560px) {
   .news-timeline {
-    --news-date-w: 3rem;
+    --news-date-w: 3.5rem;
     --news-tag-w: 3.5rem;
     --news-gap: 1rem;
     --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
