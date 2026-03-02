@@ -263,13 +263,8 @@
       setActiveButton('events');
     } else if (nav === 'publications' && isPublicationsPage()) {
       setActiveButton('publications');
-    } else if (isAboutPage()) {
-      setActiveButton('about');
-    } else if (isEventsPage()) {
-      setActiveButton('events');
-    } else if (isPublicationsPage()) {
-      setActiveButton('publications');
     } else {
+      // Default page load: all buttons appear unpressed.
       setActiveButton('');
     }
 
