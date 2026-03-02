@@ -29,7 +29,7 @@ Previously, from June 2024 to November 2025, I worked as a [KTP Associate](https
 <div class="bio-para-text" markdown="1">
 I completed my PhD in Dec 2024 in the [Department of Computer Science](https://www.lboro.ac.uk/departments/compsci/) at [Loughborough University](https://www.lboro.ac.uk/), supervised by [Dr Tao Chen](https://scholar.google.co.uk/citations?user=K4teyvoAAAAJ&hl=en) in the [<kbd>IDEAS Laboratory</kbd>](https://ideas-labo.github.io/) (Intelligent Dependability Engineering for Adaptive Software Laboratory). My PhD thesis received the [SPEC Kaivalya Dixit Distinguished Dissertation Award 2024](https://research.spec.org/awards/past-winners/2024/), a prominent award in computer benchmarking, performance evaluation, and experimental system analysis.
 </div>
-<img class="bio-logo" src="/images/event_images/spec-award.jpg" alt="SPEC Kaivalya Dixit Distinguished Dissertation Award" style="max-height: 160px;">
+<img class="bio-logo" src="/images/event_images/spec-award.jpg" alt="SPEC Kaivalya Dixit Distinguished Dissertation Award" style="max-height: 180px;">
 </div>
 
 ## Research Interests
@@ -146,8 +146,8 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 .bio-para-text { flex: 1; min-width: 0; text-align: justify; }
 .bio-logo { width: auto; border-radius: 4px; flex-shrink: 0; }
 @media (max-width: 640px) {
-  .bio-para { flex-direction: column; align-items: flex-start; }
-  .bio-logo { align-self: center; margin-top: 0.75rem; }
+  .bio-para { flex-direction: column; align-items: flex-start; margin-bottom: 1.5rem; }
+  .bio-logo { align-self: center; margin-top: 0.4rem; margin-bottom: 0; }
 }
 .research-grid {
   display: grid;
