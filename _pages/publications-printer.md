@@ -27,7 +27,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
     <div class="pub-head"><span class="pub-badge venue">MSR'26</span> <span class="pub-badge ccf">CCF-C</span> <span class="pub-badge ranking">CORE-A</span></div>
     <div class="pub-title"><a href="https://arxiv.org/abs/2601.04886">Analyzing Message-Code Inconsistency in AI Coding Agent-Authored Pull Requests</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span> <b>J. Gong</b>, G. Pinna, Y. Bian, and J. M. Zhang</div>
-    <div class="pub-venue"><span class="pub-label">Venue</span> ACM/IEEE International Conference on Mining Software Repositories, Mining Challenge Track <a href="https://2026.msrconf.org/track/msr-2026-mining-challenge#Call-for-Mining-Challenge-Papers">(MSR 2026)</a></div>
+    <div class="pub-venue"><span class="pub-label">Venue</span> International Conference on Mining Software Repositories, Mining Challenge Track <a href="https://2026.msrconf.org/track/msr-2026-mining-challenge#Call-for-Mining-Challenge-Papers">(MSR 2026)</a></div>
     <div class="pub-meta"><span class="pub-label">Year</span> 2026</div>
   </article>
 
@@ -115,7 +115,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
     <div class="pub-head"><span class="pub-badge venue">FSE'23</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">CORE-A*</span></div>
     <div class="pub-title"><a href="https://arxiv.org/pdf/2306.06651">Predicting Software Performance with Divide-and-Learn</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span> <b>J. Gong</b> and T. Chen</div>
-    <div class="pub-venue"><span class="pub-label">Venue</span> ACM Joint ESEC/FSE <a href="https://2023.esec-fse.org/">(ESEC/FSE 2023)</a></div>
+    <div class="pub-venue"><span class="pub-label">Venue</span> ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering <a href="https://2023.esec-fse.org/">(ESEC/FSE 2023)</a></div>
     <div class="pub-meta"><span class="pub-label">Year</span> 2023 | <span class="pub-label">Pages</span> 13</div>
   </article>
 
