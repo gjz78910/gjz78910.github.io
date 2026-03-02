@@ -257,7 +257,7 @@
 
 /* Name — Courier Prime Bold */
 .printer-brand {
-  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-family: 'Courier Prime', 'Courier New', 'Microsoft YaHei', monospace;
   font-weight: 700;
   color: #1c1c1c;
   font-size: 1.3rem;
