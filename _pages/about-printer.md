@@ -282,10 +282,11 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   min-width: 0;
   overflow-wrap: break-word;
   align-self: start;
+  margin-top: -0.1em;
 }
 @media (max-width: 820px) {
   .news-timeline {
-    --news-date-w: 3.3rem;
+    --news-date-w: 3rem;
     --news-tag-w: 3.6rem;
     --news-gap: 0.65rem;
     --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
@@ -297,9 +298,9 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 }
 @media (max-width: 560px) {
   .news-timeline {
-    --news-date-w: 3.2rem;
+    --news-date-w: 2.5rem;
     --news-tag-w: 3.5rem;
-    --news-gap: 0.42rem;
+    --news-gap: 0.5rem;
     --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
     margin-left: -1.1rem;
   }
