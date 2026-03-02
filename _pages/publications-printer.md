@@ -24,7 +24,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
 
 <div class="pub-list view-compact" id="pub-list">
   <article class="pub-item" data-type="conference">
-    <div class="pub-head"><span class="pub-badge venue">MSR'26</span> <span class="pub-badge ccf">CCF-C</span> <span class="pub-badge ranking">CORE-A</span> <span class="pub-badge interest">Trust AI SDLC</span></div>
+    <div class="pub-head"><span class="pub-badge venue">MSR'26</span> <span class="pub-badge ccf">CCF-C</span> <span class="pub-badge ranking">CORE-A</span> <span class="pub-badge interest">Trust AI4SE</span></div>
     <div class="pub-title"><a href="https://arxiv.org/abs/2601.04886">Analyzing Message-Code Inconsistency in AI Coding Agent-Authored Pull Requests</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span> <b>J. Gong</b>, G. Pinna, Y. Bian, and J. M. Zhang</div>
     <div class="pub-venue"><span class="pub-label">Venue</span> International Conference on Mining Software Repositories, Mining Challenge Track <a href="https://2026.msrconf.org/track/msr-2026-mining-challenge#Call-for-Mining-Challenge-Papers">(MSR 2026)</a></div>
@@ -32,7 +32,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
   </article>
 
   <article class="pub-item" data-type="conference">
-    <div class="pub-head"><span class="pub-badge venue">MSR'26</span> <span class="pub-badge ccf">CCF-C</span> <span class="pub-badge ranking">CORE-A</span> <span class="pub-badge interest">Trust AI SDLC</span></div>
+    <div class="pub-head"><span class="pub-badge venue">MSR'26</span> <span class="pub-badge ccf">CCF-C</span> <span class="pub-badge ranking">CORE-A</span> <span class="pub-badge interest">Trust AI4SE</span></div>
     <div class="pub-title"><a href="https://arxiv.org/abs/2601.04886">Comparing AI Coding Agents: A Task-Stratified Analysis of Pull Request Acceptance</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span> G. Pinna, <b>J. Gong</b>, D. Williams, and F. Sarro</div>
     <div class="pub-venue"><span class="pub-label">Venue</span> ACM/IEEE International Conference on Mining Software Repositories, Mining Challenge Track <a href="https://2026.msrconf.org/track/msr-2026-mining-challenge#Call-for-Mining-Challenge-Papers">(MSR 2026)</a></div>
@@ -40,7 +40,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
   </article>
 
   <article class="pub-item" data-type="conference">
-    <div class="pub-head"><span class="pub-badge venue">ICSE'26</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">CORE-A*</span> <span class="pub-badge interest">Config Perf</span></div>
+    <div class="pub-head"><span class="pub-badge venue">ICSE'26</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">CORE-A*</span> <span class="pub-badge interest">Config Perf Eng</span></div>
     <div class="pub-title"><a href="https://arxiv.org/abs/2507.08730">Dually Hierarchical Drift Adaptation for Online Configuration Performance Learning</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span> Z. Xiang, <b>J. Gong</b>, and T. Chen</div>
     <div class="pub-venue"><span class="pub-label">Venue</span> IEEE/ACM International Conference on Software Engineering <a href="https://conf.researchr.org/home/icse-2026">(ICSE 2026)</a></div>
@@ -48,7 +48,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
   </article>
 
   <article class="pub-item" data-type="conference">
-    <div class="pub-head"><span class="pub-badge venue">ASE'25</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">CORE-A*</span> <span class="pub-badge interest">Code Opt</span></div>
+    <div class="pub-head"><span class="pub-badge venue">ASE'25</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">CORE-A*</span> <span class="pub-badge interest">Code Perf Opt</span></div>
     <div class="pub-title"><a href="https://arxiv.org/abs/2508.01443">Tuning LLM-based Code Optimization via Meta-Prompting: An Industrial Perspective</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span> <b>J. Gong</b>, R. Giavrimis, P. Brookes, V. Voskanyan, F. Wu, M. Ashiga, M. Truscott, M. Basios, L. Kanthan, J. Xu, and Z. Wang</div>
     <div class="pub-venue"><span class="pub-label">Venue</span> IEEE/ACM International Conference on Automated Software Engineering <a href="https://conf.researchr.org/home/ase-2025">(ASE 2025)</a></div>
@@ -56,7 +56,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
   </article>
 
   <article class="pub-item" data-type="conference">
-    <div class="pub-head"><span class="pub-badge venue">SSBSE'25</span> <span class="pub-badge ccf">Challenge</span> <span class="pub-badge ranking">CORE-B</span> <span class="pub-badge interest">Code Opt</span></div>
+    <div class="pub-head"><span class="pub-badge venue">SSBSE'25</span> <span class="pub-badge ccf">Challenge</span> <span class="pub-badge ranking">CORE-B</span> <span class="pub-badge interest">Code Perf Opt</span></div>
     <div class="pub-title"><a href="placeholder-link">GA4GC: Greener Agent for Greener Code via Multi-Objective Configuration Optimization</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span> <b>J. Gong</b>, Y. Bian, L. de la Cal, G. Pinna, A. Uteem, D. Williams, M. Zamorano, K. Even-Mendoza, W. B. Langdon, H. Menendez, and F. Sarro</div>
     <div class="pub-venue"><span class="pub-label">Venue</span> Symposium on Search-Based Software Engineering, Challenge Track <a href="https://conf.researchr.org/home/ssbse-2025">(SSBSE 2025)</a></div>
@@ -64,7 +64,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
   </article>
 
   <article class="pub-item" data-type="journal">
-    <div class="pub-head"><span class="pub-badge venue">TOSEM'25</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">JCR-Q1</span> <span class="pub-badge interest">AI4SE &amp; SE4AI</span></div>
+    <div class="pub-head"><span class="pub-badge venue">TOSEM'25</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">JCR-Q1</span> <span class="pub-badge interest">AI4SE</span></div>
     <div class="pub-title"><a href="https://dl.acm.org/doi/abs/10.1145/3750040">Learning Software Bug Reports: A Systematic Literature Review</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span> G. Long, <b>J. Gong</b>, H. Fang, and T. Chen</div>
     <div class="pub-venue"><span class="pub-label">Venue</span> ACM Transactions on Software Engineering and Methodology <a href="https://dl.acm.org/toc/tosem/justaccepted">(TOSEM)</a></div>
@@ -72,7 +72,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
   </article>
 
   <article class="pub-item" data-type="journal">
-    <div class="pub-head"><span class="pub-badge venue">TSE'24</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">JCR-Q1</span> <span class="pub-badge interest">Config Perf</span></div>
+    <div class="pub-head"><span class="pub-badge venue">TSE'24</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">JCR-Q1</span> <span class="pub-badge interest">Config Perf Eng</span></div>
     <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10832565">Accuracy Can Lie: On the Impact of Surrogate Model in Configuration Tuning</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span> P. Chen, <b>J. Gong</b>, and T. Chen</div>
     <div class="pub-venue"><span class="pub-label">Venue</span> IEEE Transactions on Software Engineering <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32">(TSE)</a></div>
@@ -80,7 +80,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
   </article>
 
   <article class="pub-item" data-type="journal">
-    <div class="pub-head"><span class="pub-badge venue">TSE'24</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">JCR-Q1</span> <span class="pub-badge interest">Config Perf</span></div>
+    <div class="pub-head"><span class="pub-badge venue">TSE'24</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">JCR-Q1</span> <span class="pub-badge interest">Config Perf Eng</span></div>
     <div class="pub-title"><a href="https://arxiv.org/abs/2409.07629">Dividable Configuration Performance Learning</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span> <b>J. Gong</b>, T. Chen, and R. Bahsoon</div>
     <div class="pub-venue"><span class="pub-label">Venue</span> IEEE Transactions on Software Engineering <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32">(TSE)</a></div>
@@ -88,7 +88,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
   </article>
 
   <article class="pub-item" data-type="journal">
-    <div class="pub-head"><span class="pub-badge venue">TOSEM'24</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">JCR-Q1</span> <span class="pub-badge interest">Config Perf</span></div>
+    <div class="pub-head"><span class="pub-badge venue">TOSEM'24</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">JCR-Q1</span> <span class="pub-badge interest">Config Perf Eng</span></div>
     <div class="pub-title"><a href="https://arxiv.org/abs/2403.03322">Deep Configuration Performance Learning: A Systematic Survey and Taxonomy</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span> <b>J. Gong</b> and T. Chen</div>
     <div class="pub-venue"><span class="pub-label">Venue</span> ACM Transactions on Software Engineering and Methodology <a href="https://dl.acm.org/journal/tosem">(TOSEM)</a></div>
@@ -96,7 +96,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
   </article>
 
   <article class="pub-item" data-type="conference">
-    <div class="pub-head"><span class="pub-badge venue">SSBSE'24</span> <span class="pub-badge ccf">Winner</span> <span class="pub-badge ranking">CORE-B</span> <span class="pub-badge interest">Code Opt</span></div>
+    <div class="pub-head"><span class="pub-badge venue">SSBSE'24</span> <span class="pub-badge ccf">Winner</span> <span class="pub-badge ranking">CORE-B</span> <span class="pub-badge interest">SE4AI</span></div>
     <div class="pub-title"><a href="https://arxiv.org/abs/2407.14982">GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span> <b>J. Gong</b>, S. Li, G. d'Aloisio, Z. Ding, Y. Ye, W. Langdon, and F. Sarro</div>
     <div class="pub-venue"><span class="pub-label">Venue</span> Symposium on Search-Based Software Engineering, Challenge Track <a href="https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge">(SSBSE 2024)</a></div>
@@ -104,7 +104,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
   </article>
 
   <article class="pub-item" data-type="conference">
-    <div class="pub-head"><span class="pub-badge venue">FSE'24</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">CORE-A*</span> <span class="pub-badge interest">Config Perf</span></div>
+    <div class="pub-head"><span class="pub-badge venue">FSE'24</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">CORE-A*</span> <span class="pub-badge interest">Config Perf Eng</span></div>
     <div class="pub-title"><a href="https://arxiv.org/abs/2402.03183">Predicting Configuration Performance in Multiple Environments with Sequential Meta-Learning</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span> <b>J. Gong</b> and T. Chen</div>
     <div class="pub-venue"><span class="pub-label">Venue</span> ACM International Conference on the Foundations of Software Engineering <a href="https://conf.researchr.org/home/fse-2024">(FSE 2024)</a></div>
@@ -112,7 +112,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
   </article>
 
   <article class="pub-item" data-type="conference">
-    <div class="pub-head"><span class="pub-badge venue">FSE'23</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">CORE-A*</span> <span class="pub-badge interest">Config Perf</span></div>
+    <div class="pub-head"><span class="pub-badge venue">FSE'23</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">CORE-A*</span> <span class="pub-badge interest">Config Perf Eng</span></div>
     <div class="pub-title"><a href="https://arxiv.org/pdf/2306.06651">Predicting Software Performance with Divide-and-Learn</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span> <b>J. Gong</b> and T. Chen</div>
     <div class="pub-venue"><span class="pub-label">Venue</span> ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering <a href="https://2023.esec-fse.org/">(ESEC/FSE 2023)</a></div>
@@ -120,7 +120,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
   </article>
 
   <article class="pub-item" data-type="conference">
-    <div class="pub-head"><span class="pub-badge venue">MSR'22</span> <span class="pub-badge ccf">CCF-C</span> <span class="pub-badge ranking">CORE-A</span> <span class="pub-badge interest">Config Perf</span></div>
+    <div class="pub-head"><span class="pub-badge venue">MSR'22</span> <span class="pub-badge ccf">CCF-C</span> <span class="pub-badge ranking">CORE-A</span> <span class="pub-badge interest">Config Perf Eng</span></div>
     <div class="pub-title"><a href="https://arxiv.org/abs/2203.15988">Does Configuration Encoding Matter in Learning Software Performance? An Empirical Study on Encoding Schemes</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span> <b>J. Gong</b> and T. Chen</div>
     <div class="pub-venue"><span class="pub-label">Venue</span> International Conference on Mining Software Repositories <a href="https://conf.researchr.org/details/msr-2022/msr-2022-technical-papers/1/Does-Configuration-Encoding-Matter-in-Learning-Software-Performance-An-Empirical-Stu">(MSR 2022)</a></div>
