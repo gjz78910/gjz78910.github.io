@@ -9,7 +9,7 @@
   var STYLE_PRESET_STORAGE_KEY = 'printer-style-preset';
   var DEFAULT_STYLE_PRESET = 'book';
   var LAYOUT_PRESET_STORAGE_KEY = 'printer-layout-preset';
-  var DEFAULT_LAYOUT_PRESET = 'classic';
+  var DEFAULT_LAYOUT_PRESET = 'manuscript';
   var pendingActionTimer = null;
   var pendingPrintTimer = null;
 
@@ -220,7 +220,7 @@
   }
 
   function normalizeLayoutPreset(preset) {
-    if (preset === 'classic' || preset === 'reader' || preset === 'showcase') {
+    if (preset === 'manuscript' || preset === 'dossier' || preset === 'scrapbook') {
       return preset;
     }
     return DEFAULT_LAYOUT_PRESET;
