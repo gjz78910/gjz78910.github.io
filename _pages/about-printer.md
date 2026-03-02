@@ -190,9 +190,9 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 }
 .news-timeline {
   list-style: none;
-  --news-date-w: 5.6rem;
+  --news-date-w: 5.0rem;
   --news-tag-w: 4.2rem;
-  --news-gap: 0.48rem;
+  --news-gap: 0.72rem;
   --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
   padding: 0;
   margin: 0.75rem 0 0.5rem;
@@ -221,7 +221,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 .news-timeline li::before {
   content: '';
   position: absolute;
-  left: calc(var(--news-line-x) - 5px);
+  left: calc(var(--news-line-x) - 3px);
   top: 0.38em;
   width: 8px;
   height: 8px;
@@ -246,38 +246,29 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   font-weight: bold;
   color: #4f493f;
   border-radius: 4px;
-  border: 1px solid rgba(0,0,0,0.12);
-  background: linear-gradient(to bottom, rgba(255,255,255,0.24) 0%, rgba(0,0,0,0.06) 100%);
+  border: 1px solid rgba(0,0,0,0.16);
+  background-repeat: no-repeat;
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.85),
-    inset 0 -1px 0 rgba(0,0,0,0.06);
+    inset 0 1px 0 rgba(255,255,255,0.18),
+    inset 0 -1px 0 rgba(0,0,0,0.10);
   white-space: nowrap;
   vertical-align: middle;
   margin-right: 0;
 }
 .news-badge::before,
 .news-badge::after {
-  content: '';
-  position: absolute;
-  top: -1px;
-  width: 8px;
-  height: 4px;
-  background: #fffefa;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.28);
-  border-radius: 0 0 5px 5px;
+  content: none;
 }
-.news-badge::before { left: 7px; }
-.news-badge::after { right: 7px; }
-.news-badge.paper   { color: #fff; border-color: rgba(70,120,70,0.6); background-color: #58b45f; }
-.news-badge.award   { color: #fff; border-color: rgba(150,70,70,0.6); background-color: #d96868; }
-.news-badge.service { color: #fff; border-color: rgba(45,90,130,0.6); background-color: #1b8dbf; }
+.news-badge.paper   { color: #fff; border-color: rgba(70,120,70,0.5); background-image: radial-gradient(10px 5px at 14px -1px, rgba(142,142,142,0.55), transparent 72%), radial-gradient(10px 5px at calc(100% - 14px) -1px, rgba(142,142,142,0.55), transparent 72%), linear-gradient(to bottom, #67be6d 0%, #56ae5d 100%); }
+.news-badge.award   { color: #fff; border-color: rgba(150,70,70,0.5); background-image: radial-gradient(10px 5px at 14px -1px, rgba(142,142,142,0.55), transparent 72%), radial-gradient(10px 5px at calc(100% - 14px) -1px, rgba(142,142,142,0.55), transparent 72%), linear-gradient(to bottom, #e07474 0%, #cf6363 100%); }
+.news-badge.service { color: #fff; border-color: rgba(45,90,130,0.5); background-image: radial-gradient(10px 5px at 14px -1px, rgba(142,142,142,0.55), transparent 72%), radial-gradient(10px 5px at calc(100% - 14px) -1px, rgba(142,142,142,0.55), transparent 72%), linear-gradient(to bottom, #2a9acc 0%, #1988b8 100%); }
 .news-date {
   grid-column: 1;
-  text-align: right;
+  text-align: left;
   font-size: 0.83em;
   color: #999;
   line-height: 1.4;
-  padding-top: 0.08rem;
+  padding-top: 0.07rem;
 }
 .news-content {
   grid-column: 3;
@@ -286,9 +277,9 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 }
 @media (max-width: 820px) {
   .news-timeline {
-    --news-date-w: 4.4rem;
-    --news-tag-w: 3.65rem;
-    --news-gap: 0.36rem;
+    --news-date-w: 4.7rem;
+    --news-tag-w: 3.8rem;
+    --news-gap: 0.5rem;
     --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
   }
   .news-date {
@@ -297,9 +288,9 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 }
 @media (max-width: 560px) {
   .news-timeline {
-    --news-date-w: 4.15rem;
-    --news-tag-w: 3.45rem;
-    --news-gap: 0.28rem;
+    --news-date-w: 4.5rem;
+    --news-tag-w: 3.7rem;
+    --news-gap: 0.38rem;
     --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
   }
   .news-badge { font-size: 64%; }
