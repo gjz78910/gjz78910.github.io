@@ -288,7 +288,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   .news-timeline {
     --news-date-w: 5rem;
     --news-tag-w: 3.5rem;
-    --news-gap: 1rem;
+    --news-gap: 2rem;
     --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
     margin-left: -10em;
   }
