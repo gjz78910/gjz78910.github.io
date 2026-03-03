@@ -44,7 +44,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
     <div class="pub-title"><a href="https://arxiv.org/abs/2507.08730">Dually Hierarchical Drift Adaptation for Online Configuration Performance Learning</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value">Z. Xiang, <b>J. Gong</b>, and T. Chen</span></div>
     <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">IEEE/ACM International Conference on Software Engineering <a href="https://conf.researchr.org/home/icse-2026">(ICSE 2026)</a></span></div>
-    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2026 | <span class="pub-label">Pages</span> 13</span></div>
+    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2026 | <span class="pub-pages-label">Pages</span> 13</span></div>
   </article>
 
   <article class="pub-item" data-type="conference">
@@ -52,7 +52,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
     <div class="pub-title"><a href="https://arxiv.org/abs/2508.01443">Tuning LLM-based Code Optimization via Meta-Prompting: An Industrial Perspective</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value"><b>J. Gong</b>, R. Giavrimis, P. Brookes, V. Voskanyan, F. Wu, M. Ashiga, M. Truscott, M. Basios, L. Kanthan, J. Xu, and Z. Wang</span></div>
     <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">IEEE/ACM International Conference on Automated Software Engineering <a href="https://conf.researchr.org/home/ase-2025">(ASE 2025)</a></span></div>
-    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2025 | <span class="pub-label">Pages</span> 12</span></div>
+    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2025 | <span class="pub-pages-label">Pages</span> 12</span></div>
   </article>
 
   <article class="pub-item" data-type="conference">
@@ -68,7 +68,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
     <div class="pub-title"><a href="https://dl.acm.org/doi/abs/10.1145/3750040">Learning Software Bug Reports: A Systematic Literature Review</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value">G. Long, <b>J. Gong</b>, H. Fang, and T. Chen</span></div>
     <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">ACM Transactions on Software Engineering and Methodology <a href="https://dl.acm.org/toc/tosem/justaccepted">(TOSEM)</a></span></div>
-    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2025 | <span class="pub-label">Pages</span> 47</span></div>
+    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2025 | <span class="pub-pages-label">Pages</span> 47</span></div>
   </article>
 
   <article class="pub-item" data-type="journal">
@@ -76,7 +76,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
     <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10832565">Accuracy Can Lie: On the Impact of Surrogate Model in Configuration Tuning</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value">P. Chen, <b>J. Gong</b>, and T. Chen</span></div>
     <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">IEEE Transactions on Software Engineering <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32">(TSE)</a></span></div>
-    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2024 | <span class="pub-label">Pages</span> 33</span></div>
+    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2024 | <span class="pub-pages-label">Pages</span> 33</span></div>
   </article>
 
   <article class="pub-item" data-type="journal">
@@ -84,7 +84,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
     <div class="pub-title"><a href="https://arxiv.org/abs/2409.07629">Dividable Configuration Performance Learning</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value"><b>J. Gong</b>, T. Chen, and R. Bahsoon</span></div>
     <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">IEEE Transactions on Software Engineering <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32">(TSE)</a></span></div>
-    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2024 | <span class="pub-label">Pages</span> 29</span></div>
+    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2024 | <span class="pub-pages-label">Pages</span> 29</span></div>
   </article>
 
   <article class="pub-item" data-type="journal">
@@ -92,7 +92,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
     <div class="pub-title"><a href="https://arxiv.org/abs/2403.03322">Deep Configuration Performance Learning: A Systematic Survey and Taxonomy</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value"><b>J. Gong</b> and T. Chen</span></div>
     <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">ACM Transactions on Software Engineering and Methodology <a href="https://dl.acm.org/journal/tosem">(TOSEM)</a></span></div>
-    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2024 | <span class="pub-label">Pages</span> 62</span></div>
+    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2024 | <span class="pub-pages-label">Pages</span> 62</span></div>
   </article>
 
   <article class="pub-item" data-type="conference">
@@ -100,7 +100,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
     <div class="pub-title"><a href="https://arxiv.org/abs/2407.14982">GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value"><b>J. Gong</b>, S. Li, G. d'Aloisio, Z. Ding, Y. Ye, W. Langdon, and F. Sarro</span></div>
     <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">Symposium on Search-Based Software Engineering, Challenge Track <a href="https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge">(SSBSE 2024)</a></span></div>
-    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2024 | <span class="pub-label">Pages</span> 6</span></div>
+    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2024 | <span class="pub-pages-label">Pages</span> 6</span></div>
   </article>
 
   <article class="pub-item" data-type="conference">
@@ -108,7 +108,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
     <div class="pub-title"><a href="https://arxiv.org/abs/2402.03183">Predicting Configuration Performance in Multiple Environments with Sequential Meta-Learning</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value"><b>J. Gong</b> and T. Chen</span></div>
     <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">ACM International Conference on the Foundations of Software Engineering <a href="https://conf.researchr.org/home/fse-2024">(FSE 2024)</a></span></div>
-    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2024 | <span class="pub-label">Pages</span> 24</span></div>
+    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2024 | <span class="pub-pages-label">Pages</span> 24</span></div>
   </article>
 
   <article class="pub-item" data-type="conference">
@@ -116,7 +116,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
     <div class="pub-title"><a href="https://arxiv.org/pdf/2306.06651">Predicting Software Performance with Divide-and-Learn</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value"><b>J. Gong</b> and T. Chen</span></div>
     <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering <a href="https://2023.esec-fse.org/">(ESEC/FSE 2023)</a></span></div>
-    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2023 | <span class="pub-label">Pages</span> 13</span></div>
+    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2023 | <span class="pub-pages-label">Pages</span> 13</span></div>
   </article>
 
   <article class="pub-item" data-type="conference">
@@ -124,7 +124,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
     <div class="pub-title"><a href="https://arxiv.org/abs/2203.15988">Does Configuration Encoding Matter in Learning Software Performance? An Empirical Study on Encoding Schemes</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value"><b>J. Gong</b> and T. Chen</span></div>
     <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">International Conference on Mining Software Repositories <a href="https://conf.researchr.org/details/msr-2022/msr-2022-technical-papers/1/Does-Configuration-Encoding-Matter-in-Learning-Software-Performance-An-Empirical-Stu">(MSR 2022)</a></span></div>
-    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2022 | <span class="pub-label">Pages</span> 13</span></div>
+    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2022 | <span class="pub-pages-label">Pages</span> 13</span></div>
   </article>
 </div>
 
@@ -212,7 +212,8 @@ document.querySelectorAll('.pub-filter').forEach(btn => {
   text-decoration: none;
 }
 .pub-label {
-  display: block;
+  display: inline-block;
+  width: 4.6rem; /* wide enough for "Authors" */
   color: #666;
   font-weight: 700;
   font-size: 0.88em;
@@ -225,6 +226,9 @@ document.querySelectorAll('.pub-filter').forEach(btn => {
   grid-template-columns: auto 1fr;
   column-gap: 0.4rem;
   align-items: start;
+}
+.pub-pages-label {
+  font-weight: 700;
 }
 .pub-value {
   min-width: 0;
