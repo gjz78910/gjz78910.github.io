@@ -290,7 +290,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
     --news-tag-w: 3.5rem;
     --news-gap: 2rem;
     --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
-    margin-left: -10em;
+    margin-left: 0em;
   }
   .news-date {
     font-size: 0.79em;
@@ -302,7 +302,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
     --news-tag-w: 3.5rem;
     --news-gap: 1rem;
     --news-line-x: calc(var(--news-date-w) + (var(--news-gap) / 2));
-    margin-left: -10em;
+    margin-left: 0em;
   }
   .news-badge { font-size: 68%; }
 }
