@@ -212,8 +212,7 @@ document.querySelectorAll('.pub-filter').forEach(btn => {
   text-decoration: none;
 }
 .pub-label {
-  display: inline-block;
-  width: 4.6rem; /* wide enough for "Authors" */
+  display: block;
   color: #666;
   font-weight: 700;
   font-size: 0.88em;
@@ -229,6 +228,8 @@ document.querySelectorAll('.pub-filter').forEach(btn => {
 }
 .pub-pages-label {
   font-weight: 700;
+  color: #666;
+  font-size: 0.88em;
 }
 .pub-value {
   min-width: 0;
