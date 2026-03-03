@@ -515,6 +515,14 @@
    ============================================================= */
 @media (max-width: 640px) {
   .events-grid { grid-template-columns: 1fr; }
+  .printer-nav {
+    gap: 0.45rem;
+  }
+  .printer-nav-btn {
+    font-size: 0.72rem;
+    padding: 0.48rem 1.05rem;
+    letter-spacing: 1.1px;
+  }
 }
 
 @media (max-width: 768px) {
