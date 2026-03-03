@@ -230,7 +230,6 @@ document.querySelectorAll('.pub-filter').forEach(btn => {
 .pub-pages-label {
   font-weight: 700;
   color: #666;
-  font-size: 0.88em;
 }
 .pub-value {
   min-width: 0;
