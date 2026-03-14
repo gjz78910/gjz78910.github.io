@@ -620,6 +620,12 @@
 
 .sound-knob.unmuted .sound-knob-face {
   transform: translate(-50%, -50%) rotate(-40deg);
+  background: radial-gradient(
+    circle at 42% 36%,
+    #b8e6a0 0%,
+    #8ccc72 52%,
+    #6aaa50 100%
+  );
 }
 
 .knob-icon {
