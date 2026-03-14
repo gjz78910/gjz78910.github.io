@@ -8,6 +8,7 @@
   var PAPER_ANIMATION_DELAY_MS = 1000;
   var pendingActionTimer = null;
   var pendingPrintTimer = null;
+  var isMuted = true; // default: muted
 
   /* ------------------------------------------------------------------ */
   /* Page detection                                                       */
@@ -71,6 +72,7 @@
   /* ------------------------------------------------------------------ */
 
   function playSound(id) {
+    if (isMuted) return;
     var pool = soundPools[id];
     if (!pool || !pool.players || pool.players.length === 0) return;
 
@@ -166,6 +168,32 @@
       feedPaperIn();
       pendingPrintTimer = null;
     }, PAPER_ANIMATION_DELAY_MS);
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* Sound knob                                                          */
+  /* ------------------------------------------------------------------ */
+
+  function setupSoundKnob() {
+    var knob = document.getElementById('btn-sound-knob');
+    var iconMuted = document.getElementById('knob-icon-muted');
+    var iconUnmuted = document.getElementById('knob-icon-unmuted');
+    if (!knob) return;
+
+    knob.addEventListener('click', function () {
+      isMuted = !isMuted;
+      if (isMuted) {
+        knob.classList.remove('unmuted');
+        knob.setAttribute('aria-label', 'Sound muted — click to enable');
+        if (iconMuted) iconMuted.style.display = '';
+        if (iconUnmuted) iconUnmuted.style.display = 'none';
+      } else {
+        knob.classList.add('unmuted');
+        knob.setAttribute('aria-label', 'Sound enabled — click to mute');
+        if (iconMuted) iconMuted.style.display = 'none';
+        if (iconUnmuted) iconUnmuted.style.display = '';
+      }
+    });
   }
 
   /* ------------------------------------------------------------------ */
@@ -286,6 +314,7 @@
       if (paper) paper.style.display = 'none';
     }
 
+    setupSoundKnob();
     setupNavigation();
   }
 
