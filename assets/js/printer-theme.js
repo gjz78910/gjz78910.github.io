@@ -274,8 +274,15 @@
       if (content) content.style.visibility = 'visible';
       if (paper) paper.style.display = 'block';
       startPrintingWithDelay();
+    } else if (isAboutPage()) {
+      // Direct visit to homepage — auto-print the about page
+      setActiveButton('about');
+      var content = document.querySelector('.paper-content');
+      if (content) content.style.visibility = 'visible';
+      if (paper) paper.style.display = 'block';
+      startPrintingWithDelay();
     } else {
-      // Direct visit — hide paper entirely, just show the printer body
+      // Direct visit to other pages — hide paper entirely, just show the printer body
       if (paper) paper.style.display = 'none';
     }
 
