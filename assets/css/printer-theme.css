@@ -592,7 +592,7 @@
   z-index: 2;
 }
 
-/* Inner recessed disc */
+/* Electronic screen panel */
 .sound-knob-face {
   position: absolute;
   width: 36px;
@@ -600,34 +600,94 @@
   border-radius: 50%;
   top: 50%;
   left: 50%;
+  overflow: hidden;
+
+  /* Screen off: deep dark */
   background: radial-gradient(
-    circle at 42% 36%,
-    #d4d0c6 0%,
-    #bdb8ac 52%,
-    #a8a399 100%
+    circle at 50% 50%,
+    #1c2318 0%,
+    #0d1209 60%,
+    #070b05 100%
   );
   box-shadow:
-    0 2px 6px rgba(0,0,0,0.3) inset,
-    0 1px 0 rgba(255,255,255,0.28);
+    0 0 0 2px #0a0a0a inset,
+    0 3px 8px rgba(0,0,0,0.75) inset;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
 
   /* Counter-rotate to keep icon upright while knob rotates */
   transform: translate(-50%, -50%) rotate(40deg);
-  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition:
+    transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
+/* Glossy lens highlight — always present */
+.sound-knob-face::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 7%;
+  width: 58%;
+  height: 42%;
+  background: radial-gradient(
+    ellipse at 50% 10%,
+    rgba(255,255,255,0.16) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Screen on: bright green LED */
 .sound-knob.unmuted .sound-knob-face {
   transform: translate(-50%, -50%) rotate(-40deg);
+  background: radial-gradient(
+    circle at 46% 40%,
+    #dfffcc 0%,
+    #8fff60 22%,
+    #44d428 52%,
+    #1e8c18 78%,
+    #0d4a0a 100%
+  );
+  box-shadow:
+    0 0 0 2px #0a0a0a inset,
+    0 0 8px  rgba(110, 255, 70, 1),
+    0 0 18px rgba(90,  255, 55, 0.7),
+    0 0 35px rgba(80,  255, 50, 0.3);
 }
 
+/* Brighter gloss when screen is on */
+.sound-knob.unmuted .sound-knob-face::after {
+  background: radial-gradient(
+    ellipse at 50% 10%,
+    rgba(255,255,255,0.55) 0%,
+    rgba(255,255,255,0.15) 45%,
+    transparent 70%
+  );
+}
+
+/* Icon on dark screen: dim, ghostly */
 .knob-icon {
   width: 18px;
   height: 18px;
-  color: #2a2520;
+  color: #3a5530;
+  opacity: 0.55;
   flex-shrink: 0;
   display: block;
+  position: relative;
+  z-index: 1;
+  transition: color 0.35s ease, opacity 0.35s ease;
+}
+
+/* Icon on bright screen: dark for contrast */
+.sound-knob.unmuted .knob-icon {
+  color: #0a2808;
+  opacity: 1;
 }
 
 
