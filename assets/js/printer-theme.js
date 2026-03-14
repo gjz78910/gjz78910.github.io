@@ -8,7 +8,7 @@
   var PAPER_ANIMATION_DELAY_MS = 1000;
   var pendingActionTimer = null;
   var pendingPrintTimer = null;
-  var isMuted = true; // default: muted
+  var isMuted = localStorage.getItem('printer-muted') !== 'false'; // default: muted
 
   /* ------------------------------------------------------------------ */
   /* Page detection                                                       */
@@ -174,25 +174,33 @@
   /* Sound knob                                                          */
   /* ------------------------------------------------------------------ */
 
+  function applyKnobState(knob, iconMuted, iconUnmuted) {
+    if (isMuted) {
+      knob.classList.remove('unmuted');
+      knob.setAttribute('aria-label', 'Sound muted — click to enable');
+      if (iconMuted) iconMuted.style.display = '';
+      if (iconUnmuted) iconUnmuted.style.display = 'none';
+    } else {
+      knob.classList.add('unmuted');
+      knob.setAttribute('aria-label', 'Sound enabled — click to mute');
+      if (iconMuted) iconMuted.style.display = 'none';
+      if (iconUnmuted) iconUnmuted.style.display = '';
+    }
+  }
+
   function setupSoundKnob() {
     var knob = document.getElementById('btn-sound-knob');
     var iconMuted = document.getElementById('knob-icon-muted');
     var iconUnmuted = document.getElementById('knob-icon-unmuted');
     if (!knob) return;
 
+    // Apply persisted state on load
+    applyKnobState(knob, iconMuted, iconUnmuted);
+
     knob.addEventListener('click', function () {
       isMuted = !isMuted;
-      if (isMuted) {
-        knob.classList.remove('unmuted');
-        knob.setAttribute('aria-label', 'Sound muted — click to enable');
-        if (iconMuted) iconMuted.style.display = '';
-        if (iconUnmuted) iconUnmuted.style.display = 'none';
-      } else {
-        knob.classList.add('unmuted');
-        knob.setAttribute('aria-label', 'Sound enabled — click to mute');
-        if (iconMuted) iconMuted.style.display = 'none';
-        if (iconUnmuted) iconUnmuted.style.display = '';
-      }
+      localStorage.setItem('printer-muted', isMuted ? 'true' : 'false');
+      applyKnobState(knob, iconMuted, iconUnmuted);
     });
   }
 
