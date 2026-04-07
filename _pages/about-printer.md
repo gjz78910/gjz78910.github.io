@@ -76,6 +76,7 @@ If you're interested in collaboration, please feel free to reach out!
 ## News
 
 <ul class="news-timeline">
+  <li class="service"><span class="news-date">Apr 2026</span><span class="news-badge service">Service</span><span class="news-content">Served as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/icse-2027"><em>ICSE 2027</em></a>.</span></li>
   <li class="service"><span class="news-date">Feb 2026</span><span class="news-badge service">Service</span><span class="news-content">Served as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/issta-2026"><em>ISSTA 2026</em></a>.</span></li>
   <li class="paper"><span class="news-date">Jan 2026</span><span class="news-badge paper">Paper</span><span class="news-content">'<a href="https://arxiv.org/abs/2601.04886">Analyzing Message-Code Inconsistency in AI Coding Agent-Authored Pull Requests</a>' and '<a href="">Comparing AI Coding Agents: A Task-Stratified Analysis of Pull Request Acceptance</a>' accepted at <a href="https://2026.msrconf.org/track/msr-2026-mining-challenge#Call-for-Mining-Challenge-Papers">MSR 2026</a> Mining Challenge track.</span></li>
   <li class="service"><span class="news-date">Jan 2026</span><span class="news-badge service">Service</span><span class="news-content">Served as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/icst-2026"><em>ICST 2026</em></a>.</span></li>
