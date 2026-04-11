@@ -8,6 +8,15 @@ redirect_from:
   - /printer/events
 ---
 
+## 2026
+
+<div class="events-grid">
+  <div class="event-card">
+    <img src="/images/event_images/ssy26.jpg" alt="Talk to the KCL Software Systems group">
+    <div class="event-caption">Talk to the <a href="https://www.kcl.ac.uk/research/ssy">KCL SSY</a> group</div>
+  </div>
+</div>
+
 ## 2025
 
 <div class="events-grid">
