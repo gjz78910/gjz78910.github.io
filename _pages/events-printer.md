@@ -12,6 +12,14 @@ redirect_from:
 
 <div class="events-grid">
   <div class="event-card">
+    <img src="/images/event_images/msr26_award.jpg" alt="MSR 2026 Distinguished Challenge Paper Award">
+    <div class="event-caption"><strong>Distinguished Challenge Paper Award</strong> at <a href="https://2026.msrconf.org/">MSR 2026</a></div>
+  </div>
+  <div class="event-card">
+    <img src="/images/event_images/msr26_poster.jpg" alt="MSR 2026 Poster">
+    <div class="event-caption">Presenting poster at <a href="https://2026.msrconf.org/">MSR 2026</a></div>
+  </div>
+  <div class="event-card">
     <img src="/images/event_images/ssy26.jpg" alt="Talk to the KCL Software Systems group">
     <div class="event-caption">Talk to the <a href="https://www.kcl.ac.uk/research/ssy">KCL SSY</a> group</div>
   </div>
