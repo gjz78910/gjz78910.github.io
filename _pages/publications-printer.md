@@ -24,6 +24,14 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
 
 <div class="pub-list view-compact" id="pub-list">
   <article class="pub-item" data-type="conference">
+    <div class="pub-head"><span class="pub-badge venue">ASE'26</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">CORE-A*</span> <span class="pub-badge interest">Trust AI4SE</span></div>
+    <div class="pub-title"><a href="https://arxiv.org/abs/2604.09297">SkillMOO: Multi-Objective Optimization of Agent Skills for Software Engineering</a></div>
+    <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value"><b>J. Gong</b>, R. Gu, Z. Fei, Y. Cao, L. Twist, A. Geiger, S. Han, D. Sobania, F. Sarro, and J. M. Zhang</span></div>
+    <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">New Ideas and Emerging Results Track, IEEE/ACM International Conference on Automated Software Engineering <a href="https://conf.researchr.org/home/ase-2026">(ASE 2026 NIER)</a></span></div>
+    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2026</span></div>
+  </article>
+
+  <article class="pub-item" data-type="conference">
     <div class="pub-head"><span class="pub-badge venue">MSR'26</span> <span class="pub-badge ccf">CCF-C</span> <span class="pub-badge ranking">CORE-A</span> <span class="pub-badge interest">Trust AI4SE</span></div>
     <div class="pub-title"><a href="https://arxiv.org/abs/2601.04886">Analyzing Message-Code Inconsistency in AI Coding Agent-Authored Pull Requests</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value"><b>J. Gong</b>, G. Pinna, Y. Bian, and J. M. Zhang</span></div>
@@ -61,6 +69,22 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
     <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value"><b>J. Gong</b>, Y. Bian, L. de la Cal, G. Pinna, A. Uteem, D. Williams, M. Zamorano, K. Even-Mendoza, W. B. Langdon, H. Menendez, and F. Sarro</span></div>
     <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">Symposium on Search-Based Software Engineering, Challenge Track <a href="https://conf.researchr.org/home/ssbse-2025">(SSBSE 2025)</a></span></div>
     <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2025</span></div>
+  </article>
+
+  <article class="pub-item" data-type="conference">
+    <div class="pub-head"><span class="pub-badge venue">ICSE'25</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">CORE-A*</span> <span class="pub-badge interest">Trust AI4SE</span></div>
+    <div class="pub-title"><a href="https://arxiv.org/abs/2502.06769">Enhancing Trust in Language Model-Based Code Optimization through RLHF: A Research Design</a></div>
+    <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value"><b>J. Gong</b></span></div>
+    <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">Doctoral and Early Career Symposium, IEEE/ACM International Conference on Software Engineering <a href="https://conf.researchr.org/home/icse-2025">(ICSE 2025 DECS)</a></span></div>
+    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2025 | <span class="pub-pages-label">Pages</span> 4</span></div>
+  </article>
+
+  <article class="pub-item" data-type="journal">
+    <div class="pub-head"><span class="pub-badge venue">TAI'25</span> <span class="pub-badge ranking">CiteScore-Q1</span> <span class="pub-badge interest">SE4AI</span></div>
+    <div class="pub-title"><a href="https://arxiv.org/abs/2503.13505">Ensemble Learning for Large Language Models in Text and Code Generation: A Survey</a></div>
+    <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value">M. Ashiga, W. Jie, F. Wu, V. Voskanyan, F. Dinmohammadi, P. Brookes, <b>J. Gong</b>, and Z. Wang</span></div>
+    <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">IEEE Transactions on Artificial Intelligence <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=9078688">(TAI)</a></span></div>
+    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2025 | <span class="pub-pages-label">Pages</span> 13</span></div>
   </article>
 
   <article class="pub-item" data-type="journal">
