@@ -16,7 +16,7 @@ redirect_from:
   <div class="svc-row"><span class="svc-tag pc">PC Member</span><span class="svc-venue"><a href="https://2027.msrconf.org/">MSR 2027</a>, <a href="https://conf.researchr.org/home/fse-2027">FSE 2027</a>, <a href="https://conf.researchr.org/home/icse-2027">ICSE 2027</a>, <a href="https://issre.github.io/">ISSRE 2026</a>, <a href="https://conf.researchr.org/home/ase-2026">ASE 2026</a> <span class="svc-note-inline">(Tools &amp; Datasets)</span>, <a href="https://conf.researchr.org/home/issta-2026">ISSTA 2026</a>, <a href="https://conf.researchr.org/home/icst-2026">ICST 2026</a>, <a href="https://www2026.thewebconf.org/">WWW 2026</a>, <a href="https://ucc.uccbdcat2024.org/index.html">IEEE/ACM UCC 2024</a></span><span class="svc-year">2024&ndash;26</span></div>
   <div class="svc-row"><span class="svc-tag junior">Junior PC</span><span class="svc-venue"><a href="https://2026.msrconf.org/">MSR 2026</a></span><span class="svc-year">2025&ndash;26</span></div>
   <div class="svc-row"><span class="svc-tag shadow">Shadow PC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/icse-2026">ICSE 2026</a></span><span class="svc-year">2025</span></div>
-  <div class="svc-row"><span class="svc-tag aec">AEC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/icse-2025">ICSE 2025</a> <span class="svc-note-inline">Artifact Evaluation Committee</span></span><span class="svc-year">2025</span></div>
+  <div class="svc-row"><span class="svc-tag aec">AEC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/icse-2025">ICSE 2025</a> <span class="svc-note-inline">(Artifact Evaluation)</span></span><span class="svc-year">2025</span></div>
 </div>
 </div>
 
