@@ -36,6 +36,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
     <div class="pub-title"><a href="https://arxiv.org/abs/2601.04886">Analyzing Message-Code Inconsistency in AI Coding Agent-Authored Pull Requests</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value"><b>J. Gong</b>, G. Pinna, Y. Bian, and J. M. Zhang</span></div>
     <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">International Conference on Mining Software Repositories, Mining Challenge Track <a href="https://2026.msrconf.org/track/msr-2026-mining-challenge#Call-for-Mining-Challenge-Papers">(MSR 2026)</a></span></div>
+    <div class="pub-award"><span class="pub-label">Award</span><span class="pub-value">Distinguished Challenge Paper Award</span></div>
     <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2026</span></div>
   </article>
 
@@ -124,6 +125,7 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
     <div class="pub-title"><a href="https://arxiv.org/abs/2407.14982">GreenStableYolo: Optimizing Inference Time and Image Quality of Text-to-Image Generation</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value"><b>J. Gong</b>, S. Li, G. d'Aloisio, Z. Ding, Y. Ye, W. Langdon, and F. Sarro</span></div>
     <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">Symposium on Search-Based Software Engineering, Challenge Track <a href="https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge">(SSBSE 2024)</a></span></div>
+    <div class="pub-award"><span class="pub-label">Award</span><span class="pub-value">Challenge Winner Award</span></div>
     <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2024 | <span class="pub-pages-label">Pages</span> 6</span></div>
   </article>
 
@@ -244,6 +246,7 @@ document.querySelectorAll('.pub-filter').forEach(btn => {
 }
 .pub-authors,
 .pub-venue,
+.pub-award,
 .pub-meta {
   margin-bottom: 0.22rem;
   display: grid;
@@ -251,6 +254,7 @@ document.querySelectorAll('.pub-filter').forEach(btn => {
   column-gap: 0.4rem;
   align-items: start;
 }
+.pub-award .pub-value { color: #8a5d00; }
 .pub-pages-label {
   font-weight: 700;
   color: #666;
@@ -264,6 +268,7 @@ document.querySelectorAll('.pub-filter').forEach(btn => {
 }
 .pub-list.view-compact .pub-authors,
 .pub-list.view-compact .pub-venue,
+.pub-list.view-compact .pub-award,
 .pub-list.view-compact .pub-meta {
   font-size: 0.95em;
 }
