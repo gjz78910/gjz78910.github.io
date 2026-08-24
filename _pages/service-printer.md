@@ -13,26 +13,17 @@ redirect_from:
 <div class="svc-card">
 <h3>Programme Committee Membership</h3>
 <div class="svc-rows">
-  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue"><a href="https://2027.msrconf.org/">MSR 2027</a></span><span class="svc-year">2026</span></div>
-  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/fse-2027">FSE 2027</a></span><span class="svc-year">2026</span></div>
-  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue"><a href="https://issre.github.io/">ISSRE 2026</a></span><span class="svc-year">2026</span></div>
-  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/ase-2026">ASE 2026</a> <span class="svc-note">(Tools &amp; Datasets)</span></span><span class="svc-year">2026</span></div>
-  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/icse-2027">ICSE 2027</a></span><span class="svc-year">2026</span></div>
-  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/issta-2026">ISSTA 2026</a></span><span class="svc-year">2026</span></div>
-  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/icst-2026">ICST 2026</a></span><span class="svc-year">2026</span></div>
+  <div class="svc-row"><span class="svc-tag pc">PC Member</span><span class="svc-venue"><a href="https://2027.msrconf.org/">MSR 2027</a>, <a href="https://conf.researchr.org/home/fse-2027">FSE 2027</a>, <a href="https://conf.researchr.org/home/icse-2027">ICSE 2027</a>, <a href="https://issre.github.io/">ISSRE 2026</a>, <a href="https://conf.researchr.org/home/ase-2026">ASE 2026</a> <span class="svc-note-inline">(Tools &amp; Datasets)</span>, <a href="https://conf.researchr.org/home/issta-2026">ISSTA 2026</a>, <a href="https://conf.researchr.org/home/icst-2026">ICST 2026</a>, <a href="https://www2026.thewebconf.org/">WWW 2026</a>, IEEE/ACM UCC 2024</span><span class="svc-year">2024&ndash;26</span></div>
   <div class="svc-row"><span class="svc-tag junior">Junior PC</span><span class="svc-venue"><a href="https://2026.msrconf.org/">MSR 2026</a></span><span class="svc-year">2025&ndash;26</span></div>
-  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue"><a href="https://www2026.thewebconf.org/">WWW 2026</a></span><span class="svc-year">2025</span></div>
   <div class="svc-row"><span class="svc-tag shadow">Shadow PC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/icse-2026">ICSE 2026</a></span><span class="svc-year">2025</span></div>
-  <div class="svc-row"><span class="svc-tag aec">AEC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/icse-2025">ICSE 2025</a> <span class="svc-note">Artifact Evaluation Committee</span></span><span class="svc-year">2025</span></div>
-  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue">IEEE/ACM Utility &amp; Cloud Computing (UCC)</span><span class="svc-year">2024</span></div>
+  <div class="svc-row"><span class="svc-tag aec">AEC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/icse-2025">ICSE 2025</a> <span class="svc-note-inline">Artifact Evaluation Committee</span></span><span class="svc-year">2025</span></div>
 </div>
 </div>
 
 <div class="svc-card">
 <h3>Peer Review</h3>
 <div class="svc-rows">
-  <div class="svc-row"><span class="svc-tag review">Conf.</span><span class="svc-venue"><a href="https://ppopp25.sigplan.org/">PPOPP</a></span><span class="svc-year">2025</span></div>
-  <div class="svc-row"><span class="svc-tag review">Conf.</span><span class="svc-venue">IEEE Web Services (ICWS)</span><span class="svc-year">2023&ndash;24</span></div>
+  <div class="svc-row"><span class="svc-tag review">Conference</span><span class="svc-venue"><a href="https://ppopp25.sigplan.org/">PPOPP</a>, ICWS, SMDS, SCC</span><span class="svc-year">2020&ndash;25</span></div>
   <div class="svc-row"><span class="svc-tag review">Journal</span><span class="svc-venue"><em>TSE</em>, <em>TOSEM</em>, <em>ESE</em>, <em>JSS</em>, <em>TACO</em>, <em>CSUR</em>, <em>TAAS</em>, <em>JIS</em>, <em>JSPE</em></span><span class="svc-year">2020&ndash;26</span></div>
 </div>
 </div>
@@ -84,7 +75,7 @@ redirect_from:
 }
 .svc-row {
   display: grid;
-  grid-template-columns: 6rem 1fr 4.5rem;
+  grid-template-columns: 7rem 1fr 4.5rem;
   column-gap: 0.9rem;
   align-items: baseline;
   padding: 0.42rem 0;
@@ -99,6 +90,10 @@ redirect_from:
   color: #756f64;
   font-size: 0.94em;
   margin-top: 0.15rem;
+}
+.svc-note-inline {
+  color: #756f64;
+  font-size: 0.94em;
 }
 .svc-year {
   text-align: right;
