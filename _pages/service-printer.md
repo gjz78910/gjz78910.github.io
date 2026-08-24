@@ -42,16 +42,7 @@ redirect_from:
 <h3>Workshops &amp; Session Chairing</h3>
 <div class="svc-rows">
   <div class="svc-row"><span class="svc-tag org">Organiser</span><span class="svc-venue">Safe and Trusted AI for Software Engineering <span class="svc-note">Co-organised a two-day workshop with 10&ndash;12 invited speakers from academia and industry.</span></span><span class="svc-year">Nov 2026</span></div>
-  <div class="svc-row"><span class="svc-tag org">Organiser</span><span class="svc-venue">SBSE&times;LLMs Workshop <span class="svc-note">Co-organised a workshop bridging search-based software engineering and large language models.</span></span><span class="svc-year">Ongoing</span></div>
   <div class="svc-row"><span class="svc-tag chair">Chair</span><span class="svc-venue"><a href="https://conf.researchr.org/home/aiware-2025">AIware 2025</a> <span class="svc-note">Session Chair.</span></span><span class="svc-year">2025</span></div>
-</div>
-</div>
-
-<div class="svc-card">
-<h3>Open Research &amp; Outreach</h3>
-<div class="svc-rows">
-  <div class="svc-row"><span class="svc-tag open">Open</span><span class="svc-venue">Public GitHub repositories <span class="svc-note">accompany all publications, released for reproducibility.</span></span><span class="svc-year">Ongoing</span></div>
-  <div class="svc-row"><span class="svc-tag open">Open</span><span class="svc-venue">LLM-based benchmark <span class="svc-note">co-developed with BT through the ITEA4 GENIUS project.</span></span><span class="svc-year">Ongoing</span></div>
 </div>
 </div>
 
@@ -126,7 +117,6 @@ redirect_from:
 .svc-tag.award   { background-color: #cf6363; }
 .svc-tag.org     { background-color: #b06fc4; }
 .svc-tag.chair   { background-color: #b06fc4; }
-.svc-tag.open    { background-color: #8a8578; }
 
 @media (max-width: 640px) {
   .svc-row {
