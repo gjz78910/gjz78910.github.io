@@ -224,8 +224,9 @@ document.querySelectorAll('.pub-filter').forEach(btn => {
   font-size: 0.9em;
   line-height: 1.5;
   padding: 0.7rem 0.9rem;
-  background: #fff;
-  border: 1px solid #eee;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid #ded7ca;
+  border-radius: 5px;
 }
 .pub-head {
   margin-bottom: 0.45rem;
