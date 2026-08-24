@@ -31,6 +31,16 @@ layout: compress
     -->
     <div class="printer-container">
 
+      <!-- Taped-on note: job-search notice -->
+      <div class="printer-note">
+        <div class="printer-note-tape"></div>
+        <div class="printer-note-eyebrow">P.S.</div>
+        <p class="printer-note-text">I'm on the job market for Lecturer / Assistant Professor roles in AI for Software Engineering.</p>
+        {% if site.author.email %}
+        <a class="printer-note-link" href="mailto:{{ site.author.email }}">Get in touch &rarr;</a>
+        {% endif %}
+      </div>
+
       <!-- LAYER 3 (top): Printer frame -->
       <div class="printer-frame">
 
