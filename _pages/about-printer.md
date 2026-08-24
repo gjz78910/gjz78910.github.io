@@ -73,6 +73,17 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
 
 If you're interested in collaboration, please feel free to reach out!
 
+## Awards
+
+<div class="svc-card">
+<div class="svc-rows">
+  <div class="svc-row"><span class="svc-tag award">Award</span><span class="svc-venue"><a href="https://2026.msrconf.org/">MSR 2026</a> Distinguished Challenge Paper Award <span class="svc-note">Selected from 60+ submissions; recognised for empirical rigour in studying the trustworthiness of AI coding agents at scale.</span></span><span class="svc-year">2026</span></div>
+  <div class="svc-row"><span class="svc-tag award">Award</span><span class="svc-venue"><a href="https://conf.researchr.org/home/icse-2025">ICSE 2025</a> Distinguished Reviewer Award <span class="svc-note">Recognised for exceptional review quality in the Shadow PC.</span></span><span class="svc-year">2025</span></div>
+  <div class="svc-row"><span class="svc-tag award">Award</span><span class="svc-venue"><a href="https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge">SSBSE 2024</a> Challenge Winner Award <span class="svc-note">Led a 7-member international team to the highest-scoring submission in the GenAI optimisation challenge.</span></span><span class="svc-year">2024</span></div>
+  <div class="svc-row"><span class="svc-tag award">Award</span><span class="svc-venue"><a href="https://research.spec.org/awards/past-winners/2024/">ICPE 2024</a> SPEC Kaivalya Dixit Distinguished Dissertation Award <span class="svc-note">Sole recipient from 14 global candidates; recognises the most outstanding PhD dissertation in computer performance evaluation worldwide.</span></span><span class="svc-year">2024</span></div>
+</div>
+</div>
+
 ## News
 
 <ul class="news-timeline">
@@ -198,6 +209,66 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   color: #555;
   border-top: 1px solid #e5ded3;
   padding-top: 0.5rem;
+}
+.svc-card {
+  border: 1px solid #ded7ca;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.5);
+  padding: 0.9rem 1.15rem 0.55rem;
+  margin: 0.5rem 0 1.4rem;
+}
+.svc-rows {
+  display: flex;
+  flex-direction: column;
+}
+.svc-row {
+  display: grid;
+  grid-template-columns: 7rem 1fr 4.5rem;
+  column-gap: 0.9rem;
+  align-items: baseline;
+  padding: 0.42rem 0;
+  border-bottom: 1px dashed #e7e1d4;
+  font-size: 0.87em;
+  line-height: 1.5;
+}
+.svc-rows .svc-row:last-child { border-bottom: none; }
+.svc-venue { min-width: 0; }
+.svc-note {
+  display: block;
+  color: #756f64;
+  font-size: 0.94em;
+  margin-top: 0.15rem;
+}
+.svc-year {
+  text-align: right;
+  color: #999;
+  white-space: nowrap;
+  font-size: 0.94em;
+}
+.svc-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: .2em .45em .24em;
+  font-size: 0.76em;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.05;
+  border-radius: .25em;
+  white-space: nowrap;
+  align-self: start;
+}
+.svc-tag.award { background-color: #cf6363; }
+@media (max-width: 640px) {
+  .svc-row {
+    grid-template-columns: 1fr;
+    row-gap: 0.3rem;
+  }
+  .svc-tag { justify-self: start; }
+  .svc-year { text-align: left; }
 }
 .news-timeline {
   list-style: none;

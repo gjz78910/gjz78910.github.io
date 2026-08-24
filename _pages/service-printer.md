@@ -21,7 +21,7 @@ redirect_from:
 ## Public Engagement
 
 <div class="svc-card">
-<h3>Invited Talks &amp; Presentations</h3>
+<h3>Invited Talks</h3>
 <div class="svc-rows">
   <div class="svc-row"><span class="svc-tag talk">Talk</span><span class="svc-venue">KCL Software Systems &amp; Security (<a href="https://www.kcl.ac.uk/research/ssy">SSY</a>) Research Group <span class="svc-note">Invited guest talk on trustworthy AI coding agents and their security implications for software engineering practice.</span></span><span class="svc-year">Apr 2026</span></div>
   <div class="svc-row"><span class="svc-tag award">Award</span><span class="svc-venue"><a href="https://research.spec.org/awards/past-winners/2024/">ICPE 2025</a> <span class="svc-note">Delivered acceptance remarks for the SPEC Kaivalya Dixit Distinguished Dissertation Award.</span></span><span class="svc-year">2025</span></div>
