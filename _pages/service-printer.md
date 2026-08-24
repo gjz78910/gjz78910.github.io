@@ -142,6 +142,12 @@ redirect_from:
   font-size: 0.8rem;
   color: #332f2a;
   line-height: 1.2;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+.chip:hover {
+  background: #ede4d2;
+  border-color: #cfc4ac;
+  transform: translateY(-1px);
 }
 .chip i {
   font-style: italic;
