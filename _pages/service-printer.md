@@ -10,107 +10,142 @@ redirect_from:
 
 ## Programme Committee & Reviewing
 
-<div class="svc-card">
-<div class="svc-rows">
-  <div class="svc-row"><span class="svc-tag pc">PC Member</span><span class="svc-venue"><a href="https://2027.msrconf.org/">MSR 2027</a>, <a href="https://conf.researchr.org/home/fse-2027">FSE 2027</a>, <a href="https://conf.researchr.org/home/icse-2027">ICSE 2027</a>, <a href="https://conf.researchr.org/home/icst-2027">ICST 2027</a>, <a href="https://issre.github.io/">ISSRE 2026</a>, <a href="https://conf.researchr.org/home/ase-2026">ASE 2026</a> <span class="svc-note-inline">(Tools &amp; Datasets)</span>, <a href="https://conf.researchr.org/home/issta-2026">ISSTA 2026</a>, <a href="https://conf.researchr.org/home/icst-2026">ICST 2026</a>, <a href="https://www2026.thewebconf.org/">WWW 2026</a>, <a href="https://ucc.uccbdcat2024.org/index.html">IEEE/ACM UCC 2024</a>, <a href="https://conf.researchr.org/home/icse-2025">ICSE 2025</a> <span class="svc-note-inline">(Artifact Evaluation)</span>, <a href="https://2026.msrconf.org/">MSR 2026</a> <span class="svc-note-inline">(Junior PC)</span>, <a href="https://conf.researchr.org/home/icse-2026">ICSE 2026</a> <span class="svc-note-inline">(Shadow PC)</span></span><span class="svc-year">2024&ndash;27</span></div>
-  <div class="svc-row"><span class="svc-tag review">Conference</span><span class="svc-venue"><a href="https://ppopp25.sigplan.org/">PPOPP 2025</a>, <a href="https://conferences.computer.org/icws/">ICWS 2023&ndash;24</a>, <a href="https://conferences.computer.org/smds/2020/">SMDS 2020</a>, <a href="https://conferences.computer.org/scc/2020/">SCC 2020</a></span><span class="svc-year">2020&ndash;25</span></div>
-  <div class="svc-row"><span class="svc-tag review">Journal</span><span class="svc-venue"><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32"><em>TSE</em> 2026</a>, <a href="https://dl.acm.org/journal/tosem"><em>TOSEM</em> 2025&ndash;26</a>, <a href="https://link.springer.com/journal/10664"><em>ESE</em> 2026</a>, <a href="https://www.sciencedirect.com/journal/journal-of-systems-and-software"><em>JSS</em> 2025</a>, <a href="https://dl.acm.org/journal/taco"><em>TACO</em> 2024</a>, <a href="https://dl.acm.org/journal/csur"><em>CSUR</em> 2024</a>, <a href="https://dl.acm.org/journal/taas"><em>TAAS</em> 2024 &amp; 2026</a>, <a href="https://www.sciencedirect.com/journal/information-sciences"><em>JIS</em> 2024</a>, <a href="https://onlinelibrary.wiley.com/journal/1097024x"><em>JSPE</em> 2020</a></span><span class="svc-year">2020&ndash;26</span></div>
+<div class="cat-row">
+  <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M9 3v2h6V3M8 10h8M8 14h5"/></svg></div>
+  <div class="cat-body">
+    <div class="cat-top"><span class="cat-title">Programme Committee</span><span class="cat-count">13 roles &middot; 2024&ndash;27</span></div>
+    <div class="chip-grid">
+      <span class="chip"><a href="https://2027.msrconf.org/">MSR 2027</a></span>
+      <span class="chip"><a href="https://conf.researchr.org/home/fse-2027">FSE 2027</a></span>
+      <span class="chip"><a href="https://conf.researchr.org/home/icse-2027">ICSE 2027</a></span>
+      <span class="chip"><a href="https://conf.researchr.org/home/icst-2027">ICST 2027</a></span>
+      <span class="chip"><a href="https://issre.github.io/">ISSRE 2026</a></span>
+      <span class="chip"><a href="https://conf.researchr.org/home/ase-2026">ASE 2026</a> <i>Tools &amp; Data</i></span>
+      <span class="chip"><a href="https://conf.researchr.org/home/issta-2026">ISSTA 2026</a></span>
+      <span class="chip"><a href="https://conf.researchr.org/home/icst-2026">ICST 2026</a></span>
+      <span class="chip"><a href="https://www2026.thewebconf.org/">WWW 2026</a></span>
+      <span class="chip"><a href="https://ucc.uccbdcat2024.org/index.html">UCC 2024</a></span>
+      <span class="chip"><a href="https://conf.researchr.org/home/icse-2025">ICSE 2025</a> <i>Artifact Eval.</i></span>
+      <span class="chip"><a href="https://2026.msrconf.org/">MSR 2026</a> <i>Junior PC</i></span>
+      <span class="chip"><a href="https://conf.researchr.org/home/icse-2026">ICSE 2026</a> <i>Shadow PC</i></span>
+    </div>
+  </div>
 </div>
+
+<div class="cat-row">
+  <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+  <div class="cat-body">
+    <div class="cat-top"><span class="cat-title">Conference Reviewing</span><span class="cat-count">2020&ndash;25</span></div>
+    <div class="chip-grid">
+      <span class="chip"><a href="https://ppopp25.sigplan.org/">PPOPP 2025</a></span>
+      <span class="chip"><a href="https://conferences.computer.org/icws/">ICWS 2023&ndash;24</a></span>
+      <span class="chip"><a href="https://conferences.computer.org/smds/2020/">SMDS 2020</a></span>
+      <span class="chip"><a href="https://conferences.computer.org/scc/2020/">SCC 2020</a></span>
+    </div>
+  </div>
+</div>
+
+<div class="cat-row">
+  <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4Z"/><path d="M8 8h6M8 12h6"/></svg></div>
+  <div class="cat-body">
+    <div class="cat-top"><span class="cat-title">Journal Reviewing</span><span class="cat-count">2020&ndash;26</span></div>
+    <div class="chip-grid">
+      <span class="chip"><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32"><em>TSE</em> 2026</a></span>
+      <span class="chip"><a href="https://dl.acm.org/journal/tosem"><em>TOSEM</em> 2025&ndash;26</a></span>
+      <span class="chip"><a href="https://link.springer.com/journal/10664"><em>EMSE</em> 2026</a></span>
+      <span class="chip"><a href="https://www.sciencedirect.com/journal/journal-of-systems-and-software"><em>JSS</em> 2025</a></span>
+      <span class="chip"><a href="https://dl.acm.org/journal/taco"><em>TACO</em> 2024</a></span>
+      <span class="chip"><a href="https://dl.acm.org/journal/csur"><em>CSUR</em> 2024</a></span>
+      <span class="chip"><a href="https://dl.acm.org/journal/taas"><em>TAAS</em> 2024 &amp; 2026</a></span>
+      <span class="chip"><a href="https://www.sciencedirect.com/journal/information-sciences"><em>JIS</em> 2024</a></span>
+      <span class="chip"><a href="https://onlinelibrary.wiley.com/journal/1097024x"><em>JSPE</em> 2020</a></span>
+    </div>
+  </div>
 </div>
 
 ## Public Engagement
 
-<div class="svc-card">
-<h3>Invited Talks</h3>
-<div class="svc-rows">
-  <div class="svc-row"><span class="svc-tag talk">Talk</span><span class="svc-venue">KCL Software Systems &amp; Security (<a href="https://www.kcl.ac.uk/research/ssy">SSY</a>) Research Group <span class="svc-note">Invited guest talk on trustworthy AI coding agents and their security implications for software engineering practice.</span></span><span class="svc-year">Apr 2026</span></div>
-  <div class="svc-row"><span class="svc-tag award">Award</span><span class="svc-venue"><a href="https://research.spec.org/awards/past-winners/2024/">ICPE 2025</a> <span class="svc-note">Delivered acceptance remarks for the SPEC Kaivalya Dixit Distinguished Dissertation Award.</span></span><span class="svc-year">2025</span></div>
-</div>
+<div class="cat-row">
+  <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+  <div class="cat-body">
+    <div class="cat-top"><span class="cat-title">Invited Talks</span><span class="cat-count">2025&ndash;26</span></div>
+    <div class="chip-grid">
+      <span class="chip"><a href="https://www.kcl.ac.uk/research/ssy">KCL SSY</a> <i>Apr 2026</i></span>
+      <span class="chip"><a href="https://research.spec.org/awards/past-winners/2024/">ICPE 2025</a> <i>Award remarks</i></span>
+    </div>
+  </div>
 </div>
 
-<div class="svc-card">
-<h3>Workshops &amp; Session Chairing</h3>
-<div class="svc-rows">
-  <div class="svc-row"><span class="svc-tag org">Organiser</span><span class="svc-venue">Safe and Trusted AI for Software Engineering <span class="svc-note">Co-organised a two-day workshop with 10&ndash;12 invited speakers from academia and industry.</span></span><span class="svc-year">Nov 2026</span></div>
-  <div class="svc-row"><span class="svc-tag chair">Chair</span><span class="svc-venue"><a href="https://conf.researchr.org/home/aiware-2025">AIware 2025</a> <span class="svc-note">Session Chair.</span></span><span class="svc-year">2025</span></div>
-</div>
+<div class="cat-row">
+  <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/><circle cx="17" cy="7" r="2.3"/><path d="M15.5 14.2c2.9.5 5.5 2.6 5.5 5.8"/></svg></div>
+  <div class="cat-body">
+    <div class="cat-top"><span class="cat-title">Workshops &amp; Session Chairing</span><span class="cat-count">2025&ndash;26</span></div>
+    <div class="chip-grid">
+      <span class="chip">Safe &amp; Trusted AI Workshop <i>Organiser &middot; Nov 2026</i></span>
+      <span class="chip"><a href="https://conf.researchr.org/home/aiware-2025">AIware 2025</a> <i>Session Chair</i></span>
+    </div>
+  </div>
 </div>
 
 <style>
-.svc-card {
-  border: 1px solid #ded7ca;
-  border-radius: 5px;
-  background: rgba(255,255,255,0.5);
-  padding: 0.9rem 1.15rem 0.55rem;
-  margin: 0 0 1.1rem;
-}
-.svc-card h3 {
-  margin: 0 0 0.6rem;
-  font-size: 1.02rem;
-  border-bottom: 1px solid #e0dbd0;
-  padding-bottom: 0.45rem;
-}
-.svc-rows {
+.cat-row {
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-top: 1px dashed #e3ddd0;
 }
-.svc-row {
-  display: grid;
-  grid-template-columns: 7rem 1fr 4.5rem;
-  column-gap: 0.9rem;
-  align-items: baseline;
-  padding: 0.42rem 0;
-  border-bottom: 1px dashed #e7e1d4;
-  font-size: 0.87em;
-  line-height: 1.5;
-}
-.svc-rows .svc-row:last-child { border-bottom: none; }
-.svc-venue { min-width: 0; }
-.svc-note {
-  display: block;
-  color: #756f64;
-  font-size: 0.94em;
-  margin-top: 0.15rem;
-}
-.svc-note-inline {
-  color: #756f64;
-  font-size: 0.94em;
-}
-.svc-year {
-  text-align: right;
-  color: #999;
-  white-space: nowrap;
-  font-size: 0.94em;
-}
-.svc-tag {
-  display: inline-flex;
+.cat-row:first-child { border-top: none; padding-top: 0.2rem; }
+.cat-icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(160deg, #f4efe5 0%, #ddd8cc 100%);
+  box-shadow: 0 0 0 3px #fffefa, 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: .2em .45em .24em;
-  font-size: 0.76em;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #fff;
-  line-height: 1.05;
-  border-radius: .25em;
-  white-space: nowrap;
-  align-self: start;
 }
-.svc-tag.pc      { background-color: #1988b8; }
-.svc-tag.review  { background-color: #56ae5d; }
-.svc-tag.talk    { background-color: #cf6363; }
-.svc-tag.award   { background-color: #cf6363; }
-.svc-tag.org     { background-color: #b06fc4; }
-.svc-tag.chair   { background-color: #b06fc4; }
-
-@media (max-width: 640px) {
-  .svc-row {
-    grid-template-columns: 1fr;
-    row-gap: 0.3rem;
-  }
-  .svc-tag { justify-self: start; }
-  .svc-year { text-align: left; }
+.cat-icon svg { width: 18px; height: 18px; stroke: #6a6560; }
+.cat-body { flex: 1; min-width: 0; }
+.cat-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.7rem;
+}
+.cat-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1a1510;
+}
+.cat-count {
+  color: #999;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  border: 1px solid #e3ddd0;
+  border-radius: 3px;
+  background: #f4efe5;
+  padding: 0.28rem 0.65rem;
+  font-size: 0.8rem;
+  color: #332f2a;
+  line-height: 1.2;
+}
+.chip i {
+  font-style: italic;
+  color: #8a8578;
+  font-size: 0.9em;
 }
 </style>
