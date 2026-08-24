@@ -11,7 +11,7 @@ redirect_from:
 ## Teaching & Supervision
 
 <div class="teach-card">
-  <div class="teach-head"><span class="teach-role">Project Advisor &amp; Module Administrator</span><span class="teach-dates">Nov 2025 &ndash; Present</span></div>
+  <div class="teach-head"><span class="teach-role">Project Advisor</span><span class="teach-dates">Nov 2025 &ndash; Present</span></div>
   <div class="teach-org">King's College London, London, UK</div>
   <ul class="teach-list">
     <li>Supervise three nine-student teams on a final-year AI &amp; Robotics Group Project, guiding software-engineering projects involving RAG pipelines, medical-AI diagnosis systems, deployment, and evaluation.</li>
