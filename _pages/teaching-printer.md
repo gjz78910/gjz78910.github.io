@@ -17,7 +17,10 @@ redirect_from:
     <div class="teach-body">
       <div class="teach-top"><span class="teach-role">Project Advisor</span><span class="teach-dates">Nov 2025 &ndash; Present</span></div>
       <div class="teach-org">King's College London</div>
-      <span class="teach-stat"><b>3/3</b> teams graded above 80%</span>
+      <div class="teach-tags">
+        <span class="teach-chip">AI &amp; Robotics Group Project <i>BSc, Level 6</i></span>
+        <span class="teach-stat"><b>3/3</b> teams graded above 80%</span>
+      </div>
     </div>
   </div>
 
@@ -44,7 +47,10 @@ redirect_from:
     <div class="teach-body">
       <div class="teach-top"><span class="teach-role">Teaching Assistant</span><span class="teach-dates">Jan 2021 &ndash; Jun 2023</span></div>
       <div class="teach-org">Loughborough University</div>
-      <span class="teach-stat"><b>~100</b> students taught</span>
+      <div class="teach-tags">
+        <span class="teach-chip">Mobile Application Development <i>BSc, Level 5/6</i></span>
+        <span class="teach-stat"><b>~100</b> students taught</span>
+      </div>
     </div>
   </div>
 
@@ -96,6 +102,27 @@ redirect_from:
   font-size: 0.85rem;
   font-style: italic;
   margin: 0.1rem 0 0.65rem;
+}
+.teach-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.teach-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  background: #f4efe5;
+  border: 1px solid #e3ddd0;
+  border-radius: 3px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.82rem;
+  color: #332f2a;
+}
+.teach-chip i {
+  font-style: italic;
+  color: #8a8578;
+  font-size: 0.9em;
 }
 .teach-stat {
   display: inline-flex;
