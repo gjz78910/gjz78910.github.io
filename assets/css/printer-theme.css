@@ -761,9 +761,10 @@
     padding: 0.48rem 1.05rem;
     letter-spacing: 1.1px;
   }
+  .printer-theme-body { padding-top: 11rem; }
   .printer-note {
     width: 200px;
-    top: -40px;
+    top: -160px;
     left: 50%;
     margin-left: -100px;
     padding: 0.65rem 0.8rem 0.75rem;
@@ -778,6 +779,7 @@
     --paper-slot-overlap: 1px;
   }
   .printer-theme-body { padding: 1rem 0.5rem 4rem; }
+  .printer-theme-body { padding-top: 10.5rem; }
   .printer-frame { padding: 1.25rem 1.25rem 1rem; }
   .slot-bottom-bar {
     margin-top: 0;
