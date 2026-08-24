@@ -225,6 +225,80 @@
   }
 
   /* ------------------------------------------------------------------ */
+  /* Draggable note                                                       */
+  /* ------------------------------------------------------------------ */
+
+  function setupDraggableNote() {
+    var note = document.querySelector('.printer-note');
+    if (!note) return;
+
+    var DRAG_THRESHOLD = 4;
+    var offsetX = 0;
+    var offsetY = 0;
+    var startPointerX = 0;
+    var startPointerY = 0;
+    var startOffsetX = 0;
+    var startOffsetY = 0;
+    var dragging = false;
+    var moved = false;
+    var activePointerId = null;
+
+    function applyTransform() {
+      note.style.transform = 'rotate(-4deg) translate(' + offsetX + 'px, ' + offsetY + 'px)';
+    }
+
+    function onPointerMove(e) {
+      if (activePointerId !== null && e.pointerId !== activePointerId) return;
+      var dx = e.clientX - startPointerX;
+      var dy = e.clientY - startPointerY;
+
+      if (!dragging) {
+        if (Math.abs(dx) < DRAG_THRESHOLD && Math.abs(dy) < DRAG_THRESHOLD) return;
+        dragging = true;
+        moved = true;
+        note.classList.add('is-dragging');
+      }
+
+      offsetX = startOffsetX + dx;
+      offsetY = startOffsetY + dy;
+      applyTransform();
+    }
+
+    function onPointerUp(e) {
+      if (activePointerId !== null && e.pointerId !== activePointerId) return;
+      if (dragging) {
+        note.classList.remove('is-dragging');
+      }
+      dragging = false;
+      activePointerId = null;
+      window.removeEventListener('pointermove', onPointerMove);
+      window.removeEventListener('pointerup', onPointerUp);
+      window.removeEventListener('pointercancel', onPointerUp);
+    }
+
+    note.addEventListener('pointerdown', function (e) {
+      if (e.button !== undefined && e.button !== 0) return;
+      moved = false;
+      activePointerId = e.pointerId;
+      startPointerX = e.clientX;
+      startPointerY = e.clientY;
+      startOffsetX = offsetX;
+      startOffsetY = offsetY;
+      window.addEventListener('pointermove', onPointerMove);
+      window.addEventListener('pointerup', onPointerUp);
+      window.addEventListener('pointercancel', onPointerUp);
+    });
+
+    // Prevent the "Get in touch" link from firing at the end of an actual drag.
+    var link = note.querySelector('.printer-note-link');
+    if (link) {
+      link.addEventListener('click', function (e) {
+        if (moved) e.preventDefault();
+      });
+    }
+  }
+
+  /* ------------------------------------------------------------------ */
   /* Navigation                                                           */
   /* ------------------------------------------------------------------ */
 
@@ -396,6 +470,7 @@
 
     setupSoundKnob();
     setupNavigation();
+    setupDraggableNote();
   }
 
   if (document.readyState === 'loading') {
