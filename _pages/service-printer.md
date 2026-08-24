@@ -10,147 +10,135 @@ redirect_from:
 
 ## Programme Committee & Reviewing
 
-<ul class="svc-timeline">
-  <li class="pc"><span class="svc-date">Nov 2026</span><span class="svc-badge pc">PC Member</span><span class="svc-content">Programme Committee Member, <a href="https://2027.msrconf.org/">MSR 2027</a>.</span></li>
-  <li class="pc"><span class="svc-date">May 2026</span><span class="svc-badge pc">PC Member</span><span class="svc-content">Programme Committee Member, <a href="https://conf.researchr.org/home/fse-2027">FSE 2027</a>.</span></li>
-  <li class="pc"><span class="svc-date">May 2026</span><span class="svc-badge pc">PC Member</span><span class="svc-content">Programme Committee Member, <a href="https://issre.github.io/">ISSRE 2026</a>.</span></li>
-  <li class="pc"><span class="svc-date">May 2026</span><span class="svc-badge pc">PC Member</span><span class="svc-content">Programme Committee Member, <a href="https://conf.researchr.org/home/ase-2026">ASE 2026</a> (Tools and Datasets track).</span></li>
-  <li class="pc"><span class="svc-date">Apr 2026</span><span class="svc-badge pc">PC Member</span><span class="svc-content">Programme Committee Member, <a href="https://conf.researchr.org/home/icse-2027">ICSE 2027</a>.</span></li>
-  <li class="pc"><span class="svc-date">Feb 2026</span><span class="svc-badge pc">PC Member</span><span class="svc-content">Programme Committee Member, <a href="https://conf.researchr.org/home/issta-2026">ISSTA 2026</a>.</span></li>
-  <li class="pc"><span class="svc-date">Jan 2026</span><span class="svc-badge pc">PC Member</span><span class="svc-content">Programme Committee Member, <a href="https://conf.researchr.org/home/icst-2026">ICST 2026</a>.</span></li>
-  <li class="pc"><span class="svc-date">Oct 2025</span><span class="svc-badge junior">Junior PC</span><span class="svc-content">Junior Programme Committee Member, <a href="https://2026.msrconf.org/">MSR 2026</a>.</span></li>
-  <li class="pc"><span class="svc-date">Sep 2025</span><span class="svc-badge pc">PC Member</span><span class="svc-content">Programme Committee Member, <a href="https://www2026.thewebconf.org/">WWW 2026</a>.</span></li>
-  <li class="pc"><span class="svc-date">Jul 2025</span><span class="svc-badge shadow">Shadow PC</span><span class="svc-content">Shadow Programme Committee Member, <a href="https://conf.researchr.org/home/icse-2026">ICSE 2026</a>.</span></li>
-  <li class="pc"><span class="svc-date">2025</span><span class="svc-badge aec">AEC</span><span class="svc-content">Artifact Evaluation Committee, <a href="https://conf.researchr.org/home/icse-2025">ICSE 2025</a>.</span></li>
-  <li class="pc"><span class="svc-date">2025</span><span class="svc-badge review">Reviewer</span><span class="svc-content">Conference reviewer, <a href="https://ppopp25.sigplan.org/">PPOPP 2025</a>.</span></li>
-  <li class="pc"><span class="svc-date">2024</span><span class="svc-badge pc">PC Member</span><span class="svc-content">Programme Committee Member, IEEE/ACM International Conference on Utility and Cloud Computing (UCC) 2024.</span></li>
-  <li class="pc"><span class="svc-date">2023&ndash;24</span><span class="svc-badge review">Reviewer</span><span class="svc-content">Conference reviewer, IEEE International Conference on Web Services (ICWS) 2023&ndash;2024.</span></li>
-  <li class="pc"><span class="svc-date">2020&ndash;26</span><span class="svc-badge review">Reviewer</span><span class="svc-content">Journal reviewer: <em>TSE</em>, <em>TOSEM</em>, <em>ESE</em>, <em>JSS</em>, <em>TACO</em>, <em>CSUR</em>, <em>TAAS</em>, <em>JIS</em>, and <em>JSPE</em>.</span></li>
-</ul>
+<div class="svc-card">
+<h3>Programme Committee Membership</h3>
+<div class="svc-rows">
+  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue"><a href="https://2027.msrconf.org/">MSR 2027</a></span><span class="svc-year">2026</span></div>
+  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/fse-2027">FSE 2027</a></span><span class="svc-year">2026</span></div>
+  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue"><a href="https://issre.github.io/">ISSRE 2026</a></span><span class="svc-year">2026</span></div>
+  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/ase-2026">ASE 2026</a> <span class="svc-note">(Tools &amp; Datasets)</span></span><span class="svc-year">2026</span></div>
+  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/icse-2027">ICSE 2027</a></span><span class="svc-year">2026</span></div>
+  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/issta-2026">ISSTA 2026</a></span><span class="svc-year">2026</span></div>
+  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/icst-2026">ICST 2026</a></span><span class="svc-year">2026</span></div>
+  <div class="svc-row"><span class="svc-tag junior">Junior PC</span><span class="svc-venue"><a href="https://2026.msrconf.org/">MSR 2026</a></span><span class="svc-year">2025&ndash;26</span></div>
+  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue"><a href="https://www2026.thewebconf.org/">WWW 2026</a></span><span class="svc-year">2025</span></div>
+  <div class="svc-row"><span class="svc-tag shadow">Shadow PC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/icse-2026">ICSE 2026</a></span><span class="svc-year">2025</span></div>
+  <div class="svc-row"><span class="svc-tag aec">AEC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/icse-2025">ICSE 2025</a> <span class="svc-note">Artifact Evaluation Committee</span></span><span class="svc-year">2025</span></div>
+  <div class="svc-row"><span class="svc-tag pc">PC</span><span class="svc-venue">IEEE/ACM Utility &amp; Cloud Computing (UCC)</span><span class="svc-year">2024</span></div>
+</div>
+</div>
+
+<div class="svc-card">
+<h3>Peer Review</h3>
+<div class="svc-rows">
+  <div class="svc-row"><span class="svc-tag review">Conf.</span><span class="svc-venue"><a href="https://ppopp25.sigplan.org/">PPOPP</a></span><span class="svc-year">2025</span></div>
+  <div class="svc-row"><span class="svc-tag review">Conf.</span><span class="svc-venue">IEEE Web Services (ICWS)</span><span class="svc-year">2023&ndash;24</span></div>
+  <div class="svc-row"><span class="svc-tag review">Journal</span><span class="svc-venue"><em>TSE</em>, <em>TOSEM</em>, <em>ESE</em>, <em>JSS</em>, <em>TACO</em>, <em>CSUR</em>, <em>TAAS</em>, <em>JIS</em>, <em>JSPE</em></span><span class="svc-year">2020&ndash;26</span></div>
+</div>
+</div>
 
 ## Public Engagement
 
-<ul class="svc-timeline">
-  <li class="engage"><span class="svc-date">Nov 2026</span><span class="svc-badge engage">Workshop</span><span class="svc-content"><strong>Co-Organiser</strong>, <em>Safe and Trusted AI for Software Engineering</em> workshop &mdash; a two-day event with 10&ndash;12 invited speakers from academia and industry.</span></li>
-  <li class="engage"><span class="svc-date">Apr 2026</span><span class="svc-badge talk">Talk</span><span class="svc-content"><strong>Invited Guest Talk</strong>, KCL Software Systems &amp; Security (<a href="https://www.kcl.ac.uk/research/ssy">SSY</a>) Research Group &mdash; presented research on trustworthy AI coding agents and the security implications for software engineering practice.</span></li>
-  <li class="engage"><span class="svc-date">2025</span><span class="svc-badge talk">Chair</span><span class="svc-content"><strong>Session Chair</strong>, <a href="https://conf.researchr.org/home/aiware-2025">AIware 2025</a>.</span></li>
-  <li class="engage"><span class="svc-date">2025</span><span class="svc-badge award">Talk</span><span class="svc-content"><strong>Award Presentation</strong>, <a href="https://research.spec.org/awards/past-winners/2024/">ICPE 2025</a> &mdash; delivered acceptance remarks for the SPEC Kaivalya Dixit Distinguished Dissertation Award.</span></li>
-  <li class="engage"><span class="svc-date">Ongoing</span><span class="svc-badge engage">Workshop</span><span class="svc-content"><strong>Co-Organiser</strong>, <em>SBSE&times;LLMs</em> workshop &mdash; bridging search-based software engineering and large language models.</span></li>
-  <li class="engage"><span class="svc-date">Ongoing</span><span class="svc-badge open">Open</span><span class="svc-content"><strong>Open-Source Research</strong> &mdash; all publications accompanied by public GitHub repositories; co-developed a public LLM-based benchmark with BT through the ITEA4 GENIUS project.</span></li>
-</ul>
+<div class="svc-card">
+<h3>Invited Talks &amp; Presentations</h3>
+<div class="svc-rows">
+  <div class="svc-row"><span class="svc-tag talk">Talk</span><span class="svc-venue">KCL Software Systems &amp; Security (<a href="https://www.kcl.ac.uk/research/ssy">SSY</a>) Research Group <span class="svc-note">Invited guest talk on trustworthy AI coding agents and their security implications for software engineering practice.</span></span><span class="svc-year">Apr 2026</span></div>
+  <div class="svc-row"><span class="svc-tag award">Award</span><span class="svc-venue"><a href="https://research.spec.org/awards/past-winners/2024/">ICPE 2025</a> <span class="svc-note">Delivered acceptance remarks for the SPEC Kaivalya Dixit Distinguished Dissertation Award.</span></span><span class="svc-year">2025</span></div>
+</div>
+</div>
+
+<div class="svc-card">
+<h3>Workshops &amp; Session Chairing</h3>
+<div class="svc-rows">
+  <div class="svc-row"><span class="svc-tag org">Organiser</span><span class="svc-venue">Safe and Trusted AI for Software Engineering <span class="svc-note">Co-organised a two-day workshop with 10&ndash;12 invited speakers from academia and industry.</span></span><span class="svc-year">Nov 2026</span></div>
+  <div class="svc-row"><span class="svc-tag org">Organiser</span><span class="svc-venue">SBSE&times;LLMs Workshop <span class="svc-note">Co-organised a workshop bridging search-based software engineering and large language models.</span></span><span class="svc-year">Ongoing</span></div>
+  <div class="svc-row"><span class="svc-tag chair">Chair</span><span class="svc-venue"><a href="https://conf.researchr.org/home/aiware-2025">AIware 2025</a> <span class="svc-note">Session Chair.</span></span><span class="svc-year">2025</span></div>
+</div>
+</div>
+
+<div class="svc-card">
+<h3>Open Research &amp; Outreach</h3>
+<div class="svc-rows">
+  <div class="svc-row"><span class="svc-tag open">Open</span><span class="svc-venue">Public GitHub repositories <span class="svc-note">accompany all publications, released for reproducibility.</span></span><span class="svc-year">Ongoing</span></div>
+  <div class="svc-row"><span class="svc-tag open">Open</span><span class="svc-venue">LLM-based benchmark <span class="svc-note">co-developed with BT through the ITEA4 GENIUS project.</span></span><span class="svc-year">Ongoing</span></div>
+</div>
+</div>
 
 <style>
-.svc-timeline {
-  list-style: none;
-  --svc-date-w: 5rem;
-  --svc-tag-w: 5.5rem;
-  --svc-gap: 1.5rem;
-  --svc-line-x: calc(var(--svc-date-w) + (var(--svc-gap) / 2));
-  padding: 0;
-  margin: 0.75rem 0 2rem -6rem;
-  position: relative;
-  width: 100%;
-  max-width: none;
+.svc-card {
+  border: 1px solid #ded7ca;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.5);
+  padding: 0.9rem 1.15rem 0.55rem;
+  margin: 0 0 1.1rem;
 }
-.svc-timeline::before {
-  content: '';
-  position: absolute;
-  left: var(--svc-line-x);
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: #e0e0e0;
+.svc-card h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.02rem;
+  border-bottom: 1px solid #e0dbd0;
+  padding-bottom: 0.45rem;
 }
-.svc-timeline li {
+.svc-rows {
+  display: flex;
+  flex-direction: column;
+}
+.svc-row {
   display: grid;
-  grid-template-columns: var(--svc-date-w) var(--svc-tag-w) minmax(0, 1fr);
-  column-gap: var(--svc-gap);
-  align-items: start;
-  position: relative;
-  padding: 0 0 0.9rem 0;
-  font-size: 0.9em;
+  grid-template-columns: 6rem 1fr 4.5rem;
+  column-gap: 0.9rem;
+  align-items: baseline;
+  padding: 0.42rem 0;
+  border-bottom: 1px dashed #e7e1d4;
+  font-size: 0.87em;
   line-height: 1.5;
-  text-align: left;
-  width: 100%;
-  margin: 0;
 }
-.svc-timeline li::before {
-  content: '';
-  position: absolute;
-  left: var(--svc-line-x);
-  top: 0.6em;
-  transform: translate(-50%, -50%);
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #ccc;
+.svc-rows .svc-row:last-child { border-bottom: none; }
+.svc-venue { min-width: 0; }
+.svc-note {
+  display: block;
+  color: #756f64;
+  font-size: 0.94em;
+  margin-top: 0.15rem;
 }
-.svc-timeline li.pc::before     { background: #1988b8; }
-.svc-timeline li.engage::before { background: #b06fc4; }
-.svc-badge {
-  position: relative;
+.svc-year {
+  text-align: right;
+  color: #999;
+  white-space: nowrap;
+  font-size: 0.94em;
+}
+.svc-tag {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 var(--svc-tag-w);
-  min-width: var(--svc-tag-w);
   text-align: center;
-  padding: .22em .5em .26em;
-  font-size: 75%;
-  letter-spacing: 0.4px;
+  padding: .2em .45em .24em;
+  font-size: 0.76em;
+  letter-spacing: 0.3px;
   text-transform: uppercase;
   font-weight: bold;
   color: #fff;
   line-height: 1.05;
   border-radius: .25em;
   white-space: nowrap;
-  vertical-align: middle;
   align-self: start;
-  margin-top: 0.06em;
 }
-.svc-badge.pc     { background-color: #1988b8; }
-.svc-badge.junior { background-color: #4aa3c9; }
-.svc-badge.shadow { background-color: #8a8578; }
-.svc-badge.aec    { background-color: #d58a2d; }
-.svc-badge.review { background-color: #56ae5d; }
-.svc-badge.engage { background-color: #b06fc4; }
-.svc-badge.talk   { background-color: #cf6363; }
-.svc-badge.award  { background-color: #cf6363; }
-.svc-badge.open   { background-color: #8a8578; }
-.svc-date {
-  grid-column: 1;
-  text-align: right;
-  font-size: 0.83em;
-  color: #999;
-  line-height: 1.2;
-  padding-top: 0.16em;
-  white-space: nowrap;
-}
-.svc-content {
-  grid-column: 3;
-  min-width: 0;
-  overflow-wrap: break-word;
-  align-self: start;
-  margin-top: -0.1em;
-}
-@media (max-width: 768px) {
-  .svc-timeline {
-    --svc-date-w: 3.5rem;
-    --svc-tag-w: 4.5rem;
-    --svc-gap: 1rem;
-    --svc-line-x: calc(var(--svc-date-w) + (var(--svc-gap) / 2));
-    margin-left: -10em;
+.svc-tag.pc      { background-color: #1988b8; }
+.svc-tag.junior  { background-color: #4aa3c9; }
+.svc-tag.shadow  { background-color: #8a8578; }
+.svc-tag.aec     { background-color: #d58a2d; }
+.svc-tag.review  { background-color: #56ae5d; }
+.svc-tag.talk    { background-color: #cf6363; }
+.svc-tag.award   { background-color: #cf6363; }
+.svc-tag.org     { background-color: #b06fc4; }
+.svc-tag.chair   { background-color: #b06fc4; }
+.svc-tag.open    { background-color: #8a8578; }
+
+@media (max-width: 640px) {
+  .svc-row {
+    grid-template-columns: 1fr;
+    row-gap: 0.3rem;
   }
-  .svc-date { font-size: 0.79em; }
-}
-@media (max-width: 480px) {
-  .svc-timeline {
-    --svc-date-w: 3.5rem;
-    --svc-tag-w: 4.5rem;
-    --svc-gap: 1rem;
-    --svc-line-x: calc(var(--svc-date-w) + (var(--svc-gap) / 2));
-    margin-left: -10em;
-  }
-  .svc-badge { font-size: 68%; }
+  .svc-tag { justify-self: start; }
+  .svc-year { text-align: left; }
 }
 </style>
