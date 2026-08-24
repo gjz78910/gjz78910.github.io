@@ -75,13 +75,39 @@ If you're interested in collaboration, please feel free to reach out!
 
 ## Awards
 
-<div class="svc-card">
-<div class="svc-rows">
-  <div class="svc-row"><span class="svc-tag award">Award</span><span class="svc-venue"><a href="https://2026.msrconf.org/">MSR 2026</a> Distinguished Challenge Paper Award <span class="svc-note">Selected from 60+ submissions; recognised for empirical rigour in studying the trustworthiness of AI coding agents at scale.</span></span><span class="svc-year">2026</span></div>
-  <div class="svc-row"><span class="svc-tag award">Award</span><span class="svc-venue"><a href="https://conf.researchr.org/home/icse-2025">ICSE 2025</a> Distinguished Reviewer Award <span class="svc-note">Recognised for exceptional review quality in the Shadow PC.</span></span><span class="svc-year">2025</span></div>
-  <div class="svc-row"><span class="svc-tag award">Award</span><span class="svc-venue"><a href="https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge">SSBSE 2024</a> Challenge Winner Award <span class="svc-note">Led a 7-member international team to the highest-scoring submission in the GenAI optimisation challenge.</span></span><span class="svc-year">2024</span></div>
-  <div class="svc-row"><span class="svc-tag award">Award</span><span class="svc-venue"><a href="https://research.spec.org/awards/past-winners/2024/">ICPE 2024</a> SPEC Kaivalya Dixit Distinguished Dissertation Award <span class="svc-note">Sole recipient from 14 global candidates; recognises the most outstanding PhD dissertation in computer performance evaluation worldwide.</span></span><span class="svc-year">2024</span></div>
-</div>
+<div class="awards-list">
+  <div class="award-card">
+    <div class="award-icon">&#127942;</div>
+    <div class="award-body">
+      <div class="award-top"><span class="award-title">Distinguished Challenge Paper Award</span><span class="award-year">2026</span></div>
+      <div class="award-venue"><a href="https://2026.msrconf.org/">MSR 2026</a> Mining Challenge</div>
+      <p class="award-desc">Selected from 60+ submissions; recognised for empirical rigour in studying the trustworthiness of AI coding agents at scale.</p>
+    </div>
+  </div>
+  <div class="award-card">
+    <div class="award-icon">&#127942;</div>
+    <div class="award-body">
+      <div class="award-top"><span class="award-title">Distinguished Reviewer Award</span><span class="award-year">2025</span></div>
+      <div class="award-venue"><a href="https://conf.researchr.org/home/icse-2025">ICSE 2025</a> Shadow PC</div>
+      <p class="award-desc">Recognised for exceptional review quality in the shadow programme committee.</p>
+    </div>
+  </div>
+  <div class="award-card">
+    <div class="award-icon">&#127942;</div>
+    <div class="award-body">
+      <div class="award-top"><span class="award-title">Challenge Winner Award</span><span class="award-year">2024</span></div>
+      <div class="award-venue"><a href="https://conf.researchr.org/track/ssbse-2024/ssbse-2024-challenge">SSBSE 2024</a></div>
+      <p class="award-desc">Led a 7-member international team to the highest-scoring submission in the GenAI optimisation challenge.</p>
+    </div>
+  </div>
+  <div class="award-card">
+    <div class="award-icon">&#127942;</div>
+    <div class="award-body">
+      <div class="award-top"><span class="award-title">SPEC Kaivalya Dixit Distinguished Dissertation Award</span><span class="award-year">2024</span></div>
+      <div class="award-venue"><a href="https://research.spec.org/awards/past-winners/2024/">ICPE 2024</a></div>
+      <p class="award-desc">Sole recipient from 14 global candidates; recognises the most outstanding PhD dissertation in computer performance evaluation worldwide.</p>
+    </div>
+  </div>
 </div>
 
 ## News
@@ -210,65 +236,58 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   border-top: 1px solid #e5ded3;
   padding-top: 0.5rem;
 }
-.svc-card {
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 0.5rem 0 1.5rem;
+}
+.award-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 0.85rem 1.1rem;
   border: 1px solid #ded7ca;
   border-radius: 5px;
   background: rgba(255,255,255,0.5);
-  padding: 0.9rem 1.15rem 0.55rem;
-  margin: 0.5rem 0 1.4rem;
 }
-.svc-rows {
+.award-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+.award-body { flex: 1; min-width: 0; }
+.award-top {
   display: flex;
-  flex-direction: column;
-}
-.svc-row {
-  display: grid;
-  grid-template-columns: 7rem 1fr 4.5rem;
-  column-gap: 0.9rem;
+  justify-content: space-between;
   align-items: baseline;
-  padding: 0.42rem 0;
-  border-bottom: 1px dashed #e7e1d4;
-  font-size: 0.87em;
-  line-height: 1.5;
+  gap: 0.75rem;
 }
-.svc-rows .svc-row:last-child { border-bottom: none; }
-.svc-venue { min-width: 0; }
-.svc-note {
-  display: block;
+.award-title {
+  font-weight: 700;
+  font-size: 1em;
+  color: #1a1510;
+}
+.award-year {
+  color: #999;
+  font-size: 0.85em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.award-venue {
   color: #756f64;
-  font-size: 0.94em;
+  font-size: 0.86em;
   margin-top: 0.15rem;
 }
-.svc-year {
-  text-align: right;
-  color: #999;
-  white-space: nowrap;
-  font-size: 0.94em;
+.award-desc {
+  color: #4a453d;
+  font-size: 0.88em;
+  line-height: 1.55;
+  margin: 0.4rem 0 0;
 }
-.svc-tag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: .2em .45em .24em;
-  font-size: 0.76em;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #fff;
-  line-height: 1.05;
-  border-radius: .25em;
-  white-space: nowrap;
-  align-self: start;
-}
-.svc-tag.award { background-color: #cf6363; }
 @media (max-width: 640px) {
-  .svc-row {
-    grid-template-columns: 1fr;
-    row-gap: 0.3rem;
-  }
-  .svc-tag { justify-self: start; }
-  .svc-year { text-align: left; }
+  .award-top { flex-direction: column; gap: 0.15rem; }
 }
 .news-timeline {
   list-style: none;
