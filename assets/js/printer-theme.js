@@ -34,6 +34,11 @@
     return p === '/service/' || p === '/service' || p === '/service/index.html' || p.includes('/printer/service');
   }
 
+  function isTeachingPage() {
+    var p = window.location.pathname;
+    return p === '/teaching/' || p === '/teaching' || p === '/teaching/index.html' || p.includes('/printer/teaching');
+  }
+
   /* ------------------------------------------------------------------ */
   /* Active nav button                                                    */
   /* ------------------------------------------------------------------ */
@@ -43,6 +48,7 @@
     var eventsBtn = document.getElementById('btn-events');
     var publicationsBtn = document.getElementById('btn-publications');
     var serviceBtn = document.getElementById('btn-service');
+    var teachingBtn = document.getElementById('btn-teaching');
     if (aboutBtn) {
       aboutBtn.classList.toggle('active', page === 'about');
       aboutBtn.setAttribute('aria-current', page === 'about' ? 'page' : 'false');
@@ -58,6 +64,10 @@
     if (serviceBtn) {
       serviceBtn.classList.toggle('active', page === 'service');
       serviceBtn.setAttribute('aria-current', page === 'service' ? 'page' : 'false');
+    }
+    if (teachingBtn) {
+      teachingBtn.classList.toggle('active', page === 'teaching');
+      teachingBtn.setAttribute('aria-current', page === 'teaching' ? 'page' : 'false');
     }
   }
 
@@ -223,6 +233,7 @@
     var eventsBtn = document.getElementById('btn-events');
     var publicationsBtn = document.getElementById('btn-publications');
     var serviceBtn = document.getElementById('btn-service');
+    var teachingBtn = document.getElementById('btn-teaching');
 
     if (aboutBtn) {
       aboutBtn.addEventListener('click', function () {
@@ -315,6 +326,29 @@
         }
       });
     }
+
+    if (teachingBtn) {
+      teachingBtn.addEventListener('click', function () {
+        playSound('button-sound');
+        clearPendingAction();
+        if (isTeachingPage()) {
+          var content = document.querySelector('.paper-content');
+          if (content) content.style.visibility = 'visible';
+          var paper = document.getElementById('current-paper');
+          if (paper) paper.style.display = 'block';
+          setActiveButton('teaching');
+          pendingActionTimer = setTimeout(function () {
+            startPrintingWithDelay();
+            pendingActionTimer = null;
+          }, BUTTON_SOUND_DELAY_MS);
+        } else {
+          sessionStorage.setItem('printer-nav', 'teaching');
+          pendingActionTimer = setTimeout(function () {
+            window.location.href = '/teaching/';
+          }, BUTTON_SOUND_DELAY_MS);
+        }
+      });
+    }
   }
 
   /* ------------------------------------------------------------------ */
@@ -335,6 +369,8 @@
       setActiveButton('publications');
     } else if (nav === 'service' && isServicePage()) {
       setActiveButton('service');
+    } else if (nav === 'teaching' && isTeachingPage()) {
+      setActiveButton('teaching');
     } else {
       // Default page load: all buttons appear unpressed.
       setActiveButton('');
