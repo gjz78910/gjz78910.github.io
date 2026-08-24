@@ -105,7 +105,8 @@ redirect_from:
 }
 .teach-tags {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 0.5rem;
 }
 .teach-chip {
