@@ -44,7 +44,7 @@ redirect_from:
     <div class="teach-body">
       <div class="teach-top"><span class="teach-role">Teaching Assistant</span><span class="teach-dates">Jan 2021 &ndash; Jun 2023</span></div>
       <div class="teach-org">Loughborough University</div>
-      <span class="teach-stat"><b>~100</b> students per cohort</span>
+      <span class="teach-stat"><b>~100</b> students taught</span>
     </div>
   </div>
 
