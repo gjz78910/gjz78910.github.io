@@ -642,8 +642,8 @@
    ============================================================= */
 .printer-note {
   position: absolute;
-  top: -58px;
-  left: 60px;
+  top: 4px;
+  left: -256px;
   width: 260px;
   background: #fffefa;
   background-image:
@@ -720,29 +720,17 @@
 /* =============================================================
    RESPONSIVE
    ============================================================= */
-@media (max-width: 640px) {
-  .events-grid { grid-template-columns: 1fr; }
-  .printer-nav {
-    gap: 0.45rem;
-  }
-  .printer-nav-btn {
-    font-size: 0.72rem;
-    padding: 0.48rem 1.05rem;
-    letter-spacing: 1.1px;
-  }
-  .printer-note {
-    width: 200px;
-    top: -46px;
-    left: 12px;
-    padding: 0.65rem 0.8rem 0.75rem;
-  }
-  .printer-note-text { font-size: 0.76rem; }
-}
-
 @media (max-width: 768px) {
   .sound-knob-outer { width: 44px; height: 44px; }
   .sound-knob-face { width: 30px; height: 30px; }
   .knob-icon { width: 15px; height: 15px; }
+
+  .printer-note {
+    width: 220px;
+    top: -50px;
+    left: -40px;
+    padding: 0.7rem 0.85rem 0.8rem;
+  }
 
   .printer-container {
     --slot-side-inset: 22px;
@@ -761,6 +749,26 @@
   .paper-output-area { margin-left: var(--paper-side-inset); margin-right: var(--paper-side-inset); }
   .slot-body-fill { margin: 0; }
   .paper-sheet { padding: 2rem 1.5rem 2.5rem; min-height: 400px; }
+}
+
+@media (max-width: 640px) {
+  .events-grid { grid-template-columns: 1fr; }
+  .printer-nav {
+    gap: 0.45rem;
+  }
+  .printer-nav-btn {
+    font-size: 0.72rem;
+    padding: 0.48rem 1.05rem;
+    letter-spacing: 1.1px;
+  }
+  .printer-note {
+    width: 200px;
+    top: -40px;
+    left: 50%;
+    margin-left: -100px;
+    padding: 0.65rem 0.8rem 0.75rem;
+  }
+  .printer-note-text { font-size: 0.76rem; }
 }
 
 @media (max-width: 480px) {
