@@ -250,6 +250,12 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
   border: 1px solid #ded7ca;
   border-radius: 5px;
   background: rgba(255,255,255,0.5);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+}
+.award-card:hover {
+  border-color: #cfc4ac;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
 }
 .award-icon {
   font-size: 1.35rem;

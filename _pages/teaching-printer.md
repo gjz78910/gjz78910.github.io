@@ -119,6 +119,12 @@ redirect_from:
   padding: 0.25rem 0.7rem;
   font-size: 0.82rem;
   color: #332f2a;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+.teach-chip:hover {
+  background: #ede4d2;
+  border-color: #cfc4ac;
+  transform: translateY(-1px);
 }
 .teach-chip i {
   font-style: italic;
@@ -135,6 +141,12 @@ redirect_from:
   padding: 0.25rem 0.7rem;
   font-size: 0.82rem;
   color: #5a544a;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+.teach-stat:hover {
+  background: #ede4d2;
+  border-color: #cfc4ac;
+  transform: translateY(-1px);
 }
 .teach-stat b { font-size: 1rem; color: #b8860b; }
 
