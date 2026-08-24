@@ -13,18 +13,17 @@ redirect_from:
 <div class="svc-card">
 <h3>Programme Committee Membership</h3>
 <div class="svc-rows">
-  <div class="svc-row"><span class="svc-tag pc">PC Member</span><span class="svc-venue"><a href="https://2027.msrconf.org/">MSR 2027</a>, <a href="https://conf.researchr.org/home/fse-2027">FSE 2027</a>, <a href="https://conf.researchr.org/home/icse-2027">ICSE 2027</a>, <a href="https://conf.researchr.org/home/icst-2027">ICST 2027</a>, <a href="https://issre.github.io/">ISSRE 2026</a>, <a href="https://conf.researchr.org/home/ase-2026">ASE 2026</a> <span class="svc-note-inline">(Tools &amp; Datasets)</span>, <a href="https://conf.researchr.org/home/issta-2026">ISSTA 2026</a>, <a href="https://conf.researchr.org/home/icst-2026">ICST 2026</a>, <a href="https://www2026.thewebconf.org/">WWW 2026</a>, <a href="https://ucc.uccbdcat2024.org/index.html">IEEE/ACM UCC 2024</a></span><span class="svc-year">2024&ndash;27</span></div>
+  <div class="svc-row"><span class="svc-tag pc">PC Member</span><span class="svc-venue"><a href="https://2027.msrconf.org/">MSR 2027</a>, <a href="https://conf.researchr.org/home/fse-2027">FSE 2027</a>, <a href="https://conf.researchr.org/home/icse-2027">ICSE 2027</a>, <a href="https://conf.researchr.org/home/icst-2027">ICST 2027</a>, <a href="https://issre.github.io/">ISSRE 2026</a>, <a href="https://conf.researchr.org/home/ase-2026">ASE 2026</a> <span class="svc-note-inline">(Tools &amp; Datasets)</span>, <a href="https://conf.researchr.org/home/issta-2026">ISSTA 2026</a>, <a href="https://conf.researchr.org/home/icst-2026">ICST 2026</a>, <a href="https://www2026.thewebconf.org/">WWW 2026</a>, <a href="https://ucc.uccbdcat2024.org/index.html">IEEE/ACM UCC 2024</a>, <a href="https://conf.researchr.org/home/icse-2025">ICSE 2025</a> <span class="svc-note-inline">(Artifact Evaluation)</span></span><span class="svc-year">2024&ndash;27</span></div>
   <div class="svc-row"><span class="svc-tag junior">Junior PC</span><span class="svc-venue"><a href="https://2026.msrconf.org/">MSR 2026</a></span><span class="svc-year">2025&ndash;26</span></div>
   <div class="svc-row"><span class="svc-tag shadow">Shadow PC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/icse-2026">ICSE 2026</a></span><span class="svc-year">2025</span></div>
-  <div class="svc-row"><span class="svc-tag aec">AEC</span><span class="svc-venue"><a href="https://conf.researchr.org/home/icse-2025">ICSE 2025</a> <span class="svc-note-inline">(Artifact Evaluation)</span></span><span class="svc-year">2025</span></div>
 </div>
 </div>
 
 <div class="svc-card">
 <h3>Peer Review</h3>
 <div class="svc-rows">
-  <div class="svc-row"><span class="svc-tag review">Conference</span><span class="svc-venue"><a href="https://ppopp25.sigplan.org/">PPOPP</a> 2025, <a href="https://conferences.computer.org/icws/">ICWS</a> 2023&ndash;24, <a href="https://conferences.computer.org/smds/2020/">SMDS</a> 2020, <a href="https://conferences.computer.org/scc/2020/">SCC</a> 2020</span></div>
-  <div class="svc-row"><span class="svc-tag review">Journal</span><span class="svc-venue"><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32"><em>TSE</em></a> 2026, <a href="https://dl.acm.org/journal/tosem"><em>TOSEM</em></a> 2025&ndash;26, <a href="https://link.springer.com/journal/10664"><em>ESE</em></a> 2026, <a href="https://www.sciencedirect.com/journal/journal-of-systems-and-software"><em>JSS</em></a> 2025, <a href="https://dl.acm.org/journal/taco"><em>TACO</em></a> 2024, <a href="https://dl.acm.org/journal/csur"><em>CSUR</em></a> 2024, <a href="https://dl.acm.org/journal/taas"><em>TAAS</em></a> 2024 &amp; 2026, <a href="https://www.sciencedirect.com/journal/information-sciences"><em>JIS</em></a> 2024, <a href="https://onlinelibrary.wiley.com/journal/1097024x"><em>JSPE</em></a> 2020</span></div>
+  <div class="svc-row"><span class="svc-tag review">Conference</span><span class="svc-venue"><a href="https://ppopp25.sigplan.org/">PPOPP 2025</a>, <a href="https://conferences.computer.org/icws/">ICWS 2023&ndash;24</a>, <a href="https://conferences.computer.org/smds/2020/">SMDS 2020</a>, <a href="https://conferences.computer.org/scc/2020/">SCC 2020</a></span><span class="svc-year">2020&ndash;25</span></div>
+  <div class="svc-row"><span class="svc-tag review">Journal</span><span class="svc-venue"><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32"><em>TSE</em> 2026</a>, <a href="https://dl.acm.org/journal/tosem"><em>TOSEM</em> 2025&ndash;26</a>, <a href="https://link.springer.com/journal/10664"><em>ESE</em> 2026</a>, <a href="https://www.sciencedirect.com/journal/journal-of-systems-and-software"><em>JSS</em> 2025</a>, <a href="https://dl.acm.org/journal/taco"><em>TACO</em> 2024</a>, <a href="https://dl.acm.org/journal/csur"><em>CSUR</em> 2024</a>, <a href="https://dl.acm.org/journal/taas"><em>TAAS</em> 2024 &amp; 2026</a>, <a href="https://www.sciencedirect.com/journal/information-sciences"><em>JIS</em> 2024</a>, <a href="https://onlinelibrary.wiley.com/journal/1097024x"><em>JSPE</em> 2020</a></span><span class="svc-year">2020&ndash;26</span></div>
 </div>
 </div>
 
@@ -111,7 +110,6 @@ redirect_from:
 .svc-tag.pc      { background-color: #1988b8; }
 .svc-tag.junior  { background-color: #4aa3c9; }
 .svc-tag.shadow  { background-color: #8a8578; }
-.svc-tag.aec     { background-color: #d58a2d; }
 .svc-tag.review  { background-color: #56ae5d; }
 .svc-tag.talk    { background-color: #cf6363; }
 .svc-tag.award   { background-color: #cf6363; }
