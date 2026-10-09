@@ -83,6 +83,7 @@ redirect_from:
     <div class="cat-top"><span class="cat-title">Workshops &amp; Session Chairing</span><span class="cat-count">2025&ndash;26</span></div>
     <div class="chip-grid">
       <span class="chip">Safe &amp; Trusted AI Workshop <i>Organiser &middot; Nov 2026</i></span>
+      <span class="chip"><a href="https://conf.researchr.org/home/ase-2025">ASE 2025</a> <i>Session Chair</i></span>
       <span class="chip"><a href="https://conf.researchr.org/home/aiware-2025">AIware 2025</a> <i>Session Chair</i></span>
     </div>
   </div>
