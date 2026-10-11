@@ -79,6 +79,14 @@ If you're interested in collaboration, please feel free to reach out!
   <div class="award-card">
     <div class="award-icon">&#127942;</div>
     <div class="award-body">
+      <div class="award-top"><span class="award-title">Research Track Distinguished Reviewer Award</span><span class="award-year">2026</span></div>
+      <div class="award-venue"><a href="https://cyprusconferences.org/issre2026/awards/">ISSRE 2026</a> Program Committee</div>
+      <p class="award-desc">Recognised for insightful, constructive, and thorough reviews that supported the quality of the research track programme.</p>
+    </div>
+  </div>
+  <div class="award-card">
+    <div class="award-icon">&#127942;</div>
+    <div class="award-body">
       <div class="award-top"><span class="award-title">Distinguished Challenge Paper Award</span><span class="award-year">2026</span></div>
       <div class="award-venue"><a href="https://2026.msrconf.org/">MSR 2026</a> Mining Challenge</div>
       <p class="award-desc">Selected from 60+ submissions; recognised for empirical rigour in studying the trustworthiness of AI coding agents at scale.</p>
@@ -114,6 +122,7 @@ If you're interested in collaboration, please feel free to reach out!
 
 <ul class="news-timeline">
   <li class="service"><span class="news-date">Nov 2026</span><span class="news-badge service">Service</span><span class="news-content">Co-organising the <strong>Safe and Trusted AI for Software Engineering</strong> workshop (two-day, 10–12 invited speakers).</span></li>
+  <li class="award"><span class="news-date">Oct 2026</span><span class="news-badge award">Award</span><span class="news-content">Received the <strong>Research Track Distinguished Reviewer Award</strong> from the <a href="https://cyprusconferences.org/issre2026/awards/"><em>ISSRE 2026</em></a> Program Committee.</span></li>
   <li class="service"><span class="news-date">Sep 2026</span><span class="news-badge service">Service</span><span class="news-content">Served as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/cain-2027"><em>CAIN 2027</em></a>.</span></li>
   <li class="service"><span class="news-date">Aug 2026</span><span class="news-badge service">Service</span><span class="news-content">Served as <strong>Program Committee Member</strong> for <a href="https://2027.msrconf.org/"><em>MSR 2027</em></a>.</span></li>
   <li class="service"><span class="news-date">Aug 2026</span><span class="news-badge service">Service</span><span class="news-content">Served as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/icst-2027"><em>ICST 2027</em></a>.</span></li>
