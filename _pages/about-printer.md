@@ -73,6 +73,35 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
 
 If you're interested in collaboration, please feel free to reach out!
 
+## Grants and Research Support
+
+<div class="awards-list">
+  <div class="award-card">
+    <div class="award-icon" aria-hidden="true">&#128300;</div>
+    <div class="award-body">
+      <div class="award-top"><span class="award-title">ChatGPT for Academic Researchers</span><span class="award-year">2026</span></div>
+      <div class="award-venue"><a href="https://openai.com/index/chatgpt-for-academic-researchers/">OpenAI</a></div>
+      <p class="award-desc">Selected for OpenAI’s ChatGPT for Academic Researchers programme. The programme provides 12 months of access to frontier AI models and research tools, supporting my work on trustworthy and efficient AI-assisted software engineering.</p>
+    </div>
+  </div>
+  <div class="award-card">
+    <div class="award-icon" aria-hidden="true">&#128300;</div>
+    <div class="award-body">
+      <div class="award-top"><span class="award-title">ITEA4 GENIUS</span><span class="award-year">2025–present</span></div>
+      <div class="award-venue"><a href="https://itea4.org/project/genius.html">ITEA4 &amp; Innovate UK</a> · King's College London</div>
+      <p class="award-desc">As primary KCL researcher, I independently design, conduct, and analyse studies of AI-assisted software development with international partners including BT, Diffblue, and Siemens. This research advances the evaluation of AI coding agents’ trustworthiness, security, and energy consumption, with work on message-code inconsistency recognised by the MSR 2026 Distinguished Challenge Paper Award.</p>
+    </div>
+  </div>
+  <div class="award-card">
+    <div class="award-icon" aria-hidden="true">&#128300;</div>
+    <div class="award-body">
+      <div class="award-top"><span class="award-title">Knowledge Transfer Partnership</span><span class="award-year">2024–2025</span></div>
+      <div class="award-venue"><a href="https://www.ktp-uk.org/">Innovate UK</a> · University of Leeds &amp; TurinTech AI</div>
+      <p class="award-desc">Co-designed the research programme and led technical delivery of LLM-based code optimisation for commercial software systems. I completed the two-year research plan in 18 months, producing research published at ASE 2025 and SSBSE 2025 and contributing to TurinTech AI’s Series B funding.</p>
+    </div>
+  </div>
+</div>
+
 ## Awards
 
 <div class="awards-list">
@@ -122,6 +151,7 @@ If you're interested in collaboration, please feel free to reach out!
 
 <ul class="news-timeline">
   <li class="service"><span class="news-date">Nov 2026</span><span class="news-badge service">Service</span><span class="news-content">Co-organising the <strong>Safe and Trusted AI for Software Engineering</strong> workshop (two-day, 10–12 invited speakers).</span></li>
+  <li class="grant"><span class="news-date">Oct 2026</span><span class="news-badge grant">Grant</span><span class="news-content">Selected for OpenAI’s <a href="https://openai.com/index/chatgpt-for-academic-researchers/">ChatGPT for Academic Researchers programme</a></span></li>
   <li class="award"><span class="news-date">Oct 2026</span><span class="news-badge award">Award</span><span class="news-content">Received the <strong>Research Track Distinguished Reviewer Award</strong> from the <a href="https://cyprusconferences.org/issre2026/awards/"><em>ISSRE 2026</em></a> Program Committee.</span></li>
   <li class="service"><span class="news-date">Sep 2026</span><span class="news-badge service">Service</span><span class="news-content">Served as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/cain-2027"><em>CAIN 2027</em></a>.</span></li>
   <li class="service"><span class="news-date">Aug 2026</span><span class="news-badge service">Service</span><span class="news-content">Served as <strong>Program Committee Member</strong> for <a href="https://2027.msrconf.org/"><em>MSR 2027</em></a>.</span></li>
@@ -353,6 +383,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 .news-timeline li.paper::before  { background: #5cb85c; }
 .news-timeline li.award::before   { background: #e06666; }
 .news-timeline li.service::before { background: #0087BD; }
+.news-timeline li.grant::before   { background: #8064a2; }
 .news-badge {
   position: relative;
   display: inline-flex;
@@ -385,6 +416,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 .news-badge.paper   { background-color: #56ae5d; }
 .news-badge.award   { background-color: #cf6363; }
 .news-badge.service { background-color: #1988b8; }
+.news-badge.grant   { background-color: #8064a2; }
 .news-date {
   grid-column: 1;
   text-align: right;
