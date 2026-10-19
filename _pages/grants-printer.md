@@ -12,8 +12,10 @@ author_profile: false
     <div class="award-icon" aria-hidden="true">&#128300;</div>
     <div class="award-body">
       <div class="award-top"><span class="award-title">ChatGPT for Academic Researchers</span><span class="award-year">Oct 2026 · 12 months</span></div>
-      <div class="award-venue"><a href="https://openai.com/index/chatgpt-for-academic-researchers/">OpenAI</a></div>
-      <div class="award-role">Grant Recipient</div>
+      <div class="grant-meta">
+        <div class="award-role">Grant Recipient</div>
+        <div class="award-venue"><a href="https://openai.com/index/chatgpt-for-academic-researchers/">OpenAI</a></div>
+      </div>
       <p class="award-desc">Secured an OpenAI in-kind research grant providing frontier AI models and research tools to advance my research on trustworthy and efficient AI-assisted software engineering.</p>
     </div>
   </div>
@@ -21,8 +23,10 @@ author_profile: false
     <div class="award-icon" aria-hidden="true">&#128300;</div>
     <div class="award-body">
       <div class="award-top"><span class="award-title">ITEA4 GENIUS</span><span class="award-year">Nov 2025–present</span></div>
-      <div class="award-venue"><a href="https://itea4.org/project/genius.html">ITEA4 &amp; Innovate UK</a> · King's College London</div>
-      <div class="award-role">Primary KCL Researcher</div>
+      <div class="grant-meta">
+        <div class="award-role">Primary KCL Researcher</div>
+        <div class="award-venue"><a href="https://itea4.org/project/genius.html">ITEA4 &amp; Innovate UK</a> · King's College London</div>
+      </div>
       <p class="award-desc">Independently lead studies of AI coding agents’ trustworthiness with partners including BT, Diffblue, and GoCodeGreen, producing research recognised by the MSR 2026 Distinguished Challenge Paper Award.</p>
     </div>
   </div>
@@ -30,8 +34,10 @@ author_profile: false
     <div class="award-icon" aria-hidden="true">&#128300;</div>
     <div class="award-body">
       <div class="award-top"><span class="award-title">Knowledge Transfer Partnership</span><span class="award-year">Jun 2024–Nov 2025</span></div>
-      <div class="award-venue"><a href="https://www.ktp-uk.org/">Innovate UK</a> · University of Leeds &amp; TurinTech AI</div>
-      <div class="award-role">Main Researcher · KTP Associate</div>
+      <div class="grant-meta">
+        <div class="award-role">Main Researcher · KTP Associate</div>
+        <div class="award-venue"><a href="https://www.ktp-uk.org/">Innovate UK</a> · University of Leeds &amp; TurinTech AI</div>
+      </div>
       <p class="award-desc">Co-designed and led LLM-based code optimisation research, delivering the two-year programme in 18 months, producing ASE 2025 and SSBSE 2025 publications, and contributing to TurinTech AI’s Series B funding.</p>
     </div>
   </div>
@@ -133,11 +139,21 @@ author_profile: false
   font-size: 0.86em;
   margin-top: 0.15rem;
 }
+.grant-meta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+.grant-meta .award-venue {
+  margin-top: 0;
+  text-align: right;
+}
 .award-role {
   font-weight: 700;
   font-size: 0.86em;
   color: #4a453d;
-  margin-top: 0.25rem;
 }
 .award-desc {
   color: #4a453d;
