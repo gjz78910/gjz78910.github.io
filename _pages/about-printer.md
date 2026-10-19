@@ -73,7 +73,7 @@ I completed my PhD in Dec 2024 in the [Department of Computer Science](https://w
 
 If you're interested in collaboration, please feel free to reach out!
 
-## Grants and Research Support
+## Research Grants
 
 <div class="awards-list">
   <div class="award-card">
@@ -81,7 +81,7 @@ If you're interested in collaboration, please feel free to reach out!
     <div class="award-body">
       <div class="award-top"><span class="award-title">ChatGPT for Academic Researchers</span><span class="award-year">2026</span></div>
       <div class="award-venue"><a href="https://openai.com/index/chatgpt-for-academic-researchers/">OpenAI</a></div>
-      <p class="award-desc">Selected for OpenAI’s ChatGPT for Academic Researchers programme. The programme provides 12 months of access to frontier AI models and research tools, supporting my work on trustworthy and efficient AI-assisted software engineering.</p>
+      <p class="award-desc">Selected for OpenAI’s ChatGPT for Academic Researchers programme. This in-kind research grant provides 12 months of access to frontier AI models and research tools to advance my work on trustworthy and efficient AI-assisted software engineering.</p>
     </div>
   </div>
   <div class="award-card">
