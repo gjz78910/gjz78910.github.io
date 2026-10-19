@@ -29,6 +29,11 @@
     return p === '/publications/' || p === '/publications' || p === '/publications/index.html' || p.includes('/printer/publications');
   }
 
+  function isGrantsPage() {
+    var p = window.location.pathname;
+    return p === '/grants/' || p === '/grants' || p === '/grants/index.html';
+  }
+
   function isServicePage() {
     var p = window.location.pathname;
     return p === '/service/' || p === '/service' || p === '/service/index.html' || p.includes('/printer/service');
@@ -49,6 +54,7 @@
     var publicationsBtn = document.getElementById('btn-publications');
     var serviceBtn = document.getElementById('btn-service');
     var teachingBtn = document.getElementById('btn-teaching');
+    var grantsBtn = document.getElementById('btn-grants');
     if (aboutBtn) {
       aboutBtn.classList.toggle('active', page === 'about');
       aboutBtn.setAttribute('aria-current', page === 'about' ? 'page' : 'false');
@@ -64,6 +70,10 @@
     if (serviceBtn) {
       serviceBtn.classList.toggle('active', page === 'service');
       serviceBtn.setAttribute('aria-current', page === 'service' ? 'page' : 'false');
+    }
+    if (grantsBtn) {
+      grantsBtn.classList.toggle('active', page === 'grants');
+      grantsBtn.setAttribute('aria-current', page === 'grants' ? 'page' : 'false');
     }
     if (teachingBtn) {
       teachingBtn.classList.toggle('active', page === 'teaching');
@@ -308,6 +318,7 @@
     var publicationsBtn = document.getElementById('btn-publications');
     var serviceBtn = document.getElementById('btn-service');
     var teachingBtn = document.getElementById('btn-teaching');
+    var grantsBtn = document.getElementById('btn-grants');
 
     if (aboutBtn) {
       aboutBtn.addEventListener('click', function () {
@@ -401,6 +412,29 @@
       });
     }
 
+    if (grantsBtn) {
+      grantsBtn.addEventListener('click', function () {
+        playSound('button-sound');
+        clearPendingAction();
+        if (isGrantsPage()) {
+          var content = document.querySelector('.paper-content');
+          if (content) content.style.visibility = 'visible';
+          var paper = document.getElementById('current-paper');
+          if (paper) paper.style.display = 'block';
+          setActiveButton('grants');
+          pendingActionTimer = setTimeout(function () {
+            startPrintingWithDelay();
+            pendingActionTimer = null;
+          }, BUTTON_SOUND_DELAY_MS);
+        } else {
+          sessionStorage.setItem('printer-nav', 'grants');
+          pendingActionTimer = setTimeout(function () {
+            window.location.href = '/grants/';
+          }, BUTTON_SOUND_DELAY_MS);
+        }
+      });
+    }
+
     if (teachingBtn) {
       teachingBtn.addEventListener('click', function () {
         playSound('button-sound');
@@ -441,6 +475,8 @@
       setActiveButton('events');
     } else if (nav === 'publications' && isPublicationsPage()) {
       setActiveButton('publications');
+    } else if (nav === 'grants' && isGrantsPage()) {
+      setActiveButton('grants');
     } else if (nav === 'service' && isServicePage()) {
       setActiveButton('service');
     } else if (nav === 'teaching' && isTeachingPage()) {
@@ -456,9 +492,9 @@
       if (content) content.style.visibility = 'visible';
       if (paper) paper.style.display = 'block';
       startPrintingWithDelay();
-    } else if (isAboutPage()) {
-      // Direct visit to homepage — auto-print the about page
-      setActiveButton('about');
+    } else if (isAboutPage() || isGrantsPage()) {
+      // Direct visits to About and Grants & Awards show their content.
+      setActiveButton(isGrantsPage() ? 'grants' : 'about');
       var content = document.querySelector('.paper-content');
       if (content) content.style.visibility = 'visible';
       if (paper) paper.style.display = 'block';

@@ -6,8 +6,9 @@ This branch only keeps the printer-style website.
 - `/` -> `/_pages/about-printer.md`
 - `/events/` -> `/_pages/events-printer.md`
 - `/publications/` -> `/_pages/publications-printer.md`
+- `/grants/` -> `/_pages/grants-printer.md`
 
-The homepage includes research grants from OpenAI, ITEA4 GENIUS, and the Leeds–TurinTech Knowledge Transfer Partnership, alongside awards and news.
+The Grants & Awards page presents research grants from OpenAI, ITEA4 GENIUS, and the Leeds–TurinTech Knowledge Transfer Partnership, alongside academic awards. News remains on the homepage.
 
 ## Files you will edit most
 - Site settings and profile: `/_config.yml`
