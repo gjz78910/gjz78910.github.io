@@ -23,7 +23,7 @@ author_profile: false
       <div class="award-top"><span class="award-title">ITEA4 GENIUS</span><span class="award-year">Nov 2025–present</span></div>
       <div class="award-venue"><a href="https://itea4.org/project/genius.html">ITEA4 &amp; Innovate UK</a> · King's College London</div>
       <div class="award-role">Primary KCL Researcher</div>
-      <p class="award-desc">Independently lead studies of AI coding agents’ trustworthiness with partners including BT, Diffblue, and Siemens, producing research recognised by the MSR 2026 Distinguished Challenge Paper Award.</p>
+      <p class="award-desc">Independently lead studies of AI coding agents’ trustworthiness with partners including BT, Diffblue, and GoCodeGreen, producing research recognised by the MSR 2026 Distinguished Challenge Paper Award.</p>
     </div>
   </div>
   <div class="award-card">
