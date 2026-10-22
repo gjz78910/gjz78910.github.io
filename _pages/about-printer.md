@@ -77,6 +77,7 @@ If you're interested in collaboration, please feel free to reach out!
 
 <ul class="news-timeline">
   <li class="service"><span class="news-date">Nov 2026</span><span class="news-badge service">Service</span><span class="news-content">Co-organising the <strong>Safe and Trusted AI for Software Engineering</strong> workshop (two-day, 10–12 invited speakers).</span></li>
+  <li class="service"><span class="news-date">Oct 2026</span><span class="news-badge service">Service</span><span class="news-content">Selected as a <strong>Programme Committee Member</strong> for <em>ISSRE 2027</em>.</span></li>
   <li class="grant"><span class="news-date">Oct 2026</span><span class="news-badge grant">Grant</span><span class="news-content">Selected for OpenAI’s <a href="https://openai.com/index/chatgpt-for-academic-researchers/">ChatGPT for Academic Researchers programme</a></span></li>
   <li class="award"><span class="news-date">Oct 2026</span><span class="news-badge award">Award</span><span class="news-content">Received the <strong>Research Track Distinguished Reviewer Award</strong> from the <a href="https://cyprusconferences.org/issre2026/awards/"><em>ISSRE 2026</em></a> Program Committee.</span></li>
   <li class="service"><span class="news-date">Sep 2026</span><span class="news-badge service">Service</span><span class="news-content">Served as <strong>Program Committee Member</strong> for <a href="https://conf.researchr.org/home/cain-2027"><em>CAIN 2027</em></a>.</span></li>
