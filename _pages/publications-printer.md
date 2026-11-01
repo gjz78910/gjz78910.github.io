@@ -89,11 +89,11 @@ You can also find my articles on [Google Scholar]({{author.googlescholar}}).
   </article>
 
   <article class="pub-item" data-type="journal">
-    <div class="pub-head"><span class="pub-badge venue">TOSEM'25</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">JCR-Q1</span> <span class="pub-badge interest">AI4SE</span></div>
+    <div class="pub-head"><span class="pub-badge venue">TOSEM'26</span> <span class="pub-badge ccf">CCF-A</span> <span class="pub-badge ranking">JCR-Q1</span> <span class="pub-badge interest">AI4SE</span></div>
     <div class="pub-title"><a href="https://dl.acm.org/doi/abs/10.1145/3750040">Learning Software Bug Reports: A Systematic Literature Review</a></div>
     <div class="pub-authors"><span class="pub-label">Authors</span><span class="pub-value">G. Long, <b>J. Gong</b>, H. Fang, and T. Chen</span></div>
-    <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">ACM Transactions on Software Engineering and Methodology <a href="https://dl.acm.org/toc/tosem/justaccepted">(TOSEM)</a></span></div>
-    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2025 | <span class="pub-pages-label">Pages</span> 47</span></div>
+    <div class="pub-venue"><span class="pub-label">Venue</span><span class="pub-value">ACM Transactions on Software Engineering and Methodology <a href="https://doi.org/10.1145/3750040">(TOSEM)</a></span></div>
+    <div class="pub-meta"><span class="pub-label">Year</span><span class="pub-value">2026 | Volume 35, Issue 7 | <span class="pub-pages-label">Pages</span> 1–47</span></div>
   </article>
 
   <article class="pub-item" data-type="journal">
