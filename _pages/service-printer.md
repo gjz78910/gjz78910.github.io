@@ -13,8 +13,10 @@ redirect_from:
 <div class="cat-row">
   <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M9 3v2h6V3M8 10h8M8 14h5"/></svg></div>
   <div class="cat-body">
-    <div class="cat-top"><span class="cat-title">Programme Committee</span><span class="cat-count">15 roles &middot; 2024&ndash;27</span></div>
+    <div class="cat-top"><span class="cat-title">Programme Committee</span><span class="cat-count">19 roles &middot; 2024&ndash;27</span></div>
     <div class="chip-grid">
+      <span class="chip"><a href="https://conf.researchr.org/home/saner-2027">SANER 2027</a></span>
+      <span class="chip"><a href="https://conf.researchr.org/track/icse-2027/icse-2027-industry-challenge">ICSE 2027</a> <i>Industry Challenge</i></span>
       <span class="chip">ISSRE 2027</span>
       <span class="chip"><a href="https://2027.msrconf.org/">MSR 2027</a></span>
       <span class="chip"><a href="https://conf.researchr.org/home/fse-2027">FSE 2027</a></span>
@@ -30,6 +32,8 @@ redirect_from:
       <span class="chip"><a href="https://conf.researchr.org/home/icse-2025">ICSE 2025</a> <i>Artifact Eval.</i></span>
       <span class="chip"><a href="https://2026.msrconf.org/">MSR 2026</a> <i>Junior PC</i></span>
       <span class="chip"><a href="https://conf.researchr.org/home/icse-2026">ICSE 2026</a> <i>Shadow PC</i></span>
+      <span class="chip"><a href="https://2025.msrconf.org/">MSR 2025</a> <i>Junior PC</i></span>
+      <span class="chip"><a href="https://conf.researchr.org/home/icse-2025">ICSE 2025</a> <i>Shadow PC</i></span>
     </div>
   </div>
 </div>

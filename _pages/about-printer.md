@@ -76,6 +76,7 @@ If you're interested in collaboration, please feel free to reach out!
 ## News
 
 <ul class="news-timeline">
+  <li class="service"><span class="news-date">Nov 2026</span><span class="news-badge service">Service</span><span class="news-content">Joined the programme committees for <a href="https://conf.researchr.org/home/saner-2027"><em>SANER 2027</em></a> and the <a href="https://conf.researchr.org/track/icse-2027/icse-2027-industry-challenge"><em>ICSE 2027 Industry Challenge</em></a>.</span></li>
   <li class="service"><span class="news-date">Nov 2026</span><span class="news-badge service">Service</span><span class="news-content">Co-organising the <strong>Safe and Trusted AI for Software Engineering</strong> workshop (two-day, 10–12 invited speakers).</span></li>
   <li class="service"><span class="news-date">Oct 2026</span><span class="news-badge service">Service</span><span class="news-content">Served as <strong>Programme Committee Member</strong> for <em>ISSRE 2027</em>.</span></li>
   <li class="grant"><span class="news-date">Oct 2026</span><span class="news-badge grant">Grant</span><span class="news-content">Selected for OpenAI’s <a href="https://openai.com/index/chatgpt-for-academic-researchers/">ChatGPT for Academic Researchers programme</a></span></li>
