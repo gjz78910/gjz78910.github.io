@@ -15,7 +15,7 @@ redirect_from:
   <div class="teach-row" id="kcl-intro-software-engineering">
     <div class="teach-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></div>
     <div class="teach-body">
-      <div class="teach-top"><span class="teach-role">Module Lecturer</span><span class="teach-dates">Spring 2027</span></div>
+      <div class="teach-top"><span class="teach-role">Module Lecturer</span><span class="teach-dates">Starting Jan 2027</span></div>
       <div class="teach-org">King's College London</div>
       <div class="teach-tags">
         <span class="teach-chip"><a href="https://www.kcl.ac.uk/abroad/module-options/introduction-to-software-engineering-1">Introduction to Software Engineering</a> <i>4CCS1ISE, Level 4</i></span>
