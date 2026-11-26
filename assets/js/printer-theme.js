@@ -466,6 +466,9 @@
   function init() {
     var paper = document.getElementById('current-paper');
     var nav = sessionStorage.getItem('printer-nav');
+    if (isTeachingPage() && document.getElementById(window.location.hash.slice(1))) {
+      nav = 'teaching';
+    }
 
     initSounds();
 
