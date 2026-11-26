@@ -12,6 +12,15 @@ redirect_from:
 
 <div class="teach-list">
 
+  <div class="teach-row" id="kcl-intro-software-engineering">
+    <div class="teach-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></div>
+    <div class="teach-body">
+      <div class="teach-top"><span class="teach-role"><a href="https://www.kcl.ac.uk/abroad/module-options/introduction-to-software-engineering-1">Introduction to Software Engineering</a> (4CCS1ISE)</span><span class="teach-dates">Spring 2027</span></div>
+      <div class="teach-org">King's College London</div>
+      <p>I have been invited to lead half of this first-year module. The role includes preparing and delivering five weeks of lectures, supporting students through revision and office hours, and setting and marking assessments at both sittings.</p>
+    </div>
+  </div>
+
   <div class="teach-row">
     <div class="teach-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></div>
     <div class="teach-body">

@@ -76,6 +76,7 @@ If you're interested in collaboration, please feel free to reach out!
 ## News
 
 <ul class="news-timeline">
+  <li class="teaching"><span class="news-date">Nov 2026</span><span class="news-badge teaching">Teaching</span><span class="news-content">King's College London has invited me to lead half of its first-year <a href="/teaching/#kcl-intro-software-engineering">Introduction to Software Engineering</a> module in spring 2027.</span></li>
   <li class="service"><span class="news-date">Nov 2026</span><span class="news-badge service">Service</span><span class="news-content">Joined the programme committees for <a href="https://conf.researchr.org/home/saner-2027"><em>SANER 2027</em></a> and the <a href="https://conf.researchr.org/track/icse-2027/icse-2027-industry-challenge"><em>ICSE 2027 Industry Challenge</em></a>.</span></li>
   <li class="service"><span class="news-date">Nov 2026</span><span class="news-badge service">Service</span><span class="news-content">Co-organising the <strong>Safe and Trusted AI for Software Engineering</strong> workshop (two-day, 10–12 invited speakers).</span></li>
   <li class="service"><span class="news-date">Oct 2026</span><span class="news-badge service">Service</span><span class="news-content">Served as <strong>Programme Committee Member</strong> for <em>ISSRE 2027</em>.</span></li>
@@ -251,7 +252,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 }
 .news-timeline li.paper::before  { background: #5cb85c; }
 .news-timeline li.award::before   { background: #e06666; }
-.news-timeline li.service::before { background: #0087BD; }
+.news-timeline li.service::before, .news-timeline li.teaching::before { background: #0087BD; }
 .news-timeline li.grant::before   { background: #8064a2; }
 .news-badge {
   position: relative;
@@ -284,7 +285,7 @@ course at [University of Liverpool](https://www.liverpool.ac.uk/) (2016-18).
 }
 .news-badge.paper   { background-color: #56ae5d; }
 .news-badge.award   { background-color: #cf6363; }
-.news-badge.service { background-color: #1988b8; }
+.news-badge.service, .news-badge.teaching { background-color: #1988b8; }
 .news-badge.grant   { background-color: #8064a2; }
 .news-date {
   grid-column: 1;
